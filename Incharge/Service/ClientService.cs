@@ -39,6 +39,7 @@ namespace Incharge.Service
                 Email = clientVM.Email,
                 Phone = clientVM.Phone
             });
+
         }
 
         public void RemoveClient(ClientVM clientVM)

@@ -13,7 +13,7 @@ namespace Incharge.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() //make this a dashboard
         {
             return View();
         }
