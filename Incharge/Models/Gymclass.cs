@@ -15,7 +15,7 @@ public partial class Gymclass
 
     public int? LocationId { get; set; }
 
-    public byte[]? EmployeeId { get; set; }
+    public string? EmployeeId { get; set; }
 
     public virtual Employee? Employee { get; set; }
 

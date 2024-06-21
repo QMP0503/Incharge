@@ -11,9 +11,9 @@ public partial class Sale
 
     public int ProductId { get; set; }
 
-    public byte[]? EmployeeId { get; set; }
+    public string? EmployeeId { get; set; }
 
-    public byte[]? ClientId { get; set; }
+    public string? ClientId { get; set; }
 
     public int? BusinessReportId { get; set; }
 

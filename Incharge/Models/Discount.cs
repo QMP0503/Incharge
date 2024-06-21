@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.Models;
 
@@ -14,7 +15,7 @@ public partial class Discount
     public DateTime? StartDate { get; set; }
 
     public DateTime? EndDate { get; set; }
-
+    [AllowedValues(typeof(string), new string[]{"Weekly", "Monthly", "Yearly"})]
     public string? Recurance { get; set; }
 
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();

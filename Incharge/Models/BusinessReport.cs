@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Incharge.Models;
 
 public partial class BusinessReport
 {
     public int Id { get; set; }
-
+    
     public DateTime Date { get; set; }
 
     public double? Revenue { get; set; }

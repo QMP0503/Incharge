@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Incharge.Models;
 
 public partial class Client
 {
-    public byte[] Id { get; set; } = null!;
-
+    public string Id { get; set; } = null!; 
+   
     public string FirstName { get; set; } = null!;
 
     public string LastName { get; set; } = null!;
 
     public int Phone { get; set; }
-
+    [DataType(DataType.EmailAddress)]
     public string Email { get; set; } = null!;
-
+    [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
     public string? Status { get; set; }
-
+    [ForeignKey("PaymentRecordId")]
     public int? PaymentRecordId { get; set; }
 
     public virtual Paymentrecord? PaymentRecord { get; set; }

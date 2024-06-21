@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Incharge.Models;
 
 public partial class Employee
 {
-    public byte[] Id { get; set; } = null!;
-
+    public string Id { get; set; } = null!;
     public int RoleId { get; set; }
 
     public string FirstName { get; set; } = null!;
@@ -14,7 +15,7 @@ public partial class Employee
     public string LastName { get; set; } = null!;
 
     public int Phone { get; set; }
-
+    [DataType(DataType.EmailAddress)]
     public string Email { get; set; } = null!;
 
     public double? TotalSalary { get; set; }
