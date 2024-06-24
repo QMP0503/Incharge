@@ -7,12 +7,12 @@ namespace Incharge.Models;
 
 public partial class Client
 {
-    public string Id { get; set; } = null!; 
-    public string FirstName { get; set; } = null!;
-    public string LastName { get; set; } = null!;
+    public string Id { get; set; }   
+    public string FirstName { get; set; }  
+    public string LastName { get; set; }  
     public int Phone { get; set; }
     [DataType(DataType.EmailAddress)]
-    public string Email { get; set; } = null!;
+    public string Email { get; set; }
     [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
     public string? Status { get; set; }
     [ForeignKey("PaymentRecordId")]

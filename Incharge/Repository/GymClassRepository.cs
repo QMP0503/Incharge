@@ -34,6 +34,9 @@ namespace Incharge.Repository
                 .Where(predicate)
                 .ToList();
         }
-
+        public IQueryable<Gymclass> QueryBy(Func<Gymclass, bool> predicate)
+        {
+            return _context.Gymclasses.Where(predicate).AsQueryable(); //for index paging method. 
+        }
     }
 }

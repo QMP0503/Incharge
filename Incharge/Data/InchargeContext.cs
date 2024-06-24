@@ -56,7 +56,7 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.Property(e => e.Date).HasColumnType("datetime");
         });
 
-        modelBuilder.Entity<Client>(entity =>
+        modelBuilder.Entity<Client>(entity => //make id column not null.
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 

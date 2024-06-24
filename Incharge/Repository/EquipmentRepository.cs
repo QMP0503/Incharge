@@ -30,5 +30,9 @@ namespace Incharge.Repository
                 .Where(predicate)
                 .ToList();
         }
+        public IQueryable<Equipment> QueryBy(Func<Equipment, bool> predicate)
+        {
+            return _context.Equipment.Where(predicate).AsQueryable(); //for index paging method. 
+        }
     }
 }

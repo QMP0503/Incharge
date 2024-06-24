@@ -1,0 +1,83 @@
+﻿@model Incharge.Service.PaginatedList<Incharge.Models.Client>
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Movie Index</h1>
+
+@* <p> since already made user login to use so this should be fine right?
+    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+    {
+        <a asp-action="Create">Create New</a>
+    }
+</p> *@
+<a asp-action="AddClient">Add New Client</a>
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-default" />
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        { //have a web display for each item in db
+            <tr>
+@*                 <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">
+                        <img class="img-thumbnail align-content-sm-center img-responsive" display="block" src="@item.ProfilePic" />
+                    </a>
+                </td> *@
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">
+                    <div class="col-sm-8 align-items-center"> @*Map data so first name and last name are lumped to gether*@
+                        <h3>@item.FirstName</h3>
+                        <p>
+                            <strong>First Name:</strong> @item.FirstName
+                        </p>
+                        <p>
+                            <strong>Last Name:</strong> @item.LastName
+                        </p>
+                        <p>
+                            <strong>Email:</strong> @item.Email
+                        </p>
+                        <p>
+                            <strong>Phone:</strong> @item.Phone
+                        </p>
+                    </div>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>

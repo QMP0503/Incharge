@@ -29,5 +29,9 @@ namespace Incharge.Repository
                     .Where(predicate)
                     .ToList();
         }
+        public IQueryable<Employee> QueryBy(Func<Employee, bool> predicate)
+        {
+            return _context.Employees.Where(predicate).AsQueryable(); //for index paging method. 
+        }
     }
 }

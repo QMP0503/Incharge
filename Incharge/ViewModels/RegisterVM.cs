@@ -4,8 +4,12 @@ namespace Incharge.ViewModels
 {
     public class RegisterVM
     {
+        [MaxLength(100)]
         [Required]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        [MaxLength(100)]
+        [Required]
+        public string LastName { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } //figure out what this is for 

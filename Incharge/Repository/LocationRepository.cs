@@ -28,5 +28,9 @@ namespace Incharge.Repository
                 .ThenInclude(x => x.Employee)
                 .FirstOrDefault(predicate);
         }
+        public IQueryable<Location> QueryBy(Func<Location, bool> predicate)
+        {
+            return _context.Locations.Where(predicate).AsQueryable(); //for index paging method. 
+        }
     }
 }

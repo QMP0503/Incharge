@@ -7,6 +7,8 @@ using Incharge.Models;
 using Microsoft.AspNetCore.Identity;
 using Incharge.Repository.IRepository;
 using Incharge.Repository;
+using Incharge.Service.IService;
+using Incharge.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,13 +38,19 @@ builder.Services.AddIdentity<User, IdentityRole>(
 
 builder.Services.AddLog4net();
 
-
+//Repository injection
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IFindRepository<Client>, ClientRepository>();
 builder.Services.AddScoped<IFindRepository<Employee>, EmployeeRepository>();
 builder.Services.AddScoped<IFindRepository<Gymclass>, GymClassRepository>();
 builder.Services.AddScoped<IFindRepository<Equipment>, EquipmentRepository>();
 builder.Services.AddScoped<IFindRepository<Location>, LocationRepository>();
+builder.Services.AddScoped<IFindRepository<Product>, ProductRepository>();
+
+//service injection
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Client>>, ClientPagingService>(); //figure out async when all is working
+
 
 //add memory caching for client list and/or gym class list
 
@@ -59,12 +67,45 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+using (var scope = app.Services.CreateScope()) //add roles for manager/employee below.
+{
+    var services = scope.ServiceProvider;
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+    var role = "Admin"; //use array to add more roles
+
+    //use foreach(roles in roles to check and add)
+    if (!await roleManager.RoleExistsAsync(role)) await roleManager.CreateAsync(new IdentityRole(role));
+
+    // SeedData.Initialize(services);
+}
+using (var scope = app.Services.CreateScope())
+{
+    string Email = "admin@admin.com";
+    var password = "1234";
+
+
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+    if (await userManager.FindByEmailAsync(Email) == null)
+    {
+        var adminUser = new User();
+        adminUser.FirstName = "Admin";
+        adminUser.LastName = "Admin";
+        adminUser.UserName = Email;
+        adminUser.Email = Email;
+
+        await userManager.CreateAsync(adminUser, password);
+        await userManager.AddToRoleAsync(adminUser, "Admin");
+    }
+
+}
+
 app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    //pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
+    pattern: "{controller=CLient}/{action=Index}/{id?}"); //for testing purposes
 
 app.Run();
