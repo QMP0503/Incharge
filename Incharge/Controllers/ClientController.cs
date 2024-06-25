@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Incharge.Models;
 using Incharge.Service.IService;
-using Incharge.Parameters;
 using Incharge.ViewModel;
 using log4net;
+using Incharge.DTO;
 
 namespace Incharge.Controllers
 {
@@ -20,7 +20,7 @@ namespace Incharge.Controllers
             _pagingService = pagingService;
             _logger = logger;
         }
-        [HttpGet]
+        [HttpGet] //there will be a button in index to check client in. Design a button/page to do so. Check them in and out.
         public IActionResult Index(
                                                  string sortOrder,
                                                  string currentFilter,
@@ -45,12 +45,12 @@ namespace Incharge.Controllers
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
         }
         [HttpGet]
-        public IActionResult Details(string id) //id will be sent when client profile is clicked. Also when all is working change to async
+        public IActionResult Details(string Uuid) //id will be sent when client profile is clicked. Also when all is working change to async
         {
             try
             {
-                var clientInfo = new ClientParam();
-                clientInfo.Id = id;
+                var clientInfo = new ClientVM();
+                clientInfo.Uuid = Uuid;
                 return View(_clientService.FindClient(clientInfo));
             }catch(Exception ex)
             {
@@ -65,7 +65,7 @@ namespace Incharge.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddClient([Bind("FirstName, LastName, Phone, Email, Status")] ClientVM clientVM)
+        public IActionResult AddClient([Bind("FirstName, LastName, Phone, Email")] ClientVM clientVM)
         {
             try
             {
@@ -78,6 +78,82 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+        public IActionResult EditClient(string Uuid)
+        {
+            try
+            {
+                var clientInfo = new ClientVM();
+                clientInfo.Uuid = Uuid;
+                return View(_clientService.FindClient(clientInfo));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return NotFound();
+            }
 
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditClient([Bind("Uuid, FirstName, LastName, Phone, Email")] ClientVM clientVM)
+        {
+            try
+            {
+                _clientService.EditClient(clientVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return NotFound();
+            }
+        }
+        public IActionResult DeleteClient(string Uuid)
+        {
+            try
+            {
+                var clientInfo = new ClientVM();
+                clientInfo.Uuid = Uuid;
+                return View(_clientService.FindClient(clientInfo));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return NotFound();
+            }
+        }
+
+        [HttpPost, ActionName("DeleteClient")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteClientConfirm(string Uuid)
+        {
+            try
+            {
+                var clientInfo = new ClientVM();
+                clientInfo.Uuid = Uuid;
+                _clientService.DeleteClient(clientInfo);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return NotFound();
+            }
+        }
+        [HttpPost, ActionName("UpdateStatus")]
+        public IActionResult UpdateStatus([Bind("Uuid, Status")] ClientVM clientVM)//not working so change syntax.
+        {
+            try
+            {
+                _clientService.UpdateStatus(clientVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return NotFound();
+            }
+        }
     }
 }

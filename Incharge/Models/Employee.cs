@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +8,8 @@ namespace Incharge.Models;
 
 public partial class Employee
 {
-    public string Id { get; set; } = null!;
+    public int Id { get; set; }
+    public string? Uuid { get; set; }
     public int RoleId { get; set; }
 
     public string FirstName { get; set; } = null!;

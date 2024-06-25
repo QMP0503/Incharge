@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +8,8 @@ namespace Incharge.Models;
 
 public partial class Client
 {
-    public string Id { get; set; }   
+    public int Id { get; set; }   //set as primary key
+    public string Uuid { get; set; } //show to the public through mapping
     public string FirstName { get; set; }  
     public string LastName { get; set; }  
     public int Phone { get; set; }

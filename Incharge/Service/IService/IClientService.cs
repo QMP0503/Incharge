@@ -1,23 +1,24 @@
-﻿using Incharge.Parameters;
+﻿
 using Incharge.Models;
 using Incharge.ViewModel;
+using Incharge.DTO;
+using Incharge.ViewModels;
 namespace Incharge.Service.IService
 {
-    public interface IClientService
+    public interface IClientService //only for client personal information
     {
         //get
-        public Client FindClient(ClientParam clientParam);
-        public List<Client> ListClients(ClientParam clientParam);
+        public ClientDTO FindClient(ClientVM clientVM);
+        public List<ClientDTO> ListClients(ClientVM clientVM);
         //create
         public void AddClient(ClientVM clientVM);
         //update (do when VM is created)
         public void EditClient(ClientVM clientVM);
 
-        //AddMemberShip
-
-        //EditMembership
+        //updateStatus - for checkin purposes
+        public void UpdateStatus(ClientVM clientVM);
 
         //delete
-        public void RemoveClient(ClientVM clientVM);
+        public void DeleteClient(ClientVM clientVM);
     }
 }

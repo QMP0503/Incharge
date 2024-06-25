@@ -53,6 +53,13 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.ToTable("business_report");
 
+            entity.HasIndex(e => e.Uuid, "BusinessReport_Uuid_UNIQUE").IsUnique();
+
+            //entity.Property(e => e.Uuid)
+            //      .HasDefaultValueSql("(uuid())")
+            //      .IsFixedLength();
+
+
             entity.Property(e => e.Date).HasColumnType("datetime");
         });
 
@@ -62,17 +69,19 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.ToTable("clients");
 
+            entity.HasIndex(e => e.Uuid, "Client_Uuid_UNIQUE").IsUnique();
+
             entity.HasIndex(e => e.Email, "Email_UNIQUE").IsUnique();
 
             entity.HasIndex(e => e.FirstName, "FirstName_UNIQUE").IsUnique();
 
-            entity.HasIndex(e => e.Id, "Id_UNIQUE").IsUnique();
+            entity.HasIndex(e => e.Id, "Client_Id_UNIQUE").IsUnique();
 
             entity.HasIndex(e => e.LastName, "LastName_UNIQUE").IsUnique();
 
             entity.HasIndex(e => e.PaymentRecordId, "PaymentRecordId_idx");
 
-            entity.Property(e => e.Id)
+            entity.Property(e => e.Uuid)
                 .HasDefaultValueSql("(uuid())")
                 .IsFixedLength();
             entity.Property(e => e.Email).HasMaxLength(45);
@@ -90,24 +99,20 @@ public partial class InchargeContext : IdentityDbContext<User>
                     "ClientEmployee",
                     r => r.HasOne<Employee>().WithMany()
                         .HasForeignKey("Employeeid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("client_employee_ibfk_2"),
                     l => l.HasOne<Client>().WithMany()
                         .HasForeignKey("Clientid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("client_employee_ibfk_1"),
                     j =>
                     {
                         j.HasKey("Clientid", "Employeeid").HasName("PRIMARY");
                         j.ToTable("client_employee");
                         j.HasIndex(new[] { "Employeeid" }, "employeeid");
-                        j.IndexerProperty<string>("Clientid")
-                            .HasMaxLength(255)
-                            .IsFixedLength()
+                        j.IndexerProperty<int>("Clientid")
                             .HasColumnName("clientid");
-                        j.IndexerProperty<string>("Employeeid")
-                            .HasMaxLength(255)
-                            .IsFixedLength()
+                        j.IndexerProperty<int>("Employeeid")
                             .HasColumnName("employeeid");
                     });
 
@@ -116,20 +121,18 @@ public partial class InchargeContext : IdentityDbContext<User>
                     "ClientGymclass",
                     r => r.HasOne<Gymclass>().WithMany()
                         .HasForeignKey("Gymclassid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("client_gymclasses_ibfk_2"),
                     l => l.HasOne<Client>().WithMany()
                         .HasForeignKey("Clientid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("client_gymclasses_ibfk_1"),
                     j =>
                     {
                         j.HasKey("Clientid", "Gymclassid").HasName("PRIMARY");
                         j.ToTable("client_gymclasses");
                         j.HasIndex(new[] { "Gymclassid" }, "gymclassid");
-                        j.IndexerProperty<string>("Clientid")
-                            .HasMaxLength(255)
-                            .IsFixedLength()
+                        j.IndexerProperty<int>("Clientid")
                             .HasColumnName("clientid");
                         j.IndexerProperty<int>("Gymclassid").HasColumnName("gymclassid");
                     });
@@ -156,11 +159,13 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.ToTable("employees");
 
-            entity.HasIndex(e => e.Id, "Id_UNIQUE").IsUnique();
+            entity.HasIndex(e => e.Id, "Employee_Id_UNIQUE").IsUnique();
+
+            entity.HasIndex(e => e.Uuid, "Employee_Uuid_UNIQUE").IsUnique();
 
             entity.HasIndex(e => e.RoleId, "RoleId_idx");
 
-            entity.Property(e => e.Id)
+            entity.Property(e => e.Uuid)
                 .HasMaxLength(255)
                 .HasDefaultValueSql("(uuid())")
                 .IsFixedLength();
@@ -198,7 +203,7 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.Property(e => e.MaintanceDate).HasColumnType("datetime");
             entity.Property(e => e.Name).HasMaxLength(45);
             entity.Property(e => e.PurchaseDate).HasColumnType("datetime");
-            entity.Property(e => e.Satus)
+            entity.Property(e => e.Status)
                 .HasMaxLength(45)
                 .HasDefaultValueSql("'Available'");
 
@@ -214,6 +219,12 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.ToTable("expenses");
 
             entity.HasIndex(e => e.BusinessReportId, "business_reportId_idx");
+
+            entity.HasIndex(e => e.Uuid, "Expenses_Uuid_UNIQUE").IsUnique();
+
+            //entity.Property(e => e.Uuid)
+            //      .HasDefaultValueSql("(uuid())")
+            //      .IsFixedLength();
 
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(255);
@@ -236,9 +247,7 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.Description).HasColumnType("text");
-            entity.Property(e => e.EmployeeId)
-                .HasMaxLength(255)
-                .IsFixedLength();
+
             entity.Property(e => e.Name).HasMaxLength(45);
 
             entity.HasOne(d => d.Employee).WithMany(p => p.Gymclasses)
@@ -269,6 +278,13 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.ToTable("paymentrecord");
 
+
+            entity.HasIndex(e => e.Uuid, "PaymentRecord_Uuid_UNIQUE").IsUnique();
+
+            //entity.Property(e => e.Uuid)
+            //      .HasDefaultValueSql("(uuid())")
+            //      .IsFixedLength();
+
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
@@ -297,11 +313,11 @@ public partial class InchargeContext : IdentityDbContext<User>
                     "ClientProduct",
                     r => r.HasOne<Client>().WithMany()
                         .HasForeignKey("Clientid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("client_product_ibfk_2"),
                     l => l.HasOne<Product>().WithMany()
                         .HasForeignKey("Productid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("client_product_ibfk_1"),
                     j =>
                     {
@@ -309,7 +325,7 @@ public partial class InchargeContext : IdentityDbContext<User>
                         j.ToTable("client_product");
                         j.HasIndex(new[] { "Clientid" }, "clientid");
                         j.IndexerProperty<int>("Productid").HasColumnName("productid");
-                        j.IndexerProperty<string>("Clientid")
+                        j.IndexerProperty<int>("Clientid")
                             .HasMaxLength(255)
                             .IsFixedLength()
                             .HasColumnName("clientid");
@@ -320,11 +336,11 @@ public partial class InchargeContext : IdentityDbContext<User>
                     "ProductDiscount",
                     r => r.HasOne<Discount>().WithMany()
                         .HasForeignKey("Discountid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("product_discount_ibfk_2"),
                     l => l.HasOne<Product>().WithMany()
                         .HasForeignKey("Productid")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("product_discount_ibfk_1"),
                     j =>
                     {
@@ -360,13 +376,14 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.HasIndex(e => e.ProductId, "ProductId_idx");
 
-            entity.Property(e => e.ClientId)
-                .HasMaxLength(255)
-                .IsFixedLength();
+
+            entity.HasIndex(e => e.Uuid, "Sales_Uuid_UNIQUE").IsUnique();
+
+            //entity.Property(e => e.Uuid)
+            //      .HasDefaultValueSql("(uuid())")
+            //      .IsFixedLength();
+
             entity.Property(e => e.Date).HasColumnType("datetime");
-            entity.Property(e => e.EmployeeId)
-                .HasMaxLength(255)
-                .IsFixedLength();
 
             entity.HasOne(d => d.BusinessReport).WithMany(p => p.Sales)
                 .HasForeignKey(d => d.BusinessReportId)
@@ -374,12 +391,12 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.HasOne(d => d.Client).WithMany(p => p.Sales)
                 .HasForeignKey(d => d.ClientId)
-                .OnDelete(DeleteBehavior.SetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("Client_idfk");
 
             entity.HasOne(d => d.Employee).WithMany(p => p.Sales)
                 .HasForeignKey(d => d.EmployeeId)
-                .OnDelete(DeleteBehavior.SetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("Employe_idfk");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Sales)

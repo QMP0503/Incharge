@@ -1,16 +1,17 @@
-﻿@model Incharge.ViewModels.ClientVM
+﻿@* @model Incharge.ViewModel.ClientVM *@
+@model Incharge.DTO.ClientDTO
 
 @{
-    ViewData["Title"] = "AddCLient";
+    ViewData["Title"] = "EditClient";
 }
 
-<h1>Add Client</h1>
+<h1>Edit Client</h1>
 
-<h4>New Client</h4>
+<h4>Edit Profile</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AddClient" method="post">
+        <form asp-action="EditClient" method="post" asp-route-Uuid=@Model.Uuid>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
@@ -32,13 +33,8 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-@*             <div class="form-group"> add drop down menu for status
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div> *@
             <div class="form-group">
-                <input type="submit" value="AddClient" class="btn btn-primary" />
+                <input type="submit" value="EditClient" class="btn btn-primary" />
             </div>
         </form>
     </div>

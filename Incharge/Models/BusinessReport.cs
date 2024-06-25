@@ -7,7 +7,7 @@ namespace Incharge.Models;
 public partial class BusinessReport
 {
     public int Id { get; set; }
-    
+    public string Uuid { get; set; } = new Guid().ToString();
     public DateTime Date { get; set; }
 
     public double? Revenue { get; set; }

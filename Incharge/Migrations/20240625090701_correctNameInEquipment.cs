@@ -5,11 +5,16 @@
 namespace Incharge.Migrations
 {
     /// <inheritdoc />
-    public partial class test : Migration
+    public partial class correctNameInEquipment : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "Satus",
+                table: "equipment",
+                newName: "Status");
+
             migrationBuilder.AlterColumn<decimal>(
                 name: "Discount",
                 table: "discounts",
@@ -19,22 +24,16 @@ namespace Incharge.Migrations
                 oldClrType: typeof(decimal),
                 oldType: "decimal(10,30)",
                 oldPrecision: 10);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "LastName",
-                table: "AspNetUsers",
-                type: "varchar(100)",
-                maxLength: 100,
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "longtext")
-                .Annotation("MySql:CharSet", "utf8mb4")
-                .OldAnnotation("MySql:CharSet", "utf8mb4");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "Status",
+                table: "equipment",
+                newName: "Satus");
+
             migrationBuilder.AlterColumn<decimal>(
                 name: "Discount",
                 table: "discounts",
@@ -44,17 +43,6 @@ namespace Incharge.Migrations
                 oldClrType: typeof(decimal),
                 oldType: "decimal(10)",
                 oldPrecision: 10);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "LastName",
-                table: "AspNetUsers",
-                type: "longtext",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "varchar(100)",
-                oldMaxLength: 100)
-                .Annotation("MySql:CharSet", "utf8mb4")
-                .OldAnnotation("MySql:CharSet", "utf8mb4");
         }
     }
 }

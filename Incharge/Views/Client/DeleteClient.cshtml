@@ -1,0 +1,18 @@
+﻿@model Incharge.DTO.ClientDTO;
+
+
+@{
+    ViewData["Title"] = "DeleteClient";
+}
+
+<h1>Delete Client</h1>
+
+<h4>Confirm Delete Profile:</h4>
+<h3>@Model.FirstName, @Model.LastName</h3>
+<div>
+    <form asp-action="DeleteClient">
+        <input type="hidden" asp-for="Uuid"/>
+        <input type="submit" value="DeleteClient" class="btn btn-danger" />
+    </form>
+</div>
+<a asp-action="Index">Back to List</a>

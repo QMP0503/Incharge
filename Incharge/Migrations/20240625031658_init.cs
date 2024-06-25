@@ -42,7 +42,7 @@ namespace Incharge.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     FirstName = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    LastName = table.Column<string>(type: "longtext", nullable: false)
+                    LastName = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -334,7 +334,9 @@ namespace Incharge.Migrations
                 name: "employees",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: false, defaultValueSql: "(uuid())")
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Uuid = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: true, defaultValueSql: "(uuid())")
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     RoleId = table.Column<int>(type: "int", nullable: false),
                     FirstName = table.Column<string>(type: "varchar(45)", maxLength: 45, nullable: false)
@@ -362,7 +364,9 @@ namespace Incharge.Migrations
                 name: "clients",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "char(255)", fixedLength: true, nullable: false, defaultValueSql: "(uuid())")
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Uuid = table.Column<string>(type: "char(255)", fixedLength: true, nullable: false, defaultValueSql: "(uuid())")
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     FirstName = table.Column<string>(type: "varchar(45)", maxLength: 45, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -422,8 +426,7 @@ namespace Incharge.Migrations
                     Description = table.Column<string>(type: "text", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     LocationId = table.Column<int>(type: "int", nullable: true),
-                    EmployeeId = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    EmployeeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -447,10 +450,8 @@ namespace Incharge.Migrations
                 name: "client_employee",
                 columns: table => new
                 {
-                    clientid = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    employeeid = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    clientid = table.Column<int>(type: "int", nullable: false),
+                    employeeid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -459,12 +460,14 @@ namespace Incharge.Migrations
                         name: "client_employee_ibfk_1",
                         column: x => x.clientid,
                         principalTable: "clients",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "client_employee_ibfk_2",
                         column: x => x.employeeid,
                         principalTable: "employees",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -473,8 +476,7 @@ namespace Incharge.Migrations
                 columns: table => new
                 {
                     productid = table.Column<int>(type: "int", nullable: false),
-                    clientid = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    clientid = table.Column<int>(type: "int", fixedLength: true, maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -483,12 +485,14 @@ namespace Incharge.Migrations
                         name: "client_product_ibfk_1",
                         column: x => x.productid,
                         principalTable: "products",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "client_product_ibfk_2",
                         column: x => x.clientid,
                         principalTable: "clients",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -506,12 +510,14 @@ namespace Incharge.Migrations
                         name: "product_discount_ibfk_1",
                         column: x => x.productid,
                         principalTable: "products",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "product_discount_ibfk_2",
                         column: x => x.discountid,
                         principalTable: "discounts",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -523,10 +529,8 @@ namespace Incharge.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Date = table.Column<DateTime>(type: "datetime", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    EmployeeId = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    ClientId = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    EmployeeId = table.Column<int>(type: "int", nullable: false),
+                    ClientId = table.Column<int>(type: "int", nullable: false),
                     BusinessReportId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -542,13 +546,13 @@ namespace Incharge.Migrations
                         column: x => x.ClientId,
                         principalTable: "clients",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "Employe_idfk",
                         column: x => x.EmployeeId,
                         principalTable: "employees",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "ProductId",
                         column: x => x.ProductId,
@@ -562,8 +566,7 @@ namespace Incharge.Migrations
                 name: "client_gymclasses",
                 columns: table => new
                 {
-                    clientid = table.Column<string>(type: "char(255)", fixedLength: true, maxLength: 255, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    clientid = table.Column<int>(type: "int", nullable: false),
                     gymclassid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -573,12 +576,14 @@ namespace Incharge.Migrations
                         name: "client_gymclasses_ibfk_1",
                         column: x => x.clientid,
                         principalTable: "clients",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "client_gymclasses_ibfk_2",
                         column: x => x.gymclassid,
                         principalTable: "gymclass",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -662,6 +667,18 @@ namespace Incharge.Migrations
                 column: "clientid");
 
             migrationBuilder.CreateIndex(
+                name: "Client_Id_UNIQUE",
+                table: "clients",
+                column: "Id",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "Client_Uuid_UNIQUE",
+                table: "clients",
+                column: "Uuid",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "Email_UNIQUE",
                 table: "clients",
                 column: "Email",
@@ -671,12 +688,6 @@ namespace Incharge.Migrations
                 name: "FirstName_UNIQUE",
                 table: "clients",
                 column: "FirstName",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "Id_UNIQUE",
-                table: "clients",
-                column: "Id",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -697,9 +708,15 @@ namespace Incharge.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "Id_UNIQUE1",
+                name: "Employee_Id_UNIQUE",
                 table: "employees",
                 column: "Id",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "Employee_Uuid_UNIQUE",
+                table: "employees",
+                column: "Uuid",
                 unique: true);
 
             migrationBuilder.CreateIndex(

@@ -6,6 +6,7 @@ namespace Incharge.Models;
 public partial class Expense
 {
     public int Id { get; set; }
+    public string Uuid { get; set; } = new Guid().ToString(); //hide business information
 
     public DateTime Date { get; set; }
 

@@ -35,7 +35,7 @@ builder.Services.AddIdentity<User, IdentityRole>(
     }
     ).AddEntityFrameworkStores<InchargeContext>().AddDefaultTokenProviders().AddRoles<IdentityRole>();
 
-
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddLog4net();
 
 //Repository injection
@@ -50,7 +50,12 @@ builder.Services.AddScoped<IFindRepository<Product>, ProductRepository>();
 //service injection
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Client>>, ClientPagingService>(); //figure out async when all is working
-
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+//builder.Services.AddScoped<IGymClassService, GymClassService>();
+builder.Services.AddScoped<IEquipmentService, EquipmentService>();
+//builder.Services.AddScoped<ILocationService, LocationService>();
+//builder.Services.AddScoped<IProductService, ProductService>();
 
 //add memory caching for client list and/or gym class list
 
@@ -98,6 +103,7 @@ using (var scope = app.Services.CreateScope())
     }
 
 }
+
 
 app.UseRouting();
 

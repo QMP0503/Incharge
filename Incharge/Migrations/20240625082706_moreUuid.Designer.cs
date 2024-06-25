@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Incharge.Migrations
 {
     [DbContext(typeof(InchargeContext))]
-    [Migration("20240624102717_test")]
-    partial class test
+    [Migration("20240625082706_moreUuid")]
+    partial class moreUuid
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,17 +27,13 @@ namespace Incharge.Migrations
 
             modelBuilder.Entity("ClientEmployee", b =>
                 {
-                    b.Property<string>("Clientid")
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .HasColumnName("clientid")
-                        .IsFixedLength();
+                    b.Property<int>("Clientid")
+                        .HasColumnType("int")
+                        .HasColumnName("clientid");
 
-                    b.Property<string>("Employeeid")
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .HasColumnName("employeeid")
-                        .IsFixedLength();
+                    b.Property<int>("Employeeid")
+                        .HasColumnType("int")
+                        .HasColumnName("employeeid");
 
                     b.HasKey("Clientid", "Employeeid")
                         .HasName("PRIMARY");
@@ -49,11 +45,9 @@ namespace Incharge.Migrations
 
             modelBuilder.Entity("ClientGymclass", b =>
                 {
-                    b.Property<string>("Clientid")
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .HasColumnName("clientid")
-                        .IsFixedLength();
+                    b.Property<int>("Clientid")
+                        .HasColumnType("int")
+                        .HasColumnName("clientid");
 
                     b.Property<int>("Gymclassid")
                         .HasColumnType("int")
@@ -73,9 +67,9 @@ namespace Incharge.Migrations
                         .HasColumnType("int")
                         .HasColumnName("productid");
 
-                    b.Property<string>("Clientid")
+                    b.Property<int>("Clientid")
                         .HasMaxLength(255)
-                        .HasColumnType("char(255)")
+                        .HasColumnType("int")
                         .HasColumnName("clientid")
                         .IsFixedLength();
 
@@ -104,19 +98,26 @@ namespace Incharge.Migrations
                     b.Property<double?>("Revenue")
                         .HasColumnType("double");
 
+                    b.Property<string>("Uuid")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
+
+                    b.HasIndex(new[] { "Uuid" }, "BusinessReport_Uuid_UNIQUE")
+                        .IsUnique();
 
                     b.ToTable("business_report", (string)null);
                 });
 
             modelBuilder.Entity("Incharge.Models.Client", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("char(255)")
-                        .HasDefaultValueSql("(uuid())")
-                        .IsFixedLength();
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -143,16 +144,26 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
+                    b.Property<string>("Uuid")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(255)")
+                        .HasDefaultValueSql("(uuid())")
+                        .IsFixedLength();
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
+
+                    b.HasIndex(new[] { "Id" }, "Client_Id_UNIQUE")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "Uuid" }, "Client_Uuid_UNIQUE")
+                        .IsUnique();
 
                     b.HasIndex(new[] { "Email" }, "Email_UNIQUE")
                         .IsUnique();
 
                     b.HasIndex(new[] { "FirstName" }, "FirstName_UNIQUE")
-                        .IsUnique();
-
-                    b.HasIndex(new[] { "Id" }, "Id_UNIQUE")
                         .IsUnique();
 
                     b.HasIndex(new[] { "LastName" }, "LastName_UNIQUE")
@@ -198,12 +209,11 @@ namespace Incharge.Migrations
 
             modelBuilder.Entity("Incharge.Models.Employee", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .HasDefaultValueSql("(uuid())")
-                        .IsFixedLength();
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -229,12 +239,21 @@ namespace Incharge.Migrations
                     b.Property<double?>("TotalSalary")
                         .HasColumnType("double");
 
+                    b.Property<string>("Uuid")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(255)
+                        .HasColumnType("char(255)")
+                        .HasDefaultValueSql("(uuid())")
+                        .IsFixedLength();
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 
-                    b.HasIndex(new[] { "Id" }, "Id_UNIQUE")
-                        .IsUnique()
-                        .HasDatabaseName("Id_UNIQUE1");
+                    b.HasIndex(new[] { "Id" }, "Employee_Id_UNIQUE")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "Uuid" }, "Employee_Uuid_UNIQUE")
+                        .IsUnique();
 
                     b.HasIndex(new[] { "RoleId" }, "RoleId_idx");
 
@@ -332,8 +351,15 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
+                    b.Property<string>("Uuid")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
+
+                    b.HasIndex(new[] { "Uuid" }, "Expenses_Uuid_UNIQUE")
+                        .IsUnique();
 
                     b.HasIndex(new[] { "BusinessReportId" }, "business_reportId_idx");
 
@@ -354,10 +380,8 @@ namespace Incharge.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
-                    b.Property<string>("EmployeeId")
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .IsFixedLength();
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("LocationId")
                         .HasColumnType("int");
@@ -426,8 +450,15 @@ namespace Incharge.Migrations
                         .HasColumnName("paymentstatus")
                         .HasDefaultValueSql("'0'");
 
+                    b.Property<string>("Uuid")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
+
+                    b.HasIndex(new[] { "Uuid" }, "PaymentRecord_Uuid_UNIQUE")
+                        .IsUnique();
 
                     b.ToTable("paymentrecord", (string)null);
                 });
@@ -496,21 +527,21 @@ namespace Incharge.Migrations
                     b.Property<int?>("BusinessReportId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ClientId")
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .IsFixedLength();
+                    b.Property<int>("ClientId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("EmployeeId")
-                        .HasMaxLength(255)
-                        .HasColumnType("char(255)")
-                        .IsFixedLength();
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Uuid")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
@@ -522,6 +553,9 @@ namespace Incharge.Migrations
                     b.HasIndex(new[] { "EmployeeId" }, "EmployeeSales_idfk1");
 
                     b.HasIndex(new[] { "ProductId" }, "ProductId_idx");
+
+                    b.HasIndex(new[] { "Uuid" }, "Sales_Uuid_UNIQUE")
+                        .IsUnique();
 
                     b.ToTable("sales", (string)null);
                 });
@@ -755,12 +789,14 @@ namespace Incharge.Migrations
                     b.HasOne("Incharge.Models.Client", null)
                         .WithMany()
                         .HasForeignKey("Clientid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("client_employee_ibfk_1");
 
                     b.HasOne("Incharge.Models.Employee", null)
                         .WithMany()
                         .HasForeignKey("Employeeid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("client_employee_ibfk_2");
                 });
@@ -770,12 +806,14 @@ namespace Incharge.Migrations
                     b.HasOne("Incharge.Models.Client", null)
                         .WithMany()
                         .HasForeignKey("Clientid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("client_gymclasses_ibfk_1");
 
                     b.HasOne("Incharge.Models.Gymclass", null)
                         .WithMany()
                         .HasForeignKey("Gymclassid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("client_gymclasses_ibfk_2");
                 });
@@ -785,12 +823,14 @@ namespace Incharge.Migrations
                     b.HasOne("Incharge.Models.Client", null)
                         .WithMany()
                         .HasForeignKey("Clientid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("client_product_ibfk_2");
 
                     b.HasOne("Incharge.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("Productid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("client_product_ibfk_1");
                 });
@@ -844,6 +884,7 @@ namespace Incharge.Migrations
                         .WithMany("Gymclasses")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("EmployeeId");
 
                     b.HasOne("Incharge.Models.Location", "Location")
@@ -879,13 +920,15 @@ namespace Incharge.Migrations
                     b.HasOne("Incharge.Models.Client", "Client")
                         .WithMany("Sales")
                         .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("Client_idfk");
 
                     b.HasOne("Incharge.Models.Employee", "Employee")
                         .WithMany("Sales")
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("Employe_idfk");
 
                     b.HasOne("Incharge.Models.Product", "Product")
@@ -960,12 +1003,14 @@ namespace Incharge.Migrations
                     b.HasOne("Incharge.Models.Discount", null)
                         .WithMany()
                         .HasForeignKey("Discountid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("product_discount_ibfk_2");
 
                     b.HasOne("Incharge.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("Productid")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("product_discount_ibfk_1");
                 });

@@ -1,9 +1,9 @@
 ﻿using Incharge.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace Incharge.ViewModels
+namespace Incharge.DTO
 {
-    public class EmployeeVM
+    public class EmployeeDTO
     {
         public string? Uuid { get; set; }
         public string FirstName { get; set; } = null!;
@@ -12,9 +12,9 @@ namespace Incharge.ViewModels
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
         public double? TotalSalary { get; set; }
-        public virtual List<int> GymclassesId { get; set; } = new List<int>();
-        public int RoleId { get; set; }
-        public virtual List<int> SalesId { get; set; } = new List<int>();
-        public virtual List<int> ClientId { get; set; } = new List<int>();
+        public virtual ICollection<Gymclass> Gymclasses { get; set; } = new List<Gymclass>();
+        public virtual EmployeeType Role { get; set; } = null!;
+        public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>();
+        public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
     }
 }

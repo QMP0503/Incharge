@@ -6,7 +6,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Movie Index</h1>
+<h1>Client Index</h1>
 
 @* <p> since already made user login to use so this should be fine right?
     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
@@ -38,7 +38,7 @@
                     </a>
                 </td> *@
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">
+                    <a asp-action="Details" asp-route-Uuid="@item.Uuid">
                     <div class="col-sm-8 align-items-center"> @*Map data so first name and last name are lumped to gether*@
                         <h3>@item.FirstName</h3>
                         <p>
@@ -53,6 +53,10 @@
                         <p>
                             <strong>Phone:</strong> @item.Phone
                         </p>
+                        <p>
+                            <strong>Status:</strong> @item.Status
+                        </p>
+
                     </div>
                     </a>
                 </td>

@@ -17,7 +17,7 @@ public partial class Equipment
 
     public DateTime? MaintanceDate { get; set; }
 
-    public string Satus { get; set; } = null!;
+    public string Status { get; set; } = null!;
 
     public virtual Gymclass? GymClass { get; set; }
 }

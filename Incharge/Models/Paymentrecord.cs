@@ -6,7 +6,7 @@ namespace Incharge.Models;
 public partial class Paymentrecord
 {
     public int Id { get; set; }
-
+    public string Uuid { get; set; } = new Guid().ToString(); 
     public bool? Paymentstatus { get; set; }
 
     public string? Description { get; set; }
