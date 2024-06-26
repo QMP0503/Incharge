@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Incharge.Service
+namespace Incharge.Service.PagingService
 {
     public class PaginatedList<T> : List<T>
     {

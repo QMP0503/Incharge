@@ -1,7 +1,9 @@
-﻿@model Incharge.Service.PaginatedList<Incharge.Models.Client>
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Client>
 @using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
 @inject SignInManager<Incharge.Models.User> SignInManager;
 @inject UserManager<Incharge.Models.User> UserManager;
+
 @{
     ViewData["Title"] = "Index";
 }

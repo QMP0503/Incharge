@@ -1,12 +1,99 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Incharge.Service.IService;
+using Incharge.Service.PagingService;
+using log4net;
+using Microsoft.AspNetCore.Mvc;
+using Incharge.Models;
+using Incharge.ViewModels;
 
 namespace Incharge.Controllers
 {
     public class EmployeeController : Controller
     {
+        readonly IEmployeeService _EmployeeService;
+        readonly IPagingService<PaginatedList<Employee>> _pagingService;
+        readonly ILog _logger;
+        public EmployeeController(IEmployeeService EmployeeService, IPagingService<PaginatedList<Employee>> pagingService, ILog logger)
+        {
+            _EmployeeService = EmployeeService;
+            _pagingService = pagingService;
+            _logger = logger;
+        }
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
+        [HttpGet] //ONLY VISIBLE TO ADMIN WHO ASSIGN SALARY NUMBERS
+        public IActionResult Details(string Uuid)
+        {
+            try
+            {
+                var employeeInfo = new EmployeeVM();
+                employeeInfo.Uuid = Uuid;
+                return View(_EmployeeService.FindEmployee(employeeInfo));
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+        [HttpPost] //ONLY VISIBLE TO ADMIN TO HIRE PEOPLE
+        public IActionResult AddEmployee([Bind("FirstName, LastName, TotalSalary, Email, RoleId")] EmployeeVM employeeVM)
+        {
+            try
+            {
+                _EmployeeService.AddEmployee(employeeVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+        [HttpPost]
+        public IActionResult UpdateEmployee([Bind("Uuid, FirstName, LastName, TotalSalary, Email, RoleId")] EmployeeVM employeeVM)
+        {
+            try
+            {
+                _EmployeeService.UpdateEmployee(employeeVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+        [HttpPost]
+        public IActionResult AddClientToEmployee([Bind("Uuid, ClientId")] EmployeeVM employeeVM)
+        {
+            try
+            {
+                _EmployeeService.AddClientToEmployee(employeeVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+        [HttpPost]
+        public IActionResult AddGymClassToEmployee([Bind("Uuid, GymClassId")] EmployeeVM employeeVM)
+        {
+            try
+            {
+                _EmployeeService.AddGymClassToEmployee(employeeVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+
     }
 }

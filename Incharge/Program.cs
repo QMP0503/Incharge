@@ -4,11 +4,13 @@ using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Incharge.Models;
+using Incharge.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Incharge.Repository.IRepository;
 using Incharge.Repository;
 using Incharge.Service.IService;
 using Incharge.Service;
+using Incharge.Service.PagingService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,17 +48,16 @@ builder.Services.AddScoped<IFindRepository<Gymclass>, GymClassRepository>();
 builder.Services.AddScoped<IFindRepository<Equipment>, EquipmentRepository>();
 builder.Services.AddScoped<IFindRepository<Location>, LocationRepository>();
 builder.Services.AddScoped<IFindRepository<Product>, ProductRepository>();
+builder.Services.AddScoped<IFindRepository<EmployeeType>, EmployeeTypeRepository>();
 
 //service injection
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Client>>, ClientPagingService>(); //figure out async when all is working
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-//builder.Services.AddScoped<IGymClassService, GymClassService>();
-builder.Services.AddScoped<IEquipmentService, EquipmentService>();
-//builder.Services.AddScoped<ILocationService, LocationService>();
-//builder.Services.AddScoped<IProductService, ProductService>();
-
+builder.Services.AddScoped<IService<EquipmentVM,Equipment>, EquipmentService>();
+builder.Services.AddScoped<IService<LocationVM,Location>, LocationService>();
+builder.Services.AddScoped<IService<GymClassVM, Gymclass>, GymClassService>();
 //add memory caching for client list and/or gym class list
 
 
@@ -112,6 +113,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     //pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
-    pattern: "{controller=CLient}/{action=Index}/{id?}"); //for testing purposes
+    pattern: "{controller=Home}/{action=Index}/{id?}"); //for testing purposes
 
 app.Run();

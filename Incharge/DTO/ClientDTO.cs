@@ -6,7 +6,7 @@ namespace Incharge.DTO
 {
     public class ClientDTO
     {
-        public string Uuid { get; set; } //show to the public through mapping
+        public string Uuid { get; set; }  //show to the public through mapping
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Phone { get; set; }
@@ -15,9 +15,9 @@ namespace Incharge.DTO
         [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
         public string? Status { get; set; }
         public virtual Paymentrecord? PaymentRecord { get; set; }
-        public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>(); //do i need this in dto??
-        public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
-        public virtual ICollection<Gymclass> Gymclasses { get; set; } = new List<Gymclass>();
-        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+        public virtual ICollection<Sale> Sales { get; set; }  //do i need this in dto??
+        public virtual ICollection<Employee> Employees { get; set; } 
+        public virtual ICollection<Gymclass> Gymclasses { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

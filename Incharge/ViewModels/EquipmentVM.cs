@@ -9,17 +9,19 @@ namespace Incharge.ViewModels
         public int Id { get; set; }
 
         public string Name { get; set; } = null!;
-
-        public int? GymClassId { get; set; }
-
         public string? Description { get; set; }
 
         public DateTime? PurchaseDate { get; set; }
         [DataType(DataType.Date)]
         public DateTime? MainationDate { get; set; }
-        public string Satus { get; set; } = null!;
+        [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved", "Under Maintance" })]
+
+        public string Status { get; set; } = null!;
 
         public Gymclass? GymClass { get; set; }
+
+        //int Id retrieved from view
+        public int? GymClassId { get; set; }
     }
 }
 

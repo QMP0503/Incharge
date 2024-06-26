@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.Models;
 
@@ -16,6 +17,7 @@ public partial class Equipment
     public DateTime? PurchaseDate { get; set; }
 
     public DateTime? MaintanceDate { get; set; }
+    [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved", "Under Maintance" })]
 
     public string Status { get; set; } = null!;
 

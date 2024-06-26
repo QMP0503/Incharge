@@ -20,17 +20,26 @@ namespace Incharge.ViewModels
         //sign in and out of the gym, when payment is overdue they can no longer enter the gym
         [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
         public string? Status { get; set; }
-        
 
-        //Relationship for other methods like (add gymclass, add product, etc.) adding and updating clients will not use this
-        //ALL like will store ID of items so that razor page can access and use.
+        //Icollection<object> to retrieve and display data.
+        public virtual Paymentrecord? PaymentRecord { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; }  //do i need this in dto??
+        public virtual ICollection<Employee> Employees { get; set; }
+       
+        //Consider going through DTO pushing into view. Don't need to see everything about gym class
+        public virtual ICollection<Gymclass> Gymclasses { get; set; } 
+
+        public virtual ICollection<Product> Products { get; set; }
+
+
+        //Selected object Id retrieved from view page
         public List<int?> SalesID { get; set; } = new List<int?>();
 
         public List<string> EmployeeID { get; set; } = new List<string>();
 
-        public List<int?> Gymclasses { get; set; } = new List<int?>();
+        public List<int?> GymClassID { get; set; } = new List<int?>();
 
-        public List<int?> Products { get; set; } = new List<int?>();
+        public List<int?> ProductID { get; set; } = new List<int?>();
 
     }
 }

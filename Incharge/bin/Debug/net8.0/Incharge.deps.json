@@ -9,7 +9,7 @@
       "Incharge/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "BootstrapBlazor": "8.6.2",
+          "BootstrapBlazor": "8.6.4",
           "Dapper": "2.1.35",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore": "8.0.6",
@@ -37,7 +37,7 @@
         }
       },
       "bootstrap/5.3.3": {},
-      "BootstrapBlazor/8.6.2": {
+      "BootstrapBlazor/8.6.4": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Authorization": "8.0.0",
           "Microsoft.AspNetCore.Components.Web": "8.0.0",
@@ -48,8 +48,8 @@
         },
         "runtime": {
           "lib/net8.0/BootstrapBlazor.dll": {
-            "assemblyVersion": "8.6.2.0",
-            "fileVersion": "8.6.2.0"
+            "assemblyVersion": "8.6.4.0",
+            "fileVersion": "8.6.4.0"
           }
         }
       },
@@ -2031,12 +2031,12 @@
       "path": "bootstrap/5.3.3",
       "hashPath": "bootstrap.5.3.3.nupkg.sha512"
     },
-    "BootstrapBlazor/8.6.2": {
+    "BootstrapBlazor/8.6.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XebADUvlc+JFxJHOYPE76gcbp2/8TXAl9r27rYboYFOGsUlACp5Hp0K/jYOpiH3LaB/OWrh2JF7SR4GVyBsTtQ==",
-      "path": "bootstrapblazor/8.6.2",
-      "hashPath": "bootstrapblazor.8.6.2.nupkg.sha512"
+      "sha512": "sha512-u0sTl5fmbkVlRTfNTPGWTMiW0kXTMBc2ZcMhVueuj369dlxwcKBMQf4fzbRt5k+AWC08OZK8sB5TzEyiWVYu6A==",
+      "path": "bootstrapblazor/8.6.4",
+      "hashPath": "bootstrapblazor.8.6.4.nupkg.sha512"
     },
     "BouncyCastle.Cryptography/2.2.1": {
       "type": "package",

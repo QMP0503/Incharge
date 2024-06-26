@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.Models;
 
-public partial class Location
+public partial class Location //add image column to help with search
 {
     public int Id { get; set; }
 
@@ -12,7 +13,7 @@ public partial class Location
     public int? Capacity { get; set; }
 
     public string? Description { get; set; }
-
+    [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved" , "Under Maintance"})]
     public bool? Status { get; set; }
 
     public virtual ICollection<Gymclass> Gymclasses { get; set; } = new List<Gymclass>();

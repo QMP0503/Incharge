@@ -1,6 +1,6 @@
 ﻿
 using Incharge.Models;
-using Incharge.ViewModel;
+using Incharge.ViewModels;
 using Incharge.DTO;
 using Incharge.ViewModels;
 namespace Incharge.Service.IService

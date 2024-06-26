@@ -4,7 +4,7 @@ using Incharge.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace Incharge.Service
+namespace Incharge.Service.PagingService
 {
     public class ClientPagingService : IPagingService<PaginatedList<Client>>
     {

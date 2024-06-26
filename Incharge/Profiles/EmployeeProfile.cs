@@ -1,15 +1,21 @@
 ﻿using AutoMapper;
 using System.Runtime.CompilerServices;
 using Incharge.Models;
-using Incharge.DTO;
+using Incharge.ViewModels;
 
 namespace Incharge.Profiles
 {
     public class EmployeeProfile:Profile
     {
         public EmployeeProfile() 
-        { 
-            CreateMap<Employee, EmployeeDTO>().ReverseMap(); //.ReverseMap() is availabe if two-way mapping is needed>
+        {
+            CreateMap<Employee, EmployeeVM>()
+                .ReverseMap()
+                .ForAllMembers(opts =>
+                {
+                    opts.AllowNull();
+                    opts.Condition((src, dest, srcMember) => srcMember != null);
+                }); //check and test to make sure data is not messy when implemented
         }
     }
 }

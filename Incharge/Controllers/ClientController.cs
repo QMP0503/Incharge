@@ -1,10 +1,9 @@
-﻿using Incharge.Service;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Incharge.Models;
 using Incharge.Service.IService;
-using Incharge.ViewModel;
 using log4net;
-using Incharge.DTO;
+using Incharge.Service.PagingService;
+using Incharge.ViewModels;
 
 namespace Incharge.Controllers
 {

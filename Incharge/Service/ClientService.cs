@@ -2,7 +2,7 @@
 using Incharge.Models;
 using Incharge.Repository.IRepository;
 using K4os.Compression.LZ4;
-using Incharge.ViewModel;
+using Incharge.ViewModels;
 using ZstdSharp.Unsafe;
 using Incharge.DTO;
 using AutoMapper;

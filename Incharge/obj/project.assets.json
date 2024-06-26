@@ -243,7 +243,7 @@
           }
         }
       },
-      "BootstrapBlazor/8.6.2": {
+      "BootstrapBlazor/8.6.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Authorization": "8.0.0",
@@ -3457,14 +3457,14 @@
         "contentFiles/any/any/wwwroot/js/bootstrap.min.js.map"
       ]
     },
-    "BootstrapBlazor/8.6.2": {
-      "sha512": "XebADUvlc+JFxJHOYPE76gcbp2/8TXAl9r27rYboYFOGsUlACp5Hp0K/jYOpiH3LaB/OWrh2JF7SR4GVyBsTtQ==",
+    "BootstrapBlazor/8.6.4": {
+      "sha512": "u0sTl5fmbkVlRTfNTPGWTMiW0kXTMBc2ZcMhVueuj369dlxwcKBMQf4fzbRt5k+AWC08OZK8sB5TzEyiWVYu6A==",
       "type": "package",
-      "path": "bootstrapblazor/8.6.2",
+      "path": "bootstrapblazor/8.6.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bootstrapblazor.8.6.2.nupkg.sha512",
+        "bootstrapblazor.8.6.4.nupkg.sha512",
         "bootstrapblazor.nuspec",
         "build/BootstrapBlazor.props",
         "build/Microsoft.AspNetCore.StaticWebAssets.props",
@@ -9154,7 +9154,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
-      "BootstrapBlazor >= 8.6.2",
+      "BootstrapBlazor >= 8.6.4",
       "Dapper >= 2.1.35",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.6",
       "Microsoft.EntityFrameworkCore >= 8.0.6",
@@ -9223,7 +9223,7 @@
           },
           "BootstrapBlazor": {
             "target": "Package",
-            "version": "[8.6.2, )"
+            "version": "[8.6.4, )"
           },
           "Dapper": {
             "target": "Package",
