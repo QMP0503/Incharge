@@ -1,14 +1,79 @@
 ﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Client>
 @using Microsoft.AspNetCore.Identity;
 @using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
 @inject SignInManager<Incharge.Models.User> SignInManager;
 @inject UserManager<Incharge.Models.User> UserManager;
 
 @{
-    ViewData["Title"] = "Index";
+    var clientVM = new ClientVM();
 }
 
-<h1>Client Index</h1>
+@{
+    ViewData["Title"] = "Index";
+}
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="align-text-top text-black font-bold ">Client</h1>
+    </div>
+    <div class="row align-content-center pt-3 pb-3">
+        <div class="col-2 pr-2">
+            <a asp-action="AddClient" class="btn btn-primary">Add New Client</a>
+        </div>
+
+        @*Add filter column*@
+
+        <form asp-action="Index" method="get" class="col-8">
+                <div class="d-flex gap-1 flex-row-reverse">
+                    <input class="btn btn-outline-primary" type="submit" value="Search"aria-label="search"/>
+                    <input class="form-control w-25" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            </div>
+        </form>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+
+    </div>
+
+</nav>
+@foreach(var item in Model)
+{
+    <div class="card">
+        <div class="card-Header font-monospace fw-bold">
+            @item.FirstName @item.LastName
+        </div>
+        <div class="card-body row">
+            <div class="card-text col">Email: @item.Email</div>
+            <div class="card-text col">Phone: @item.Phone</div>
+            <div class="card-text col">Status: @item.Status</div>
+            <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-outline-primary col-1 ms-2">
+                Details
+            </a>
+            <div class="col-2 me-1">
+                <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@item.Uuid>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        @if (item.Status == "Signed Out")
+                        {
+
+                                <input type="submit" id="Status" name="Status" value="Signed In" class="btn btn-primary" />
+                        
+                        }
+                        @if (item.Status == "Signed In")
+                        {
+
+                            <input type="submit" id="Status" name="Status" value="Signed Out" class="btn btn-primary" />
+                            @*Asp-for="Status" is converted into html code: id="status" name="status"*@
+                        }
+                </form>
+            </div>
+            
+        </div>
+
+    </div>
+}
+
+
 
 @* <p> since already made user login to use so this should be fine right?
     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
@@ -16,32 +81,43 @@
         <a asp-action="Create">Create New</a>
     }
 </p> *@
-<a asp-action="AddClient">Add New Client</a>
-
-<form asp-action="Index" method="get">
-    <div class="form-actions no-color">
-        <p>
-            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
-            <input type="submit" value="Search" class="btn btn-default" />
-            <a asp-action="Index">Back to Full List</a>
-        </p>
-    </div>
-</form>
 
 
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+@*Add numbered paging*@
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+
+@* ugly page but it works
 <table class="table">
     <tbody>
         @foreach (var item in Model)
         { //have a web display for each item in db
             <tr>
-@*                 <td>
+              <td>
                     <a asp-action="Details" asp-route-id="@item.Id">
                         <img class="img-thumbnail align-content-sm-center img-responsive" display="block" src="@item.ProfilePic" />
                     </a>
-                </td> *@
+                </td>
                 <td>
                     <a asp-action="Details" asp-route-Uuid="@item.Uuid">
-                    <div class="col-sm-8 align-items-center"> @*Map data so first name and last name are lumped to gether*@
+                    <div class="col-sm-8 align-items-center"> @*Map data so first name and last name are lumped to gether
                         <h3>@item.FirstName</h3>
                         <p>
                             <strong>First Name:</strong> @item.FirstName
@@ -66,24 +142,4 @@
         }
     </tbody>
 </table>
-
-
-@{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-}
-
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-pageNumber="@(Model.PageIndex - 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @prevDisabled">
-    Previous
-</a>
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-pageNumber="@(Model.PageIndex + 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @nextDisabled">
-    Next
-</a>
+ *@

@@ -13,15 +13,17 @@ namespace Incharge.Service
         readonly IRepository<Employee> _EmployeeRepository;
         readonly IFindRepository<EmployeeType> _FindEmployeeTypeRepository;
         readonly IFindRepository<Client> _FindClientRepository;
+        readonly IFindRepository<Gymclass> _FindGymClassRepository;
         readonly IMapper _Mapper;
 
-        public EmployeeService(IFindRepository<Client> FindClientRepository, IFindRepository<Employee> FindEmployeeRepository, IRepository<Employee> EmployeeRepository, IMapper Mapper, IFindRepository<EmployeeType> findEmployeeTypeRepository)
+        public EmployeeService( IFindRepository<Client> FindClientRepository, IFindRepository<Employee> FindEmployeeRepository, IRepository<Employee> EmployeeRepository, IMapper Mapper, IFindRepository<EmployeeType> findEmployeeTypeRepository, IFindRepository<Gymclass> findGymClassRepository)
         {
             _FindEmployeeRepository = FindEmployeeRepository;
             _EmployeeRepository = EmployeeRepository;
             _Mapper = Mapper;
             _FindEmployeeTypeRepository = findEmployeeTypeRepository;
             _FindClientRepository = FindClientRepository;
+            _FindGymClassRepository = findGymClassRepository;
         }
         public List<EmployeeVM> ListEmployee() //recosider if i need this.
         {
@@ -92,9 +94,9 @@ namespace Incharge.Service
             if (employeeVM.GymclassesId == null) { throw new ArgumentNullException("No Class Entered"); }
             foreach (var GymclassesId in employeeVM.GymclassesId)
             {
-                var ClassToAdd = _FindClientRepository.FindBy(c => c.Id == GymclassesId); //check if this repeats itself
+                var ClassToAdd = _FindGymClassRepository.FindBy(c => c.Id == GymclassesId); //check if this repeats itself
                 if (ClassToAdd == null) { throw new ArgumentNullException("Gym Class don't exist"); }
-                employee.Clients.Add(ClassToAdd);
+                employee.Gymclasses.Add(ClassToAdd);
             }
             _EmployeeRepository.Update(employee);
             _EmployeeRepository.Save();

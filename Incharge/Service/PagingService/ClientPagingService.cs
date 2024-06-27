@@ -2,7 +2,9 @@
 using Incharge.Models;
 using Incharge.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
+using Incharge.ViewModels;
 using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Incharge.Service.PagingService
 {
@@ -16,6 +18,7 @@ namespace Incharge.Service.PagingService
         public PaginatedList<Client> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
             var ClientQuery = _findClientRepository.QueryBy(x => true);
+            
 
             if (!string.IsNullOrEmpty(searchString))
             {

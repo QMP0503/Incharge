@@ -40,6 +40,7 @@ namespace Incharge.ViewModels
         public List<int?> GymClassID { get; set; } = new List<int?>();
 
         public List<int?> ProductID { get; set; } = new List<int?>();
+        public int? PaymentRecordId { get; set; }
 
     }
 }

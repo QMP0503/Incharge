@@ -1,8 +1,6 @@
 using BookAHotel.Logs;
 using Incharge.Data;
-using System.Configuration;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Incharge.Models;
 using Incharge.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -113,6 +111,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     //pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
-    pattern: "{controller=Home}/{action=Index}/{id?}"); //for testing purposes
+    pattern: "{controller=Client}/{action=Index}/{id?}"); //for testing purposes
 
 app.Run();

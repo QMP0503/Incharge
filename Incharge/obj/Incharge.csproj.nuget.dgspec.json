@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[8.6.4, )"
             },
+            "BootstrapIcons.AspNetCore": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"

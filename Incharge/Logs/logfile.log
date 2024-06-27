@@ -198,3 +198,19 @@
    at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
    at Incharge.Service.ClientService.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 50
    at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 71
+2024-06-27 17:10:18,390 [16] ERROR Program - AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Client -> ClientVM
+Incharge.Models.Client -> Incharge.ViewModels.ClientVM
+   at lambda_method316(Closure, Object, ClientVM, ResolutionContext)
+   at Incharge.Service.ClientService.FindClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 32
+   at Incharge.Controllers.ClientController.Details(String Uuid) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 53
+2024-06-27 17:10:54,654 [5] ERROR Program - AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Client -> ClientVM
+Incharge.Models.Client -> Incharge.ViewModels.ClientVM
+   at lambda_method312(Closure, Object, ClientVM, ResolutionContext)
+   at Incharge.Service.ClientService.FindClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 32
+   at Incharge.Controllers.ClientController.Details(String Uuid) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 53

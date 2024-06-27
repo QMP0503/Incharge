@@ -14,6 +14,7 @@
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="BootstrapBlazor" Version="8.6.4" />
+    <PackageReference Include="BootstrapIcons.AspNetCore" Version="1.11.0" />
     <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="log4net" Version="2.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />

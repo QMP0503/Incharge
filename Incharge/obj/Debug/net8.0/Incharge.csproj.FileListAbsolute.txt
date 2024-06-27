@@ -254,3 +254,4 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\refint\Incharge.d
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.pdb
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.genruntimeconfig.cache
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\ref\Incharge.dll
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\BootstrapIcons.AspNetCore.dll

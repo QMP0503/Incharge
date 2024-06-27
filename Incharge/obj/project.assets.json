@@ -270,6 +270,18 @@
           "buildMultiTargeting/BootstrapBlazor.props": {}
         }
       },
+      "BootstrapIcons.AspNetCore/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/BootstrapIcons.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BootstrapIcons.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "BouncyCastle.Cryptography/2.2.1": {
         "type": "package",
         "compile": {
@@ -3567,6 +3579,19 @@
         "staticwebassets/modules/viewer.js",
         "staticwebassets/scss/theme/bootstrap.blazor.css",
         "staticwebassets/scss/theme/bootstrap.blazor.scss"
+      ]
+    },
+    "BootstrapIcons.AspNetCore/1.11.0": {
+      "sha512": "KqU5oEyI+aehqTToBI7HnXtKuj27Kg+vJItkmunLZnf4ioy0BCjSW4CiKS0md92u+I5VJ+kAHxOnORp/4fx3sQ==",
+      "type": "package",
+      "path": "bootstrapicons.aspnetcore/1.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "bootstrapicons.aspnetcore.1.11.0.nupkg.sha512",
+        "bootstrapicons.aspnetcore.nuspec",
+        "lib/net5.0/BootstrapIcons.AspNetCore.dll"
       ]
     },
     "BouncyCastle.Cryptography/2.2.1": {
@@ -9155,6 +9180,7 @@
     "net8.0": [
       "AutoMapper >= 13.0.1",
       "BootstrapBlazor >= 8.6.4",
+      "BootstrapIcons.AspNetCore >= 1.11.0",
       "Dapper >= 2.1.35",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.6",
       "Microsoft.EntityFrameworkCore >= 8.0.6",
@@ -9224,6 +9250,10 @@
           "BootstrapBlazor": {
             "target": "Package",
             "version": "[8.6.4, )"
+          },
+          "BootstrapIcons.AspNetCore": {
+            "target": "Package",
+            "version": "[1.11.0, )"
           },
           "Dapper": {
             "target": "Package",

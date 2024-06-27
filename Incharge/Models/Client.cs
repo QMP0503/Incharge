@@ -15,8 +15,9 @@ public partial class Client
     public int Phone { get; set; }
     [DataType(DataType.EmailAddress)]
     public string Email { get; set; }
-    [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
+    [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out", "Overdue" })]
     public string? Status { get; set; }
+
     [ForeignKey("PaymentRecordId")]
     public int? PaymentRecordId { get; set; }
     public virtual Paymentrecord? PaymentRecord { get; set; }

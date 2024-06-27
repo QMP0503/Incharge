@@ -20,7 +20,7 @@ namespace Incharge.Service
             _FindClientRepository = FindClientRepository;
             _mapper = mapper;
         }
-        public ClientDTO FindClient(ClientVM clientVM)
+        public ClientVM FindClient(ClientVM clientVM)
         {
             if (clientVM == null) { throw new NullReferenceException("client"); }
             var client = _FindClientRepository.FindBy(x => x.FirstName == clientVM.FirstName 
@@ -29,8 +29,8 @@ namespace Incharge.Service
             || x.Phone == clientVM.Phone
             || x.Uuid == clientVM.Uuid);
             
-            var clientDTO = _mapper.Map<ClientDTO>(client);
-            return (clientDTO);
+            var clientFound = _mapper.Map<ClientVM>(client);
+            return (clientFound);
         }
         public List<ClientDTO> ListClients(ClientVM clientVM)
         {
@@ -70,7 +70,7 @@ namespace Incharge.Service
         }
         public void UpdateStatus(ClientVM clientVM) //ONLY used when client have been found.
         {
-            if (clientVM == null) { throw new NullReferenceException("Input Empty."); }
+            if (clientVM.Status == null && clientVM.Uuid==null) { throw new NullReferenceException("Input Empty."); }
             var client = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
             if (client == null) { throw new NullReferenceException("Client Empty."); }
             client.Status = clientVM.Status;

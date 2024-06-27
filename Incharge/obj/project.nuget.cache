@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TBLH2cgMOFBBxqKKUfvR9adnvUKABC2lAeWur7vo4y+C8eLAPPwFHxrwaT2GQlVFE0Y4XakTK/JLlD1cuTJO3g==",
+  "dgSpecHash": "cYfdxgaKeM1ZDyHNjXgCfLOuEDlxKWGVHlrcoVsGS7yWnAHsy1Uxk90QiMe6VM2u1/nn6uvfYvJM4uEaZSFMUA==",
   "success": true,
   "projectFilePath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\bootstrapblazor.8.6.4.nupkg.sha512",
+    "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapicons.aspnetcore\\1.11.0\\bootstrapicons.aspnetcore.1.11.0.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

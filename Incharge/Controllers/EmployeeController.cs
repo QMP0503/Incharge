@@ -52,6 +52,21 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+        public IActionResult UpdateEmloyee(string Uuid)
+        {
+            try
+            {
+                var employeeInfo = new EmployeeVM();
+                employeeInfo.Uuid = Uuid;
+                return View(_EmployeeService.FindEmployee(employeeInfo));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+
         [HttpPost]
         public IActionResult UpdateEmployee([Bind("Uuid, FirstName, LastName, TotalSalary, Email, RoleId")] EmployeeVM employeeVM)
         {
@@ -66,6 +81,8 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+
+        //test if view page is needed
         [HttpPost]
         public IActionResult AddClientToEmployee([Bind("Uuid, ClientId")] EmployeeVM employeeVM)
         {
@@ -80,6 +97,9 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+
+        //check if we need view page
+
         [HttpPost]
         public IActionResult AddGymClassToEmployee([Bind("Uuid, GymClassId")] EmployeeVM employeeVM)
         {
@@ -94,6 +114,35 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+        //view page for delete employee
+        public IActionResult DeleteEmployee(string Uuid)
+        {
+            try
+            {
+                var employeeInfo = new EmployeeVM();
+                employeeInfo.Uuid = Uuid;
+                return View(_EmployeeService.FindEmployee(employeeInfo));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
 
+        [HttpPost, ActionName("DeleteEmployee")]
+        public IActionResult DeleteEmployeeConfirm(string Uuid)
+        {
+            try
+            {
+                _EmployeeService.DeleteEmployee(Uuid);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
     }
 }

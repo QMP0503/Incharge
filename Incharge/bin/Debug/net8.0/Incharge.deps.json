@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "13.0.1",
           "BootstrapBlazor": "8.6.4",
+          "BootstrapIcons.AspNetCore": "1.11.0",
           "Dapper": "2.1.35",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore": "8.0.6",
@@ -50,6 +51,14 @@
           "lib/net8.0/BootstrapBlazor.dll": {
             "assemblyVersion": "8.6.4.0",
             "fileVersion": "8.6.4.0"
+          }
+        }
+      },
+      "BootstrapIcons.AspNetCore/1.11.0": {
+        "runtime": {
+          "lib/net5.0/BootstrapIcons.AspNetCore.dll": {
+            "assemblyVersion": "1.11.0.0",
+            "fileVersion": "1.11.0.0"
           }
         }
       },
@@ -2037,6 +2046,13 @@
       "sha512": "sha512-u0sTl5fmbkVlRTfNTPGWTMiW0kXTMBc2ZcMhVueuj369dlxwcKBMQf4fzbRt5k+AWC08OZK8sB5TzEyiWVYu6A==",
       "path": "bootstrapblazor/8.6.4",
       "hashPath": "bootstrapblazor.8.6.4.nupkg.sha512"
+    },
+    "BootstrapIcons.AspNetCore/1.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KqU5oEyI+aehqTToBI7HnXtKuj27Kg+vJItkmunLZnf4ioy0BCjSW4CiKS0md92u+I5VJ+kAHxOnORp/4fx3sQ==",
+      "path": "bootstrapicons.aspnetcore/1.11.0",
+      "hashPath": "bootstrapicons.aspnetcore.1.11.0.nupkg.sha512"
     },
     "BouncyCastle.Cryptography/2.2.1": {
       "type": "package",

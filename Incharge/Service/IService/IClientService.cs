@@ -8,7 +8,7 @@ namespace Incharge.Service.IService
     public interface IClientService //only for client personal information
     {
         //get
-        public ClientDTO FindClient(ClientVM clientVM);
+        public ClientVM FindClient(ClientVM clientVM);
         public List<ClientDTO> ListClients(ClientVM clientVM);
         //create
         public void AddClient(ClientVM clientVM);
