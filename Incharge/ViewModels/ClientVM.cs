@@ -14,7 +14,7 @@ namespace Incharge.ViewModels
         [DisplayName("Last Name")]
         public string LastName { get; set; } = null!;
 
-        public int Phone { get; set; }
+        public int? Phone { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
         //sign in and out of the gym, when payment is overdue they can no longer enter the gym

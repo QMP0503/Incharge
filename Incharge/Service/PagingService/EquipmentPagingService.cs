@@ -38,7 +38,7 @@ namespace Incharge.Service.PagingService
                 case "Status_desc":
                     EquipmentQuery = EquipmentQuery.OrderByDescending(c => c.Status);
                     break;
-                default: //firstName_asc
+                default: //Name_asc
                     EquipmentQuery = EquipmentQuery.OrderBy(c => c.Name);
                     break;
             }

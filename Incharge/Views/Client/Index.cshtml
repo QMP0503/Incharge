@@ -8,16 +8,21 @@
 @{
     var clientVM = new ClientVM();
 }
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
 
 @{
     ViewData["Title"] = "Index";
 }
 <nav class="navbar-brand mb-5">
     <div class="row align-content-center">
-        <h1 class="align-text-top text-black font-bold ">Client</h1>
+        <h1 class="align-text-top text-black font-bold m-3">Client</h1>
     </div>
     <div class="row align-content-center pt-3 pb-3">
-        <div class="col-2 pr-2">
+        <div class="col pr-2">
             <a asp-action="AddClient" class="btn btn-primary">Add New Client</a>
         </div>
 
@@ -37,42 +42,61 @@
     </div>
 
 </nav>
-@foreach(var item in Model)
-{
-    <div class="card">
-        <div class="card-Header font-monospace fw-bold">
-            @item.FirstName @item.LastName
-        </div>
-        <div class="card-body row">
-            <div class="card-text col">Email: @item.Email</div>
-            <div class="card-text col">Phone: @item.Phone</div>
-            <div class="card-text col">Status: @item.Status</div>
-            <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-outline-primary col-1 ms-2">
-                Details
-            </a>
-            <div class="col-2 me-1">
-                <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@item.Uuid>
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        @if (item.Status == "Signed Out")
-                        {
+<div class="container">
+    <div class="card-group">
+        @foreach(var item in Model)
+        {
+            <div class="card border-dark-75 shadow">
+                <div class="card-header font-monospace fw-bold pl-2 pr-2">
+                    @item.FirstName @item.LastName
+                </div>
+                <div class="card-body row">
+                    <div class="card-text col">Email: @item.Email</div>
+                    <div class="card-text col">Phone: @item.Phone</div>
+                    <div class="card-text col">Status: @item.Status</div>
+                    <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-outline-primary col-1 ms-2">
+                        Details
+                    </a>
+                    <div class="col-2 me-1">
+                        <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@item.Uuid >
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                @if (item.Status == "Signed Out")
+                                {
 
-                                <input type="submit" id="Status" name="Status" value="Signed In" class="btn btn-primary" />
+                                 <input type="submit" id="clientVM.Status" name="Status" value="Sign In" class="btn btn-primary" />
                         
-                        }
-                        @if (item.Status == "Signed In")
-                        {
+                                }
+                                @if (item.Status == "Signed In")
+                                {
 
-                            <input type="submit" id="Status" name="Status" value="Signed Out" class="btn btn-primary" />
-                            @*Asp-for="Status" is converted into html code: id="status" name="status"*@
-                        }
-                </form>
-            </div>
+                                <input type="submit" id="clientVM.Status" name="Status" value="Sign Out" class="btn btn-primary"  />
+                                    @*Asp-for="Status" is converted into html code: id="status" name="status"*@
+                                }
+                        </form>
+                    </div>
             
-        </div>
+                </div>
 
+            </div>
+        }
     </div>
-}
-
+    <div class="btn-group border-bottom">
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+</div>
 
 
 @* <p> since already made user login to use so this should be fine right?
@@ -83,26 +107,9 @@
 </p> *@
 
 
-@{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-}
 
 @*Add numbered paging*@
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-pageNumber="@(Model.PageIndex - 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @prevDisabled">
-    Previous
-</a>
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["CurrentSort"]"
-   asp-route-pageNumber="@(Model.PageIndex + 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-default @nextDisabled">
-    Next
-</a>
+
 
 @* ugly page but it works
 <table class="table">

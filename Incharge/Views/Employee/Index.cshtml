@@ -1,0 +1,73 @@
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Employee>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="align-text-top text-black font-bold m-3">Employee</h1>
+    </div>
+    <div class="row align-content-center pt-3 pb-3">
+        <div class="col pr-2">
+            <a asp-action="AddEmployee" class="btn btn-primary">Add Employee</a>
+        </div>
+
+        <form asp-action="Index" method="get" class="col">
+            <div class="d-flex gap-1 flex-row-reverse">
+                <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
+                <input class="form-control w-50" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            </div>
+        </form>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+
+    </div>
+
+</nav>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"></th> @*Planning on having image here*@
+            <th scope="col">
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">First</a>
+            </th>
+            <th scope="col">
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["LastNameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Last</a>
+            </th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Details</th> @*Name this column somewhere for employee to track client, class and so on*@
+            @*this should be store a bunch of buttons
+            *@
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var item in Model)
+    {
+            <tr>
+                <th @*image column for employee*@>1</th>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Email</td>
+                <td>//</td>
+                <td>
+                    <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-primary">Details</a>
+                </td>
+            </tr>
+    }
+    </tbody>
+</table>

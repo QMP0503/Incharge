@@ -14,7 +14,7 @@ public partial class Location //add image column to help with search
 
     public string? Description { get; set; }
     [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved" , "Under Maintance"})]
-    public bool? Status { get; set; }
+    public string? Status { get; set; }
 
     public virtual ICollection<Gymclass> Gymclasses { get; set; } = new List<Gymclass>();
 }

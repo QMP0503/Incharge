@@ -10,11 +10,13 @@ namespace Incharge.Service
     {
         private readonly IFindRepository<Location> _FindLocationRepository;
         private readonly IRepository<Location> _LocationRepository;
+        private readonly IFindRepository<Gymclass> _FindGymClassRepository;
         private readonly IMapper _Mapper;
-        public LocationService(IMapper mapper, IFindRepository<Location> findLocationRepository, IRepository<Location> locationRepository) 
+        public LocationService(IMapper mapper, IFindRepository<Location> findLocationRepository, IRepository<Location> locationRepository, IFindRepository<Gymclass> findGymClassRepository)
         {
             _FindLocationRepository = findLocationRepository;
             _LocationRepository = locationRepository;
+            _FindGymClassRepository = findGymClassRepository;
             _Mapper = mapper;
         }
         public List<LocationVM> ListItem(Func<Location, bool> predicate)
@@ -42,10 +44,18 @@ namespace Incharge.Service
             if(LocationVM == null) throw new ArgumentNullException("location don't exist");
             var location = _FindLocationRepository.FindBy(x => x.Id == LocationVM.Id);
             if(location == null) throw new ArgumentNullException("location don't exist");
-            location.Name = LocationVM.Name;
-            location.Status = LocationVM.Status;
-            location.Description = LocationVM.Description;
-            if(LocationVM.Gymclasses != null) location.Gymclasses = LocationVM.Gymclasses;
+            location.Name = LocationVM.Name ?? location.Name;
+            location.Status = LocationVM.Status ?? location.Status;
+            location.Description = LocationVM.Description ?? location.Description;
+            location.Capacity = LocationVM.Capacity ?? location.Capacity;
+            if(LocationVM.Gymclasses != null)
+            {
+                foreach(var gymclass in LocationVM.Gymclasses)
+                {
+                    var gymclassToAdd = _FindGymClassRepository.FindBy(x => x.Id == gymclass.Id);
+                    location.Gymclasses.Add(gymclassToAdd);
+                }
+            }
             _LocationRepository.Update(location);
             _LocationRepository.Save();
         }
@@ -57,14 +67,5 @@ namespace Incharge.Service
             _LocationRepository.Delete(location);
             _LocationRepository.Save();
         }
-        //public void UpdateStatus(LocationVM LocationVM) //might not even need this if mapper for update works.
-        //{
-        //    if(LocationVM == null) throw new ArgumentNullException("location don't exist");
-        //    var location = _FindLocationRepository.FindBy(x => x.Id == LocationVM.Id);
-        //    if(location == null) throw new ArgumentNullException("location don't exist");
-        //    location.Status = LocationVM.Status;
-        //    _LocationRepository.Update(location);
-        //    _LocationRepository.Save();
-        //}
     }
 }

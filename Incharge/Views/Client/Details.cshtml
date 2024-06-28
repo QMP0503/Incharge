@@ -40,14 +40,21 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Status)
         </dd>
+     
         <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@Model.Uuid>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <input type="submit" asp-for="Status" value="Signed In" class="btn btn-primary" />
-            </div>
-            <div class="form-group">
-                <input type="submit" asp-for="Status" value="Signed Out" class="btn btn-primary" />
-            </div>
+            @if(Model.Status == "Signed Out")
+            {
+                <div class="form-group">
+                    <input type="submit" asp-for="Status" value="Sign In" class="btn btn-primary" />
+                </div>
+            }
+            @if(Model.Status =="Signed In")
+            {
+                <div class="form-group">
+                    <input type="submit" asp-for="Status" value="Sign Out" class="btn btn-primary" />
+                </div>
+            }
         </form>
     </dl>
 </div>

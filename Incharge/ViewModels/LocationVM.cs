@@ -14,7 +14,7 @@ namespace Incharge.ViewModels
         public string? Description { get; set; }
         [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved", "Under Maintance" })]
 
-        public bool? Status { get; set; }
+        public string? Status { get; set; }
 
         //object list to display on view
         public virtual ICollection<Gymclass>? Gymclasses { get; set; }

@@ -7,7 +7,7 @@ using Incharge.ViewModels;
 
 namespace Incharge.Service
 {
-    public class EquipmentService : IService<EquipmentVM, Equipment> //use autopmapper
+    public class EquipmentService : IService<EquipmentVM, Equipment>//use autopmapper
     {
         private readonly IFindRepository<Equipment> _FindEquipmentRepository;
         private readonly IRepository<Equipment> _EquipmentRepository;
@@ -27,20 +27,11 @@ namespace Incharge.Service
         public EquipmentVM GetItem(Func<Equipment, bool> predicate)
         {
             var equipment = _FindEquipmentRepository.FindBy(predicate);
-            var equipmentVM = new EquipmentVM //use and configure mapper to map the whole list as well
-            {
-                Id = equipment.Id,
-                Name = equipment.Name,
-                Description = equipment.Description,
-                PurchaseDate = equipment.PurchaseDate,
-                MainationDate = equipment.MaintanceDate,
-                GymClass = equipment.GymClass,
-                GymClassId = equipment.GymClassId
-            };
+            var equipmentVM = _Mapper.Map<EquipmentVM>(equipment);
             return equipmentVM;
         }
 
-        public void AddService(EquipmentVM equipmentVM)
+        public void AddService(EquipmentVM equipmentVM) //make sure no null data point error
         {
             if (equipmentVM == null) { throw new NullReferenceException("Input Empty."); }
             var equipment = new Equipment
@@ -48,26 +39,38 @@ namespace Incharge.Service
                 Name = equipmentVM.Name,
                 Description = equipmentVM.Description,
                 PurchaseDate = equipmentVM.PurchaseDate,
-                MaintanceDate = equipmentVM.MainationDate,
+                MaintanceDate = equipmentVM.MaintanceDate,
                 Status = "available"
             };
             _EquipmentRepository.Add(equipment);
             _EquipmentRepository.Save();
 
         }
-        public void UpdateService(EquipmentVM equipmentVM) 
+        public void UpdateService(EquipmentVM equipmentVM)
         {
-            if(equipmentVM == null) { throw new NullReferenceException("Input Empty."); }
+            if (equipmentVM == null)
+            {
+                throw new NullReferenceException("Input Empty.");
+            }
+
             var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentVM.Id);
-            if (equipment == null) { throw new NullReferenceException("Equipment Empty."); }
-            equipment.Name = equipmentVM.Name;
-            equipment.Description = equipmentVM.Description;
-            equipment.PurchaseDate = equipmentVM.PurchaseDate;
-            equipment.MaintanceDate = equipmentVM.MainationDate;
-            equipment.Status = equipmentVM.Status;
+
+            if (equipment == null)
+            {
+                throw new NullReferenceException("Equipment Empty.");
+            }
+
+            equipment.Name = equipmentVM.Name ?? equipment.Name;
+            equipment.Description = equipmentVM.Description ?? equipment.Description;
+            equipment.PurchaseDate = equipmentVM.PurchaseDate ?? equipment.PurchaseDate;
+            equipment.MaintanceDate = equipmentVM.MaintanceDate ?? equipment.MaintanceDate;
+            equipment.Status = equipmentVM.Status ?? equipment.Status;
+            equipment.GymClassId = equipmentVM.GymClassId ?? equipment.GymClassId;
+            equipment.GymClass = equipmentVM.GymClass ?? equipment.GymClass;
             _EquipmentRepository.Update(equipment);
             _EquipmentRepository.Save();
         }
+
         public void DeleteService(EquipmentVM equipmentVM)
         {
             if(equipmentVM.Id < 1) { throw new NullReferenceException("Input Invalid."); }
@@ -76,14 +79,5 @@ namespace Incharge.Service
             _EquipmentRepository.Delete(equipmentToDelete);
             _EquipmentRepository.Save();
         }
-        //public void UpdateStatus(EquipmentVM equipmentVM) //fast update but might be redundant when update status can be used for this. 
-        //{
-        //    if(equipmentVM == null || equipmentVM.Id < 1 || equipmentVM.Status == null) { throw new NullReferenceException("Input Invalid."); }
-        //    var equipmentToUpdate = _FindEquipmentRepository.FindBy(x => x.Id == equipmentVM.Id);
-        //    if (equipmentToUpdate == null) { throw new NullReferenceException("Equipment Empty."); }
-        //    equipmentToUpdate.Status = equipmentVM.Status;
-        //    _EquipmentRepository.Update(equipmentToUpdate);
-        //    _EquipmentRepository.Save();
-        //}
     }
 }

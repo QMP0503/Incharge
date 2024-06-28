@@ -19,11 +19,30 @@ namespace Incharge.Controllers
             _logger = logger;
         }
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(
+                                                 string sortOrder,
+                                                 string currentFilter,
+                                                 string searchString,
+                                                 int? pageNumber)
         {
-            return View();
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["FirstNameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "FirstName_desc" : string.Empty;
+            ViewData["LastNameSortParam"] = sortOrder == "LastName" ? "LastName_desc" : "LastName";
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
         }
-        [HttpGet] //ONLY VISIBLE TO ADMIN WHO ASSIGN SALARY NUMBERS
+        [HttpGet] //ONLY SALARY IS VISIBLE TO ADMIN ... Let admin view seperate page?
         public IActionResult Details(string Uuid)
         {
             try

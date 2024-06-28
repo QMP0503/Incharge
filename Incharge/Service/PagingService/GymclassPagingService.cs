@@ -32,7 +32,7 @@ namespace Incharge.Service.PagingService
                 case "ClassDate_desc":
                     GymClassQuery = GymClassQuery.OrderByDescending(c => c.Date);
                     break;
-                default: //firstName_asc
+                default: //Name_asc
                     GymClassQuery = GymClassQuery.OrderBy(c => c.Name);
                     break;
             }

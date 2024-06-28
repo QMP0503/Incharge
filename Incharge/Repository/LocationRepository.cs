@@ -30,7 +30,6 @@ namespace Incharge.Repository
         }
         public IQueryable<Location> QueryBy(Func<Location, bool> predicate)
         {
-            return _context.Locations.Where(predicate).AsQueryable(); //for index paging method. 
-        }
+            return _context.Locations.Include(x => x.Gymclasses).ThenInclude(x => x.Employee).Where(predicate).AsQueryable();
     }
 }

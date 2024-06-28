@@ -1,8 +1,5 @@
-﻿
-using Incharge.Models;
-using Incharge.ViewModels;
+﻿using Incharge.ViewModels;
 using Incharge.DTO;
-using Incharge.ViewModels;
 namespace Incharge.Service.IService
 {
     public interface IClientService //only for client personal information

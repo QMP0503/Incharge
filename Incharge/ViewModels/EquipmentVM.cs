@@ -13,7 +13,7 @@ namespace Incharge.ViewModels
 
         public DateTime? PurchaseDate { get; set; }
         [DataType(DataType.Date)]
-        public DateTime? MainationDate { get; set; }
+        public DateTime? MaintanceDate { get; set; }
         [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved", "Under Maintance" })]
 
         public string Status { get; set; } = null!;

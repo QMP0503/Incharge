@@ -28,7 +28,7 @@ namespace Incharge.Controllers
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["FirstNameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "FirstName_desc" : string.Empty;
-            ViewData["LastName"] = sortOrder == "LastName" ? "LastName_desc" : "LastName";
+            ViewData["LastNameSortParam"] = sortOrder == "LastName" ? "LastName_desc" : "LastName";
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -141,10 +141,18 @@ namespace Incharge.Controllers
             }
         }
         [HttpPost, ActionName("UpdateStatus")]
-        public IActionResult UpdateStatus([Bind("Uuid, Status")] ClientVM clientVM)//not working so change syntax.
+        public IActionResult UpdateStatus(/*[Bind("Uuid, Status")]*/ ClientVM clientVM)//dont need bind if html id is used explicitly
         {
             try
             {
+                if(clientVM.Status =="Sign In")
+                {
+                    clientVM.Status = "Signed In";
+                }
+                if(clientVM.Status == "Sign Out")
+                {
+                    clientVM.Status = "Signed Out";
+                }
                 _clientService.UpdateStatus(clientVM);
                 return RedirectToAction(nameof(Index));
             }

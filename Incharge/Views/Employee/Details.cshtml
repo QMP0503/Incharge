@@ -1,0 +1,87 @@
+﻿@model Incharge.ViewModels.EmployeeVM;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+@{
+    ViewData["Title"] = "Details";
+}
+
+@{
+    var ClientList = Model.Clients;
+    var GymClassList = Model.Gymclasses;
+    
+}
+
+<div class="row m-4">
+    <div class="col fw-bold">
+        <div class="row">
+            <h1>@Model.FirstName @Model.LastName</h1>
+        </div>
+        <div class="flex-row gap-2 mt-2">
+            
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="Edit" asp-route-Uuid="@Model.Uuid" class="btn btn-primary w-25">Edit</a>
+                <a asp-action="Delete" asp-route-Uuid="@Model.Uuid" class="btn btn-danger w-25">Delete</a>
+            }
+        </div>
+    </div>
+    <div class="col mt-2">
+            <p>
+                <strong>Email: </strong>@Model.Email
+            </p>    
+            <p>
+                <strong>Phone: </strong>@Model.Phone
+            </p>
+        @if (User.IsInRole("Admin"))
+        {
+            <p>
+                <strong>Salary: </strong>$@string.Format("{0:#,0.####}", Model.TotalSalary)
+            </p>
+        }
+    </div>
+</div>
+<div class="row mt-4 gap-2">
+    <div class="col-4">
+        <h5 class="fw-bold align-content-center ms-2">Clients</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ClientList)
+                {
+                    <tr>
+                        <td><a asp-controller="Client" asp-action="Details" asp-route-Uuid="@item.Uuid">@item.FirstName @item.LastName</a></td>
+                        <td>@item.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col mx-2">
+        <h5 class="fw-bold align-content-center">Gym Class</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in GymClassList)
+                {
+                    <tr>
+                        <td href="/GymClass/Details/@item.Id">@item.Name</td>
+                        <td>@item.Date</td>
+                        <td>@item.Location</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

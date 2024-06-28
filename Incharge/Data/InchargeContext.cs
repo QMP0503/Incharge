@@ -269,7 +269,7 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.Property(e => e.Description).HasColumnType("text");
             entity.Property(e => e.Name).HasMaxLength(45);
-            entity.Property(e => e.Status).HasDefaultValueSql("'1'");
+            entity.Property(e => e.Status).HasDefaultValueSql("Available");
         });
 
         modelBuilder.Entity<Paymentrecord>(entity =>

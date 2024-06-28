@@ -9,73 +9,96 @@ using AutoMapper;
 
 namespace Incharge.Service
 {
-    public class ClientService: IClientService //make sure surface interface use data from the same place.
+    public class ClientService: IService<ClientVM, Client> //make sure surface interface use data from the same place.
     {
         private readonly IFindRepository<Client> _FindClientRepository;
-        private readonly IRepository<Client> _clientRepository;
+        private readonly IRepository<Client> _ClientRepository;
+        private readonly IFindRepository<Employee> _FindEmployeeRepository;
+        private readonly IFindRepository<Gymclass> _FindGymClassRepository;
+        private readonly IFindRepository<Product> _FindProductRepository;
+        private readonly IFindRepository<Sale> _FindSaleRepository;
         private readonly IMapper _mapper;
-        public ClientService(IFindRepository<Client> FindClientRepository, IRepository<Client> clientRepository, IMapper mapper)
+        public ClientService(IFindRepository<Product> findProductRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Gymclass> findGymClassRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Client> FindClientRepository, IRepository<Client> clientRepository, IMapper mapper)
         {
-            _clientRepository = clientRepository;
+            _ClientRepository = clientRepository;
             _FindClientRepository = FindClientRepository;
             _mapper = mapper;
+            _FindEmployeeRepository = findEmployeeRepository;
+            _FindGymClassRepository = findGymClassRepository;
+            _FindProductRepository = findProductRepository;
+            _FindSaleRepository = findSaleRepository;
         }
-        public ClientVM FindClient(ClientVM clientVM)
+        public ClientVM GetItem(Func<Client, bool> predicate)
         {
-            if (clientVM == null) { throw new NullReferenceException("client"); }
-            var client = _FindClientRepository.FindBy(x => x.FirstName == clientVM.FirstName 
-            || x.LastName == clientVM.LastName 
-            || x.Email == clientVM.Email 
-            || x.Phone == clientVM.Phone
-            || x.Uuid == clientVM.Uuid);
-            
-            var clientFound = _mapper.Map<ClientVM>(client);
-            return (clientFound);
+            var client = _FindClientRepository.FindBy(predicate);
+            if(client == null) { throw new NullReferenceException("Client Empty"); }
+            return _mapper.Map<ClientVM>(client);
         }
-        public List<ClientDTO> ListClients(ClientVM clientVM)
+        public List<ClientVM> ListItem(Func<Client, bool> predicate) //test if automapper work with lists
+        {
+            var client = _FindClientRepository.ListBy(predicate);
+            if (client == null) { throw new NullReferenceException("Client Empty"); }
+            return _mapper.Map<List<ClientVM>>(client);
+        }
+        public void AddService(ClientVM clientVM)
         {
             if(clientVM == null) { throw new NullReferenceException("Input Empty."); }
-            return new List<ClientDTO>();//_FindClientRepository.ListBy(null); //might need to find better way to get all.
+            var client = _mapper.Map<Client>(clientVM); //some is null so check if this is true
+            _ClientRepository.Add(client) ;
+            _ClientRepository.Save();
         }
-        public void AddClient(ClientVM clientVM)
-        {
-            var client = new Client
-            {
-                FirstName = clientVM.FirstName,
-                LastName = clientVM.LastName,
-                Email = clientVM.Email,
-                Phone = clientVM.Phone
-            };
-            _clientRepository.Add(client) ;
-            _clientRepository.Save();
-        }
-        public void EditClient(ClientVM clientVM) //email, phone, firstname and lastname are required
+        public void UpdateService(ClientVM clientVM) //email, phone, firstname and lastname are required
         {
             var clientToUpdate = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
             if (clientToUpdate == null) { throw new NullReferenceException("Client Empty."); }
-            clientToUpdate.FirstName = clientVM.FirstName;
-            clientToUpdate.LastName = clientVM.LastName;
-            clientToUpdate.Email = clientVM.Email;
-            clientToUpdate.Phone = clientVM.Phone;
-            _clientRepository.Update(clientToUpdate);
-            _clientRepository.Save();
+            clientToUpdate.FirstName = clientVM.FirstName ?? clientToUpdate.FirstName;
+            clientToUpdate.LastName = clientVM.LastName ?? clientToUpdate.LastName;
+            clientToUpdate.Email = clientVM.Email ?? clientToUpdate.Email;
+            clientToUpdate.Phone = clientVM.Phone ?? clientToUpdate.Phone;
+            clientToUpdate.Status = clientVM.Status ?? clientToUpdate.Status;
+            clientToUpdate.PaymentRecord = clientVM.PaymentRecord ?? clientToUpdate.PaymentRecord;
+            if(clientVM.Sales != null)
+            {
+                foreach (var clientSales in clientVM.SalesID)
+                {
+                    var sales = _FindSaleRepository.FindBy(x => x.Id == clientSales);
+                    clientToUpdate.Sales.Add(sales);
+                }
+            }
+            if(clientVM.Products != null)
+            {
+                foreach (var clientProducts in clientVM.ProductID)
+                {
+                    var products = _FindProductRepository.FindBy(x => x.Id == clientProducts);
+                    clientToUpdate.Products.Add(products);
+                }
+            }
+            if(clientVM.Gymclasses != null)
+            {
+                foreach (var clientGymclasses in clientVM.GymClassID)
+                {
+                    var gymclasses = _FindGymClassRepository.FindBy(x => x.Id == clientGymclasses);
+                    clientToUpdate.Gymclasses.Add(gymclasses);
+                }
+            }
+            if(clientVM.Employees != null)
+            {
+                foreach (var clientEmployees in clientVM.EmployeeID)
+                {
+                    var employees = _FindEmployeeRepository.FindBy(x => x.Uuid == clientEmployees);
+                    clientToUpdate.Employees.Add(employees);
+                }
+            }
+            _ClientRepository.Update(clientToUpdate);
+            _ClientRepository.Save();
         }
-        public void DeleteClient(ClientVM clientVM)
+        public void DeleteService(ClientVM clientVM)
         {
             if(clientVM == null) { throw new NullReferenceException("Input Empty."); }
             var clientToDelete = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
             if(clientToDelete == null) { throw new NullReferenceException("Client Empty."); }
-            _clientRepository.Delete(clientToDelete);
-            _clientRepository.Save();
-        }
-        public void UpdateStatus(ClientVM clientVM) //ONLY used when client have been found.
-        {
-            if (clientVM.Status == null && clientVM.Uuid==null) { throw new NullReferenceException("Input Empty."); }
-            var client = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
-            if (client == null) { throw new NullReferenceException("Client Empty."); }
-            client.Status = clientVM.Status;
-            _clientRepository.Update(client);
-            _clientRepository.Save();
+            _ClientRepository.Delete(clientToDelete);
+            _ClientRepository.Save();
         }
         
     } //consider adding save after actiong is executed in controller.

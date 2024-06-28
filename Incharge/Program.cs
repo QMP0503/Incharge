@@ -32,8 +32,7 @@ builder.Services.AddIdentity<User, IdentityRole>(
         options.Password.RequiredLength = 4;
         options.Password.RequireNonAlphanumeric = false;
         options.Password.RequireLowercase = false;
-    }
-    ).AddEntityFrameworkStores<InchargeContext>().AddDefaultTokenProviders().AddRoles<IdentityRole>();
+    }).AddEntityFrameworkStores<InchargeContext>().AddDefaultTokenProviders().AddRoles<IdentityRole>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddLog4net();
@@ -47,15 +46,24 @@ builder.Services.AddScoped<IFindRepository<Equipment>, EquipmentRepository>();
 builder.Services.AddScoped<IFindRepository<Location>, LocationRepository>();
 builder.Services.AddScoped<IFindRepository<Product>, ProductRepository>();
 builder.Services.AddScoped<IFindRepository<EmployeeType>, EmployeeTypeRepository>();
+builder.Services.AddScoped<IFindRepository<Producttype>, ProductTypeRepository>();
+builder.Services.AddScoped<IFindRepository<Sale>, SalesRepository>();
 
 //service injection
-builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IService<ClientVM, Client>, ClientService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Client>>, ClientPagingService>(); //figure out async when all is working
-builder.Services.AddScoped<IClientService, ClientService>();
+
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Employee>>, EmployeePagingService>();
+
 builder.Services.AddScoped<IService<EquipmentVM,Equipment>, EquipmentService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Equipment>>, EquipmentPagingService>();
+
 builder.Services.AddScoped<IService<LocationVM,Location>, LocationService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Location>>, LocationPagingService>();
+
 builder.Services.AddScoped<IService<GymClassVM, Gymclass>, GymClassService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Gymclass>>, GymclassPagingService>();
 //add memory caching for client list and/or gym class list
 
 
@@ -111,6 +119,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     //pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
-    pattern: "{controller=Client}/{action=Index}/{id?}"); //for testing purposes
+    pattern: "{controller=Employee}/{action=Index}/{id?}"); //for testing purposes
 
 app.Run();
