@@ -17,71 +17,75 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Incharge
 build_property.RootNamespace = Incharge
-build_property.ProjectDir = C:\Users\intern.pmquang1\C#\Incharge\Incharge\
+build_property.ProjectDir = C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\intern.pmquang1\C#\Incharge\Incharge
+build_property.MSBuildProjectDirectory = C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Account/Login.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Account/Register.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/AddClient.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Client/AddClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEFkZENsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/DeleteClient.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Client/DeleteClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XERlbGV0ZUNsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/Details.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Client/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/EditClient.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Client/EditClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEVkaXRDbGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/Index.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Employee/Details.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Employee/AddEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQWRkRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Employee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Employee/Index.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Home/Index.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/Error.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/_ViewImports.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/_ViewStart.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_Layout.cshtml]
+[C:/Users/quang/OneDrive/Desktop/Projects/Incharge/Incharge/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kqe4qt23gn

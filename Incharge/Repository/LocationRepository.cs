@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Incharge.Repository
 {
-    public class LocationRepository:IFindRepository<Location>
+    public class LocationRepository : IFindRepository<Location>
     {
         private readonly InchargeContext _context;
         public LocationRepository(InchargeContext context)
@@ -31,5 +31,6 @@ namespace Incharge.Repository
         public IQueryable<Location> QueryBy(Func<Location, bool> predicate)
         {
             return _context.Locations.Include(x => x.Gymclasses).ThenInclude(x => x.Employee).Where(predicate).AsQueryable();
+        }
     }
 }

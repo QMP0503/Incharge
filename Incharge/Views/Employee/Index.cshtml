@@ -20,8 +20,13 @@
     </div>
     <div class="row align-content-center pt-3 pb-3">
         <div class="col pr-2">
-            <a asp-action="AddEmployee" class="btn btn-primary">Add Employee</a>
+        @if (User.IsInRole("Admin"))
+        {
+
+                <a asp-action="AddEmployee" class="btn btn-primary">Add Employee</a>
+        }
         </div>
+        
 
         <form asp-action="Index" method="get" class="col">
             <div class="d-flex gap-1 flex-row-reverse">

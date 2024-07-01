@@ -46,7 +46,7 @@
     <div class="card-group">
         @foreach(var item in Model)
         {
-            <div class="card border-dark-75 shadow">
+            <div class="card border-dark-subtle m-2">
                 <div class="card-header font-monospace fw-bold pl-2 pr-2">
                     @item.FirstName @item.LastName
                 </div>
@@ -66,7 +66,7 @@
                                  <input type="submit" id="clientVM.Status" name="Status" value="Sign In" class="btn btn-primary" />
                         
                                 }
-                                @if (item.Status == "Signed In")
+                                @if (item.Status == "Signed In" || item.Status == null)
                                 {
 
                                 <input type="submit" id="clientVM.Status" name="Status" value="Sign Out" class="btn btn-primary"  />

@@ -10,10 +10,10 @@ namespace Incharge.Controllers
     [BindProperties]
     public class ClientController : Controller
     {
-        readonly IClientService _clientService;
+        readonly IService<ClientVM, Client> _clientService;
         readonly IPagingService<PaginatedList<Client>> _pagingService;
         readonly ILog _logger;
-        public ClientController(IClientService clientService, IPagingService<PaginatedList<Client>> pagingService, ILog logger)
+        public ClientController(IService<ClientVM, Client> clientService, IPagingService<PaginatedList<Client>> pagingService, ILog logger)
         {
             _clientService = clientService;
             _pagingService = pagingService;
@@ -44,13 +44,11 @@ namespace Incharge.Controllers
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
         }
         [HttpGet]
-        public IActionResult Details(string Uuid) //id will be sent when client profile is clicked. Also when all is working change to async
+        public IActionResult Details(ClientVM clientVM) //id will be sent when client profile is clicked. Also when all is working change to async
         {
             try
             {
-                var clientInfo = new ClientVM();
-                clientInfo.Uuid = Uuid;
-                return View(_clientService.FindClient(clientInfo));
+                return View(_clientService.GetItem(x => x.Uuid == clientVM.Uuid));
             }catch(Exception ex)
             {
                 _logger.Error(ex);
@@ -68,7 +66,8 @@ namespace Incharge.Controllers
         {
             try
             {
-                _clientService.AddClient(clientVM);
+                clientVM.Status = "Signed In";
+                _clientService.AddService(clientVM);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
@@ -81,9 +80,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                var clientInfo = new ClientVM();
-                clientInfo.Uuid = Uuid;
-                return View(_clientService.FindClient(clientInfo));
+                return View(_clientService.GetItem(x => x.Uuid == Uuid));
             }
             catch(Exception ex)
             {
@@ -99,7 +96,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                _clientService.EditClient(clientVM);
+                _clientService.UpdateService(clientVM);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
@@ -112,9 +109,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                var clientInfo = new ClientVM();
-                clientInfo.Uuid = Uuid;
-                return View(_clientService.FindClient(clientInfo));
+                return View(_clientService.GetItem(x => x.Uuid == Uuid));
             }
             catch(Exception ex)
             {
@@ -131,7 +126,7 @@ namespace Incharge.Controllers
             {
                 var clientInfo = new ClientVM();
                 clientInfo.Uuid = Uuid;
-                _clientService.DeleteClient(clientInfo);
+                _clientService.DeleteService(clientInfo);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
@@ -153,7 +148,7 @@ namespace Incharge.Controllers
                 {
                     clientVM.Status = "Signed Out";
                 }
-                _clientService.UpdateStatus(clientVM);
+                _clientService.UpdateService(clientVM);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)

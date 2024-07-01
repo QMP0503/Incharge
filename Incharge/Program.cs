@@ -9,6 +9,7 @@ using Incharge.Repository;
 using Incharge.Service.IService;
 using Incharge.Service;
 using Incharge.Service.PagingService;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +49,7 @@ builder.Services.AddScoped<IFindRepository<Product>, ProductRepository>();
 builder.Services.AddScoped<IFindRepository<EmployeeType>, EmployeeTypeRepository>();
 builder.Services.AddScoped<IFindRepository<Producttype>, ProductTypeRepository>();
 builder.Services.AddScoped<IFindRepository<Sale>, SalesRepository>();
+builder.Services.AddScoped<IFindRepository<Discount>, DiscountRepository>();
 
 //service injection
 builder.Services.AddScoped<IService<ClientVM, Client>, ClientService>();
@@ -64,6 +66,10 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Location>>, LocationPagi
 
 builder.Services.AddScoped<IService<GymClassVM, Gymclass>, GymClassService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Gymclass>>, GymclassPagingService>();
+
+builder.Services.AddScoped<IService<ProductVM, Product>, ProductService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPagingService>();
+
 //add memory caching for client list and/or gym class list
 
 
@@ -118,7 +124,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    //pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
-    pattern: "{controller=Employee}/{action=Index}/{id?}"); //for testing purposes
+    pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
+    //pattern: "{controller=Employee}/{action=Index}/{id?}"); //for testing purposes
 
 app.Run();

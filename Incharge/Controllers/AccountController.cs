@@ -46,6 +46,10 @@ namespace MyMovies.Controllers
         }
         public IActionResult Login()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
         [HttpPost]
@@ -65,7 +69,7 @@ namespace MyMovies.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index","Home"); //redirect to home
+            return RedirectToAction("Login","Account"); //redirect to home
         }
     }
 }
