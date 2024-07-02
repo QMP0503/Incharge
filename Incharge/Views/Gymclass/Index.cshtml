@@ -1,0 +1,152 @@
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Gymclass>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Gym Classes</h1>
+    </div>
+    <div class="row align-content-center pt-3 pb-3">
+        <div class="col pr-2">
+            <a asp-action="AddGymclass" class="btn btn-primary">Create Gym Classes</a>
+        </div>
+
+        <form asp-action="Index" method="get" class="col">
+            <div class="d-flex gap-1 flex-row-reverse">
+                <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
+                <input class="form-control w-50" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            </div>
+        </form>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+    </div>
+</nav>
+
+<div class="overflow-visible">
+    <div class="timetable-img text-center">
+        <img src="img/content/timetable.png" alt="">
+    </div>
+    <div class="table-responsive">
+        <table class="table-bordered table text-center">
+            <thead>
+                <tr class="bg-light-gray">
+                    <th class="text-uppercase">
+                        Time
+                    </th>
+                    <th class="text-uppercase" id="monday">Monday</th>
+                    <th class="text-uppercase" id="tuesday">Tuesday</th>
+                    <th class="text-uppercase" id="wednesday">Wednesday</th>
+                    <th class="text-uppercase" id="thursday">Thursday</th>
+                    <th class="text-uppercase" id="friday" >Friday</th>
+                    <th class="text-uppercase" id="saturday">Saturday</th>
+                </tr>
+            </thead>
+
+            @*Row is time and columns are days. The columns are automatically sorted by days of the week.*@
+            <tbody>
+                <tr>
+                    <td class="align-middle" id="7am">07:00am</td> @*Use asp-action to assigg the correct value to the correct square*@
+                    <td>
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dance</span>
+                        <div class="margin-10px-top font-size14">9:00-10:00</div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </td>
+
+
+                <tr>
+                    <td class="align-middle">08:00am</td>
+                    <td>
+                        <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Music</span>
+                        <div class="margin-10px-top font-size14">10:00-11:00</div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </td>
+                    <td class="bg-light-gray">
+                
+                    <td class="bg-light-gray">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="align-middle">09:00am</td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">
+                            Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">10:00am</td> @*Give this intity a value to make grid system to assign values to them.*@
+                    <td class="bg-light-gray">
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td class="align-middle">11:00am</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">12:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">01:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">02:00pm</td>
+
+                </tr>
+                <tr>
+                    <td class="align-middle">03:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">04:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">05:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">06:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">07:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">08:00pm</td>
+
+                </tr>
+
+                <tr>
+                    <td class="align-middle">09:00pm</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

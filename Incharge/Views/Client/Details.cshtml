@@ -6,60 +6,136 @@
 
 <h1>Details</h1>
 
-<div>
-    <h4>Client</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-     
-        <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@Model.Uuid>
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @if(Model.Status == "Signed Out")
-            {
-                <div class="form-group">
-                    <input type="submit" asp-for="Status" value="Sign In" class="btn btn-primary" />
-                </div>
-            }
-            @if(Model.Status =="Signed In")
-            {
-                <div class="form-group">
-                    <input type="submit" asp-for="Status" value="Sign Out" class="btn btn-primary" />
-                </div>
-            }
-        </form>
-    </dl>
-</div>
-<div>
-    <a asp-action="EditClient" asp-route-Uuid="@Model?.Uuid">Edit</a> 
-    <a asp-action="DeleteClient" asp-route-Uuid="@Model?.Uuid">Delete</a>
-    <a asp-action="Index">Back to List</a>
+<div class="container">
+	<div class="main-body">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex flex-column align-items-center text-center">
+							<img scr="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110" /> @*Find solution for image hosting and make sure its secured. URl will be stored in db*@
+							<div class="mt-3">
+								<h4>@Model.FirstName @Model.LastName</h4>
+								<p class="text-secondary mb-1">@Model.Status</p>
+								<p class="text-muted font-size-sm">@*Model membership will be displayed here*@</p>
+								<div class="row row-cols-2">
+								<div class="col">
+									<a asp-action="DeleteClient" asp-route-Uuid="@Model.Uuid" class="btn btn-primary">Delete</a>
+								</div>
+								<form asp-action="UpdateStatus" method="post" asp-route-Uuid=@Model.Uuid class="col">
+									@if (Model.Status == "Signed Out")
+									{
+
+										<input type="submit" id="clientVM.Status" name="Status" value="Sign In" class="btn btn-success" />
+
+									}
+									@if (Model.Status == "Signed In" || Model.Status == null)
+									{
+
+										<input type="submit" id="clientVM.Status" name="Status" value="Sign Out" class="btn btn-warning" />
+										@*Asp-for= "Status" is converted into html code: id = "status" name = "status" *@
+									}
+								</form>
+								</div>
+							</div>
+						</div>
+@* 						<hr class="my-4">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+									<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe me-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+									<span class="text-secondary">https://bootdey.com</span>
+								</li>
+							</ul> *@
+					</div>
+				</div>
+			</div>
+
+			@*side profile info*@
+			<div class="col-lg-8">
+				<div class="card">
+					<div class="card-body">
+						<form asp-action="EditClient" method="post" asp-route-Uuid=@Model.Uuid>
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<div class="row mb-3">
+								<div class="col-sm-3">
+									<h6 class="mb-0">First Name</h6>
+								</div>
+								<div class="col-sm-9 text-secondary">
+									<input asp-for="FirstName" class="form-control" placeholder="@Model.FirstName"/>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-sm-3">
+									<h6 class="mb-0">Last Name</h6>
+								</div>
+								<div class="col-sm-9 text-secondary">
+									<input asp-for="LastName" class="form-control" placeholder="@Model.LastName"/>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-sm-3">
+									<h6 class="mb-0">Email</h6>
+								</div>
+								<div class="col-sm-9 text-secondary">
+									<input asp-for="Email" class="form-control" placeholder="@Model.Email"/>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-sm-3">
+									<h6 class="mb-0">Phone</h6>
+								</div>
+								<div class="col-sm-9 text-secondary">
+									<input asp-for="Phone" class="form-control" placeholder="@Model.Phone"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-3"></div>
+								<div class="col-sm-9 text-secondary">
+									<input type="submit" placeholder="Save changes" value="EditClient" class="btn btn-primary" />
+								</div>
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-9 text-secondary">
+                                    <a asp-action="" asp-route-Uuid=@Model.Uuid class="btn btn-primary">Delete</a> @*Link to add client to gym class.*@
+                                </div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="card">
+						<table class="table-responsive table-light table-striped-columns table-hover table table">
+							<thead>
+								<tr>
+									 @*will juat be colour indicator for if the client is signed in/out or payment is overdued.*@
+									<th scope="col" class="col">Name</th>
+									<th scope="col" class="col">Date</th>
+									<th scope="col" class="col">Trainer</th>
+									<th scope="col" class="col">Location</th>
+									<th scope="col" class="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model.Gymclasses)
+								{
+									<tr>
+										<th>@item.Name</th>
+										<th>@item.Date</th>
+										<td>@item.Employee</td>
+										<td>@item.Location.Name</td> @*If null is will crash*@
+										<td>
+											<a asp-controller="Gymclasses" asp-action="DeleteGymclass" asp-route-Id="@item.Id" class="btn btn-primary">
+												<i class="bi bi-info-square"></i>
+											</a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

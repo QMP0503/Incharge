@@ -11,79 +11,84 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Incharge.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" asp-append-version="true">
+
 </head>
 <body>
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark"> @*start of sidebar*@
+            <div class="col-md-3 col-xl-2 px-sm-2 px-0 bg-dark col-auto"> @*start of sidebar*@
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none fw-bold">
                         <span class="fs-5 d-none d-sm-inline navbar-brand">Incharge</span>
                     </a>
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                             <li class="nav-item">
-                                <a href="/Home/Index" class="nav-link align-middle px-0">
+                                <a href="/Home/Index" class="nav-link px-0 align-middle">
                                     <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">People</span>
+                                    <i class="fs-4 bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">People</span>
                                 </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <ul class="nav flex-column ms-1 collapse" id="submenu1" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a href="/Client/Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Clients</span> 1 </a>
+                                        <a href="/Client/Index" class="nav-link px-2 text-white">Clients</a>
                                     </li>
                                     <li>
-                                        <a href="/Employee/Index" class="nav-link px-0"> <span class="d-none d-sm-inline">Employee</span> 2 </a>
+                                        <a href="/Employee/Index" class="nav-link px-2 text-white">Employee </a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a  class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Gym Schedule</span>
+                                <a href="/GymClass/Index" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-calendar3"></i> <span class="ms-1 d-none d-sm-inline">Gym Schedule</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
+                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-bag-fill"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
                                 </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <ul class="nav flex-column ms-1 collapse" id="submenu2" data-bs-parent="#menu">
 
                                     @*SPLIT MEMEBERSHIP AND DISCOUNTS CONTROLLER TO HAVE TWO SEPERATE SET FROM PRODUCTS*@
                                     <li class="w-100">
-                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Membership</span> 1</a>
+                                        <a href="#" class="nav-link text-light">Membership</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Discounts</span> 2</a>
+                                        <a href="#" class="nav-link text-light"> Discounts</a>
                                     </li>
                                     <li> @*Option for gyms who want to sell more than just membership*@
-                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Other</span> 2</a>
+                                        <a href="#" class="nav-link text-light">Other</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Gym Activity</span>
+                                    <i class="fs-4 bi-bicycle"></i> <span class="ms-1 d-none d-sm-inline">Gym Activity</span>
                                 </a>
-                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <ul class="nav flex-column ms-1 text-light collapse" id="submenu3" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a class="nav-link px-0"> <span class="d-none d-sm-inline">Equipment</span> 1</a>
+                                        <a class="nav-link px-0">Equipment</a>
                                     </li>
                                     <li>
-                                        <a class="nav-link px-0"> <span class="d-none d-sm-inline">Location</span> 2</a>
+                                        <a class="nav-link px-0">Location</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a class="nav-link px-0 align-middle">
-                                    @*ONLY VISIBLE TO ADMIN*@
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Analytics</span>
-                                </a>
-                            </li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    <a class="nav-link px-0 align-middle">
+                                        @*ONLY VISIBLE TO ADMIN*@
+                                        <i class="fs-4 bi-graph-up"></i> <span class="ms-1 d-none d-sm-inline">Analytics</span>
+                                    </a>
+                                </li>
+                            }
                         </ul>
                         <hr>
                     }
@@ -92,7 +97,7 @@
                     {
                         <div class="dropdown pb-4">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <i class="bi bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">@User.Identity.Name</span">
                                 <span a class="d-none d-sm-inline mx-1"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
@@ -112,22 +117,22 @@
                     }
                     else
                     {
-                        <div class="dropdown pb-4">
+                        @* <div class="dropdown pb-4">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <i class="bi bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">Sign In</span">
                                 <span a class="d-none d-sm-inline mx-1"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                                 <li><a asp-controller="Account" asp-action="Login" class="dropdown-item">Sign In</a></li>
                             </ul>
-                        </div>
+                        </div> *@
                     }
 
                 </div>
              
             </div>
                 @* RENDER BODY WHERE CODE OF PAGE IS COMPILED *@
-                <div class="col-auto col-md-9 ms-md-auto col-xl-10 px-md-4`">
+                <div class="col-md-9 ms-md-auto col-xl-10 px-md-4` col-auto">
                     <main role="main" class="pb-3">
                         @RenderBody()
                     </main>

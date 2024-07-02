@@ -105,18 +105,18 @@ namespace Incharge.Controllers
                 return NotFound();
             }
         }
-        public IActionResult DeleteClient(string Uuid)
-        {
-            try
-            {
-                return View(_clientService.GetItem(x => x.Uuid == Uuid));
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return NotFound();
-            }
-        }
+        //public IActionResult DeleteClient(string Uuid)
+        //{
+        //    try
+        //    {
+        //        return View(_clientService.GetItem(x => x.Uuid == Uuid));
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        _logger.Error(ex);
+        //        return NotFound();
+        //    }
+        //}
 
         [HttpPost, ActionName("DeleteClient")]
         [ValidateAntiForgeryToken]

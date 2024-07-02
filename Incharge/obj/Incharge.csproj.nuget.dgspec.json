@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\quang\\OneDrive\\Desktop\\Projects\\Incharge\\Incharge\\Incharge.csproj": {}
+    "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\quang\\OneDrive\\Desktop\\Projects\\Incharge\\Incharge\\Incharge.csproj": {
+    "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\quang\\OneDrive\\Desktop\\Projects\\Incharge\\Incharge\\Incharge.csproj",
+        "projectUniqueName": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.csproj",
         "projectName": "Incharge",
-        "projectPath": "C:\\Users\\quang\\OneDrive\\Desktop\\Projects\\Incharge\\Incharge\\Incharge.csproj",
-        "packagesPath": "C:\\Users\\quang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\quang\\OneDrive\\Desktop\\Projects\\Incharge\\Incharge\\obj\\",
+        "projectPath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.csproj",
+        "packagesPath": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\quang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\intern.pmquang1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -124,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -24,8 +24,15 @@ namespace Incharge.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult Index(
+        [HttpGet] //straight calendar view
+        public IActionResult Index()
+        {
+
+            return View();
+        }
+
+        [HttpGet] //another view instead of the calendar
+        public IActionResult GymclassList(
                                                          string sortOrder,
                                                          string currentFilter,
                                                          string searchString,
@@ -48,6 +55,7 @@ namespace Incharge.Controllers
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
         }
+
         [HttpGet]
         public IActionResult Details(int id) //id will be sent when client profile is clicked. Also when all is working change to async
         {
@@ -66,6 +74,7 @@ namespace Incharge.Controllers
             //Check if employee/trainger information is needed on display for when new client account is created
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddGymclass(GymClassVM gymclassVM)

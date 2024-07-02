@@ -19,7 +19,7 @@
 }
 <nav class="navbar-brand mb-5">
     <div class="row align-content-center">
-        <h1 class="align-text-top text-black font-bold m-3">Client</h1>
+        <h1 class="text-black m-3 align-text-top font-bold">Client</h1>
     </div>
     <div class="row align-content-center pt-3 pb-3">
         <div class="col pr-2">
@@ -42,8 +42,98 @@
     </div>
 
 </nav>
-<div class="container">
-    <div class="card-group">
+<div class="">
+    <table class="table-responsive table-light table-striped-columns table-hover table">
+        <thead>
+            <tr>
+                <th scope="col" class="col-1"></th> @*will juat be colour indicator for if the client is signed in/out or payment is overdued.*@
+                <th scope="col" class="col">First</th>
+                <th scope="col" class="col">Last</th>
+                <th scope="col" class="col">Phone</th>
+                <th scope="col" class="col">Status</th>
+                <th scope="col" class="col">Update Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="col-1">
+                            
+                           
+                            @if (item.Status == "Signed In")
+                            {
+                                <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-success"><i class="bi bi-person"></i></a>
+                            }
+                            @if (item.Status == "Signed Out" || item.Status == null)
+                            {
+                                <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-warning"><i class="bi bi-person"></i></a>
+
+                            }
+                            @if(item.Status == "Overdue")
+                            {
+                                <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-danger"><i class="bi bi-person"></i></a>
+                            }
+                        </div>
+                    </td>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Status</td>
+                    <td>
+                        <div class="col-2 me-1">
+                            <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@item.Uuid>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                @if (item.Status == "Signed Out")
+                                {
+
+                                    <input type="submit" id="clientVM.Status" name="Status" value="Sign In" class="btn btn-success" />
+
+                                }
+                                @if (item.Status == "Signed In" || item.Status == null)
+                                {
+
+                                    <input type="submit" id="clientVM.Status" name="Status" value="Sign Out" class="btn btn-warning" />
+                                    @*Asp-for= "Status" is converted into html code: id = "status" name = "status" *@
+                                }
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        
+    </table>
+    <div class="btn-group border-bottom">
+        <a asp-action="Index"
+            asp-route-sortOrder="@ViewData["CurrentSort"]"
+            asp-route-pageNumber="@(Model.PageIndex - 1)"
+            asp-route-currentFilter="@ViewData["CurrentFilter"]"
+            class="btn btn-default @prevDisabled">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+        <a asp-action="Index"
+            asp-route-sortOrder="@ViewData["CurrentSort"]"
+            asp-route-pageNumber="@(Model.PageIndex + 1)"
+            asp-route-currentFilter="@ViewData["CurrentFilter"]"
+            class="btn btn-default @nextDisabled">
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+
+@* <p> since already made user login to use so this should be fine right?
+    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+    {
+        <a asp-action="Create">Create New</a>
+    }
+</p> *@
+
+
+
+  @*   <div class="card-group">
         @foreach(var item in Model)
         {
             <div class="card border-dark-subtle m-2">
@@ -70,7 +160,7 @@
                                 {
 
                                 <input type="submit" id="clientVM.Status" name="Status" value="Sign Out" class="btn btn-primary"  />
-                                    @*Asp-for="Status" is converted into html code: id="status" name="status"*@
+                                    @Asp-for="Status" is converted into html code: id="status" name="status"*\@
                                 }
                         </form>
                     </div>
@@ -79,74 +169,4 @@
 
             </div>
         }
-    </div>
-    <div class="btn-group border-bottom">
-        <a asp-action="Index"
-           asp-route-sortOrder="@ViewData["CurrentSort"]"
-           asp-route-pageNumber="@(Model.PageIndex - 1)"
-           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-           class="btn btn-default @prevDisabled">
-            Previous
-        </a>
-        <a asp-action="Index"
-           asp-route-sortOrder="@ViewData["CurrentSort"]"
-           asp-route-pageNumber="@(Model.PageIndex + 1)"
-           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-           class="btn btn-default @nextDisabled">
-            Next
-        </a>
-    </div>
-</div>
-
-
-@* <p> since already made user login to use so this should be fine right?
-    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
-    {
-        <a asp-action="Create">Create New</a>
-    }
-</p> *@
-
-
-
-@*Add numbered paging*@
-
-
-@* ugly page but it works
-<table class="table">
-    <tbody>
-        @foreach (var item in Model)
-        { //have a web display for each item in db
-            <tr>
-              <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">
-                        <img class="img-thumbnail align-content-sm-center img-responsive" display="block" src="@item.ProfilePic" />
-                    </a>
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-Uuid="@item.Uuid">
-                    <div class="col-sm-8 align-items-center"> @*Map data so first name and last name are lumped to gether
-                        <h3>@item.FirstName</h3>
-                        <p>
-                            <strong>First Name:</strong> @item.FirstName
-                        </p>
-                        <p>
-                            <strong>Last Name:</strong> @item.LastName
-                        </p>
-                        <p>
-                            <strong>Email:</strong> @item.Email
-                        </p>
-                        <p>
-                            <strong>Phone:</strong> @item.Phone
-                        </p>
-                        <p>
-                            <strong>Status:</strong> @item.Status
-                        </p>
-
-                    </div>
-                    </a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
- *@
+    </div>*@
