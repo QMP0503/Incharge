@@ -5,19 +5,19 @@
 @{
     ViewData["Title"] = "Register";
 }
-<h1 class="text-center col">Register</h1>
+<h1 class="col text-center">Register</h1>
 
 <form asp-action="Register" method="post">
     <div asp-validation-summary="ModelOnly" div class="col"></div>
 
     <!-- Name input -->
-    <div data-mdb-input-init class="form-outline mb-4">
+    <div data-mdb-input-init class="form-floating mb-4">
         <input asp-for="FirstName" id="form2Example1" class="form-control" />
         <label class="form-label" for="form2Example1">First Name</label>
         <span asp-validation-for="FirstName" class="text-danger"></span>
     </div>
 
-    <div data-mdb-input-init class="form-outline mb-4">
+    <div data-mdb-input-init class="form-floating mb-4">
         <input asp-for="LastName" id="form2Example1" class="form-control" />
         <label class="form-label" for="form2Example1">Last Name</label>
         <span asp-validation-for="LastName" class="text-danger"></span>
@@ -25,21 +25,21 @@
 
 
     <!-- Email input -->
-    <div data-mdb-input-init class="form-outline mb-4">
+    <div data-mdb-input-init class="form-floating mb-4">
         <input asp-for="Email" id="form2Example1" class="form-control" />
         <label asp-for="Email" class="form-label" for="form2Example1"></label>
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <!-- Password input -->
-    <div data-mdb-input-init class="form-outline mb-4">
+    <div data-mdb-input-init class="form-floating mb-4">
         <input asp-for="Password" id="form2Example2" class="form-control" />
         <label class="form-label" for="form2Example2">Password</label>
         <span asp-validation-for="Password" class="text-danger" type="password"></span>
     </div>
 
     <!-- Confirm Password -->
-    <div data-mdb-input-init class="form-outline mb-4">
+    <div data-mdb-input-init class="form-floating mb-4">
         <input asp-for="ConfirmPassword" id="form2Example2" class="form-control" />
         <label class="form-label" for="form2Example2">Confirm Password</label>
         <span asp-validation-for="ConfirmPassword" class="text-danger" type="password"></span>

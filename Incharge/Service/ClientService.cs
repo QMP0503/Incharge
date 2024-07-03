@@ -9,7 +9,7 @@ using AutoMapper;
 
 namespace Incharge.Service
 {
-    public class ClientService: IService<ClientVM, Client> //make sure surface interface use data from the same place.
+    public class ClientService: IService<ClientVM, Client>//make sure surface interface use data from the same place.
     {
         private readonly IFindRepository<Client> _FindClientRepository;
         private readonly IRepository<Client> _ClientRepository;
@@ -32,7 +32,9 @@ namespace Incharge.Service
         {
             var client = _FindClientRepository.FindBy(predicate);
             if(client == null) { throw new NullReferenceException("Client Empty"); }
-            return _mapper.Map<ClientVM>(client);
+            var clientVM = _mapper.Map<ClientVM>(client);
+            clientVM.GymMembership = client.Products.FirstOrDefault(x => x.ProductType.Name.Equals("Membership")) ?? new Product { Name = "No Membership" } ; //this is kinda stupid but oh well haha
+            return clientVM;
         }
         public List<ClientVM> ListItem(Func<Client, bool> predicate) //test if automapper work with lists
         {
@@ -40,7 +42,7 @@ namespace Incharge.Service
             if (client == null) { throw new NullReferenceException("Client Empty"); }
             return _mapper.Map<List<ClientVM>>(client);
         }
-        public void AddService(ClientVM clientVM)
+        public void AddService(ClientVM clientVM) //cosider if there is a desire to add membership as soon as client profile is made..
         {
             if(clientVM == null) { throw new NullReferenceException("Input Empty."); }
             var client = _mapper.Map<Client>(clientVM); //some is null so check if this is true
@@ -89,6 +91,10 @@ namespace Incharge.Service
                     clientToUpdate.Employees.Add(employees);
                 }
             }
+
+            //need a method to add gym membership record and when the gym membership would expire.
+            //Find way to simulate different times to test the result for demo.
+
             _ClientRepository.Update(clientToUpdate);
             _ClientRepository.Save();
         }
@@ -100,6 +106,29 @@ namespace Incharge.Service
             _ClientRepository.Delete(clientToDelete);
             _ClientRepository.Save();
         }
-        
+        public DateTime GetEndDate(ClientVM entity)
+        {
+            var product = _FindProductRepository.FindBy(x => x.ProductType.Id == entity.GymMembership.ProductTypeId);
+            if (product == null) { throw new NullReferenceException("ProductType cannot be found."); }
+            TimeSpan duration = TimeSpan.FromDays(1); //for trial membership
+
+            //could use switch case
+            if (product.ProductType.Recurance == "Weekly")
+            {
+                duration = TimeSpan.FromDays(7);
+            }
+            if (product.ProductType.Recurance == "Monthly")
+            {
+                duration = TimeSpan.FromDays(30); //assuming regular month
+            }
+            if (product.ProductType.Recurance == "Yearly")
+            {
+                duration = TimeSpan.FromDays(365); //assuming regular year
+            }
+            var EndDate = entity.StartDate + duration;
+
+            return (DateTime)EndDate;
+        }
+
     } //consider adding save after actiong is executed in controller.
 }

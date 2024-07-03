@@ -11,12 +11,14 @@ namespace Incharge.Controllers
     {
         readonly IService<ProductVM, Product> _ProductService;
         readonly IPagingService<PaginatedList<Product>> _pagingService;
+        readonly IDropDownOptions<ProductVM> _productDropDown;
         readonly ILog _logger;
 
-        public ProductController(IService<ProductVM, Product> ProductService, IPagingService<PaginatedList<Product>> pagingService, ILog logger)
+        public ProductController(IDropDownOptions<ProductVM> ProductDropDown ,IService<ProductVM, Product> ProductService, IPagingService<PaginatedList<Product>> pagingService, ILog logger)
         {
             _ProductService = ProductService;
             _pagingService = pagingService;
+            _productDropDown = ProductDropDown;
             _logger = logger;
         }
 
@@ -58,7 +60,12 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        [HttpPost]
+        public IActionResult AddProduct()
+        {
+            return View(_productDropDown.DropDownOptions()); //just for the product type drop down menu
+        }
+
+        [HttpPost, ActionName("AddProduct")]
         public IActionResult AddProduct(ProductVM productVM)
         {
             try
@@ -125,7 +132,7 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        [HttpPost, ActionName("DeleteProduct")]
+        [HttpPost, ActionName("DeleteProduct")] //delete with confirmation paper pop-up in page
         public IActionResult DeleteProduct(ProductVM productVM)
         {
             try

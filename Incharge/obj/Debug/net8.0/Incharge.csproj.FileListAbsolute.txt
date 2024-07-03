@@ -52,7 +52,6 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Microsoft.VisualS
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\MySql.Data.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\MySql.EntityFrameworkCore.dll
@@ -75,7 +74,6 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Compositio
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Security.Permissions.dll
@@ -220,15 +218,11 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\ru\Microsoft.Code
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.AssemblyReference.cache
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.AssemblyInfoInputs.cache
@@ -512,3 +506,4 @@ C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\scop
 C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.Up2Date
 C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\Incharge.genruntimeconfig.cache
 C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\ref\Incharge.dll
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll

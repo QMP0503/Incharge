@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Incharge.Models;
 
-public partial class Product
+public partial class Product 
 {
     public int Id { get; set; }
 

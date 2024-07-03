@@ -131,6 +131,9 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
+                    b.Property<string>("Note")
+                        .HasColumnType("longtext");
+
                     b.Property<int?>("PaymentRecordId")
                         .HasColumnType("int");
 
@@ -179,9 +182,9 @@ namespace Incharge.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Discount1")
+                    b.Property<double>("DiscountValue")
                         .HasPrecision(10)
-                        .HasColumnType("decimal(10)")
+                        .HasColumnType("double")
                         .HasColumnName("Discount");
 
                     b.Property<DateTime?>("EndDate")
@@ -380,6 +383,9 @@ namespace Incharge.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int?>("LocationId")
                         .HasColumnType("int");
 
@@ -419,7 +425,7 @@ namespace Incharge.Migrations
                     b.Property<string>("Status")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("longtext")
-                        .HasDefaultValueSql("'Available'");
+                        .HasDefaultValueSql("Available");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");

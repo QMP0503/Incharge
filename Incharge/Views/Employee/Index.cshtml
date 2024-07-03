@@ -16,7 +16,7 @@
 }
 <nav class="navbar-brand mb-5">
     <div class="row align-content-center">
-        <h1 class="align-text-top text-black font-bold m-3">Employee</h1>
+        <h1 class="text-black m-3 align-text-top font-bold">Employee</h1>
     </div>
     <div class="row align-content-center pt-3 pb-3">
         <div class="col pr-2">
@@ -64,11 +64,11 @@
     @foreach(var item in Model)
     {
             <tr>
-                <th @*image column for employee*@>1</th>
+                <th @*image column for employee*@></th>
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td>@item.Email</td>
-                <td>//</td>
+                <td>@item.Role</td> @*Find solution to show role name to display, experiencing null pointer issue.*@
                 <td>
                     <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-primary">Details</a>
                 </td>

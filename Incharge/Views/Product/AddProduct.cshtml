@@ -1,0 +1,52 @@
+﻿@model Incharge.ViewModels.ProductVM; //collect selected discount as LIst<int>
+@using Incharge.ViewModels;
+@using Incharge.Models;
+@*
+Product has:
+Name
+Price
+Product type
+discount - show a list of existing discounts //if this shit is too combusome just make the user manually input the values....
+*@
+
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+@*Only admins can add products*@
+
+<div class="container">
+    <div class="row">
+        <h1 class="font-monospace fw-bold mt-3">Add New Product</h1>
+    </div>
+    <div class="form-group">
+        <form asp-action="AddProduct" method="post">
+        <div class="mb-3 mt-3">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+        @*Will override price set in product type. Ok to be null*@
+            <label asp-for="TotalPrice" class="control-label"></label>
+            <input asp-for="TotalPrice" class="form-control" />
+            <span asp-validation-for="TotalPrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProductType" class="control-label"></label>
+            <select asp-for="ProductTypeId" class="form-select"> 
+            @foreach (var product in Model.ProductTypeOption)
+            {
+                    <option value="@product.Id">@product.Name</option>
+            }
+            </select>
+        </div>
+        <button asp-action="AddProduct" type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+

@@ -5,10 +5,11 @@ using Incharge.Repository.IRepository;
 using AutoMapper;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.CompilerServices;
+using Google.Protobuf.WellKnownTypes;
 
 namespace Incharge.Service
 {
-    public class ProductService:IService<ProductVM, Product>
+    public class ProductService:IService<ProductVM, Product>, IDropDownOptions<ProductVM>
     {
         public readonly IRepository<Product> _ProductRepository;
         public readonly IFindRepository<Product> _FindProductRepository;
@@ -57,7 +58,7 @@ namespace Incharge.Service
                 if (findDiscount != null) { productToAdd.Discounts.Add(findDiscount); }
             }
 
-            productToAdd.TotalPrice = productToAdd.ProductType.Price * (double)productToAdd.Discounts.Sum(x => x.Discount1);
+            productToAdd.TotalPrice = entity.TotalPrice ?? productToAdd.ProductType.Price;
             //make sure to trouble shoot because this might have a ton of problems
             _ProductRepository.Add(productToAdd);
             _ProductRepository.Save();
@@ -80,7 +81,18 @@ namespace Incharge.Service
                 if(findDiscount != null && product.Discounts.Contains(findDiscount)) { product.Discounts.Add(findDiscount); }
             }
             product.ProductType = _FindProductTypeRepository.FindBy(x => x.Id == entity.ProductTypeId) ?? product.ProductType;
-            product.TotalPrice = entity.TotalPrice * (double)product.Discounts.Sum(x => x.Discount1) ?? product.ProductType.Price * (double)product.Discounts.Sum(x => x.Discount1);
+
+            //should find a better way to do this
+            if (product.Discounts.Any())
+            {
+                product.TotalPrice = entity.TotalPrice * (double)product.Discounts.Sum(x => x.DiscountValue) ?? product.ProductType.Price * (double)product.Discounts.Sum(x => x.DiscountValue);
+            }
+            else
+            {
+                product.TotalPrice = entity.TotalPrice ?? product.ProductType.Price;
+            } 
+
+            //add ways for computer to know that the client have paid their monthly membership
         }
         public void DeleteService(ProductVM entity)
         {
@@ -89,6 +101,15 @@ namespace Incharge.Service
             if(product == null) { throw new NullReferenceException("Product cannot be found."); }
             _ProductRepository.Delete(product);
             _ProductRepository.Save();
+        }
+        public ProductVM DropDownOptions() //for view purposes only
+        {
+            var productVM = new ProductVM()
+            {
+                ProductTypeOption = _FindProductTypeRepository.ListBy(x => x.Id > 0) //just something to get all the options for dropdown menu
+            };
+
+            return productVM;
         }
     }
 }

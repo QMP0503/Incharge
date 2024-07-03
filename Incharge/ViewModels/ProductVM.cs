@@ -1,4 +1,7 @@
 ﻿using Incharge.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.ViewModels
 {
@@ -8,11 +11,16 @@ namespace Incharge.ViewModels
 
         public string Name { get; set; } = null!;
 
+        [DisplayName("Total Price")]
         public double? TotalPrice { get; set; }
 
         public int ProductTypeId { get; set; }
 
+        [DisplayName("Product Type")]
         public virtual Producttype ProductType { get; set; }
+
+        //since one product can only have one type this is strictly for selection in add/edit view for product 
+        public virtual List<Producttype> ProductTypeOption { get; set; } //VIEW ONLY
         
         //used to extract data from view
         public virtual List<int> SalesId { get; set; } = new List<int>();

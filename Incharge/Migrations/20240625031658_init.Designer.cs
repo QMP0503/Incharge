@@ -175,7 +175,7 @@ namespace Incharge.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Discount1")
+                    b.Property<decimal>("DiscountValue")
                         .HasPrecision(10)
                         .HasColumnType("decimal(10)")
                         .HasColumnName("Discount");

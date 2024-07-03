@@ -144,7 +144,7 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.ToTable("discounts");
 
-            entity.Property(e => e.Discount1)
+            entity.Property(e => e.DiscountValue)
                 .HasPrecision(10)
                 .HasColumnName("Discount");
             entity.Property(e => e.EndDate).HasColumnType("datetime");

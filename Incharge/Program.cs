@@ -70,6 +70,9 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Gymclass>>, GymclassPagi
 builder.Services.AddScoped<IService<ProductVM, Product>, ProductService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPagingService>();
 
+//dropdown menu view options
+builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
+
 //add memory caching for client list and/or gym class list
 
 
@@ -122,9 +125,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.MapControllerRoute( //edit to make all pages require authentication
     name: "default",
-    pattern: "{controller=Account}/{action=Login}/{id?}"); //check if they put remember me will it work..
+    pattern: "{controller=Product}/{action=Index}/{id?}");
+
+
+    //check if they put remember me will it work..
     //pattern: "{controller=Employee}/{action=Index}/{id?}"); //for testing purposes
 
 app.Run();

@@ -14,9 +14,16 @@ public partial class Client
     public string LastName { get; set; }  
     public int Phone { get; set; }
     [DataType(DataType.EmailAddress)]
+
+    //public string ProfilePic{get; set;} //Need this for profile picture of clients
     public string Email { get; set; }
     [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out", "Overdue" })]
     public string? Status { get; set; }
+    public string? Note { get; set; } //for adding additional information about the client
+
+    //membership date - will reset when payment record is recieved each month
+    //public DateTime? StartDate { get; set; } // = will be set to the date the client bought their membership
+    //public DateTime? EndDate { get; set; }
 
     [ForeignKey("PaymentRecordId")]
     public int? PaymentRecordId { get; set; }

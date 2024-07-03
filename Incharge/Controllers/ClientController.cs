@@ -57,12 +57,11 @@ namespace Incharge.Controllers
         }
         public IActionResult AddClient()
         {
-            //Check if employee/trainger information is needed on display for when new client account is created
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddClient([Bind("FirstName, LastName, Phone, Email")] ClientVM clientVM)
+        public IActionResult AddClient(ClientVM clientVM)
         {
             try
             {

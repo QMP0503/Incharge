@@ -9,7 +9,9 @@ public partial class Gymclass
 
     public string Name { get; set; } = null!;
 
-    public DateTime Date { get; set; }
+    public DateTime Date { get; set; } //start
+
+    public DateTime EndTime { get; set; } //end
 
     public string? Description { get; set; }
 

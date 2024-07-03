@@ -1,0 +1,114 @@
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Product>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager; 
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+@*Page specific style sheets*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+
+
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Memberships</h1>
+    </div>
+
+    <div class="row align-content-center pt-3 pb-3">
+        @if (User.IsInRole("Admin"))
+        {
+        <div class="col pr-2">
+            <a asp-action="AddProduct" class="btn btn-primary">Add Membership</a>
+        </div>
+        }
+        
+        <form asp-action="Index" method="get" class="col">
+            <div class="d-flex gap-1 flex-row-reverse">
+                <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
+                <input class="form-control w-50" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            </div>
+        </form>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+<div class="row">
+        <div class="col-xl-12">
+            <div class="card m-1">
+                <div class="card-body mb-1">
+                    <div class="row align-items-center">
+                        <div class="table-reposive px-3 table overflow-y-visible">
+                            <table class="table-nowrap table align-middle">
+                                <tbody>
+                                    @foreach(var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-18 align-middle"><a asp-action="Details" asp-route-id="@item.Id" class="text-dark">@item.Name</a></h5>
+                                                </div>
+                                            </td>
+
+                                            <td style="width: 220px;">
+                                                <h3 class="mb-0 font-size-20"><span class="text-muted me-2"></span><b>$@item.TotalPrice</b></h3>
+                                            </td>
+
+                                            <td>
+                                                 @*Make controller method just for adding clients to membership - do in client controller..*@
+                                                <button type="button" class="btn btn-primary waves-effect waves-light align-self-end"><i class="bi bi-cart me-2 font-size-15"></i> Add</button>
+                                            </td>
+                                            @if (User.IsInRole("Admin"))
+                                            {
+                                                <td>
+                                                    <div class="dropdown float-end">
+                                                        <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
+                                                            <a asp-action="DeleteProduct" asp-route-id="@item.Id" class="dropdown-item">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            }
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+@* <div class="btn-group border-bottom">
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @prevDisabled">
+        <i class="bi bi-arrow-left"></i>
+    </a>
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @nextDisabled">
+        <i class="bi bi-arrow-right"></i>
+    </a>
+</div> *@

@@ -1,6 +1,7 @@
 ﻿@using Incharge.Models;
 @using Microsoft.AspNetCore.Identity;
 @inject SignInManager<User> SignInManager;
+@using BootstrapIcons;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Incharge.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" asp-append-version="true">
+    
 
 </head>
 <body>
@@ -57,7 +59,7 @@
 
                                     @*SPLIT MEMEBERSHIP AND DISCOUNTS CONTROLLER TO HAVE TWO SEPERATE SET FROM PRODUCTS*@
                                     <li class="w-100">
-                                        <a href="#" class="nav-link text-light">Membership</a>
+                                        <a href="/Product/Index" class="nav-link text-light">Membership</a>
                                     </li>
                                     <li>
                                         <a href="#" class="nav-link text-light"> Discounts</a>
@@ -73,10 +75,10 @@
                                 </a>
                                 <ul class="nav flex-column ms-1 text-light collapse" id="submenu3" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a class="nav-link px-0">Equipment</a>
+                                        <a class="nav-link px-0 text-light">Equipment</a>
                                     </li>
                                     <li>
-                                        <a class="nav-link px-0">Location</a>
+                                        <a class="nav-link px-0 text-light">Location</a>
                                     </li>
                                 </ul>
                             </li>
@@ -131,12 +133,12 @@
                 </div>
              
             </div>
-                @* RENDER BODY WHERE CODE OF PAGE IS COMPILED *@
-                <div class="col-md-9 ms-md-auto col-xl-10 px-md-4` col-auto">
-                    <main role="main" class="pb-3">
-                        @RenderBody()
-                    </main>
-                </div>
+            @* RENDER BODY WHERE CODE OF PAGE IS COMPILED *@
+            <div class="col-md-9 ms-md-auto col-xl-10 px-md-4` col-auto">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
         </div>
 
     </div>

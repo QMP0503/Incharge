@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fqowVR/VAzorOhb1PjjWHkeSaTQyx53WOoJbsjeBXoE=",
+  "Hash": "iBDzj1MbeS9z0PMXUrtybIivxWoZkKHoa557pSkMnZs=",
   "Source": "Incharge",
   "BasePath": "_content/Incharge",
   "Mode": "Default",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Anchor\\Anchor.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Anchor\\Anchor.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Anchor/Anchor.razor.js",
       "AssetKind": "All",
@@ -869,13 +869,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Anchor\\Anchor.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Anchor\\Anchor.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\AnchorLink\\AnchorLink.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\AnchorLink\\AnchorLink.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/AnchorLink/AnchorLink.razor.js",
       "AssetKind": "All",
@@ -888,13 +888,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\AnchorLink\\AnchorLink.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\AnchorLink\\AnchorLink.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\AutoComplete\\AutoComplete.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\AutoComplete\\AutoComplete.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/AutoComplete/AutoComplete.razor.js",
       "AssetKind": "All",
@@ -907,13 +907,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\AutoComplete\\AutoComplete.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\AutoComplete\\AutoComplete.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\Button.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\Button.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Button/Button.razor.js",
       "AssetKind": "All",
@@ -926,13 +926,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\Button.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\Button.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\DialButton.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\DialButton.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Button/DialButton.razor.js",
       "AssetKind": "All",
@@ -945,13 +945,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\DialButton.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\DialButton.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\PopConfirmButton.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\PopConfirmButton.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Button/PopConfirmButton.razor.js",
       "AssetKind": "All",
@@ -964,13 +964,32 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\PopConfirmButton.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\PopConfirmButton.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\SlideButton.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\PopConfirmButtonContent.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
+      "BasePath": "_content/BootstrapBlazor",
+      "RelativePath": "Components/Button/PopConfirmButtonContent.razor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\PopConfirmButtonContent.razor.js"
+    },
+    {
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\SlideButton.razor.js",
+      "SourceId": "BootstrapBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Button/SlideButton.razor.js",
       "AssetKind": "All",
@@ -983,13 +1002,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Button\\SlideButton.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Button\\SlideButton.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Camera\\Camera.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Camera\\Camera.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Camera/Camera.razor.js",
       "AssetKind": "All",
@@ -1002,13 +1021,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Camera\\Camera.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Camera\\Camera.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Captcha\\Captcha.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Captcha\\Captcha.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Captcha/Captcha.razor.js",
       "AssetKind": "All",
@@ -1021,13 +1040,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Captcha\\Captcha.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Captcha\\Captcha.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Card\\Card.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Card\\Card.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Card/Card.razor.js",
       "AssetKind": "All",
@@ -1040,13 +1059,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Card\\Card.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Card\\Card.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Carousel\\Carousel.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Carousel\\Carousel.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Carousel/Carousel.razor.js",
       "AssetKind": "All",
@@ -1059,13 +1078,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Carousel\\Carousel.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Carousel\\Carousel.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ClockPicker\\ClockPicker.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ClockPicker\\ClockPicker.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/ClockPicker/ClockPicker.razor.js",
       "AssetKind": "All",
@@ -1078,13 +1097,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ClockPicker\\ClockPicker.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ClockPicker\\ClockPicker.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Console\\Console.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Console\\Console.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Console/Console.razor.js",
       "AssetKind": "All",
@@ -1097,13 +1116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Console\\Console.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Console\\Console.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ContextMenu\\ContextMenu.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ContextMenu\\ContextMenu.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/ContextMenu/ContextMenu.razor.js",
       "AssetKind": "All",
@@ -1116,13 +1135,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ContextMenu\\ContextMenu.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ContextMenu\\ContextMenu.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\CountUp\\CountUp.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\CountUp\\CountUp.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/CountUp/CountUp.razor.js",
       "AssetKind": "All",
@@ -1135,13 +1154,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\CountUp\\CountUp.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\CountUp\\CountUp.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\DateTimePicker\\DateTimePicker.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\DateTimePicker\\DateTimePicker.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/DateTimePicker/DateTimePicker.razor.js",
       "AssetKind": "All",
@@ -1154,13 +1173,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\DateTimePicker\\DateTimePicker.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\DateTimePicker\\DateTimePicker.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Dialog\\EditDialog.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Dialog\\EditDialog.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Dialog/EditDialog.razor.js",
       "AssetKind": "All",
@@ -1173,13 +1192,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Dialog\\EditDialog.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Dialog\\EditDialog.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Dialog\\IconDialog.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Dialog\\IconDialog.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Dialog/IconDialog.razor.js",
       "AssetKind": "All",
@@ -1192,13 +1211,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Dialog\\IconDialog.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Dialog\\IconDialog.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Drawer\\Drawer.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Drawer\\Drawer.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Drawer/Drawer.razor.js",
       "AssetKind": "All",
@@ -1211,13 +1230,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Drawer\\Drawer.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Drawer\\Drawer.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Dropdown\\Dropdown.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Dropdown\\Dropdown.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Dropdown/Dropdown.razor.js",
       "AssetKind": "All",
@@ -1230,13 +1249,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Dropdown\\Dropdown.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Dropdown\\Dropdown.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Filters\\TableFilter.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Filters\\TableFilter.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Filters/TableFilter.razor.js",
       "AssetKind": "All",
@@ -1249,13 +1268,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Filters\\TableFilter.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Filters\\TableFilter.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\FlipClock\\FlipClock.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\FlipClock\\FlipClock.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/FlipClock/FlipClock.razor.js",
       "AssetKind": "All",
@@ -1268,13 +1287,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\FlipClock\\FlipClock.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\FlipClock\\FlipClock.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\GoTop\\GoTop.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\GoTop\\GoTop.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/GoTop/GoTop.razor.js",
       "AssetKind": "All",
@@ -1287,13 +1306,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\GoTop\\GoTop.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\GoTop\\GoTop.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Handwritten\\Handwritten.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Handwritten\\Handwritten.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Handwritten/Handwritten.razor.js",
       "AssetKind": "All",
@@ -1306,13 +1325,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Handwritten\\Handwritten.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Handwritten\\Handwritten.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\IFrame\\IFrame.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\IFrame\\IFrame.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/IFrame/IFrame.razor.js",
       "AssetKind": "All",
@@ -1325,13 +1344,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\IFrame\\IFrame.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\IFrame\\IFrame.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ImagePreviewer\\ImagePreviewer.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ImagePreviewer\\ImagePreviewer.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/ImagePreviewer/ImagePreviewer.razor.js",
       "AssetKind": "All",
@@ -1344,13 +1363,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ImagePreviewer\\ImagePreviewer.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ImagePreviewer\\ImagePreviewer.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ImageViewer\\ImageViewer.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ImageViewer\\ImageViewer.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/ImageViewer/ImageViewer.razor.js",
       "AssetKind": "All",
@@ -1363,13 +1382,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ImageViewer\\ImageViewer.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ImageViewer\\ImageViewer.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Input\\BootstrapInput.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Input\\BootstrapInput.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Input/BootstrapInput.razor.js",
       "AssetKind": "All",
@@ -1382,13 +1401,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Input\\BootstrapInput.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Input\\BootstrapInput.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\IpAddress\\IpAddress.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\IpAddress\\IpAddress.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/IpAddress/IpAddress.razor.js",
       "AssetKind": "All",
@@ -1401,13 +1420,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\IpAddress\\IpAddress.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\IpAddress\\IpAddress.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Layout\\Layout.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Layout\\Layout.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Layout/Layout.razor.js",
       "AssetKind": "All",
@@ -1420,13 +1439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Layout\\Layout.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Layout\\Layout.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Menu\\Menu.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Menu\\Menu.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Menu/Menu.razor.js",
       "AssetKind": "All",
@@ -1439,13 +1458,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Menu\\Menu.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Menu\\Menu.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Message\\Message.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Message\\Message.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Message/Message.razor.js",
       "AssetKind": "All",
@@ -1458,13 +1477,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Message\\Message.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Message\\Message.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Modal\\Modal.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Modal\\Modal.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Modal/Modal.razor.js",
       "AssetKind": "All",
@@ -1477,13 +1496,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Modal\\Modal.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Modal\\Modal.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Modal\\ModalDialog.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Modal\\ModalDialog.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Modal/ModalDialog.razor.js",
       "AssetKind": "All",
@@ -1496,13 +1515,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Modal\\ModalDialog.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Modal\\ModalDialog.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Print\\PrintButton.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Print\\PrintButton.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Print/PrintButton.razor.js",
       "AssetKind": "All",
@@ -1515,13 +1534,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Print\\PrintButton.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Print\\PrintButton.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Reconnector\\ReconnectorContent.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Reconnector\\ReconnectorContent.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Reconnector/ReconnectorContent.razor.js",
       "AssetKind": "All",
@@ -1534,13 +1553,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Reconnector\\ReconnectorContent.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Reconnector\\ReconnectorContent.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\RibbonTab\\RibbonTab.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\RibbonTab\\RibbonTab.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/RibbonTab/RibbonTab.razor.js",
       "AssetKind": "All",
@@ -1553,13 +1572,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\RibbonTab\\RibbonTab.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\RibbonTab\\RibbonTab.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Row\\Row.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Row\\Row.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Row/Row.razor.js",
       "AssetKind": "All",
@@ -1572,13 +1591,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Row\\Row.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Row\\Row.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Segmented\\Segmented.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Segmented\\Segmented.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Segmented/Segmented.razor.js",
       "AssetKind": "All",
@@ -1591,13 +1610,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Segmented\\Segmented.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Segmented\\Segmented.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\MultiSelect.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\MultiSelect.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Select/MultiSelect.razor.js",
       "AssetKind": "All",
@@ -1610,13 +1629,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\MultiSelect.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\MultiSelect.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\Select.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\Select.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Select/Select.razor.js",
       "AssetKind": "All",
@@ -1629,13 +1648,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\Select.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\Select.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\SelectObject.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\SelectObject.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Select/SelectObject.razor.js",
       "AssetKind": "All",
@@ -1648,13 +1667,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\SelectObject.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\SelectObject.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\SelectTable.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\SelectTable.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Select/SelectTable.razor.js",
       "AssetKind": "All",
@@ -1667,13 +1686,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\SelectTable.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\SelectTable.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\SelectTree.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\SelectTree.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Select/SelectTree.razor.js",
       "AssetKind": "All",
@@ -1686,13 +1705,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Select\\SelectTree.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Select\\SelectTree.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Split\\Split.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Split\\Split.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Split/Split.razor.js",
       "AssetKind": "All",
@@ -1705,13 +1724,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Split\\Split.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Split\\Split.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Tab\\Tab.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Tab\\Tab.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Tab/Tab.razor.js",
       "AssetKind": "All",
@@ -1724,13 +1743,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Tab\\Tab.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Tab\\Tab.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Table\\Table.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Table\\Table.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Table/Table.razor.js",
       "AssetKind": "All",
@@ -1743,13 +1762,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Table\\Table.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Table\\Table.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Textarea\\Textarea.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Textarea\\Textarea.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Textarea/Textarea.razor.js",
       "AssetKind": "All",
@@ -1762,13 +1781,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Textarea\\Textarea.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Textarea\\Textarea.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ThemeProvider\\ThemeProvider.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ThemeProvider\\ThemeProvider.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/ThemeProvider/ThemeProvider.razor.js",
       "AssetKind": "All",
@@ -1781,13 +1800,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ThemeProvider\\ThemeProvider.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ThemeProvider\\ThemeProvider.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\TimePicker\\TimePickerCell.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\TimePicker\\TimePickerCell.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/TimePicker/TimePickerCell.razor.js",
       "AssetKind": "All",
@@ -1800,13 +1819,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\TimePicker\\TimePickerCell.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\TimePicker\\TimePickerCell.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Toast\\Toast.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Toast\\Toast.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Toast/Toast.razor.js",
       "AssetKind": "All",
@@ -1819,13 +1838,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Toast\\Toast.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Toast\\Toast.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Tooltip\\Tooltip.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Tooltip\\Tooltip.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Tooltip/Tooltip.razor.js",
       "AssetKind": "All",
@@ -1838,13 +1857,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Tooltip\\Tooltip.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Tooltip\\Tooltip.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Transition\\Transition.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Transition\\Transition.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Transition/Transition.razor.js",
       "AssetKind": "All",
@@ -1857,13 +1876,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Transition\\Transition.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Transition\\Transition.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\TreeView\\TreeView.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\TreeView\\TreeView.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/TreeView/TreeView.razor.js",
       "AssetKind": "All",
@@ -1876,13 +1895,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\TreeView\\TreeView.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\TreeView\\TreeView.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ValidateForm\\ValidateForm.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ValidateForm\\ValidateForm.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/ValidateForm/ValidateForm.razor.js",
       "AssetKind": "All",
@@ -1895,13 +1914,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\ValidateForm\\ValidateForm.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\ValidateForm\\ValidateForm.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Waterfall\\Waterfall.razor.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Waterfall\\Waterfall.razor.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "Components/Waterfall/Waterfall.razor.js",
       "AssetKind": "All",
@@ -1914,13 +1933,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\Components\\Waterfall\\Waterfall.razor.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\Components\\Waterfall\\Waterfall.razor.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\css\\bootstrap.blazor.bundle.min.css",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\css\\bootstrap.blazor.bundle.min.css",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "css/bootstrap.blazor.bundle.min.css",
       "AssetKind": "All",
@@ -1933,13 +1952,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\css\\bootstrap.blazor.bundle.min.css"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\css\\bootstrap.blazor.bundle.min.css"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\css\\motronic.min.css",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\css\\motronic.min.css",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "css/motronic.min.css",
       "AssetKind": "All",
@@ -1952,13 +1971,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\css\\motronic.min.css"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\css\\motronic.min.css"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\js\\bootstrap.blazor.bundle.min.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\js\\bootstrap.blazor.bundle.min.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "js/bootstrap.blazor.bundle.min.js",
       "AssetKind": "All",
@@ -1971,13 +1990,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\js\\bootstrap.blazor.bundle.min.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\js\\bootstrap.blazor.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\lib\\countUp\\countUp.min.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\lib\\countUp\\countUp.min.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "lib/countUp/countUp.min.js",
       "AssetKind": "All",
@@ -1990,13 +2009,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\lib\\countUp\\countUp.min.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\lib\\countUp\\countUp.min.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\lib\\floating-ui\\floating-ui.core.esm.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\lib\\floating-ui\\floating-ui.core.esm.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "lib/floating-ui/floating-ui.core.esm.js",
       "AssetKind": "All",
@@ -2009,13 +2028,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\lib\\floating-ui\\floating-ui.core.esm.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\lib\\floating-ui\\floating-ui.core.esm.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\lib\\floating-ui\\floating-ui.dom.esm.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\lib\\floating-ui\\floating-ui.dom.esm.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "lib/floating-ui/floating-ui.dom.esm.js",
       "AssetKind": "All",
@@ -2028,13 +2047,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\lib\\floating-ui\\floating-ui.dom.esm.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\lib\\floating-ui\\floating-ui.dom.esm.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\ajax.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\ajax.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/ajax.js",
       "AssetKind": "All",
@@ -2047,13 +2066,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\ajax.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\ajax.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\autoredirect.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\autoredirect.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/autoredirect.js",
       "AssetKind": "All",
@@ -2066,13 +2085,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\autoredirect.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\autoredirect.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\base-popover.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\base-popover.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/base-popover.js",
       "AssetKind": "All",
@@ -2085,13 +2104,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\base-popover.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\base-popover.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\browser.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\browser.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/browser.js",
       "AssetKind": "All",
@@ -2104,13 +2123,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\browser.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\browser.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\client.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\client.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/client.js",
       "AssetKind": "All",
@@ -2123,13 +2142,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\client.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\client.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\data.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\data.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/data.js",
       "AssetKind": "All",
@@ -2142,13 +2161,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\data.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\data.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\debounce.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\debounce.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/debounce.js",
       "AssetKind": "All",
@@ -2161,13 +2180,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\debounce.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\debounce.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\download.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\download.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/download.js",
       "AssetKind": "All",
@@ -2180,13 +2199,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\download.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\download.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\drag.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\drag.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/drag.js",
       "AssetKind": "All",
@@ -2199,13 +2218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\drag.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\drag.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\event-handler.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\event-handler.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/event-handler.js",
       "AssetKind": "All",
@@ -2218,13 +2237,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\event-handler.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\event-handler.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\eye-dropper.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\eye-dropper.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/eye-dropper.js",
       "AssetKind": "All",
@@ -2237,13 +2256,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\eye-dropper.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\eye-dropper.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\floating-ui.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\floating-ui.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/floating-ui.js",
       "AssetKind": "All",
@@ -2256,13 +2275,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\floating-ui.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\floating-ui.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\fullscreen.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\fullscreen.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/fullscreen.js",
       "AssetKind": "All",
@@ -2275,13 +2294,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\fullscreen.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\fullscreen.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\geo.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\geo.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/geo.js",
       "AssetKind": "All",
@@ -2294,13 +2313,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\geo.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\geo.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\hub.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\hub.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/hub.js",
       "AssetKind": "All",
@@ -2313,13 +2332,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\hub.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\hub.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\input.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\input.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/input.js",
       "AssetKind": "All",
@@ -2332,13 +2351,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\input.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\input.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\noti.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\noti.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/noti.js",
       "AssetKind": "All",
@@ -2351,13 +2370,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\noti.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\noti.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\popover.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\popover.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/popover.js",
       "AssetKind": "All",
@@ -2370,13 +2389,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\popover.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\popover.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\responsive.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\responsive.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/responsive.js",
       "AssetKind": "All",
@@ -2389,13 +2408,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\responsive.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\responsive.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\theme.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\theme.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/theme.js",
       "AssetKind": "All",
@@ -2408,13 +2427,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\theme.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\theme.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\title.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\title.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/title.js",
       "AssetKind": "All",
@@ -2427,13 +2446,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\title.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\title.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\upload.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\upload.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/upload.js",
       "AssetKind": "All",
@@ -2446,13 +2465,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\upload.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\upload.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\utility.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\utility.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/utility.js",
       "AssetKind": "All",
@@ -2465,13 +2484,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\utility.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\utility.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\validate.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\validate.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/validate.js",
       "AssetKind": "All",
@@ -2484,13 +2503,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\validate.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\validate.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\viewer.js",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\viewer.js",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "modules/viewer.js",
       "AssetKind": "All",
@@ -2503,13 +2522,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\modules\\viewer.js"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\modules\\viewer.js"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\scss\\theme\\bootstrap.blazor.css",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\scss\\theme\\bootstrap.blazor.css",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "scss/theme/bootstrap.blazor.css",
       "AssetKind": "All",
@@ -2522,13 +2541,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\scss\\theme\\bootstrap.blazor.css"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\scss\\theme\\bootstrap.blazor.css"
     },
     {
-      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\scss\\theme\\bootstrap.blazor.scss",
+      "Identity": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\scss\\theme\\bootstrap.blazor.scss",
       "SourceId": "BootstrapBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\",
       "BasePath": "_content/BootstrapBlazor",
       "RelativePath": "scss/theme/bootstrap.blazor.scss",
       "AssetKind": "All",
@@ -2541,7 +2560,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.6.4\\staticwebassets\\scss\\theme\\bootstrap.blazor.scss"
+      "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrapblazor\\8.7.0\\staticwebassets\\scss\\theme\\bootstrap.blazor.scss"
     },
     {
       "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Incharge.styles.css",

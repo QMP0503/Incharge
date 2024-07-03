@@ -20,6 +20,9 @@ namespace Incharge.ViewModels
         //sign in and out of the gym, when payment is overdue they can no longer enter the gym
         [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
         public string? Status { get; set; }
+        public string? Note { get; set; }
+        public DateTime? StartDate { get; set; } // = will be set to the date the client bought their membership
+        public DateTime? EndDate { get; set; }
 
         //Icollection<object> to retrieve and display data.
         public virtual Paymentrecord? PaymentRecord { get; set; }
@@ -31,6 +34,10 @@ namespace Incharge.ViewModels
 
         public virtual ICollection<Product> Products { get; set; }
 
+
+
+        [Display(Name = "Gym Membership")]
+        public Product GymMembership { get; set; }
 
         //Selected object Id retrieved from view page
         public List<int?> SalesID { get; set; } = new List<int?>();
