@@ -59,6 +59,7 @@ namespace Incharge.Service
             clientToUpdate.Phone = clientVM.Phone ?? clientToUpdate.Phone;
             clientToUpdate.Status = clientVM.Status ?? clientToUpdate.Status;
             clientToUpdate.PaymentRecord = clientVM.PaymentRecord ?? clientToUpdate.PaymentRecord;
+            clientToUpdate.Note = clientVM.Note ?? clientToUpdate.Note;
             if(clientVM.Sales != null)
             {
                 foreach (var clientSales in clientVM.SalesID)

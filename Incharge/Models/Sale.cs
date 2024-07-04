@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.Models;
 
@@ -11,11 +12,14 @@ public partial class Sale
 
     public int ProductId { get; set; }
 
+    [AllowedValues(typeof(string), new string[] { "Cash", "Credit", "Debit" })]
+    public string? PaymentType { get; set; }
+
     public int EmployeeId { get; set; }
 
     public int ClientId { get; set; }
 
-    public int? BusinessReportId { get; set; }
+    public int? BusinessReportId { get; set; } //send to business report within the month, will be made during the background.
 
     public virtual BusinessReport? BusinessReport { get; set; }
 

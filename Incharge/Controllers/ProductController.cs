@@ -52,7 +52,9 @@ namespace Incharge.Controllers
         {
             try
             {
-                return View(_ProductService.GetItem(x => x.Id == id));
+                var product = _ProductService.GetItem(x => x.Id == id);
+                product.ProductTypeOption = _productDropDown.DropDownOptions().ProductTypeOption;
+                return View(product);
             }
             catch (Exception ex)
             {
@@ -83,7 +85,9 @@ namespace Incharge.Controllers
         {
             try
             {
-                return View(_ProductService.GetItem(x => x.Id == id));
+                var productVM = _ProductService.GetItem(x => x.Id == id);
+                productVM.ProductTypeOption = _productDropDown.DropDownOptions().ProductTypeOption;
+                return View(productVM);
             }
             catch(Exception ex)
             {
@@ -105,21 +109,7 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        //decide where to put product assigned to client.
-        [HttpPost]
-        public IActionResult AddProductToClient(ProductVM productVM) //only have list of clients
-        {
-            try
-            {
-                _ProductService.UpdateService(productVM);
-                return RedirectToAction(nameof(Index)); //find a more logical place to redirect
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return View();
-            }
-        }
+        
         public IActionResult DeleteProduct(int id)
         {
             try
@@ -146,5 +136,49 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-    }
+
+
+        public IActionResult RegisterClient(int id)
+        {
+            try
+            {
+                return View(_productDropDown.DropDownOptions());
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                return View();
+            }
+        }
+
+        [HttpPost, ActionName("RegisterClient")] //should only update 
+        public IActionResult RegisterClient(ProductVM productVM) //need to make sales controller and method to register the transaction
+        {
+            try
+            {
+                _ProductService.UpdateService(productVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                return View(); //link to error page when possible
+            }
+        }
+		//decide where to put product assigned to client.
+		[HttpPost]
+		public IActionResult AddProductToClient(ProductVM productVM) //only have list of clients
+		{
+			try
+			{
+				_ProductService.UpdateService(productVM);
+				return RedirectToAction(nameof(Index)); //find a more logical place to redirect
+			}
+			catch (Exception ex)
+			{
+				_logger.Error(ex);
+				return View();
+			}
+		}
+	}
 }

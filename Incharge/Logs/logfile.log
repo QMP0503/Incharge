@@ -217,3 +217,9 @@ Incharge.Models.Client -> Incharge.ViewModels.ClientVM
 2024-07-03 09:25:16,037 [17] ERROR Program - System.NullReferenceException: Client Empty
    at Incharge.Service.ClientService.GetItem(Func`2 predicate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 34
    at Incharge.Controllers.ClientController.Details(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 51
+2024-07-04 16:34:14,099 [18] ERROR Program - System.Exception: Product already exist
+   at Incharge.Service.ProductService.AddService(ProductVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ProductService.cs:line 48
+   at Incharge.Controllers.ProductController.AddProduct(ProductVM productVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ProductController.cs:line 75
+2024-07-04 16:36:18,257 [18] ERROR Program - System.Exception: Product already exist
+   at Incharge.Service.ProductService.AddService(ProductVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ProductService.cs:line 48
+   at Incharge.Controllers.ProductController.AddProduct(ProductVM productVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ProductController.cs:line 75

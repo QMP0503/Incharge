@@ -89,8 +89,8 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.Property(e => e.LastName).HasMaxLength(45);
             entity.Property(e => e.Status).HasMaxLength(45);
 
-            entity.HasOne(d => d.PaymentRecord).WithMany(p => p.Clients)
-                .HasForeignKey(d => d.PaymentRecordId)
+            entity.HasOne(d => d.PaymentRecord).WithOne(p => p.Clients)
+                .HasForeignKey<Client>(d => d.PaymentRecordId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("PaymentRecordId");
 

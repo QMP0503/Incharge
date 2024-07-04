@@ -140,6 +140,9 @@ namespace Incharge.Migrations
                     b.Property<int>("Phone")
                         .HasColumnType("int");
 
+                    b.Property<string>("ProfilePicture")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Status")
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
@@ -153,6 +156,9 @@ namespace Incharge.Migrations
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
+
+                    b.HasIndex("PaymentRecordId")
+                        .IsUnique();
 
                     b.HasIndex(new[] { "Id" }, "Client_Id_UNIQUE")
                         .IsUnique();
@@ -232,6 +238,9 @@ namespace Incharge.Migrations
 
                     b.Property<int>("Phone")
                         .HasColumnType("int");
+
+                    b.Property<string>("ProfilePicture")
+                        .HasColumnType("longtext");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -442,6 +451,9 @@ namespace Incharge.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("ClientId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)")
@@ -539,6 +551,12 @@ namespace Incharge.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("PaymentType")
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("PaymentrecordId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -548,6 +566,8 @@ namespace Incharge.Migrations
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
+
+                    b.HasIndex("PaymentrecordId");
 
                     b.HasIndex(new[] { "BusinessReportId" }, "BusinessReportId_idx");
 
@@ -841,8 +861,8 @@ namespace Incharge.Migrations
             modelBuilder.Entity("Incharge.Models.Client", b =>
                 {
                     b.HasOne("Incharge.Models.Paymentrecord", "PaymentRecord")
-                        .WithMany("Clients")
-                        .HasForeignKey("PaymentRecordId")
+                        .WithOne("Clients")
+                        .HasForeignKey("Incharge.Models.Client", "PaymentRecordId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("PaymentRecordId");
 
@@ -933,6 +953,10 @@ namespace Incharge.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("Employe_idfk");
+
+                    b.HasOne("Incharge.Models.Paymentrecord", null)
+                        .WithMany("ClientSales")
+                        .HasForeignKey("PaymentrecordId");
 
                     b.HasOne("Incharge.Models.Product", "Product")
                         .WithMany("Sales")
@@ -1054,7 +1078,10 @@ namespace Incharge.Migrations
 
             modelBuilder.Entity("Incharge.Models.Paymentrecord", b =>
                 {
-                    b.Navigation("Clients");
+                    b.Navigation("ClientSales");
+
+                    b.Navigation("Clients")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Incharge.Models.Product", b =>

@@ -10,13 +10,26 @@ using Incharge.Service.IService;
 using Incharge.Service;
 using Incharge.Service.PagingService;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using dotenv.net;
+
+// Set your Cloudinary credentials
+//=================================
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var cloudAPI = builder.Configuration.GetValue<string>("CLOUDINARY_URL");
+Cloudinary cloudinary = new Cloudinary(cloudAPI);
+cloudinary.Api.Secure = true;
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddAutoMapper(typeof(Program));
+
+
 
 var conectionString = builder.Configuration.GetConnectionString("InchargeDatabase");
 
@@ -70,8 +83,11 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Gymclass>>, GymclassPagi
 builder.Services.AddScoped<IService<ProductVM, Product>, ProductService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPagingService>();
 
+builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>(); //have not made paging service for sales.
+
 //dropdown menu view options
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
+builder.Services.AddScoped<IDropDownOptions<SaleVM>, SalesService>();
 
 //add memory caching for client list and/or gym class list
 
@@ -127,7 +143,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute( //edit to make all pages require authentication
     name: "default",
-    pattern: "{controller=Product}/{action=Index}/{id?}");
+    pattern: "{controller=Client}/{action=Index}/{id?}");
 
 
     //check if they put remember me will it work..

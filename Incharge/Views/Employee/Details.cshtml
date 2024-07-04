@@ -13,11 +13,16 @@
 }
 
 <div class="row m-4">
-    <div class="col fw-bold">
-        <div class="row">
+    <div class="col-2">
+        <div class="mt-2 mx-1">
+            <img width="100" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary">
+        </div>
+    </div>
+    <div class="col">
+        <div class="row fw-bold">
             <h1>@Model.FirstName @Model.LastName</h1>
         </div>
-        <div class="flex-row gap-2 mt-2">
+        <div class="gap-2 mt-2 flex-row">
             
             @if (User.IsInRole("Admin"))
             {
@@ -26,25 +31,34 @@
             }
         </div>
     </div>
-    <div class="col mt-2">
+    
+    <div class="col">
+        <div class="mt-2">
             <p>
                 <strong>Email: </strong>@Model.Email
-            </p>    
+            </p>
             <p>
                 <strong>Phone: </strong>@Model.Phone
             </p>
-        @if (User.IsInRole("Admin"))
-        {
             <p>
-                <strong>Salary: </strong>$@string.Format("{0:#,0.####}", Model.TotalSalary)
+                <strong>Role: </strong>@Model.Role.Type
             </p>
-        }
+
+            @if (User.IsInRole("Admin"))
+            {
+                <p>
+                    <strong>Salary: </strong>$@string.Format("{0:#,0.####}", Model.TotalSalary)
+                </p>
+            }
+        </div>
     </div>
+
+   
 </div>
 <div class="row mt-4 gap-2">
     <div class="col-4">
         <h5 class="fw-bold align-content-center ms-2">Clients</h5>
-        <table class="table table-striped">
+        <table class="table-striped table">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -64,7 +78,7 @@
     </div>
     <div class="col mx-2">
         <h5 class="fw-bold align-content-center">Gym Class</h5>
-        <table class="table table-striped">
+        <table class="table-striped table">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -78,7 +92,7 @@
                     <tr>
                         <td href="/GymClass/Details/@item.Id">@item.Name</td>
                         <td>@item.Date</td>
-                        <td>@item.Location</td>
+                        <td>@item.Location.Name</td>
                     </tr>
                 }
             </tbody>

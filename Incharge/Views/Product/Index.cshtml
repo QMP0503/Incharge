@@ -69,7 +69,9 @@
 
                                             <td>
                                                  @*Make controller method just for adding clients to membership - do in client controller..*@
-                                                <button type="button" class="btn btn-primary waves-effect waves-light align-self-end"><i class="bi bi-cart me-2 font-size-15"></i> Add</button>
+                                                <button type="button" class="btn btn-primary waves-effect waves-light align-self-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    <i class="bi bi-profile me-2 font-size-15"></i> Add
+                                                </button>
                                             </td>
                                             @if (User.IsInRole("Admin"))
                                             {
@@ -96,7 +98,24 @@
         </div>
 </div>
 </div>
-@* <div class="btn-group border-bottom">
+
+@* @section Script {
+    <script>
+        $('#staticBackdrop').load("/Sale/_SalePartial")
+    </script>
+} *@
+
+
+@*
+    --Use Partial View Tag Helper--
+    <partial name="_*Name of partial view*", model="NAME OF MODEL" />
+
+    --use html tag helper--
+    @await html.PartialAsync("_*Name of partial view*", Model)
+*@
+
+
+<div class="btn-group border-bottom">
     <a asp-action="Index"
        asp-route-sortOrder="@ViewData["CurrentSort"]"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
@@ -111,4 +130,4 @@
        class="btn btn-default @nextDisabled">
         <i class="bi bi-arrow-right"></i>
     </a>
-</div> *@
+</div>

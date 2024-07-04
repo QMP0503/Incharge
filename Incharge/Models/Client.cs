@@ -14,8 +14,7 @@ public partial class Client
     public string LastName { get; set; }  
     public int Phone { get; set; }
     [DataType(DataType.EmailAddress)]
-
-    //public string ProfilePic{get; set;} //Need this for profile picture of clients
+    public string? ProfilePicture { get; set; }
     public string Email { get; set; }
     [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out", "Overdue" })]
     public string? Status { get; set; }

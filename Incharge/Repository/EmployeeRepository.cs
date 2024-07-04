@@ -15,23 +15,38 @@ namespace Incharge.Repository
         public Employee FindBy(Func<Employee, bool> predicate)
         {
             return _context.Employees
-                .Include(x => x.Clients)
-                .Include(x => x.Gymclasses)
-                .ThenInclude(x => x.Equipment)
-                .FirstOrDefault(predicate);
+				.Include(x => x.Clients)
+				.Include(x => x.Gymclasses)
+				.ThenInclude(x => x.Location)
+				.Include(x => x.Gymclasses)
+				.ThenInclude(x => x.Equipment)
+				.Include(x => x.Role)
+				.FirstOrDefault(predicate);
         }
         public List<Employee> ListBy(Func<Employee, bool> predicate)
         {
             return _context.Employees
                     .Include(x => x.Clients)
                     .Include(x => x.Gymclasses)
+                    .ThenInclude(x => x.Location)
+                    .Include(x => x.Gymclasses)
                     .ThenInclude(x => x.Equipment)
-                    .Where(predicate)
+					.Include(x => x.Role)
+					.Where(predicate)
                     .ToList();
         }
         public IQueryable<Employee> QueryBy(Func<Employee, bool> predicate)
         {
-            return _context.Employees.Where(predicate).AsQueryable(); //for index paging method. 
+            return _context.Employees
+                .Include(x=> x.Role)
+                .Include(x => x.Clients)
+                .Include(x => x.Gymclasses)
+                .ThenInclude(x => x.Location)
+                .Include(x => x.Gymclasses)
+                .ThenInclude(x => x.Equipment)
+                .Include(x => x.Role)
+                .Where(predicate)
+                .AsQueryable(); //for index paging method.
         }
     }
 }

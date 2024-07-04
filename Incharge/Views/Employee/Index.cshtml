@@ -68,7 +68,7 @@
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td>@item.Email</td>
-                <td>@item.Role</td> @*Find solution to show role name to display, experiencing null pointer issue.*@
+                <td>@item.Role.Type</td>
                 <td>
                     <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-primary">Details</a>
                 </td>

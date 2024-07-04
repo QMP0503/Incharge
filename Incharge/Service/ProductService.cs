@@ -91,7 +91,8 @@ namespace Incharge.Service
             {
                 product.TotalPrice = entity.TotalPrice ?? product.ProductType.Price;
             } 
-
+            _ProductRepository.Update(product);
+            _ProductRepository.Save();
             //add ways for computer to know that the client have paid their monthly membership
         }
         public void DeleteService(ProductVM entity)
@@ -106,7 +107,8 @@ namespace Incharge.Service
         {
             var productVM = new ProductVM()
             {
-                ProductTypeOption = _FindProductTypeRepository.ListBy(x => x.Id > 0) //just something to get all the options for dropdown menu
+                ProductTypeOption = _FindProductTypeRepository.ListBy(x => x.Id > 0), //just something to get all the options for dropdown menu
+                ClientOptions = _FindClientRepository.ListBy(x => x.Id > 0)//getting all clients available
             };
 
             return productVM;

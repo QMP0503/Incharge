@@ -10,6 +10,9 @@ public partial class Paymentrecord
     public bool? Paymentstatus { get; set; }
 
     public string? Description { get; set; }
+    
+    public int? ClientId { get; set; }
+    public virtual Client Clients { get; set; } //each client will have a personal payment record
 
-    public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
+    public virtual ICollection<Sale> ClientSales { get; set; } //list of pruchases clients made
 }

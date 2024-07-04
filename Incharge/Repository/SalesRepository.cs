@@ -18,6 +18,7 @@ namespace Incharge.Repository
                 .Include(x => x.Client)
                 .Include(x => x.Employee)
                 .Include(x => x.Product)
+                .Include(x => x.BusinessReport)
                 .FirstOrDefault(predicate);
         }
         public List<Sale> ListBy(Func<Sale, bool>? predicate)
@@ -26,6 +27,7 @@ namespace Incharge.Repository
                 .Include(x => x.Client)
                 .Include(x => x.Employee)
                 .Include(x => x.Product)
+                .Include(x => x.BusinessReport)
                 .Where(predicate)
                 .ToList();
         }
@@ -35,6 +37,7 @@ namespace Incharge.Repository
                 .Include(x => x.Client)
                 .Include(x => x.Employee)
                 .Include(x => x.Product)
+                .Include(x => x.BusinessReport)
                 .Where(predicate)
                 .AsQueryable();
         }

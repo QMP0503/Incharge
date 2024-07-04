@@ -91,7 +91,7 @@ namespace Incharge.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditClient([Bind("Uuid, FirstName, LastName, Phone, Email")] ClientVM clientVM)
+        public IActionResult EditClient(ClientVM clientVM)
         {
             try
             {

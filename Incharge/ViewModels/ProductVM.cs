@@ -20,7 +20,10 @@ namespace Incharge.ViewModels
         public virtual Producttype ProductType { get; set; }
 
         //since one product can only have one type this is strictly for selection in add/edit view for product 
-        public virtual List<Producttype> ProductTypeOption { get; set; } //VIEW ONLY
+
+        //VIEW ONLY
+        public virtual List<Producttype> ProductTypeOption { get; set; } = new List<Producttype>();
+        public virtual List<Client> ClientOptions { get; set; } = new List<Client>();
         
         //used to extract data from view
         public virtual List<int> SalesId { get; set; } = new List<int>();

@@ -36,7 +36,13 @@ namespace Incharge.Repository
         }
         public IQueryable<Gymclass> QueryBy(Func<Gymclass, bool> predicate)
         {
-            return _context.Gymclasses.Where(predicate).AsQueryable(); //for index paging method. 
+            return _context.Gymclasses
+                .Include(x => x.Equipment)
+                .Include(x => x.Location)
+                .Include(x => x.Clients)
+                .Include(x => x.Employee)
+                .Where(predicate)
+                .AsQueryable(); //for index paging method. 
         }
     }
 }

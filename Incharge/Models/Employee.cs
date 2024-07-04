@@ -15,7 +15,7 @@ public partial class Employee
     public string FirstName { get; set; } = null!;
 
     public string LastName { get; set; } = null!;
-
+    public string? ProfilePicture { get; set; }
     public int Phone { get; set; }
     [DataType(DataType.EmailAddress)]
     public string Email { get; set; } = null!;

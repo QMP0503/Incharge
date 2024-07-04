@@ -35,6 +35,7 @@ namespace Incharge.Repository
         {
             return _context.Clients
                 .Include(x => x.Employees)
+                .ThenInclude(x=> x.Role)
                 .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
                 .Include(x => x.Products)
                 .Include(x => x.PaymentRecord)

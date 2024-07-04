@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[1.11.0, )"
             },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.26.2, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
@@ -99,6 +103,10 @@
             "bootstrap": {
               "target": "Package",
               "version": "[5.3.3, )"
+            },
+            "dotenv.net": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "log4net": {
               "target": "Package",
