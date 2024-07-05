@@ -7,7 +7,7 @@ using Incharge.ViewModels;
 using AutoMapper.Configuration.Annotations;
 namespace Incharge.Service
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeeService : IEmployeeService, IDropDownOptions<EmployeeVM>
     {
         readonly IFindRepository<Employee> _FindEmployeeRepository;
         readonly IRepository<Employee> _EmployeeRepository;
@@ -101,5 +101,14 @@ namespace Incharge.Service
             _EmployeeRepository.Update(employee);
             _EmployeeRepository.Save();
         }
+        public EmployeeVM DropDownOptions()
+        {
+            var employeeVM = new EmployeeVM()
+            {
+                EmployeeTypeOptions = _FindEmployeeTypeRepository.ListBy(x => true)
+            };
+            return employeeVM;
+        }
+
     }
 }

@@ -119,13 +119,11 @@ namespace Incharge.Controllers
 
         [HttpPost, ActionName("DeleteClient")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteClientConfirm(string Uuid)
+        public IActionResult DeleteClientConfirm(ClientVM clientVM)
         {
             try
             {
-                var clientInfo = new ClientVM();
-                clientInfo.Uuid = Uuid;
-                _clientService.DeleteService(clientInfo);
+                _clientService.DeleteService(clientVM);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)

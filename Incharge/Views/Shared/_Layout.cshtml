@@ -119,7 +119,7 @@
                     }
                     else
                     {
-                        @* <div class="dropdown pb-4">
+                        <div class="dropdown pb-4">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">Sign In</span">
                                 <span a class="d-none d-sm-inline mx-1"></span>
@@ -127,7 +127,7 @@
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                                 <li><a asp-controller="Account" asp-action="Login" class="dropdown-item">Sign In</a></li>
                             </ul>
-                        </div> *@
+                        </div>
                     }
 
                 </div>
@@ -143,15 +143,17 @@
 
     </div>
     
-   @*  <footer class="border-top footer text-muted">
+   @* <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - Incharge - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer> *@
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+   
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

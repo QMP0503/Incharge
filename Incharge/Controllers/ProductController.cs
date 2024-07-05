@@ -109,20 +109,23 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        
-        public IActionResult DeleteProduct(int id)
-        {
-            try
-            {
-                return View(_ProductService.GetItem(x => x.Id == id));
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return View();
-            }
-        }
-        [HttpPost, ActionName("DeleteProduct")] //delete with confirmation paper pop-up in page
+
+        ////make into partial view
+        //public IActionResult DeleteProduct(int id)
+        //{
+        //    try
+        //    {
+        //        return PartialView("_DeleteConfirmationPartial", _ProductService.GetItem(x => x.Id == id)); //product serive is the model that is 
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.Error(ex);
+        //        return View();
+        //    }
+        //}
+
+        //trying to make partial view for delete confirmation page
+        [HttpPost] //delete with confirmation paper pop-up in page
         public IActionResult DeleteProduct(ProductVM productVM)
         {
             try

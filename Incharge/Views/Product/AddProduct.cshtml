@@ -37,7 +37,7 @@ discount - show a list of existing discounts //if this shit is too combusome jus
             <select asp-for="ProductTypeId" class="form-select"> 
             @foreach (var product in Model.ProductTypeOption)
             {
-                    <option value="@product.Id">@product.Name</option>
+                <option value="@product.Id">@product.Name</option>
             }
             </select>
         </div>

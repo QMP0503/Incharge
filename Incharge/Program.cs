@@ -13,6 +13,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using dotenv.net;
+using Microsoft.Build.Framework;
 
 // Set your Cloudinary credentials
 //=================================
@@ -21,9 +22,9 @@ using dotenv.net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var cloudAPI = builder.Configuration.GetValue<string>("CLOUDINARY_URL");
-Cloudinary cloudinary = new Cloudinary(cloudAPI);
-cloudinary.Api.Secure = true;
+//var cloudAPI = builder.Configuration.GetValue<string>("CLOUDINARY_URL");
+//Cloudinary cloudinary = new Cloudinary(cloudAPI);
+//cloudinary.Api.Secure = true;
 
 builder.Services.AddControllersWithViews();
 
@@ -88,6 +89,7 @@ builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>(); //have not m
 //dropdown menu view options
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
 builder.Services.AddScoped<IDropDownOptions<SaleVM>, SalesService>();
+builder.Services.AddScoped < IDropDownOptions<EmployeeVM>, EmployeeService>();
 
 //add memory caching for client list and/or gym class list
 
@@ -143,7 +145,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute( //edit to make all pages require authentication
     name: "default",
-    pattern: "{controller=Client}/{action=Index}/{id?}");
+    pattern: "{controller=Product}/{action=Index}/{id?}");
 
 
     //check if they put remember me will it work..

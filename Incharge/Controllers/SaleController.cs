@@ -24,19 +24,28 @@ namespace Incharge.Controllers
             return View();
         }
 
+        //CURRENTLY BROKEN
+        //public IActionResult _SalePartial() 
+        //{
+        //    return PartialView("_SalePartial", _SaleDropDown.DropDownOptions()); //just to print out the values
+        //}
 
-        public IActionResult _SalePartial()
+        public IActionResult AddSale(SaleVM saleVM)
         {
-            return PartialView("_SalePartial", _SaleDropDown.DropDownOptions()); //just to print out the values
+            saleVM.ClientOptions = _SaleDropDown.DropDownOptions().ClientOptions;
+            saleVM.EmployeeOptions = _SaleDropDown.DropDownOptions().EmployeeOptions;
+            saleVM.ProductOptions = _SaleDropDown.DropDownOptions().ProductOptions;
+            saleVM.Date=DateTime.Now;
+            return View(saleVM); //for ease of selection
         }
 
         [HttpPost, ActionName("AddSale")]
-        public IActionResult AddSale(SaleVM saleVM)
+        public IActionResult AddSaleConfirm(SaleVM saleVM)
         {
             try
             {
                 _SaleService.AddService(saleVM);
-                return Redirect("product/index"); //lead back to product cause that is the only place u can add a sale
+                return RedirectToAction("Index","Product"); //lead back to product cause that is the only place u can add a sale
             }
             catch (Exception ex)
             {

@@ -7,7 +7,7 @@ namespace Incharge.Models;
 public partial class Sale 
 {
     public int Id { get; set; }
-    public string Uuid { get; set; } = new Guid().ToString(); //relationship will still use regular id.
+    public string Uuid { get; set; } //relationship will still use regular id.
     public DateTime Date { get; set; }
 
     public int ProductId { get; set; }

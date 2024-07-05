@@ -1,1 +1,54 @@
 ﻿@model Incharge.ViewModels.EmployeeVM;
+
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Add New Employee</h1>
+        </div>
+
+        <div class="card-body">
+            <form asp-action="AddEmployee" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Role" class="control-label"></label>
+                    <select asp-for="RoleId" class="form-select">
+                        @foreach (var enitity in Model.EmployeeTypeOptions)
+                        {
+                            <option value="@enitity.Id">@enitity.Type</option>
+                        }
+                    </select>
+                </div>
+
+                <a asp-action="Index" type="button" class="btn btn-primary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>

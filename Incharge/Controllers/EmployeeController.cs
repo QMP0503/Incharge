@@ -10,13 +10,15 @@ namespace Incharge.Controllers
     public class EmployeeController : Controller
     {
         readonly IEmployeeService _EmployeeService;
+        readonly IDropDownOptions<EmployeeVM> _EmployeeDropDown;
         readonly IPagingService<PaginatedList<Employee>> _pagingService;
         readonly ILog _logger;
-        public EmployeeController(IEmployeeService EmployeeService, IPagingService<PaginatedList<Employee>> pagingService, ILog logger)
+        public EmployeeController(IDropDownOptions<EmployeeVM> EmployeeDropDown, IEmployeeService EmployeeService, IPagingService<PaginatedList<Employee>> pagingService, ILog logger)
         {
             _EmployeeService = EmployeeService;
             _pagingService = pagingService;
             _logger = logger;
+            _EmployeeDropDown = EmployeeDropDown;
         }
         [HttpGet]
         public IActionResult Index(
@@ -57,8 +59,13 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+        
+        public IActionResult AddEmployee()
+        {
+            return View(_EmployeeDropDown.DropDownOptions());
+        }
         [HttpPost] //ONLY VISIBLE TO ADMIN TO HIRE PEOPLE
-        public IActionResult AddEmployee([Bind("FirstName, LastName, TotalSalary, Email, RoleId")] EmployeeVM employeeVM)
+        public IActionResult AddEmployee( EmployeeVM employeeVM)
         {
             try
             {

@@ -24,5 +24,8 @@ namespace Incharge.ViewModels
         public int RoleId { get; set; }
         public virtual List<int>? SalesId { get; set; } 
         public virtual List<int>? ClientId { get; set; } //check if this is a security risk to display client int id.
+        
+        //VIEW ONLY
+        public List<EmployeeType>? EmployeeTypeOptions { get; set; }
     }
 }

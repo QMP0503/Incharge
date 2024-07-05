@@ -1,0 +1,67 @@
+﻿@model Incharge.ViewModels.SaleVM;
+
+
+@{
+    ViewData["Title"] = "Add Sale";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Add Sale</h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="AddSale" method="post">
+                <div class="mb-3 mt-3">
+                    <label class="control-label">Product Selected: </label>
+                    <select asp-for="ProductId" class="form-select">
+                        <option selected value="@Model.ProductId">@Model.ProductName</option>
+                        @foreach (var enitity in Model.ProductOptions)
+                        {
+                            if(enitity.Id != Model.ProductId)
+                            {
+                                <option value="@enitity.Id">@enitity.Name</option>
+                            }
+                            
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" placeholder="yyyy/mm/dd"/>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Client" class="control-label"></label>
+                    <select asp-for="ClientId" class="form-select">
+                        @foreach (var enitity in Model.ClientOptions)
+                        {
+                            <option value="@enitity.Id">@enitity.FirstName @enitity.LastName</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Employee" class="control-label"></label>
+                    <select asp-for="EmployeeId" class="form-select">
+                        @foreach (var enitity in Model.EmployeeOptions)
+                        {
+                            <option value="@enitity.Id">@enitity.FirstName @enitity.LastName</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PaymentType" class="control-label"></label>
+                    <select asp-for="PaymentType" class="form-select">
+                        @foreach (var enitity in Model.PaymentOptions)
+                        {
+                            <option value="@enitity">@enitity</option>
+                        }
+                    </select>
+                </div>
+                <a asp-controller="Product" asp-action="Index" type="button" class="btn btn-primary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+
+        </div>
+            
+    </div>
+</div>

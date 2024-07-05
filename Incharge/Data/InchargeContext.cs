@@ -384,6 +384,9 @@ public partial class InchargeContext : IdentityDbContext<User>
             //      .IsFixedLength();
 
             entity.Property(e => e.Date).HasColumnType("datetime");
+            entity.Property(e => e.Uuid)
+               .HasDefaultValueSql("(uuid())")
+               .IsFixedLength();
 
             entity.HasOne(d => d.BusinessReport).WithMany(p => p.Sales)
                 .HasForeignKey(d => d.BusinessReportId)

@@ -122,7 +122,9 @@ namespace Incharge.Service
         {
             var salveVM = new SaleVM()
             {
-                ClientOptions = _findClientRepository.ListBy(x => x.Id > 0)
+                ClientOptions = _findClientRepository.ListBy(x => x.Id > 0),
+                EmployeeOptions = _findEmployeeRepository.ListBy(x => x.Id > 0),
+                ProductOptions = _findProductRepository.ListBy(x => x.Id > 0)
             };
 
             return salveVM;

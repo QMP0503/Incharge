@@ -13,6 +13,8 @@
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
+
+
 @*Page specific style sheets*@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
@@ -56,6 +58,7 @@
                                 <tbody>
                                     @foreach(var item in Model)
                                     {
+                                        
                                         <tr>
                                             <td>
                                                 <div>
@@ -68,10 +71,15 @@
                                             </td>
 
                                             <td>
-                                                 @*Make controller method just for adding clients to membership - do in client controller..*@
-                                                <button type="button" class="btn btn-primary waves-effect waves-light align-self-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                    <i class="bi bi-profile me-2 font-size-15"></i> Add
-                                                </button>
+                                                 @*Too ficking tilted to figure out partial view (so adding it directly to index) fix later when not angry*@
+                                                @* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SaleModal" data-bs-Name="@item.Name" data-bs-Id="@item.Id">
+                                                    <i class="bi bi-cart me-2 font-size-15"></i> Add
+                                                </button> *@
+
+                                                
+                                                <a asp-controller="Sale" asp-action="AddSale" asp-route-ProductId="@item.Id" asp-route-ProductName="@item.Name" type="button" class="btn btn-primary">
+                                                    <i class="bi bi-cart me-2 font-size-15"></i> Add
+                                                </a>
                                             </td>
                                             @if (User.IsInRole("Admin"))
                                             {
@@ -82,7 +90,10 @@
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-end">
                                                             <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
-                                                            <a asp-action="DeleteProduct" asp-route-id="@item.Id" class="dropdown-item">Remove</a>
+                                                            <!-- this look nasty as fuck, fix when not angry -->
+                                                            <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">
+                                                                <input class="dropdown-item" value="Delete" type="submit"/>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -99,11 +110,33 @@
 </div>
 </div>
 
-@* @section Script {
-    <script>
-        $('#staticBackdrop').load("/Sale/_SalePartial")
-    </script>
-} *@
+<!--MODAL VIEW INSIDE INDEX. DO NOT RECOMMEND LEAVING FOR FINAL VERSION-->
+<div class="modal fade" id="SaleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Sale" asp-action="AddSale">
+                    <div class="mb-3">
+                        <label class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 @*

@@ -20,7 +20,10 @@
 								<p class="text-muted font-size-sm">@Model.GymMembership.Name</p> @*Add variable in vm for just membership product*@
 								<div class="row row-cols-2">
 								<div class="col">
-									<a asp-action="DeleteClient" asp-route-Uuid="@Model.Uuid" class="btn btn-primary">Delete</a>
+								<form asp-action="DeleteClient" asp-route-Uuid="@Model.Uuid" method="post">
+									<input type="submit" value="Delete" class="btn btn-primary"/>
+								</form>
+
 								</div>
 								<form asp-action="UpdateStatus" method="post" asp-route-Uuid=@Model.Uuid class="col">
 									@if (Model.Status == "Signed Out")
