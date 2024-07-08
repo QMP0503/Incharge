@@ -131,5 +131,11 @@ namespace Incharge.Service
             return (DateTime)EndDate;
         }
 
+        public void UpdatePaymentRecord(ClientVM entity)
+        {
+            var client = _FindClientRepository.FindBy(x => x.Uuid == entity.Uuid);
+            if (client == null) { throw new NullReferenceException("Client cannot be found."); }
+            
+        }
     } //consider adding save after actiong is executed in controller.
 }

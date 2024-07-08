@@ -86,18 +86,60 @@ namespace Incharge.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<double?>("Cost")
+                    b.Property<double>("AccountsPayable")
+                        .HasColumnType("double");
+
+                    b.Property<double>("AccountsRecievable")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Cost")
                         .HasColumnType("double");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime");
 
-                    b.Property<double?>("Revenue")
+                    b.Property<double>("Equipment")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Insurance")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Mantaince")
+                        .HasColumnType("double");
+
+                    b.Property<double>("MembershipFee")
+                        .HasColumnType("double");
+
+                    b.Property<int>("MonthlyMembers")
+                        .HasColumnType("int");
+
+                    b.Property<double>("NewMembershipSales")
+                        .HasColumnType("double");
+
+                    b.Property<double>("OtherExpenses")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Profit")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Rent")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Revenue")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Utilities")
                         .HasColumnType("double");
 
                     b.Property<string>("Uuid")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(255)")
+                        .HasDefaultValueSql("(uuid())")
+                        .IsFixedLength();
+
+                    b.Property<double>("Wages")
+                        .HasColumnType("double");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
@@ -116,6 +158,10 @@ namespace Incharge.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(45)
@@ -130,6 +176,9 @@ namespace Incharge.Migrations
                         .IsRequired()
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
+
+                    b.Property<string>("MembershipStatus")
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Note")
                         .HasColumnType("longtext");
@@ -220,6 +269,10 @@ namespace Incharge.Migrations
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -360,6 +413,10 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Uuid")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
@@ -494,7 +551,7 @@ namespace Incharge.Migrations
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("int");
 
-                    b.Property<double?>("TotalPrice")
+                    b.Property<double>("TotalPrice")
                         .HasColumnType("double");
 
                     b.HasKey("Id")
@@ -559,6 +616,9 @@ namespace Incharge.Migrations
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("double");
 
                     b.Property<string>("Uuid")
                         .IsRequired()
@@ -792,22 +852,22 @@ namespace Incharge.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ProductDiscount", b =>
+            modelBuilder.Entity("SaleDiscount", b =>
                 {
-                    b.Property<int>("Productid")
+                    b.Property<int>("Saleid")
                         .HasColumnType("int")
-                        .HasColumnName("productid");
+                        .HasColumnName("saleid");
 
                     b.Property<int>("Discountid")
                         .HasColumnType("int")
                         .HasColumnName("discountid");
 
-                    b.HasKey("Productid", "Discountid")
+                    b.HasKey("Saleid", "Discountid")
                         .HasName("PRIMARY");
 
                     b.HasIndex(new[] { "Discountid" }, "discountid");
 
-                    b.ToTable("product_discount", (string)null);
+                    b.ToTable("sale_discount", (string)null);
                 });
 
             modelBuilder.Entity("ClientEmployee", b =>
@@ -1028,21 +1088,21 @@ namespace Incharge.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ProductDiscount", b =>
+            modelBuilder.Entity("SaleDiscount", b =>
                 {
                     b.HasOne("Incharge.Models.Discount", null)
                         .WithMany()
                         .HasForeignKey("Discountid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("product_discount_ibfk_2");
+                        .HasConstraintName("sale_discount_ibfk_2");
 
-                    b.HasOne("Incharge.Models.Product", null)
+                    b.HasOne("Incharge.Models.Sale", null)
                         .WithMany()
-                        .HasForeignKey("Productid")
+                        .HasForeignKey("Saleid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("product_discount_ibfk_1");
+                        .HasConstraintName("sale_discount_ibfk_1");
                 });
 
             modelBuilder.Entity("Incharge.Models.BusinessReport", b =>

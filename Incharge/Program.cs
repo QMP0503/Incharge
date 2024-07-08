@@ -64,6 +64,8 @@ builder.Services.AddScoped<IFindRepository<EmployeeType>, EmployeeTypeRepository
 builder.Services.AddScoped<IFindRepository<Producttype>, ProductTypeRepository>();
 builder.Services.AddScoped<IFindRepository<Sale>, SalesRepository>();
 builder.Services.AddScoped<IFindRepository<Discount>, DiscountRepository>();
+builder.Services.AddScoped<IFindRepository<BusinessReport>, BusinessReportRepository>();
+builder.Services.AddScoped<IFindRepository<Expense>, ExpensesRepository>();
 
 //service injection
 builder.Services.AddScoped<IService<ClientVM, Client>, ClientService>();
@@ -84,12 +86,18 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Gymclass>>, GymclassPagi
 builder.Services.AddScoped<IService<ProductVM, Product>, ProductService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPagingService>();
 
-builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>(); //have not made paging service for sales.
+builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>(); 
+builder.Services.AddScoped<IPagingService<PaginatedList<Sale>>, SalesPagingService>(); 
+
+builder.Services.AddScoped<IBusinessReportService, BusinessReportService>(); //no paging yet
+
+builder.Services.AddScoped<IService<ExpenseVM, Expense>, ExpenseService>(); 
+builder.Services.AddScoped<IPagingService<PaginatedList<Expense>>, ExpensesPagingService>(); 
 
 //dropdown menu view options
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
 builder.Services.AddScoped<IDropDownOptions<SaleVM>, SalesService>();
-builder.Services.AddScoped < IDropDownOptions<EmployeeVM>, EmployeeService>();
+builder.Services.AddScoped<IDropDownOptions<EmployeeVM>, EmployeeService>();
 
 //add memory caching for client list and/or gym class list
 
@@ -150,5 +158,10 @@ app.MapControllerRoute( //edit to make all pages require authentication
 
     //check if they put remember me will it work..
     //pattern: "{controller=Employee}/{action=Index}/{id?}"); //for testing purposes
+using(var scope = app.Services.CreateScope())
+{
+    var initializationService = scope.ServiceProvider.GetRequiredService<IBusinessReportService>();
+    initializationService.AddService(); //run to add new business report if new month begins
+}
 
 app.Run();

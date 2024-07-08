@@ -52,12 +52,7 @@ namespace Incharge.Service
             };
             productToAdd.ProductType = _FindProductTypeRepository.FindBy(x => x.Id == entity.ProductTypeId);
             if (productToAdd.ProductType == null) { throw new Exception("ProductType don't exist"); }
-            foreach (var discount in entity.DiscountsId)
-            {
-                var findDiscount = _FindDiscountRepository.FindBy(x => x.Id == discount);
-                if (findDiscount != null) { productToAdd.Discounts.Add(findDiscount); }
-            }
-
+            
             productToAdd.TotalPrice = entity.TotalPrice ?? productToAdd.ProductType.Price;
             //make sure to trouble shoot because this might have a ton of problems
             _ProductRepository.Add(productToAdd);
@@ -75,22 +70,12 @@ namespace Incharge.Service
                 var findClient = _FindClientRepository.FindBy(x => x.Id == client);
                 if (findClient != null && product.Clients.Contains(findClient)) { product.Clients.Add(findClient); }
             }
-            foreach (var discount in entity.DiscountsId)
-            {
-                var findDiscount = _FindDiscountRepository.FindBy(x => x.Id == discount);
-                if(findDiscount != null && product.Discounts.Contains(findDiscount)) { product.Discounts.Add(findDiscount); }
-            }
+            
             product.ProductType = _FindProductTypeRepository.FindBy(x => x.Id == entity.ProductTypeId) ?? product.ProductType;
 
             //should find a better way to do this
-            if (product.Discounts.Any())
-            {
-                product.TotalPrice = entity.TotalPrice * (double)product.Discounts.Sum(x => x.DiscountValue) ?? product.ProductType.Price * (double)product.Discounts.Sum(x => x.DiscountValue);
-            }
-            else
-            {
-                product.TotalPrice = entity.TotalPrice ?? product.ProductType.Price;
-            } 
+          
+            product.TotalPrice = entity.TotalPrice ?? product.ProductType.Price;
             _ProductRepository.Update(product);
             _ProductRepository.Save();
             //add ways for computer to know that the client have paid their monthly membership

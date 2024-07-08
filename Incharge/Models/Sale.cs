@@ -10,6 +10,8 @@ public partial class Sale
     public string Uuid { get; set; } //relationship will still use regular id.
     public DateTime Date { get; set; }
 
+    public double TotalPrice { get; set; } //edit the rest of sales
+
     public int ProductId { get; set; }
 
     [AllowedValues(typeof(string), new string[] { "Cash", "Credit", "Debit" })]
@@ -28,4 +30,7 @@ public partial class Sale
     public virtual Employee? Employee { get; set; }
 
     public virtual Product Product { get; set; } = null!;
+
+    //list of discounts if more than one discount applies
+    public virtual ICollection<Discount> Discounts { get; set; } = new List<Discount>();
 }

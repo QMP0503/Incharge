@@ -53,11 +53,12 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.ToTable("business_report");
 
+
             entity.HasIndex(e => e.Uuid, "BusinessReport_Uuid_UNIQUE").IsUnique();
 
-            //entity.Property(e => e.Uuid)
-            //      .HasDefaultValueSql("(uuid())")
-            //      .IsFixedLength();
+            entity.Property(e => e.Uuid)
+               .HasDefaultValueSql("(uuid())")
+               .IsFixedLength();
 
 
             entity.Property(e => e.Date).HasColumnType("datetime");
@@ -331,25 +332,7 @@ public partial class InchargeContext : IdentityDbContext<User>
                             .HasColumnName("clientid");
                     });
 
-            entity.HasMany(d => d.Discounts).WithMany(p => p.Products)
-                .UsingEntity<Dictionary<string, object>>(
-                    "ProductDiscount",
-                    r => r.HasOne<Discount>().WithMany()
-                        .HasForeignKey("Discountid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .HasConstraintName("product_discount_ibfk_2"),
-                    l => l.HasOne<Product>().WithMany()
-                        .HasForeignKey("Productid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .HasConstraintName("product_discount_ibfk_1"),
-                    j =>
-                    {
-                        j.HasKey("Productid", "Discountid").HasName("PRIMARY");
-                        j.ToTable("product_discount");
-                        j.HasIndex(new[] { "Discountid" }, "discountid");
-                        j.IndexerProperty<int>("Productid").HasColumnName("productid");
-                        j.IndexerProperty<int>("Discountid").HasColumnName("discountid");
-                    });
+
         });
 
         modelBuilder.Entity<Producttype>(entity =>
@@ -406,6 +389,26 @@ public partial class InchargeContext : IdentityDbContext<User>
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("ProductId");
+
+            entity.HasMany(d => d.Discounts).WithMany(p => p.Sales)
+            .UsingEntity<Dictionary<string, object>>(
+            "SaleDiscount",
+            r => r.HasOne<Discount>().WithMany()
+                .HasForeignKey("Discountid")
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("sale_discount_ibfk_2"),
+            l => l.HasOne<Sale>().WithMany()
+                .HasForeignKey("Saleid")
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("sale_discount_ibfk_1"),
+            j =>
+            {
+                j.HasKey("Saleid", "Discountid").HasName("PRIMARY");
+                j.ToTable("sale_discount");
+                j.HasIndex(new[] { "Discountid" }, "discountid");
+                j.IndexerProperty<int>("Saleid").HasColumnName("saleid");
+                j.IndexerProperty<int>("Discountid").HasColumnName("discountid");
+            });
         });
 
         OnModelCreatingPartial(modelBuilder);

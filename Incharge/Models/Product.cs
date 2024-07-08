@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace Incharge.Models;
 
-public partial class Product 
-{
+public partial class Product
+{ 
     public int Id { get; set; }
 
     public string Name { get; set; } = null!;
 
-    public double? TotalPrice { get; set; }
-
+    public double TotalPrice { get; set; }
+    
     public int ProductTypeId { get; set; }
 
     public virtual Producttype ProductType { get; set; } = null!;
@@ -19,5 +19,5 @@ public partial class Product
 
     public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
 
-    public virtual ICollection<Discount> Discounts { get; set; } = new List<Discount>();
+
 }

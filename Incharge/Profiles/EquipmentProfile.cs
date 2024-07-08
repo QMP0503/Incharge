@@ -8,7 +8,12 @@ namespace Incharge.Profiles
     {
         public EquipmentProfile() 
         {
-            CreateMap<Equipment, EquipmentVM>().ReverseMap(); 
+            CreateMap<Equipment, EquipmentVM>().ReverseMap()
+                .ForAllMembers(opts =>
+                {
+                    opts.AllowNull();
+                    opts.Condition((src, dest, srcMember) => srcMember != null);
+                }); ; 
         }
     }
 }

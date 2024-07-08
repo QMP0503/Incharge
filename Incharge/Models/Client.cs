@@ -16,8 +16,12 @@ public partial class Client
     [DataType(DataType.EmailAddress)]
     public string? ProfilePicture { get; set; }
     public string Email { get; set; }
-    [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out", "Overdue" })]
+    [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out"  })]
     public string? Status { get; set; }
+
+    [AllowedValues(typeof(string), new string[] { "Active", "Inactive", "Suspended", "Overdue" })]
+    public string? MembershipStatus { get; set; }
+
     public string? Note { get; set; } //for adding additional information about the client
 
     //membership date - will reset when payment record is recieved each month
@@ -26,8 +30,11 @@ public partial class Client
 
     [ForeignKey("PaymentRecordId")]
     public int? PaymentRecordId { get; set; }
+
+    public string Address { get; set; } //address of client
     public virtual Paymentrecord? PaymentRecord { get; set; }
     public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>();
+    //will act as record to track membership payments.
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
     public virtual ICollection<Gymclass> Gymclasses { get; set; } = new List<Gymclass>();
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();

@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.Models;
 
 public partial class Expense
 {
     public int Id { get; set; }
-    public string Uuid { get; set; } = new Guid().ToString(); //hide business information
+    public string Uuid { get; set; }
 
+    [AllowedValues(typeof(string), new string[] { "Wages", "Rent", "Utilities", "Insurance", "Eqipment", "Maintance", "Other" })]
+    public string Type { get; set; }
     public DateTime Date { get; set; }
 
     public string Name { get; set; } = null!;
@@ -19,4 +22,6 @@ public partial class Expense
     public int? BusinessReportId { get; set; }
 
     public virtual BusinessReport? BusinessReport { get; set; }
+
+
 }

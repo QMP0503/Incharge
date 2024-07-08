@@ -1,11 +1,12 @@
 ﻿using Incharge.Models;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 using System.Security.Policy;
 
 namespace Incharge.ViewModels
 {
-    public class SaleVM
+    public class SaleVM //need discount :(((
     {
         public string Uuid { get; set; }  //relationship will still use regular id.
         public DateTime Date { get; set; }
@@ -17,7 +18,7 @@ namespace Incharge.ViewModels
         public int ProductId { get; set; }
 
         //ADD PRICE WHEN TAX IS ADDED
-        //public double price { get; set; }
+        public double TotalPrice { get; set; }
 
         //Used for internal calculations and relationship assignment.
         public int EmployeeId { get; set; }
@@ -39,6 +40,8 @@ namespace Incharge.ViewModels
 
         public virtual Product Product { get; set; }
 
+        public virtual List<int>? DiscountId { get; set; } 
+
         //for view only
         [DisplayName("Client Names")]
         public List<Client>? ClientOptions { get; set; }
@@ -51,5 +54,7 @@ namespace Incharge.ViewModels
         [DisplayName("Product Name")] //don't think i need this
         public string ProductName { get; set; }
 
+        [DisplayName("Discount Options")]
+        public List<Discount>? DiscountOptions { get; set; }
     }
 }

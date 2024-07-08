@@ -12,7 +12,7 @@ public partial class Producttype
 
     public double Price { get; set; }
 
-    [AllowedValues(typeof(string), new string[] {"weekly", "Monthly", "Yearly" })]
+    [AllowedValues(typeof(string), new string[] {"weekly", "Monthly", "Yearly" })] //make enum
     public string? Recurance { get; set; }
 
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Incharge.ViewModels;
 using Incharge.Models;
-namespace MyMovies.Controllers
+namespace Incharge.Controllers
 {
     public class AccountController : Controller
     {

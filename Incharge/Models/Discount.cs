@@ -13,5 +13,5 @@ public partial class Discount
     public DateTime? EndDate { get; set; }
     [AllowedValues(typeof(string), new string[]{"Weekly", "Monthly", "Yearly"})]
     public string? Recurance { get; set; }
-    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+    public virtual ICollection<Sale>? Sales { get; set; } //discount applied to salse
 }

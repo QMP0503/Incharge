@@ -8,7 +8,11 @@ namespace Incharge.Profiles
     {
         public LocationProfile() 
         {
-            CreateMap<Location, LocationVM>().ReverseMap(); 
+            CreateMap<Location, LocationVM>().ReverseMap().ForAllMembers(opts =>
+            {
+                opts.AllowNull();
+                opts.Condition((src, dest, srcMember) => srcMember != null);
+            }); ; 
         }
     }
 }

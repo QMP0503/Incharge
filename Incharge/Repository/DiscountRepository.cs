@@ -15,15 +15,15 @@ namespace Incharge.Repository
 
         public Discount FindBy(Func<Discount, bool> predicate)
         {
-            return _context.Discounts.Include(x => x.Products).FirstOrDefault(predicate);
+            return _context.Discounts.Include(x => x.Sales).FirstOrDefault(predicate);
         }
         public List<Discount> ListBy(Func<Discount, bool>? predicate)
         {
-            return _context.Discounts.Include(x => x.Products).Where(predicate).ToList();
+            return _context.Discounts.Include(x => x.Sales).Where(predicate).ToList();
         }
         public IQueryable<Discount> QueryBy(Func<Discount, bool> predicate)
         {
-            return _context.Discounts.Include(x => x.Products).Where(predicate).AsQueryable();
+            return _context.Discounts.Include(x => x.Sales).Where(predicate).AsQueryable();
         }
 
     }

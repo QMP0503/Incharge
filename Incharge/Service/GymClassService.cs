@@ -40,7 +40,7 @@ namespace Incharge.Service
         }
         public void AddService(GymClassVM entity)
         {
-            if(entity == null) { throw new ArgumentNullException("Input Empty."); }
+             
             var checkGymClass = _FindGymClassRepository.FindBy(x => x.Name == entity.Name);
             if(checkGymClass != null) { throw new Exception("GymClass already exist."); }
             var gymClass = _Mapper.Map<Gymclass>(entity);
@@ -49,7 +49,7 @@ namespace Incharge.Service
         }
         public void UpdateService(GymClassVM entity)
         {
-            if(entity == null) { throw new ArgumentNullException("Input Empty."); }
+             
             var gymClassToUpdate = _FindGymClassRepository.FindBy(x => x.Id == entity.Id);
             if(gymClassToUpdate == null) { throw new Exception("GymClass don't exist."); }
             gymClassToUpdate.Name = entity.Name;

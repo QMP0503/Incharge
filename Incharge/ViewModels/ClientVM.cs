@@ -18,8 +18,10 @@ namespace Incharge.ViewModels
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
         //sign in and out of the gym, when payment is overdue they can no longer enter the gym
-        [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut", "Overdue" })]
+        [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut" })]
         public string? Status { get; set; }
+        [AllowedValues(typeof(string), new string[] { "Active", "Inactive", "Suspended", "Overdue" })]
+        public string? MembershipStatus { get; set; }
         public string? Note { get; set; }
         public DateTime? StartDate { get; set; } // = will be set to the date the client bought their membership
         public DateTime? EndDate { get; set; }

@@ -16,8 +16,8 @@ namespace Incharge.Repository
         {
             return _context.Products
                 .Include(x => x.Clients)
-                .Include(x => x.Discounts)
                 .Include(x => x.ProductType)
+                .Include(x => x.Sales)
                 .Where(predicate)
                 .ToList();
         }
@@ -25,7 +25,7 @@ namespace Incharge.Repository
         {
             return _context.Products
                 .Include(x => x.Clients)
-                .Include(x => x.Discounts)
+                .Include(x => x.Sales)
                 .Include(x => x.ProductType)
                 .FirstOrDefault(predicate);
         }
@@ -33,7 +33,7 @@ namespace Incharge.Repository
         { 
             return _context.Products
                 .Include(x => x.Clients)
-                .Include(x => x.Discounts)
+                .Include(x => x.Sales)
                 .Include(x => x.ProductType)
                 .Where(predicate)
                 .AsQueryable();
