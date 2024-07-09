@@ -25,7 +25,7 @@ namespace Incharge.Controllers
             _PagingService = PagingService;
         }
 
-        [HttpGet]
+        [HttpGet] //make /index be just name of controller
         public IActionResult Index(
                                                  string sortOrder,
                                                  string currentFilter,
