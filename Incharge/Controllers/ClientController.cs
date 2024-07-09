@@ -49,7 +49,8 @@ namespace Incharge.Controllers
             try
             {
                 return View(_clientService.GetItem(x => x.Uuid == clientVM.Uuid));
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 _logger.Error(ex);
                 return View();

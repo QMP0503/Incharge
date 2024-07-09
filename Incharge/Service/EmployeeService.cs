@@ -35,6 +35,7 @@ namespace Incharge.Service
         {
             var employee = _FindEmployeeRepository.FindBy(e => e.Uuid == employeeVM.Uuid);
             var employeeFound = _Mapper.Map<EmployeeVM>(employee);
+            employeeFound.EmployeeTypeOptions = DropDownOptions().EmployeeTypeOptions;
             return employeeFound;
         }
         public void AddEmployee(EmployeeVM employeeVM)//employee type
@@ -42,14 +43,7 @@ namespace Incharge.Service
             if (employeeVM == null) { throw new ArgumentNullException("employee empty"); }
             var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == employeeVM.RoleId);
             if (employeeType == null) { throw new ArgumentNullException("employee type don't exist"); }
-            var employee = new Employee
-            {
-                FirstName = employeeVM.FirstName,
-                LastName = employeeVM.LastName,
-                Email = employeeVM.Email,
-                Phone = employeeVM.Phone,
-                Role = employeeType,
-            };
+            var employee = _Mapper.Map<Employee>(employeeVM); //maps the employeeVM to employee
             _EmployeeRepository.Add(employee);
             _EmployeeRepository.Save();
         }
@@ -62,8 +56,8 @@ namespace Incharge.Service
             if (employeeType == null) { throw new ArgumentNullException("employee type don't exist"); }
             employeeVM.Role = employeeType;
          
-            var updatedEmployee = _Mapper.Map<Employee>(employeeVM); //maps the employeeVM to employee
-            _EmployeeRepository.Update(updatedEmployee);
+            _Mapper.Map(employeeVM, employeeToUpdate); //maps the employeeVM to employee
+            _EmployeeRepository.Update(employeeToUpdate);
             _EmployeeRepository.Save();
         }
         public void DeleteEmployee(string Uuid)

@@ -23,6 +23,7 @@ namespace Incharge.ViewModels
         [AllowedValues(typeof(string), new string[] { "Active", "Inactive", "Suspended", "Overdue" })]
         public string? MembershipStatus { get; set; }
         public string? Note { get; set; }
+        public string Address { get; set; } //address of client
         public DateTime? StartDate { get; set; } // = will be set to the date the client bought their membership
         public DateTime? EndDate { get; set; }
 

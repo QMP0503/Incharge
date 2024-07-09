@@ -11,6 +11,7 @@ namespace Incharge.ViewModels
         public int Phone { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
+        public string Address { get; set; }
         public double? TotalSalary { get; set; }
 
         //object list to display and munipulated (currently set as nullabkle because we have no data)

@@ -1,0 +1,23 @@
+﻿@model Incharge.ViewModels.SaleVM;
+
+
+@{
+    ViewData["Title"] = "Edit Sale";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Edit Sale</h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="EditSale" asp-route-Uuid="@Model.Uuid" method="post">
+
+                <partial name="_SalesFormFields" model="@Model" />
+
+            </form>
+
+        </div>
+
+    </div>
+</div>

@@ -26,8 +26,8 @@
             
             @if (User.IsInRole("Admin"))
             {
-                <a asp-action="Edit" asp-route-Uuid="@Model.Uuid" class="btn btn-primary w-25">Edit</a>
-                <a asp-action="Delete" asp-route-Uuid="@Model.Uuid" class="btn btn-danger w-25">Delete</a>
+                <a asp-action="UpdateEmloyee" asp-route-Uuid="@Model.Uuid" class="btn btn-primary w-25">Edit</a>
+                <a asp-action="DeleteEmployee" asp-route-Uuid="@Model.Uuid" class="btn btn-danger w-25">Delete</a>
             }
         </div>
     </div>
@@ -38,7 +38,7 @@
                 <strong>Email: </strong>@Model.Email
             </p>
             <p>
-                <strong>Phone: </strong>@Model.Phone
+                <strong>Phone: </strong>@Model.Phone 
             </p>
             <p>
                 <strong>Role: </strong>@Model.Role.Type
@@ -50,6 +50,9 @@
                     <strong>Salary: </strong>$@string.Format("{0:#,0.####}", Model.TotalSalary)
                 </p>
             }
+            <p>
+                <strong>Address: </strong>@Model.Address
+            </p>
         </div>
     </div>
 

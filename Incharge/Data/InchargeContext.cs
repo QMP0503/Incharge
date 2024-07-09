@@ -223,9 +223,9 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.HasIndex(e => e.Uuid, "Expenses_Uuid_UNIQUE").IsUnique();
 
-            //entity.Property(e => e.Uuid)
-            //      .HasDefaultValueSql("(uuid())")
-            //      .IsFixedLength();
+            entity.Property(e => e.Uuid)
+                  .HasDefaultValueSql("(uuid())")
+                  .IsFixedLength();
 
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(255);
@@ -362,11 +362,9 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.HasIndex(e => e.Uuid, "Sales_Uuid_UNIQUE").IsUnique();
 
-            //entity.Property(e => e.Uuid)
-            //      .HasDefaultValueSql("(uuid())")
-            //      .IsFixedLength();
 
             entity.Property(e => e.Date).HasColumnType("datetime");
+
             entity.Property(e => e.Uuid)
                .HasDefaultValueSql("(uuid())")
                .IsFixedLength();

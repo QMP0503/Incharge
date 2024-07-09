@@ -65,7 +65,6 @@ namespace Incharge.Controllers
         }
         public IActionResult AddLocation()
         {
-            //Check if employee/trainger information is needed on display for when new client account is created
             return View();
         }
         [HttpPost]
@@ -112,22 +111,22 @@ namespace Incharge.Controllers
                 return NotFound();
             }
         }
-        public IActionResult DeleteLocation(int id)
-        {
-            try
-            {
-                return View(_LocationService.GetItem(x => x.Id == id));
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex);
-                return NotFound();
-            }
-        }
+        //public IActionResult DeleteLocation(int id)
+        //{
+        //    try
+        //    {
+        //        return View(_LocationService.GetItem(x => x.Id == id));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.Error(ex);
+        //        return NotFound();
+        //    }
+        //}
 
         [HttpPost, ActionName("DeleteLocation")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteLocationConfirm(LocationVM locationVM)
+        public IActionResult DeleteLocation(LocationVM locationVM)
         {
             try
             {

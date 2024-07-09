@@ -17,11 +17,12 @@ namespace Incharge.Controllers
         private readonly IBusinessReportService _BusinessReportService;
         private readonly IPagingService<PaginatedList<Expense>> _PagingService;
 
-        public ExpenseController(IService<ExpenseVM, Expense> ExpenseService, ILog logger, IBusinessReportService businessReportService)
+        public ExpenseController(IService<ExpenseVM, Expense> ExpenseService, ILog logger, IBusinessReportService businessReportService, IPagingService<PaginatedList<Expense>> PagingService)
         {
             _ExpenseService = ExpenseService;
             _log = logger;
             _BusinessReportService = businessReportService;
+            _PagingService = PagingService;
         }
 
         [HttpGet]

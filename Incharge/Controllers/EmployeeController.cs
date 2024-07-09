@@ -78,13 +78,11 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        public IActionResult UpdateEmloyee(string Uuid)
+        public IActionResult UpdateEmloyee(EmployeeVM employeeVM)
         {
             try
             {
-                var employeeInfo = new EmployeeVM();
-                employeeInfo.Uuid = Uuid;
-                return View(_EmployeeService.FindEmployee(employeeInfo));
+                return View(_EmployeeService.FindEmployee(employeeVM));
             }
             catch(Exception ex)
             {
@@ -93,13 +91,13 @@ namespace Incharge.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult UpdateEmployee([Bind("Uuid, FirstName, LastName, TotalSalary, Email, RoleId")] EmployeeVM employeeVM)
+        [HttpPost, ActionName("UpdateEmployee")]
+        public IActionResult UpdateEmployeeConfirm(EmployeeVM employeeVM)
         {
             try
             {
                 _EmployeeService.UpdateEmployee(employeeVM);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
             catch(Exception ex)
             {

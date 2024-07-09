@@ -1,0 +1,22 @@
+﻿@model Incharge.ViewModels.EmployeeVM;
+
+@{
+    ViewData["Title"] = "Update Employee";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Edit Employee</h1>
+        </div>
+
+        <div class="card-body">
+            <form asp-action="UpdateEmployee" asp-route-Uuid="@Model.Uuid" method="post">
+                <!--Employee Form fields partial view-->
+                <partial name="_EmployeeFormFields" model="@Model" />
+            </form>
+
+        </div>
+
+    </div>
+</div>

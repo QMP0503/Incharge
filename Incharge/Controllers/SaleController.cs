@@ -78,7 +78,7 @@ namespace Incharge.Controllers
             {
                 _SaleService.AddService(saleVM);
                 _BusinessReportService.UpdateService();
-                return RedirectToAction("Index","Product"); //lead back to product cause that is the only place u can add a sale
+                return RedirectToAction("Index"); //lead back to product cause that is the only place u can add a sale
             }
             catch (Exception ex)
             {
@@ -95,7 +95,7 @@ namespace Incharge.Controllers
             {
                 _SaleService.DeleteService(saleVM);
                 _BusinessReportService.UpdateService();
-                return RedirectToAction("Index", "Product");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -123,7 +123,7 @@ namespace Incharge.Controllers
             {
                 _SaleService.UpdateService(saleVM);
                 _BusinessReportService.UpdateService();
-                return RedirectToAction("Index", "Product");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {

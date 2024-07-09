@@ -46,7 +46,9 @@ namespace Incharge.Service
         public void UpdateService(ExpenseVM entity)
         {
             var expenseToUpdate = _FindExpenseRepository.FindBy(x=>x.Uuid == entity.Uuid);
-            expenseToUpdate = _mapper.Map<Expense>(entity);
+            if(expenseToUpdate == null) { throw new Exception("Expense don't exist."); }
+            _mapper.Map(entity, expenseToUpdate);
+            if(expenseToUpdate.Id == 0) { throw new Exception("Expense Id cannot be empty."); }
             _ExpenseRepository.Update(expenseToUpdate);
             _ExpenseRepository.Save();
         }

@@ -9,7 +9,7 @@ public partial class Expense
     public int Id { get; set; }
     public string Uuid { get; set; }
 
-    [AllowedValues(typeof(string), new string[] { "Wages", "Rent", "Utilities", "Insurance", "Eqipment", "Maintance", "Other" })]
+    [AllowedValues(typeof(string), new string[] { "Wages", "Rent", "Utilities", "Insurance", "Equipment", "Maintance", "Other" })]
     public string Type { get; set; }
     public DateTime Date { get; set; }
 

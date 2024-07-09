@@ -361,6 +361,9 @@ namespace Incharge.Migrations
                     b.Property<int?>("GymClassId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime?>("MaintanceDate")
                         .HasColumnType("datetime");
 
@@ -419,7 +422,10 @@ namespace Incharge.Migrations
 
                     b.Property<string>("Uuid")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(255)")
+                        .HasDefaultValueSql("(uuid())")
+                        .IsFixedLength();
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
@@ -483,6 +489,9 @@ namespace Incharge.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .HasMaxLength(45)

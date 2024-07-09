@@ -33,7 +33,10 @@ namespace Incharge.Service
             var client = _FindClientRepository.FindBy(predicate);
             if(client == null) { throw new NullReferenceException("Client Empty"); }
             var clientVM = _mapper.Map<ClientVM>(client);
-            clientVM.GymMembership = client.Products.FirstOrDefault(x => x.ProductType.Name.Equals("Membership")) ?? new Product { Name = "No Membership" } ; //this is kinda stupid but oh well haha
+            if(client.Products.FirstOrDefault(x => x.ProductType.Name.Equals("Membership")) != null)
+            {
+				clientVM.GymMembership = client.Products.FirstOrDefault(x => x.ProductType.Name.Equals("Membership")); //this is kinda stupid but oh well haha
+			}
             return clientVM;
         }
         public List<ClientVM> ListItem(Func<Client, bool> predicate) //test if automapper work with lists
@@ -53,13 +56,15 @@ namespace Incharge.Service
         {
             var clientToUpdate = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
             if (clientToUpdate == null) { throw new NullReferenceException("Client Empty."); }
-            clientToUpdate.FirstName = clientVM.FirstName ?? clientToUpdate.FirstName;
-            clientToUpdate.LastName = clientVM.LastName ?? clientToUpdate.LastName;
-            clientToUpdate.Email = clientVM.Email ?? clientToUpdate.Email;
-            clientToUpdate.Phone = clientVM.Phone ?? clientToUpdate.Phone;
-            clientToUpdate.Status = clientVM.Status ?? clientToUpdate.Status;
-            clientToUpdate.PaymentRecord = clientVM.PaymentRecord ?? clientToUpdate.PaymentRecord;
-            clientToUpdate.Note = clientVM.Note ?? clientToUpdate.Note;
+            //clientToUpdate.FirstName = clientVM.FirstName ?? clientToUpdate.FirstName;
+            //clientToUpdate.LastName = clientVM.LastName ?? clientToUpdate.LastName;
+            //clientToUpdate.Email = clientVM.Email ?? clientToUpdate.Email;
+            //clientToUpdate.Phone = clientVM.Phone ?? clientToUpdate.Phone;
+            //clientToUpdate.Status = clientVM.Status ?? clientToUpdate.Status;
+            //clientToUpdate.PaymentRecord = clientVM.PaymentRecord ?? clientToUpdate.PaymentRecord;
+            //clientToUpdate.Note = clientVM.Note ?? clientToUpdate.Note;
+
+            _mapper.Map(clientVM, clientToUpdate);
             if(clientVM.Sales != null)
             {
                 foreach (var clientSales in clientVM.SalesID)

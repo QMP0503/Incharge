@@ -22,9 +22,10 @@ using Microsoft.Build.Framework;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//var cloudAPI = builder.Configuration.GetValue<string>("CLOUDINARY_URL");
-//Cloudinary cloudinary = new Cloudinary(cloudAPI);
-//cloudinary.Api.Secure = true;
+
+DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] {"C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env"}));
+Cloudinary cloudinary = new Cloudinary(Environment.GetEnvironmentVariable("CLOUDINARY_URL"));
+cloudinary.Api.Secure = true;
 
 builder.Services.AddControllersWithViews();
 
@@ -32,7 +33,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 
 
-var conectionString = builder.Configuration.GetConnectionString("InchargeDatabase");
+var conectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
 builder.Services.AddDbContext<InchargeContext>(options =>
 {
@@ -153,7 +154,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute( //edit to make all pages require authentication
     name: "default",
-    pattern: "{controller=Product}/{action=Index}/{id?}");
+    pattern: "{controller=Location}/{action=Index}/{id?}");
 
 
     //check if they put remember me will it work..

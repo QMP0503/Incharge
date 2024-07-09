@@ -21,5 +21,7 @@ public partial class Equipment
 
     public string Status { get; set; } = null!;
 
+    //equipment picture
+    public string ? Image { get; set; }
     public virtual Gymclass? GymClass { get; set; }
 }

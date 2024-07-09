@@ -11,6 +11,7 @@ namespace Incharge.Profiles
         {
             CreateMap<Expense, ExpenseVM>()
                .ReverseMap()
+               .ForMember(dest => dest.Id, opts => opts.Ignore())
                .ForAllMembers(opts =>
                {
                    opts.AllowNull();

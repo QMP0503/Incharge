@@ -12,6 +12,7 @@ namespace Incharge.Service
         private readonly IRepository<Sale> _saleRepository;
         private readonly IRepository<Employee> _employeeRepository;
         private readonly IRepository<Product> _productRepository;
+        private readonly IRepository<Client> _clientRepository;
 
 
         private readonly IFindRepository<Sale> _findSaleRepository;
@@ -20,7 +21,7 @@ namespace Incharge.Service
         private readonly IFindRepository<Employee> _findEmployeeRepository;
         private readonly IFindRepository<Discount> _findDiscountRepository;
 
-        public SalesService( IRepository<Employee> employeeRepository, IRepository<Product> productRepository, IMapper mapper, IRepository<Sale> saleRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Client> findClientRepository, IFindRepository<Product> findProductRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Discount> findDiscountRepository)
+        public SalesService(IRepository<Client> clientRepository, IRepository<Employee> employeeRepository, IRepository<Product> productRepository, IMapper mapper, IRepository<Sale> saleRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Client> findClientRepository, IFindRepository<Product> findProductRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Discount> findDiscountRepository)
         {
             _mapper = mapper;
             _saleRepository = saleRepository;
@@ -31,6 +32,7 @@ namespace Incharge.Service
             _employeeRepository = employeeRepository;
             _productRepository = productRepository;
             _findDiscountRepository = findDiscountRepository;
+			_clientRepository = clientRepository;
         }
 
         public List<SaleVM> ListItem(Func<Sale, bool> predicate)
@@ -74,7 +76,15 @@ namespace Incharge.Service
                 _employeeRepository.Update(employee);
             }
 
-            product.Clients.Add(client);
+            if(product.ProductType.Name.Contains("Membership"))
+			{
+				client.MembershipStatus = "Active";
+			}
+            //adding product to client
+			client.Products.Add(product);
+			_clientRepository.Update(client);
+
+			product.Clients.Add(client);
 
             _saleRepository.Add(sale);
             _productRepository.Update(product);
@@ -98,12 +108,12 @@ namespace Incharge.Service
             if (client == null) { throw new Exception("Client don't exist."); }
 
             List<Discount> discount = new List<Discount>();
-            foreach(var discountId in entity.DiscountId)
-            {
-                var discountToAdd = _findDiscountRepository.FindBy(x => x.Id == discountId);
-                if(discountToAdd == null) { throw new Exception("discount don't exist"); } //delete once complete cause this should never happen
-                discount.Add(discountToAdd);
-            }
+            //foreach(var discountId in entity.DiscountId)
+            //{
+            //    var discountToAdd = _findDiscountRepository.FindBy(x => x.Id == discountId);
+            //    if(discountToAdd == null) { throw new Exception("discount don't exist"); } //delete once complete cause this should never happen
+            //    discount.Add(discountToAdd);
+            //}
             
 
             if (product.ProductType.Name.Contains("Training"))
@@ -123,6 +133,7 @@ namespace Incharge.Service
             saleToUpdate.Product = product;
             saleToUpdate.Client = client;
             saleToUpdate.Employee = employee;
+            saleToUpdate.PaymentType = entity.PaymentType;
 
             if (entity.Date != DateTime.MinValue) //incase it is null
             {

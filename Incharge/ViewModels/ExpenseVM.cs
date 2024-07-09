@@ -28,6 +28,6 @@ namespace Incharge.ViewModels
         public virtual BusinessReport? BusinessReport { get; set; }
 
         //VIEW ONLY TO SELECT:
-        public List<string> TypeOptions { get; set; } = new List<string>() { "Wages, Rent, Utilities", "Insurance", "Eqipment", "Maintance", "Other" };
+        public List<string> TypeOptions { get; set; } = new List<string>() { "Wages","Rent", "Utilities", "Insurance", "Equipment", "Maintance", "Other" };
     }
 }
