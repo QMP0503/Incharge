@@ -31,7 +31,8 @@ namespace Incharge.Controllers
                                                          string sortOrder,
                                                          string currentFilter,
                                                          string searchString,
-                                                         int? pageNumber)
+                                                         int? pageNumber, 
+                                                         int pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "Name_desc" : string.Empty;
@@ -48,7 +49,7 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
+            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
         [HttpGet]
         public IActionResult Details(int id) //id will be sent when client profile is clicked. Also when all is working change to async
@@ -111,18 +112,6 @@ namespace Incharge.Controllers
                 return NotFound();
             }
         }
-        //public IActionResult DeleteLocation(int id)
-        //{
-        //    try
-        //    {
-        //        return View(_LocationService.GetItem(x => x.Id == id));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.Error(ex);
-        //        return NotFound();
-        //    }
-        //}
 
         [HttpPost, ActionName("DeleteLocation")]
         [ValidateAntiForgeryToken]

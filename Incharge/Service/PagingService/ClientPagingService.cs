@@ -15,7 +15,7 @@ namespace Incharge.Service.PagingService
         {
             _findClientRepository = findClientRepository;
         }
-        public PaginatedList<Client> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public PaginatedList<Client> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             var ClientQuery = _findClientRepository.QueryBy(x => true);
             
@@ -40,8 +40,8 @@ namespace Incharge.Service.PagingService
                     ClientQuery = ClientQuery.OrderBy(c => c.FirstName);
                     break;
             }
-            const int pageSize = 10;
-            return PaginatedList<Client>.Create(ClientQuery.AsNoTracking(), pageNumber ?? 1, pageSize);
+            int setPageSize = pageSize > 0 ? pageSize : 10;
+            return PaginatedList<Client>.Create(ClientQuery.AsNoTracking(), pageNumber ?? 1, setPageSize);
         }
     }
 }

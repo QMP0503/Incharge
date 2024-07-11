@@ -7,8 +7,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+  
 }
 <nav class="navbar-brand mb-5">
     <div class="row align-content-center">
@@ -40,10 +39,18 @@
     <table class="table-responsive table-hover table">
         <thead>
             <tr>
-                <th scope="col" class="col">Name</th>
-                <th scope="col" class="col">Type</th>
-                <th scope="col" class="col">Date</th>
-                <th scope="col" class="col">Cost</th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["TypeSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Type</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["CostSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cost</a>
+                </th>
                 <th scope="col" class="col">Description</th>
                 <th scope="col" class="col-1"></th> 
                 <th scope="col" class="col-1"></th>
@@ -76,20 +83,7 @@
         </tbody>
 
     </table>
-    <div class="btn-group border-bottom">
-        <a asp-action="Index"
-           asp-route-sortOrder="@ViewData["CurrentSort"]"
-           asp-route-pageNumber="@(Model.PageIndex - 1)"
-           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-           class="btn btn-default @prevDisabled">
-            <i class="bi bi-arrow-left"></i>
-        </a>
-        <a asp-action="Index"
-           asp-route-sortOrder="@ViewData["CurrentSort"]"
-           asp-route-pageNumber="@(Model.PageIndex + 1)"
-           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-           class="btn btn-default @nextDisabled">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />
 </div>

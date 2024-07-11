@@ -324,3 +324,80 @@ Incharge.Models.Client -> Incharge.ViewModels.ClientVM
    at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
    at Incharge.Service.EmployeeService.UpdateEmployee(EmployeeVM employeeVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\EmployeeService.cs:line 61
    at Incharge.Controllers.EmployeeController.UpdateEmployeeConfirm(EmployeeVM employeeVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\EmployeeController.cs:line 99
+2024-07-11 14:32:44,187 [23] ERROR Program - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Client -> ClientVM
+Incharge.Models.Client -> Incharge.ViewModels.ClientVM
+
+Type Map configuration:
+Client -> ClientVM
+Incharge.Models.Client -> Incharge.ViewModels.ClientVM
+
+Destination Member:
+ProfilePicture
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> IFormFile
+System.String -> Microsoft.AspNetCore.Http.IFormFile
+
+Destination Member:
+ProfilePicture
+
+   at lambda_method767(Closure, String, IFormFile, ResolutionContext)
+   at lambda_method766(Closure, Object, ClientVM, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method766(Closure, Object, ClientVM, ResolutionContext)
+   at Incharge.Service.ClientService.GetItem(Func`2 predicate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 37
+   at Incharge.Controllers.ClientController.Details(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 54
+2024-07-11 14:33:34,601 [19] ERROR Program - AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Client -> ClientVM
+Incharge.Models.Client -> Incharge.ViewModels.ClientVM
+
+Type Map configuration:
+Client -> ClientVM
+Incharge.Models.Client -> Incharge.ViewModels.ClientVM
+
+Destination Member:
+ProfilePicture
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> IFormFile
+System.String -> Microsoft.AspNetCore.Http.IFormFile
+
+Destination Member:
+ProfilePicture
+
+   at lambda_method639(Closure, String, IFormFile, ResolutionContext)
+   at lambda_method638(Closure, Object, ClientVM, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method638(Closure, Object, ClientVM, ResolutionContext)
+   at Incharge.Service.ClientService.GetItem(Func`2 predicate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 37
+   at Incharge.Controllers.ClientController.Details(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 54
+2024-07-11 15:07:15,803 [19] ERROR Program - System.AggregateException: One or more errors occurred. (PublicId must be specified in UploadParams!)
+ ---> System.ArgumentException: PublicId must be specified in UploadParams!
+   at CloudinaryDotNet.Actions.DeletionParams.Check()
+   at CloudinaryDotNet.ApiShared.GetCallParams(BaseParams parameters)
+   at CloudinaryDotNet.ApiShared.CallApiAsync[T](HttpMethod method, String url, BaseParams parameters, Dictionary`2 extraHeaders, Nullable`1 cancellationToken)
+   at CloudinaryDotNet.Cloudinary.CallUploadApiAsync[T](HttpMethod httpMethod, String url, BaseParams parameters, Nullable`1 cancellationToken, Dictionary`2 extraHeaders)
+   at CloudinaryDotNet.Cloudinary.DestroyAsync(DeletionParams parameters)
+   at Incharge.Service.PhotoService.DeletePhotoAsync(String publicId) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\PhotoService.cs:line 40
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.UpdateService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 65
+   at Incharge.Controllers.ClientController.EditClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 103
+2024-07-11 15:09:52,243 [5] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\PhotoService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.UpdateService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 67
+   at Incharge.Controllers.ClientController.EditClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 103

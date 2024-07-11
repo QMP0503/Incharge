@@ -13,7 +13,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="d-flex flex-column align-items-center text-center">
-							<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110" /> @*Find solution for image hosting and make sure its secured. URl will be stored in db*@
+							<img src="@Model.ProfilePicture" alt="Admin" class="rounded-circle p-1 bg-primary" width="110" /> @*Find solution for image hosting and make sure its secured. URl will be stored in db*@
 							<div class="mt-3">
 								<h4>@Model.FirstName @Model.LastName</h4>
 								<p class="text-secondary mb-1">@Model.Status</p>
@@ -66,7 +66,7 @@
 			<div class="col-lg-8">
 				<div class="card">
 					<div class="card-body">
-						<form asp-action="EditClient" method="post" asp-route-Uuid=@Model.Uuid>
+						<form asp-action="EditClient" method="post" asp-route-Uuid=@Model.Uuid enctype="multipart/form-data">
 							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 							<div class="row mb-3">
 								<div class="col-sm-3">
@@ -105,7 +105,7 @@
 									<h6 class="mb-0">Address</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<textarea asp-for="Address" class="form-control" rows="2" placeholder="@Model.Address"></textarea>
+									<input asp-for="Address" class="form-control" placeholder="@Model.Address"></input>
 								</div>
 							</div>
 							<div class="row mb-3">
@@ -116,10 +116,18 @@
 									<textarea asp-for="Note" class="form-control" rows="2" placeholder="@Model.Note"></textarea>
 								</div>
 							</div>
+							<div class="row mb-3">
+								<div class="col-sm-3">
+									<h6 class="mb-0">Note</h6>
+								</div>
+								<div class="col-sm-9 text-secondary">
+									<input asp-for="PicutreInput" type="file" class="form-control" />
+								</div>
+							</div>
 							<div class="row">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
-									<input type="submit" placeholder="Save changes" value="EditClient" class="btn btn-primary" />
+									<input type="submit" value="Edit Client" class="btn btn-primary" />
 								</div>
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9 text-secondary">

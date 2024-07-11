@@ -12,11 +12,13 @@ namespace Incharge.Service
         private readonly IFindRepository<Equipment> _FindEquipmentRepository;
         private readonly IRepository<Equipment> _EquipmentRepository;
         private readonly IMapper _Mapper;
-        public EquipmentService(IMapper mapper, IFindRepository<Equipment> FindEquipmentRepository, IRepository<Equipment> EquipmentRepository)
+        private readonly IPhotoService _PhotoService;
+        public EquipmentService(IPhotoService photoService, IMapper mapper, IFindRepository<Equipment> FindEquipmentRepository, IRepository<Equipment> EquipmentRepository)
         {
             _FindEquipmentRepository = FindEquipmentRepository;
             _EquipmentRepository = EquipmentRepository;
             _Mapper = mapper;
+            _PhotoService = photoService;
         }
         public List<EquipmentVM> ListItem(Func<Equipment, bool> predicate)//mapper
         {
@@ -34,14 +36,10 @@ namespace Incharge.Service
         public void AddService(EquipmentVM equipmentVM) //make sure no null data point error
         {
             if (equipmentVM == null) { throw new NullReferenceException("Input Empty."); }
-            var equipment = new Equipment
-            {
-                Name = equipmentVM.Name,
-                Description = equipmentVM.Description,
-                PurchaseDate = equipmentVM.PurchaseDate,
-                MaintanceDate = equipmentVM.MaintanceDate,
-                Status = "available"
-            };
+            var result = _PhotoService.AddPhotoAsync(equipmentVM.PictureFile).Result;
+            if (result == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
+            equipmentVM.Image = result.Url.ToString();
+            var equipment = _Mapper.Map<Equipment>(equipmentVM);
             _EquipmentRepository.Add(equipment);
             _EquipmentRepository.Save();
 
@@ -60,13 +58,20 @@ namespace Incharge.Service
                 throw new NullReferenceException("Equipment Empty.");
             }
 
-            equipment.Name = equipmentVM.Name ?? equipment.Name;
-            equipment.Description = equipmentVM.Description ?? equipment.Description;
-            equipment.PurchaseDate = equipmentVM.PurchaseDate ?? equipment.PurchaseDate;
-            equipment.MaintanceDate = equipmentVM.MaintanceDate ?? equipment.MaintanceDate;
-            equipment.Status = equipmentVM.Status ?? equipment.Status;
-            equipment.GymClassId = equipmentVM.GymClassId ?? equipment.GymClassId;
-            equipment.GymClass = equipmentVM.GymClass ?? equipment.GymClass;
+            //delete photo first before new one can be generated
+            if(equipment.Image != null)
+            {
+                var delete = _PhotoService.DeletePhotoAsync(equipment.Image).Result;
+                if (delete == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
+            }
+
+            if (equipmentVM.PictureFile != null)
+            {
+                var result = _PhotoService.AddPhotoAsync(equipmentVM.PictureFile).Result;
+                if (result == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
+                equipmentVM.Image = result.Url.ToString();
+            }
+            _Mapper.Map(equipmentVM, equipment);
             _EquipmentRepository.Update(equipment);
             _EquipmentRepository.Save();
         }

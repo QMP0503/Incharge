@@ -13,7 +13,7 @@ namespace Incharge.Service.PagingService
         {
             _FindProductRepository = findProductRepository;
         }
-        public PaginatedList<Product> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public PaginatedList<Product> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             var ProductQuery = _FindProductRepository.QueryBy(x => true);
 
@@ -37,9 +37,9 @@ namespace Incharge.Service.PagingService
                     ProductQuery = ProductQuery.OrderBy(c => c.Name);
                     break;
             }
-            const int pageSize = 10;
+            int setPageSize = pageSize > 0 ? pageSize : 10;
 
-            return PaginatedList<Product>.Create(ProductQuery.AsNoTracking(), pageNumber ?? 1, pageSize);
+            return PaginatedList<Product>.Create(ProductQuery.AsNoTracking(), pageNumber ?? 1, setPageSize);
         }
 
     }

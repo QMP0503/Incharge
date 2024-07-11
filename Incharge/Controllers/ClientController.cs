@@ -13,18 +13,21 @@ namespace Incharge.Controllers
         readonly IService<ClientVM, Client> _clientService;
         readonly IPagingService<PaginatedList<Client>> _pagingService;
         readonly ILog _logger;
-        public ClientController(IService<ClientVM, Client> clientService, IPagingService<PaginatedList<Client>> pagingService, ILog logger)
+        private readonly IPhotoService _photoService;
+        public ClientController(IPhotoService photoService ,IService<ClientVM, Client> clientService, IPagingService<PaginatedList<Client>> pagingService, ILog logger)
         {
             _clientService = clientService;
             _pagingService = pagingService;
             _logger = logger;
+            _photoService = photoService;
         }
         [HttpGet] //there will be a button in index to check client in. Design a button/page to do so. Check them in and out.
         public IActionResult Index(
                                                  string sortOrder,
                                                  string currentFilter,
                                                  string searchString,
-                                                 int? pageNumber)
+                                                 int? pageNumber,
+                                                 int pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["FirstNameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "FirstName_desc" : string.Empty;
@@ -41,7 +44,7 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
+            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
         [HttpGet]
         public IActionResult Details(ClientVM clientVM) //id will be sent when client profile is clicked. Also when all is working change to async
@@ -60,6 +63,7 @@ namespace Incharge.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddClient(ClientVM clientVM)
@@ -105,6 +109,7 @@ namespace Incharge.Controllers
                 return NotFound();
             }
         }
+
         //public IActionResult DeleteClient(string Uuid)
         //{
         //    try

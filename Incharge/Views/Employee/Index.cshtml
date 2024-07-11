@@ -6,12 +6,6 @@
 @inject UserManager<Incharge.Models.User> UserManager;
 
 @{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-}
-
-
-@{
     ViewData["Title"] = "Index";
 }
 <nav class="navbar-brand mb-5">
@@ -27,11 +21,23 @@
         }
         </div>
         
-
         <form asp-action="Index" method="get" class="col">
             <div class="d-flex gap-1 flex-row-reverse">
                 <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
                 <input class="form-control w-50" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Page Size
+                    </button>
+
+                    <!--Code does not work-->
+
+                    <ul class="dropdown-menu" id="PaginatedList<Employee>.pageSize"> 
+                        <li><button class="dropdown-item" type="submit" value="1">10</button></li>
+                        <li><button class="dropdown-item" type="submit" value="2">20</button></li>
+                        <li><button class="dropdown-item" type="submit" value="3">30</button></li>
+                    </ul>
+                </div>
             </div>
         </form>
 
@@ -43,7 +49,7 @@
 
 </nav>
 
-<table class="table">
+<table class="table-responsive table-hover table">
     <thead>
         <tr>
             <th scope="col"></th> @*Planning on having image here*@
@@ -55,24 +61,39 @@
             </th>
             <th scope="col">Email</th>
             <th scope="col">Role</th>
-            <th scope="col">Details</th> @*Name this column somewhere for employee to track client, class and so on*@
-            @*this should be store a bunch of buttons
+            @if (User.IsInRole("Admin"))
+            {
+                <th scope="col">Edit</th> @*Name this column somewhere for employee to track client, class and so on*@
+                @*this should be store a bunch of buttons
             *@
+                <th scope="col">Delete</th>
+            }
         </tr>
     </thead>
     <tbody>
     @foreach(var item in Model)
     {
-            <tr>
+            <tr onclick="location.href='/Employee/Details?Uuid=@item.Uuid'">
                 <th @*image column for employee*@></th>
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td>@item.Email</td>
                 <td>@item.Role.Type</td>
-                <td>
-                    <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-primary">Details</a>
-                </td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="UpdateEmloyee" asp-route-Uuid="@item.Uuid" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                    </td>
+                    <td>
+                        <a asp-action="DeleteEmployee" asp-route-Uuid="@item.Uuid" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                    </td>
+                }
             </tr>
     }
+
     </tbody>
 </table>
+
+@*Pagination partial view*@
+
+<partial name="_Pagination" model="@Model" />

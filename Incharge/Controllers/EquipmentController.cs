@@ -31,7 +31,8 @@ namespace Incharge.Controllers
                                                          string sortOrder,
                                                          string currentFilter,
                                                          string searchString,
-                                                         int? pageNumber)
+                                                         int? pageNumber,
+                                                         int pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "Name_desc" : string.Empty;
@@ -48,7 +49,7 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
+            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
         [HttpGet]
         public IActionResult Details(int id) //id will be sent when client profile is clicked. Also when all is working change to async
@@ -65,7 +66,6 @@ namespace Incharge.Controllers
         }
         public IActionResult AddEquipment()
         {
-            //Check if employee/trainger information is needed on display for when new client account is created
             return View();
         }
         [HttpPost]
@@ -97,21 +97,6 @@ namespace Incharge.Controllers
 
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult EditClient(EquipmentVM equipmentVM)
-        {
-            try
-            {
-                _EquipmentService.UpdateService(equipmentVM);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex);
-                return NotFound();
-            }
-        }
         public IActionResult DeleteEquipment(int id)
         {
             try

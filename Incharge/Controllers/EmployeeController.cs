@@ -25,7 +25,8 @@ namespace Incharge.Controllers
                                                  string sortOrder,
                                                  string currentFilter,
                                                  string searchString,
-                                                 int? pageNumber)
+                                                 int? pageNumber,
+                                                 int pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["FirstNameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "FirstName_desc" : string.Empty;
@@ -42,7 +43,7 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
+            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
         [HttpGet] //ONLY SALARY IS VISIBLE TO ADMIN ... Let admin view seperate page?
         public IActionResult Details(string Uuid)

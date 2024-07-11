@@ -12,7 +12,7 @@ namespace Incharge.Service.PagingService
         {
             _FindEmployeeRepository = findEmployeeRepository;
         }
-        public PaginatedList<Employee> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public PaginatedList<Employee> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             var EmployeeQuery = _FindEmployeeRepository.QueryBy(x => true);
 
@@ -36,8 +36,8 @@ namespace Incharge.Service.PagingService
                     EmployeeQuery = EmployeeQuery.OrderBy(c => c.FirstName);
                     break;
             }
-            const int pageSize = 10;
-            return PaginatedList<Employee>.Create(EmployeeQuery.AsNoTracking(), pageNumber ?? 1, pageSize);
+            int setPageSize = pageSize > 0 ? pageSize : 10;
+            return PaginatedList<Employee>.Create(EmployeeQuery.AsNoTracking(), pageNumber ?? 1, setPageSize);
         }
     }
 }

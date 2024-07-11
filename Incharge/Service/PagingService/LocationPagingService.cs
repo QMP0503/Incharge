@@ -12,7 +12,7 @@ namespace Incharge.Service.PagingService
         {
             _FindEquipmentRepository = findEquipmentRepository;
         }
-        public PaginatedList<Location> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public PaginatedList<Location> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             var LocationQuery = _FindEquipmentRepository.QueryBy(x => true);
 
@@ -42,8 +42,8 @@ namespace Incharge.Service.PagingService
                     LocationQuery = LocationQuery.OrderBy(l => l.Name);
                     break;
             }
-            const int pageSize = 10;
-            return PaginatedList<Location>.Create(LocationQuery.AsNoTracking(), pageNumber ?? 1, pageSize);
+            int setPageSize = pageSize > 0 ? pageSize : 10;
+            return PaginatedList<Location>.Create(LocationQuery.AsNoTracking(), pageNumber ?? 1, setPageSize);
         }
     }
 }

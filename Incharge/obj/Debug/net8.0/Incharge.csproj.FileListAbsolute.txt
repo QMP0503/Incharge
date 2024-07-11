@@ -511,3 +511,4 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\CloudinaryDotNet.
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\dotenv.net.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\package-lock.json
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\package.json
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\System.Text.Json.dll

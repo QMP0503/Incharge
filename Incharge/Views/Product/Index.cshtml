@@ -8,11 +8,6 @@
 @{
     ViewData["Title"] = "Index";
 }
-@{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-}
-
 
 
 @*Page specific style sheets*@
@@ -46,6 +41,7 @@
     </div>
 </nav>
 
+<!--Add sorting by switching to table layout-->
 
 <div class="container">
 <div class="row">
@@ -86,7 +82,6 @@
                                                 <td>
                                                     <div class="dropdown float-end">
                                                         <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-horizontal-rounded"></i>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-end">
                                                             <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
@@ -149,18 +144,7 @@
 
 
 <div class="btn-group border-bottom">
-    <a asp-action="Index"
-       asp-route-sortOrder="@ViewData["CurrentSort"]"
-       asp-route-pageNumber="@(Model.PageIndex - 1)"
-       asp-route-currentFilter="@ViewData["CurrentFilter"]"
-       class="btn btn-default @prevDisabled">
-        <i class="bi bi-arrow-left"></i>
-    </a>
-    <a asp-action="Index"
-       asp-route-sortOrder="@ViewData["CurrentSort"]"
-       asp-route-pageNumber="@(Model.PageIndex + 1)"
-       asp-route-currentFilter="@ViewData["CurrentFilter"]"
-       class="btn btn-default @nextDisabled">
-        <i class="bi bi-arrow-right"></i>
-    </a>
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />
 </div>

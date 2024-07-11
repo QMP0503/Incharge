@@ -18,23 +18,24 @@
 
 
 //THIS IS NOT FUCKING PRACTICAL, JUST MAKE A NEW PAGE FOR IT FUCKS SAKE
-const SaleModal = document.getElementById('SaleModal')
-if (SaleModal) {
-    SaleModal.addEventListener('show.bs.modal', event => {
-        // Button that triggered the modal
-        const button = event.relatedTarget
-        // Extract info from data-bs-* attributes
-        const productName = button.getAttribute('data-bs-Name')
-        const productId = button.getAttribute('data-bs-Id')
-        // If necessary, you could initiate an Ajax request here
-        // and then do the updating in a callback.
+//const SaleModal = document.getElementById('SaleModal')
+//if (SaleModal) {
+//    SaleModal.addEventListener('show.bs.modal', event => {
+//        // Button that triggered the modal
+//        const button = event.relatedTarget
+//        // Extract info from data-bs-* attributes
+//        const productName = button.getAttribute('data-bs-Name')
+//        const productId = button.getAttribute('data-bs-Id')
+//        // If necessary, you could initiate an Ajax request here
+//        // and then do the updating in a callback.
 
-        // Update the modal's content.
-        const saleProductName = SaleModal.querySelector('.modal-title')
-        const saleProductId = SaleModal.querySelector('.modal-body input') //assign one input field as the Id to directly call the AP
+//        // Update the modal's content.
+//        const saleProductName = SaleModal.querySelector('.modal-title')
+//        const saleProductId = SaleModal.querySelector('.modal-body input') //assign one input field as the Id to directly call the AP
 
-        modalTitle.textContent = `New message to ${recipient}`
-        saleProductName.value = recipient
-    })
-}
+//        modalTitle.textContent = `New message to ${recipient}`
+//        saleProductName.value = recipient
+//    })
+//}
+
 

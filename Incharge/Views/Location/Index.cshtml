@@ -7,8 +7,6 @@
 
 @{
     ViewData["Title"] = "Index";
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
 <nav class="navbar-brand mb-5">
@@ -39,38 +37,32 @@
     </div>
 
 </nav>
+
+
 <div class="container">
     <table class="table-responsive table-hover table">
         <thead>
             <tr>
-                <th scope="col" class="col-1"></th> @*will juat be colour indicator for if the client is signed in/out or payment is overdued.*@
-                <th scope="col" class="col">Name</th>
-                <th scope="col" class="col">Capacity</th>
-                <th scope="col" class="col">Status</th>
+                <th scope="col" class="col-1"></th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["CapacitySortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Capacity</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["StatusSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Status</a>
+                </th>
                 <th scope="col" class="col">Gym Class</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr onclick="Location.href='/Location/Details?@item.Id'" class="table-light">
                     <td>
                         <div class="col-1">
-
-
-                            @if (item.Status == "Available" || item.Status == null)
-                            {
-                                <a asp-action="Details" asp-route-Id="@item.Id" class="btn btn-success"><i class="bi bi-info-square"></i></a>
-                            }
-                            @if (item.Status == "Unavailable")
-                            {
-                                <a asp-action="Details" asp-route-Id="@item.Id" class="btn btn-danger"><i class="bi bi-info-square"></i></a>
-
-                            }
-                            @if(item.Status == "Under Maintance")
-                            {
-                                <a asp-action="Details" asp-route-Id="@item.Id" class="btn btn-warning"><i class="bi bi-info-square"></i></a>
-                            }
+                            <!--Find something useful to put here-->
                         </div>
                     </td>
 
@@ -83,22 +75,11 @@
         </tbody>
 
     </table>
-    <div class="btn-group border-bottom">
-        <a asp-action="Index"
-           asp-route-sortOrder="@ViewData["CurrentSort"]"
-           asp-route-pageNumber="@(Model.PageIndex - 1)"
-           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-           class="btn btn-default @prevDisabled">
-            <i class="bi bi-arrow-left"></i>
-        </a>
-        <a asp-action="Index"
-           asp-route-sortOrder="@ViewData["CurrentSort"]"
-           asp-route-pageNumber="@(Model.PageIndex + 1)"
-           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-           class="btn btn-default @nextDisabled">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
+
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />@*Pagination partial view*@
+
 </div>
 
 

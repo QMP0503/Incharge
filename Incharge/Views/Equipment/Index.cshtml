@@ -1,0 +1,87 @@
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Equipment>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Equipment</h1>
+    </div>
+    <div class="row align-content-center pt-3 pb-3">
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="col pr-1">
+                <a asp-action="AddEquipment" class="btn btn-primary">Add New Equipment</a>
+            </div>
+        }
+
+        @*Add filter column*@
+
+        <form asp-action="Index" method="get" class="col">
+            <div class="d-flex gap-1 flex-row-reverse">
+                <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
+                <input class="form-control w-25" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            </div>
+        </form>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<div class="container">
+    <table class="table-responsive table-hover table">
+        <thead>
+            <tr>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["StatusSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Capacity</a>
+                </th>
+@*                 <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["GymClassSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Gym Class</a>
+                </th> *@
+                <th scope="col" class="col">
+                    Purchase Date
+                </th>
+                <th scope="col" class="col">
+                    Maintance Date
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr onclick="location.href='/Equipment/Details?Id=@item.Id'" >
+
+                    <td class="col">@item.Name</td>
+                    <td>@item.Status</td>
+@*                     <td>@item.GymClass.Name</td>
+ *@                    <td>@item.PurchaseDate</td>
+                    <td>@item.MaintanceDate</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />@*Pagination partial view*@
+
+</div>
+
+
+

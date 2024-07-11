@@ -8,11 +8,6 @@
 @{
     var clientVM = new ClientVM();
 }
-@{
-    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
-}
-
 
 @{
     ViewData["Title"] = "Index";
@@ -47,35 +42,26 @@
         <thead>
             <tr>
                 <th scope="col" class="col-1"></th> @*will juat be colour indicator for if the client is signed in/out or payment is overdued.*@
-                <th scope="col" class="col">First</th>
-                <th scope="col" class="col">Last</th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">First</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["LastNameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Last</a>
+                </th>
                 <th scope="col" class="col">Phone</th>
                 <th scope="col" class="col">Status</th>
                 <th scope="col" class="col">Update Status</th>
+                <th scope="col" class="col">Membership Status</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        <div class="col-1">
-                            
-                           
-                            @if (item.Status == "Signed In")
-                            {
-                                <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-success"><i class="bi bi-person"></i></a>
-                            }
-                            @if (item.Status == "Signed Out" || item.Status == null)
-                            {
-                                <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-warning"><i class="bi bi-person"></i></a>
-
-                            }
-                            @if(item.Status == "Overdue")
-                            {
-                                <a asp-action="Details" asp-route-Uuid="@item.Uuid" class="btn btn-danger"><i class="bi bi-person"></i></a>
-                            }
-                        </div>
+                <!--When checked box is clicked this will still lead to details page-->
+                <tr onclick="location.href='/Client/Details?Uuid=@item.Uuid'">
+                    <td class="no-click">
+                        <!--Checkbox to help sign in-->
+                        <input type="checkbox"/> 
                     </td>
                     <td>@item.FirstName</td>
                     <td>@item.LastName</td>
@@ -100,27 +86,17 @@
                             </form>
                         </div>
                     </td>
+                    <td>@item.MembershipStatus</td>
                 </tr>
             }
         </tbody>
         
     </table>
-    <div class="btn-group border-bottom">
-        <a asp-action="Index"
-            asp-route-sortOrder="@ViewData["CurrentSort"]"
-            asp-route-pageNumber="@(Model.PageIndex - 1)"
-            asp-route-currentFilter="@ViewData["CurrentFilter"]"
-            class="btn btn-default @prevDisabled">
-            <i class="bi bi-arrow-left"></i>
-        </a>
-        <a asp-action="Index"
-            asp-route-sortOrder="@ViewData["CurrentSort"]"
-            asp-route-pageNumber="@(Model.PageIndex + 1)"
-            asp-route-currentFilter="@ViewData["CurrentFilter"]"
-            class="btn btn-default @nextDisabled">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
+
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />
+
 </div>
 
 

@@ -14,6 +14,10 @@ namespace Incharge.ViewModels
         [DisplayName("Last Name")]
         public string LastName { get; set; } = null!;
 
+        //display url link for profile picture
+        [DisplayName("Profile Picture")]
+        public string ProfilePicture { get; set; }
+
         public int? Phone { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
@@ -51,6 +55,10 @@ namespace Incharge.ViewModels
 
         public List<int?> ProductID { get; set; } = new List<int?>();
         public int? PaymentRecordId { get; set; }
+
+        //INPUT ONLY
+        [DisplayName("Add Profile Picture")]
+        public IFormFile PicutreInput { get; set; }
 
     }
 }

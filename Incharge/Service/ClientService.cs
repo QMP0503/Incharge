@@ -6,6 +6,7 @@ using Incharge.ViewModels;
 using ZstdSharp.Unsafe;
 using Incharge.DTO;
 using AutoMapper;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Incharge.Service
 {
@@ -18,7 +19,8 @@ namespace Incharge.Service
         private readonly IFindRepository<Product> _FindProductRepository;
         private readonly IFindRepository<Sale> _FindSaleRepository;
         private readonly IMapper _mapper;
-        public ClientService(IFindRepository<Product> findProductRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Gymclass> findGymClassRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Client> FindClientRepository, IRepository<Client> clientRepository, IMapper mapper)
+        private readonly IPhotoService _photoService;
+        public ClientService(IPhotoService photoService, IFindRepository<Product> findProductRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Gymclass> findGymClassRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Client> FindClientRepository, IRepository<Client> clientRepository, IMapper mapper)
         {
             _ClientRepository = clientRepository;
             _FindClientRepository = FindClientRepository;
@@ -27,6 +29,7 @@ namespace Incharge.Service
             _FindGymClassRepository = findGymClassRepository;
             _FindProductRepository = findProductRepository;
             _FindSaleRepository = findSaleRepository;
+            _photoService = photoService;
         }
         public ClientVM GetItem(Func<Client, bool> predicate)
         {
@@ -48,23 +51,31 @@ namespace Incharge.Service
         public void AddService(ClientVM clientVM) //cosider if there is a desire to add membership as soon as client profile is made..
         {
             if(clientVM == null) { throw new NullReferenceException("Input Empty."); }
+            var result = _photoService.AddPhotoAsync(clientVM.PicutreInput).Result;
+            //Make whole program async when all tests are completed
+            if(result == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
             var client = _mapper.Map<Client>(clientVM); //some is null so check if this is true
+            client.ProfilePicture = result.Url.ToString();
             _ClientRepository.Add(client) ;
             _ClientRepository.Save();
         }
         public void UpdateService(ClientVM clientVM) //email, phone, firstname and lastname are required
         {
             var clientToUpdate = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
-            if (clientToUpdate == null) { throw new NullReferenceException("Client Empty."); }
-            //clientToUpdate.FirstName = clientVM.FirstName ?? clientToUpdate.FirstName;
-            //clientToUpdate.LastName = clientVM.LastName ?? clientToUpdate.LastName;
-            //clientToUpdate.Email = clientVM.Email ?? clientToUpdate.Email;
-            //clientToUpdate.Phone = clientVM.Phone ?? clientToUpdate.Phone;
-            //clientToUpdate.Status = clientVM.Status ?? clientToUpdate.Status;
-            //clientToUpdate.PaymentRecord = clientVM.PaymentRecord ?? clientToUpdate.PaymentRecord;
-            //clientToUpdate.Note = clientVM.Note ?? clientToUpdate.Note;
+            if(clientToUpdate.ProfilePicture != null)
+            {
+				var delete = _photoService.DeletePhotoAsync(clientToUpdate.ProfilePicture).Result;
+				if (clientToUpdate == null) { throw new NullReferenceException("Client Empty."); }
+                Console.WriteLine(delete.ToString());
+			}
+            if(clientVM.PicutreInput != null) 
+            {
+				var result = _photoService.AddPhotoAsync(clientVM.PicutreInput).Result;
+				clientVM.ProfilePicture = result.Url.ToString();
+			}
+			//replace null with result message from cloudinary
+			_mapper.Map(clientVM, clientToUpdate);
 
-            _mapper.Map(clientVM, clientToUpdate);
             if(clientVM.Sales != null)
             {
                 foreach (var clientSales in clientVM.SalesID)
@@ -109,7 +120,8 @@ namespace Incharge.Service
             if(clientVM == null) { throw new NullReferenceException("Input Empty."); }
             var clientToDelete = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
             if(clientToDelete == null) { throw new NullReferenceException("Client Empty."); }
-            _ClientRepository.Delete(clientToDelete);
+			var delete = _photoService.DeletePhotoAsync(clientToDelete.ProfilePicture).Result;
+			_ClientRepository.Delete(clientToDelete);
             _ClientRepository.Save();
         }
         public DateTime GetEndDate(ClientVM entity)

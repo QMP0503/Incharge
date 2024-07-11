@@ -13,8 +13,8 @@ public partial class Client
     public string FirstName { get; set; }  
     public string LastName { get; set; }  
     public int Phone { get; set; }
-    [DataType(DataType.EmailAddress)]
     public string? ProfilePicture { get; set; }
+    [DataType(DataType.EmailAddress)]
     public string Email { get; set; }
     [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out"  })]
     public string? Status { get; set; }

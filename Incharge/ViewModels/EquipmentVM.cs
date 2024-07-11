@@ -11,7 +11,11 @@ namespace Incharge.ViewModels
         public string Name { get; set; } = null!;
         public string? Description { get; set; }
 
+        public string? Image { get; set; }//picture of equipment
+
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? PurchaseDate { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime? MaintanceDate { get; set; }
         [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved", "Under Maintance" })]
@@ -20,8 +24,11 @@ namespace Incharge.ViewModels
 
         public Gymclass? GymClass { get; set; }
 
-        //int Id retrieved from view
+        //Date retrieved from view
         public int? GymClassId { get; set; }
+
+        public IFormFile PictureFile { get; set; }
+       
     }
 }
 

@@ -32,7 +32,8 @@ namespace Incharge.Controllers
                                                 string sortOrder,
                                                 string currentFilter,
                                                 string searchString,
-                                                int? pageNumber)
+                                                int? pageNumber,
+                                                int pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["DateSortParam"] = string.IsNullOrEmpty(sortOrder) ? "Date_asc" : string.Empty;
@@ -52,14 +53,8 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            return View(_PagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber));
+            return View(_PagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
-
-        //CURRENTLY BROKEN
-        //public IActionResult _SalePartial() 
-        //{
-        //    return PartialView("_SalePartial", _SaleDropDown.DropDownOptions()); //just to print out the values
-        //}
 
         public IActionResult AddSale(SaleVM saleVM)
         {

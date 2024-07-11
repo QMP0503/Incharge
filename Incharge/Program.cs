@@ -14,6 +14,7 @@ using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using dotenv.net;
 using Microsoft.Build.Framework;
+using Incharge.Helper;
 
 // Set your Cloudinary credentials
 //=================================
@@ -24,14 +25,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] {"C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env"}));
-Cloudinary cloudinary = new Cloudinary(Environment.GetEnvironmentVariable("CLOUDINARY_URL"));
-cloudinary.Api.Secure = true;
+//Cloudinary cloudinary = new Cloudinary(Environment.GetEnvironmentVariable("CLOUDINARY_URL"));
+//cloudinary.Api.Secure = true;
 
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+//Cloudinary injection
+builder.Services.AddScoped <IPhotoService, PhotoService>();
 
+builder.Services.Configure<CloudinarySettings>( options =>
+{
+    options.CloudName = Environment.GetEnvironmentVariable("CLOUDINARY_CLOUD_NAME");
+    options.ApiKey = Environment.GetEnvironmentVariable("CLOUDINARY_API_KEY");
+    options.ApiSecret = Environment.GetEnvironmentVariable("CLOUDINARY_API_SECRET");
+});
 
 var conectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
@@ -154,7 +163,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute( //edit to make all pages require authentication
     name: "default",
-    pattern: "{controller=Location}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
     //check if they put remember me will it work..

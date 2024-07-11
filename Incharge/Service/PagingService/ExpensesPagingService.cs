@@ -12,7 +12,7 @@ namespace Incharge.Service.PagingService
         {
             _FindExpenseRepository = findExpenseRepository;
         }
-        public PaginatedList<Expense> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public PaginatedList<Expense> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             var ExpenseQuery = _FindExpenseRepository.QueryBy(x => true);
 
@@ -47,8 +47,8 @@ namespace Incharge.Service.PagingService
                     ExpenseQuery = ExpenseQuery.OrderByDescending(c => c.Date);
                     break;
             }
-            const int pageSize = 10;
-            return PaginatedList<Expense>.Create(ExpenseQuery.AsNoTracking(), pageNumber ?? 1, pageSize);
+            int setPageSize = pageSize > 0 ? pageSize : 10;
+            return PaginatedList<Expense>.Create(ExpenseQuery.AsNoTracking(), pageNumber ?? 1, setPageSize);
         }
     }
 }

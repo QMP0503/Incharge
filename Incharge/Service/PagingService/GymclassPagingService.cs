@@ -12,7 +12,7 @@ namespace Incharge.Service.PagingService
         {
             _findGymClassRepository = findGymClassRepository;
         }
-        public PaginatedList<Gymclass> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public PaginatedList<Gymclass> IndexPaging(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             var GymClassQuery = _findGymClassRepository.QueryBy(x => true);
 
@@ -36,8 +36,8 @@ namespace Incharge.Service.PagingService
                     GymClassQuery = GymClassQuery.OrderBy(c => c.Name);
                     break;
             }
-            const int pageSize = 10;
-            return PaginatedList<Gymclass>.Create(GymClassQuery.AsNoTracking(), pageNumber ?? 1, pageSize);
+            int setPageSize = pageSize>0? pageSize: 10;
+            return PaginatedList<Gymclass>.Create(GymClassQuery.AsNoTracking(), pageNumber ?? 1, setPageSize);
 
         }
     }

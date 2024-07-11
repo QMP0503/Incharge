@@ -1,0 +1,48 @@
+﻿@model Incharge.ViewModels.EquipmentVM;
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body mt-1">
+                    <h3 class="mb-3">EQUIPMENT DETAILS</h3>
+                    <!--Description-->
+                    <p class="mb-2 mt-2">@Model.Description</p>
+                    <div class="row align-content-center">
+                        <div class="col-2">
+                            <a asp-action="EditEquipment" asp-route-id="@Model.Id" class="btn btn-primary"> Edit </a>
+                        </div>
+                        <div class="col-2">
+                            <form asp-action="DeleteEquipment" asp-route-id="@Model.Id" method="post">
+                                <input type="submit" value="Delete" class="btn btn-danger" />
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- / project-info-box -->
+            </div>
+            <div class="card">
+                <div class="card-body p-2 mb-1">
+                    <p class="m-2"><b>Name:</b> @Model.Name</p>
+                    <p class="m-2"><b>Capacity:</b> @Model.GymClass</p>
+                    <p class="m-2"><b>Status:</b> @Model.Status</p>
+                    <p class="m-2"><b>Purchase Date:</b> @Model.PurchaseDate</p>
+                    <p class="m-2"><b>Maintanance Date:</b> @Model.MaintanceDate</p>
+@*                     <p class="m-2"><b>Gym Class:</b> @Model.GymClass.Name</p>
+ *@                    <p class="m-2"><b>Description:</b> @Model.Description</p>
+
+                </div><!-- / project-info-box -->
+            </div>
+
+        </div>
+
+        <div class="col-md-7"> 
+            <img src="@Model.Image" alt="project-image" class="rounded">
+        </div><!-- / column (image) -->
+    </div>
+    
+</div>
