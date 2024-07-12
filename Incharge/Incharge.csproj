@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Incharge.env" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Incharge.env" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Incharge.env" />
   </ItemGroup>
 

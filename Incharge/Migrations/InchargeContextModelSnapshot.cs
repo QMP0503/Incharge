@@ -17,7 +17,7 @@ namespace Incharge.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
@@ -177,6 +177,18 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
+                    b.Property<DateTime?>("MembershipExpiryDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("MembershipName")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MembershipProductId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("MembershipStartDate")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("MembershipStatus")
                         .HasColumnType("longtext");
 
@@ -195,6 +207,9 @@ namespace Incharge.Migrations
                     b.Property<string>("Status")
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
+
+                    b.Property<int>("TotalTrainingSessions")
+                        .HasColumnType("int");
 
                     b.Property<string>("Uuid")
                         .IsRequired()
@@ -624,6 +639,9 @@ namespace Incharge.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<double>("TotalPrice")

@@ -11,7 +11,7 @@
         </div>
 
         <div class="card-body">
-            <form asp-action="UpdateEmployee" asp-route-Uuid="@Model.Uuid" method="post">
+            <form asp-action="UpdateEmployee" asp-route-Uuid="@Model.Uuid" method="post" enctype="multipart/form-data">
                 <!--Employee Form fields partial view-->
                 <partial name="_EmployeeFormFields" model="@Model" />
             </form>

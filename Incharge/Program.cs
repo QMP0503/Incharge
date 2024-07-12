@@ -15,18 +15,15 @@ using CloudinaryDotNet.Actions;
 using dotenv.net;
 using Microsoft.Build.Framework;
 using Incharge.Helper;
-
-// Set your Cloudinary credentials
-//=================================
-
+using MyMovies.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 
+
 DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] {"C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env"}));
-//Cloudinary cloudinary = new Cloudinary(Environment.GetEnvironmentVariable("CLOUDINARY_URL"));
-//cloudinary.Api.Secure = true;
+
 
 builder.Services.AddControllersWithViews();
 
@@ -81,7 +78,7 @@ builder.Services.AddScoped<IFindRepository<Expense>, ExpensesRepository>();
 builder.Services.AddScoped<IService<ClientVM, Client>, ClientService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Client>>, ClientPagingService>(); //figure out async when all is working
 
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IService<EmployeeVM, Employee>, EmployeeService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Employee>>, EmployeePagingService>();
 
 builder.Services.AddScoped<IService<EquipmentVM,Equipment>, EquipmentService>();
@@ -108,6 +105,11 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Expense>>, ExpensesPagin
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
 builder.Services.AddScoped<IDropDownOptions<SaleVM>, SalesService>();
 builder.Services.AddScoped<IDropDownOptions<EmployeeVM>, EmployeeService>();
+
+
+//CHECKER INJECTION
+builder.Services.AddScoped<IChecker<Client>, ClientChecker>();
+
 
 //add memory caching for client list and/or gym class list
 
@@ -173,5 +175,19 @@ using(var scope = app.Services.CreateScope())
     var initializationService = scope.ServiceProvider.GetRequiredService<IBusinessReportService>();
     initializationService.AddService(); //run to add new business report if new month begins
 }
+
+using (var scope = app.Services.CreateScope())
+{
+    var initializationService = scope.ServiceProvider.GetRequiredService<IChecker<Client>>();
+    initializationService.Check(); //run to add new business report if new month begins
+}
+
+//for seeding intial data to program only
+//using (var scope = app.Services.CreateScope())
+//{
+//    var services = scope.ServiceProvider;
+
+//    SeedData.Initialize(services);
+//}
 
 app.Run();

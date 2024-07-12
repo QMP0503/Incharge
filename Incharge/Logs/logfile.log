@@ -401,3 +401,6 @@ ProfilePicture
    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at Incharge.Service.ClientService.UpdateService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 67
    at Incharge.Controllers.ClientController.EditClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 103
+2024-07-12 17:00:40,434 [25] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.AddService(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 76
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 74

@@ -20,6 +20,8 @@ namespace Incharge.ViewModels
         //ADD PRICE WHEN TAX IS ADDED
         public double TotalPrice { get; set; }
 
+        public int Quantity { get; set; }
+
         //Used for internal calculations and relationship assignment.
         public int EmployeeId { get; set; }
 

@@ -2,12 +2,10 @@
 using Incharge.Models;
 using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
-using Incharge.DTO;
 using Incharge.ViewModels;
-using AutoMapper.Configuration.Annotations;
 namespace Incharge.Service
 {
-    public class EmployeeService : IEmployeeService, IDropDownOptions<EmployeeVM>
+    public class EmployeeService : IService<EmployeeVM, Employee>, IDropDownOptions<EmployeeVM>
     {
         readonly IFindRepository<Employee> _FindEmployeeRepository;
         readonly IRepository<Employee> _EmployeeRepository;
@@ -15,8 +13,9 @@ namespace Incharge.Service
         readonly IFindRepository<Client> _FindClientRepository;
         readonly IFindRepository<Gymclass> _FindGymClassRepository;
         readonly IMapper _Mapper;
+        readonly IPhotoService _PhotoService;
 
-        public EmployeeService( IFindRepository<Client> FindClientRepository, IFindRepository<Employee> FindEmployeeRepository, IRepository<Employee> EmployeeRepository, IMapper Mapper, IFindRepository<EmployeeType> findEmployeeTypeRepository, IFindRepository<Gymclass> findGymClassRepository)
+        public EmployeeService(IPhotoService photoService, IFindRepository<Client> FindClientRepository, IFindRepository<Employee> FindEmployeeRepository, IRepository<Employee> EmployeeRepository, IMapper Mapper, IFindRepository<EmployeeType> findEmployeeTypeRepository, IFindRepository<Gymclass> findGymClassRepository)
         {
             _FindEmployeeRepository = FindEmployeeRepository;
             _EmployeeRepository = EmployeeRepository;
@@ -24,85 +23,67 @@ namespace Incharge.Service
             _FindEmployeeTypeRepository = findEmployeeTypeRepository;
             _FindClientRepository = FindClientRepository;
             _FindGymClassRepository = findGymClassRepository;
+            _PhotoService = photoService;
         }
-        public List<EmployeeVM> ListEmployee() //recosider if i need this.
+        public List<EmployeeVM> ListItem(Func<Employee, bool> predicate) //recosider if i need this.
         {
-            var employee = _FindEmployeeRepository.ListBy(x => true);
-            var employeeDTO = _Mapper.Map<List<EmployeeVM>>(employee);
-            return employeeDTO;
+            var employeeList = _FindEmployeeRepository.ListBy(predicate);
+            var employeeVMLIst = _Mapper.Map<List<EmployeeVM>>(employeeList);
+            return employeeVMLIst;
         }
-        public EmployeeVM FindEmployee(EmployeeVM employeeVM)
+        public EmployeeVM GetItem(Func<Employee, bool> predicate)
         {
-            var employee = _FindEmployeeRepository.FindBy(e => e.Uuid == employeeVM.Uuid);
-            var employeeFound = _Mapper.Map<EmployeeVM>(employee);
-            employeeFound.EmployeeTypeOptions = DropDownOptions().EmployeeTypeOptions;
-            return employeeFound;
+            var employee = _FindEmployeeRepository.FindBy(predicate);
+            var entity = _Mapper.Map<EmployeeVM>(employee);
+            entity.EmployeeTypeOptions = DropDownOptions().EmployeeTypeOptions;
+            return entity;
         }
-        public void AddEmployee(EmployeeVM employeeVM)//employee type
+        public void AddService(EmployeeVM entity)//employee type
         {
-            if (employeeVM == null) { throw new ArgumentNullException("employee empty"); }
-            var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == employeeVM.RoleId);
+            if (entity == null) { throw new ArgumentNullException("employee empty"); }
+            var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == entity.RoleId);
             if (employeeType == null) { throw new ArgumentNullException("employee type don't exist"); }
-            var employee = _Mapper.Map<Employee>(employeeVM); //maps the employeeVM to employee
+            var result = _PhotoService.AddPhotoAsync(entity.PicutreInput).Result;
+            entity.ProfilePicture = result.Url.ToString();
+            var employee = _Mapper.Map<Employee>(entity); //maps the entity to employee
             _EmployeeRepository.Add(employee);
             _EmployeeRepository.Save();
         }
-        public void UpdateEmployee(EmployeeVM employeeVM) //add ignore null member mapping configuration
+        public void UpdateService(EmployeeVM entity) //add ignore null member mapping configuration
         {
-            if (employeeVM == null) { throw new ArgumentNullException("employee empty"); }
-            var employeeToUpdate = _FindEmployeeRepository.FindBy(e => e.Uuid == employeeVM.Uuid);
+            if (entity == null) { throw new ArgumentNullException("employee empty"); }
+            var employeeToUpdate = _FindEmployeeRepository.FindBy(e => e.Uuid == entity.Uuid);
             if (employeeToUpdate == null) { throw new ArgumentNullException("Employee don't exist"); }
-            var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == employeeVM.RoleId);
+            var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == entity.RoleId);
             if (employeeType == null) { throw new ArgumentNullException("employee type don't exist"); }
-            employeeVM.Role = employeeType;
-         
-            _Mapper.Map(employeeVM, employeeToUpdate); //maps the employeeVM to employee
+            entity.Role = employeeType;
+            var result = entity.PicutreInput != null ? _PhotoService.AddPhotoAsync(entity.PicutreInput).Result : null;
+            if (result != null) { entity.ProfilePicture = result.Url.ToString(); }
+            var delete = _PhotoService.DeletePhotoAsync(employeeToUpdate.ProfilePicture).Result;
+            var phoneNum = employeeToUpdate.Phone;
+            _Mapper.Map(entity, employeeToUpdate); //maps the entity to employee
+            if(employeeToUpdate.Phone == 0) { employeeToUpdate.Phone = phoneNum; }
             _EmployeeRepository.Update(employeeToUpdate);
             _EmployeeRepository.Save();
         }
-        public void DeleteEmployee(string Uuid)
+        public void DeleteService(EmployeeVM entity)
         {
-            var employeeToDelete = _FindEmployeeRepository.FindBy(e => e.Uuid == Uuid);
+            var employeeToDelete = _FindEmployeeRepository.FindBy(e => e.Uuid == entity.Uuid);
             if (employeeToDelete == null) { throw new ArgumentNullException("Employee don't exist"); }
+            var delete = _PhotoService.DeletePhotoAsync(employeeToDelete.ProfilePicture).Result;
             _EmployeeRepository.Delete(employeeToDelete);
             _EmployeeRepository.Save();
         }
-        public void AddClientToEmployee(EmployeeVM employeeVM)
-        {
-            var employee = _FindEmployeeRepository.FindBy(e => e.Uuid == employeeVM.Uuid);
-            if (employee == null) { throw new ArgumentNullException("Employee don't exist"); }
-            if(employeeVM.ClientId == null) { throw new ArgumentNullException("No Client in list"); }
-            foreach (var clientId in employeeVM.ClientId)
-            {
-                var clientToAdd = _FindClientRepository.FindBy(c => c.Id == clientId); //check if this repeats itself
-                if (clientToAdd == null) { throw new ArgumentNullException("Client don't exist"); }
-                employee.Clients.Add(clientToAdd);
-            }
-            _EmployeeRepository.Update(employee);
-            _EmployeeRepository.Save();
-        }
-        public void AddGymClassToEmployee(EmployeeVM employeeVM)
-        {
-            var employee = _FindEmployeeRepository.FindBy(e => e.Uuid == employeeVM.Uuid);
-            if (employee == null) { throw new ArgumentNullException("Employee don't exist"); }
-            if (employeeVM.GymclassesId == null) { throw new ArgumentNullException("No Class Entered"); }
-            foreach (var GymclassesId in employeeVM.GymclassesId)
-            {
-                var ClassToAdd = _FindGymClassRepository.FindBy(c => c.Id == GymclassesId); //check if this repeats itself
-                if (ClassToAdd == null) { throw new ArgumentNullException("Gym Class don't exist"); }
-                employee.Gymclasses.Add(ClassToAdd);
-            }
-            _EmployeeRepository.Update(employee);
-            _EmployeeRepository.Save();
-        }
+
         public EmployeeVM DropDownOptions()
         {
-            var employeeVM = new EmployeeVM()
+            var entity = new EmployeeVM()
             {
                 EmployeeTypeOptions = _FindEmployeeTypeRepository.ListBy(x => true)
             };
-            return employeeVM;
+            return entity;
         }
+
 
     }
 }

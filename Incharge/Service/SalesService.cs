@@ -4,6 +4,7 @@ using Incharge.Models;
 using Incharge.ViewModels;
 using AutoMapper;
 using System.Data;
+using Google.Protobuf.WellKnownTypes;
 namespace Incharge.Service
 {
     public class SalesService:IService<SaleVM, Sale>, IDropDownOptions<SaleVM>
@@ -47,9 +48,8 @@ namespace Incharge.Service
             var saleVM = _mapper.Map<SaleVM>(sale);
             return saleVM;
         }
-        public void AddService(SaleVM entity)
+        public void AddService(SaleVM entity) //NEED TO ADD DISCOUNTS
         { 
-             
             var sale = _mapper.Map<Sale>(entity);
             if(entity.ClientId == 0) { throw new ArgumentNullException("Client Empty.");}
             if(entity.ProductId == 0) { throw new ArgumentNullException("Product Empty."); }
@@ -67,21 +67,39 @@ namespace Incharge.Service
             if (client == null) { throw new Exception("Client don't exist."); }
             sale.Client = client;
 
-            sale.TotalPrice = product.ProductType.Price; //find a way to add tax (think it will be set by employee)
+            //find a way to add tax (think it will be set by employee)
             sale.Date = DateTime.Now; //track sales date
+
+            //CHECKING FOR DUPLICATE MEMBERSHIP
+            if(client.MembershipStatus == "Active" && client.MembershipName == product.Name)
+            {
+                throw new Exception("Client already have this product.");
+            }
 
             if (product.ProductType.Name.Contains("Training"))
             {
                 employee.Clients.Add(client);
                 _employeeRepository.Update(employee);
+                client.TotalTrainingSessions += sale.Quantity; //track total training sessions
             }
 
+            //CLIENT CAN ONLY BUY 1 MONTH MEMBERSHIP!
             if(product.ProductType.Name.Contains("Membership"))
 			{
+                sale.Quantity = 1;
 				client.MembershipStatus = "Active";
+                client.MembershipExpiryDate = sale.Date.AddMonths(1); //Set number of months members bought
+                client.MembershipName = product.Name;
+                client.MembershipProductId = product.Id;
+                client.MembershipStartDate = sale.Date;
 			}
+
+            //PRICING
+            sale.TotalPrice = product.ProductType.Price * sale.Quantity;
+            //sale.TotalPrice = priceCalulator(sale, client);
+
             //adding product to client
-			client.Products.Add(product);
+            client.Products.Add(product);
 			_clientRepository.Update(client);
 
 			product.Clients.Add(client);
@@ -94,7 +112,6 @@ namespace Incharge.Service
         public void UpdateService(SaleVM entity)//should NEVER use unless there is a massive error
         {
              
-
             var saleToUpdate = _findSaleRepository.FindBy(x => x.Uuid == entity.Uuid);
             if(saleToUpdate == null) { throw new Exception("Sale don't exist."); }
 
@@ -107,14 +124,9 @@ namespace Incharge.Service
             var client = _findClientRepository.FindBy(x => x.Id == entity.ClientId);
             if (client == null) { throw new Exception("Client don't exist."); }
 
-            List<Discount> discount = new List<Discount>();
-            //foreach(var discountId in entity.DiscountId)
-            //{
-            //    var discountToAdd = _findDiscountRepository.FindBy(x => x.Id == discountId);
-            //    if(discountToAdd == null) { throw new Exception("discount don't exist"); } //delete once complete cause this should never happen
-            //    discount.Add(discountToAdd);
-            //}
-            
+
+         
+
 
             if (product.ProductType.Name.Contains("Training"))
             {
@@ -123,13 +135,7 @@ namespace Incharge.Service
                 _employeeRepository.Update(employee);
             }
 
-            saleToUpdate.Discounts.Clear();
-
-            foreach(var discountToAdd in discount)
-            {
-                saleToUpdate.Discounts.Add(discountToAdd);
-            }
-
+            
             saleToUpdate.Product = product;
             saleToUpdate.Client = client;
             saleToUpdate.Employee = employee;
@@ -140,9 +146,29 @@ namespace Incharge.Service
                 saleToUpdate.Date = entity.Date;
             }
 
+            List<Discount> discount = new List<Discount>();
+
+            if (entity.DiscountId != null) //if theres none - ignore
+            {
+                
+                foreach (var discountId in entity.DiscountId)
+                {
+                    var discountToAdd = _findDiscountRepository.FindBy(x => x.Id == discountId);
+                    if (discountToAdd == null) { throw new Exception("discount don't exist"); } //delete once complete cause this should never happen
+                    discount.Add(discountToAdd);
+                }
+                saleToUpdate.Discounts.Clear();
+
+                foreach (var discountToAdd in discount)
+                {
+                    saleToUpdate.Discounts.Add(discountToAdd);
+                }
+            }
+
             var totalDiscount = discount.Sum(x => x.DiscountValue);
 
-            if(totalDiscount > 0)
+
+            if (totalDiscount > 0)
             {
                 saleToUpdate.TotalPrice = product.ProductType.Price * totalDiscount;
             }
@@ -175,5 +201,21 @@ namespace Incharge.Service
 
             return salveVM;
         }
+        //public double priceCalulator(Sale sale, Client client)
+        //{
+        //    //CHECKING IF PRODUCT IS MEMBERSHIP
+        //    if (sale.Product.ProductType.Name.Contains("Membership"))
+        //    {
+        //        if (client.MembershipExpiryDate > sale.Date)
+        //        {
+        //            return sale.Product.ProductType.Price;
+        //        }
+        //        else
+        //        {
+        //            return 0;
+        //        }
+        //    }
+            
+        //}
     }
 }

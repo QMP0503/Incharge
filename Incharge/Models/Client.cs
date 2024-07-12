@@ -19,8 +19,17 @@ public partial class Client
     [AllowedValues(typeof(string), new string[] { "Signed In", "Signed Out"  })]
     public string? Status { get; set; }
 
+    //MEMBERSHIP MANAGEMENT DATA
     [AllowedValues(typeof(string), new string[] { "Active", "Inactive", "Suspended", "Overdue" })]
     public string? MembershipStatus { get; set; }
+    public string? MembershipName { get; set; }
+    public int MembershipProductId { get; set; } = 0; //for searching purposes
+    public DateTime? MembershipExpiryDate { get; set; } //set in sales service
+    public DateTime? MembershipStartDate { get; set; }
+
+
+    //FOR PRIVATE TRAINING SESSIONS
+    public int TotalTrainingSessions { get; set; }
 
     public string? Note { get; set; } //for adding additional information about the client
 

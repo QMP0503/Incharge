@@ -9,7 +9,8 @@ public partial class Sale
     public int Id { get; set; }
     public string Uuid { get; set; } //relationship will still use regular id.
     public DateTime Date { get; set; }
-
+    public int Quantity { get; set; }
+    //Membership will be counted by months
     public double TotalPrice { get; set; } //edit the rest of sales
 
     public int ProductId { get; set; }

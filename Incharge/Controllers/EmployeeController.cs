@@ -9,11 +9,11 @@ namespace Incharge.Controllers
 {
     public class EmployeeController : Controller
     {
-        readonly IEmployeeService _EmployeeService;
+        readonly IService<EmployeeVM, Employee> _EmployeeService;
         readonly IDropDownOptions<EmployeeVM> _EmployeeDropDown;
         readonly IPagingService<PaginatedList<Employee>> _pagingService;
         readonly ILog _logger;
-        public EmployeeController(IDropDownOptions<EmployeeVM> EmployeeDropDown, IEmployeeService EmployeeService, IPagingService<PaginatedList<Employee>> pagingService, ILog logger)
+        public EmployeeController(IDropDownOptions<EmployeeVM> EmployeeDropDown, IService<EmployeeVM, Employee> EmployeeService, IPagingService<PaginatedList<Employee>> pagingService, ILog logger)
         {
             _EmployeeService = EmployeeService;
             _pagingService = pagingService;
@@ -45,14 +45,13 @@ namespace Incharge.Controllers
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
+
         [HttpGet] //ONLY SALARY IS VISIBLE TO ADMIN ... Let admin view seperate page?
-        public IActionResult Details(string Uuid)
+        public IActionResult Details(EmployeeVM employeeVM)
         {
             try
             {
-                var employeeInfo = new EmployeeVM();
-                employeeInfo.Uuid = Uuid;
-                return View(_EmployeeService.FindEmployee(employeeInfo));
+                return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
             }
             catch (Exception ex)
             {
@@ -70,7 +69,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                _EmployeeService.AddEmployee(employeeVM);
+                _EmployeeService.AddService(employeeVM);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
@@ -83,7 +82,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                return View(_EmployeeService.FindEmployee(employeeVM));
+                return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
             }
             catch(Exception ex)
             {
@@ -97,7 +96,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                _EmployeeService.UpdateEmployee(employeeVM);
+                _EmployeeService.UpdateService(employeeVM);
                 return RedirectToAction("Index");
             }
             catch(Exception ex)
@@ -107,46 +106,13 @@ namespace Incharge.Controllers
             }
         }
 
-        //test if view page is needed
-        [HttpPost]
-        public IActionResult AddClientToEmployee([Bind("Uuid, ClientId")] EmployeeVM employeeVM)
-        {
-            try
-            {
-                _EmployeeService.AddClientToEmployee(employeeVM);
-                return RedirectToAction(nameof(Index));
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return View();
-            }
-        }
-
-        //check if we need view page
-
-        [HttpPost]
-        public IActionResult AddGymClassToEmployee([Bind("Uuid, GymClassId")] EmployeeVM employeeVM)
-        {
-            try
-            {
-                _EmployeeService.AddGymClassToEmployee(employeeVM);
-                return RedirectToAction(nameof(Index));
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return View();
-            }
-        }
+       
         //view page for delete employee
-        public IActionResult DeleteEmployee(string Uuid)
+        public IActionResult DeleteEmployee(EmployeeVM employeeVM)
         {
             try
             {
-                var employeeInfo = new EmployeeVM();
-                employeeInfo.Uuid = Uuid;
-                return View(_EmployeeService.FindEmployee(employeeInfo));
+                return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
             }
             catch(Exception ex)
             {
@@ -156,11 +122,11 @@ namespace Incharge.Controllers
         }
 
         [HttpPost, ActionName("DeleteEmployee")]
-        public IActionResult DeleteEmployeeConfirm(string Uuid)
+        public IActionResult DeleteEmployeeConfirm(EmployeeVM employeeVM)
         {
             try
             {
-                _EmployeeService.DeleteEmployee(Uuid);
+                _EmployeeService.DeleteService(employeeVM);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)

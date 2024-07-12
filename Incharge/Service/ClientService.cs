@@ -73,8 +73,9 @@ namespace Incharge.Service
 				var result = _photoService.AddPhotoAsync(clientVM.PicutreInput).Result;
 				clientVM.ProfilePicture = result.Url.ToString();
 			}
-			//replace null with result message from cloudinary
+			var phone = clientToUpdate.Phone;
 			_mapper.Map(clientVM, clientToUpdate);
+            if(clientToUpdate.Phone == 0) { clientToUpdate.Phone = phone; }
 
             if(clientVM.Sales != null)
             {
@@ -124,35 +125,31 @@ namespace Incharge.Service
 			_ClientRepository.Delete(clientToDelete);
             _ClientRepository.Save();
         }
-        public DateTime GetEndDate(ClientVM entity)
-        {
-            var product = _FindProductRepository.FindBy(x => x.ProductType.Id == entity.GymMembership.ProductTypeId);
-            if (product == null) { throw new NullReferenceException("ProductType cannot be found."); }
-            TimeSpan duration = TimeSpan.FromDays(1); //for trial membership
 
-            //could use switch case
-            if (product.ProductType.Recurance == "Weekly")
-            {
-                duration = TimeSpan.FromDays(7);
-            }
-            if (product.ProductType.Recurance == "Monthly")
-            {
-                duration = TimeSpan.FromDays(30); //assuming regular month
-            }
-            if (product.ProductType.Recurance == "Yearly")
-            {
-                duration = TimeSpan.FromDays(365); //assuming regular year
-            }
-            var EndDate = entity.StartDate + duration;
+        //public DateTime GetEndDate(ClientVM entity)
+        //{
+        //    var product = _FindProductRepository.FindBy(x => x.ProductType.Id == entity.GymMembership.ProductTypeId);
+        //    if (product == null) { throw new NullReferenceException("ProductType cannot be found."); }
+        //    TimeSpan duration = TimeSpan.FromDays(1); //for trial membership
 
-            return (DateTime)EndDate;
-        }
+        //    //could use switch case
+        //    if (product.ProductType.Recurance == "Weekly")
+        //    {
+        //        duration = TimeSpan.FromDays(7);
+        //    }
+        //    if (product.ProductType.Recurance == "Monthly")
+        //    {
+        //        duration = TimeSpan.FromDays(30); //assuming regular month
+        //    }
+        //    if (product.ProductType.Recurance == "Yearly")
+        //    {
+        //        duration = TimeSpan.FromDays(365); //assuming regular year
+        //    }
+        //    var EndDate = duration;
 
-        public void UpdatePaymentRecord(ClientVM entity)
-        {
-            var client = _FindClientRepository.FindBy(x => x.Uuid == entity.Uuid);
-            if (client == null) { throw new NullReferenceException("Client cannot be found."); }
-            
-        }
+        //    return DateTime.Now.AddDays(EndDate.Days);
+        //}
+
+
     } //consider adding save after actiong is executed in controller.
 }
