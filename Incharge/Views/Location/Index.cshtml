@@ -59,7 +59,7 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr onclick="Location.href='/Location/Details?@item.Id'" class="table-light">
+                <tr onclick="location.href='/Location/Details?Id=@item.Id'">
                     <td>
                         <div class="col-1">
                             <!--Find something useful to put here-->
@@ -69,7 +69,14 @@
                     <td class="col-4">@item.Name</td>
                     <td>@item.Capacity</td>
                     <td>@item.Status</td>
+                    <td></td>
+                   @*  @if (item.Gymclasses == null)
+                    {
+                        <td>No Class bookings</td>
+                    }else
+                    {
                     <td>@item.Gymclasses.First().Name</td>
+                    } *@
                 </tr>
             }
         </tbody>

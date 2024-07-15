@@ -4,6 +4,7 @@ using Incharge.Service.IService;
 using log4net;
 using Incharge.Service.PagingService;
 using Incharge.ViewModels;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Incharge.Controllers
 {
@@ -51,7 +52,9 @@ namespace Incharge.Controllers
         {
             try
             {
-                return View(_clientService.GetItem(x => x.Uuid == clientVM.Uuid));
+                var clientDetail = _clientService.GetItem(x => x.Uuid == clientVM.Uuid);
+                clientDetail.Error = clientVM.Error;
+                return View(clientDetail);
             }
             catch(Exception ex)
             {
@@ -61,13 +64,18 @@ namespace Incharge.Controllers
         }
         public IActionResult AddClient()
         {
-            return View();
+            return View(new ClientVM());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddClient(ClientVM clientVM)
         {
+            if (!ModelState.IsValid)
+            {
+                clientVM.Error = "Invalid inputs";
+                return View(clientVM);
+            }
             try
             {
                 clientVM.Status = "Signed In";
@@ -77,28 +85,22 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                clientVM.Error = ex.Message;
+                return View(clientVM);
             }
         }
-        public IActionResult EditClient(string Uuid)
-        {
-            try
-            {
-                return View(_clientService.GetItem(x => x.Uuid == Uuid));
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return NotFound();
-            }
 
-        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditClient(ClientVM clientVM)
         {
-            try
+			if (!ModelState.IsValid)
+			{
+                clientVM.Error = "Invalid inputs";
+				return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error});
+			}
+			try
             {
                 _clientService.UpdateService(clientVM);
                 return RedirectToAction(nameof(Index));
@@ -139,7 +141,7 @@ namespace Incharge.Controllers
             }
         }
         [HttpPost, ActionName("UpdateStatus")]
-        public IActionResult UpdateStatus(/*[Bind("Uuid, Status")]*/ ClientVM clientVM)//dont need bind if html id is used explicitly
+        public IActionResult UpdateStatus(ClientVM clientVM)//dont need bind if html id is used explicitly
         {
             try
             {

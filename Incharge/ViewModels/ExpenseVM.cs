@@ -8,7 +8,7 @@ namespace Incharge.ViewModels
     {
         public string Uuid { get; set; }
 
-        [AllowedValues(typeof(string), new string[] {"Wages, Rent, Utilities", "Insurance", "Eqipment", "Maintance", "Other" })]
+        [AllowedValues("Wages, Rent, Utilities", "Insurance", "Eqipment", "Maintance", "Other")]
         public string Type { get; set; }
 
         public DateTime Date { get; set; } = DateTime.Now; 
@@ -29,5 +29,8 @@ namespace Incharge.ViewModels
 
         //VIEW ONLY TO SELECT:
         public List<string> TypeOptions { get; set; } = new List<string>() { "Wages","Rent", "Utilities", "Insurance", "Equipment", "Maintance", "Other" };
+
+        //Error Message
+        public string? Error { get; set; }
     }
 }

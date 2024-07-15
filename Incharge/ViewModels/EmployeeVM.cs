@@ -7,13 +7,17 @@ namespace Incharge.ViewModels
     public class EmployeeVM
     {
         public string? Uuid { get; set; }
+        [DisplayName("First Name")]
         public string FirstName { get; set; } = null!;
+        [DisplayName("Last Name")]
         public string LastName { get; set; } = null!;
         public int Phone { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
-        public string Address { get; set; }
+        public string? Address { get; set; }
+        [DisplayName("Total Salary")]
         public double? TotalSalary { get; set; }
+        [DisplayName("Profile Picture")]
         public string? ProfilePicture { get; set; } //get cloudinary working for image upload
 
 
@@ -34,6 +38,11 @@ namespace Incharge.ViewModels
         public virtual List<int>? ClientId { get; set; } //check if this is a security risk to display client int id.
 
         [DisplayName("Add Profile Picture")]
-        public IFormFile PicutreInput { get; set; }
-    }
+		[AllowedExtensions(new string[] { ".jpg", ".png", ".jpeg" })]
+		public IFormFile PicutreInput { get; set; }
+
+
+		//ERROR MESSAGE FOR VIEW ONLY
+		public string? Error { get; set; } //error message from server
+	}
 }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using AutoMapper;
 using log4net;
-using Incharge.Service;
+using Incharge.Repository;
 
 namespace Incharge.Controllers
 {
@@ -52,11 +52,11 @@ namespace Incharge.Controllers
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
         [HttpGet]
-        public IActionResult Details(int id) //id will be sent when client profile is clicked. Also when all is working change to async
+        public IActionResult Details(LocationVM locationVM) //id will be sent when client profile is clicked. Also when all is working change to async
         {
             try
             {
-                return View(_LocationService.GetItem(x => x.Id == id));
+                return View(_LocationService.GetItem(x => x.Id == locationVM.Id));
             }
             catch (Exception ex)
             {
@@ -66,12 +66,17 @@ namespace Incharge.Controllers
         }
         public IActionResult AddLocation()
         {
-            return View();
+            return View(new LocationVM());
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddLocation(LocationVM locationVM)
         {
+            if(ModelState.IsValid == false)
+            {
+                locationVM.Error = "Invalid inputs!";
+                return View(locationVM);
+            }
             try
             {
                 _LocationService.AddService(locationVM);
@@ -80,14 +85,17 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                locationVM.Error = ex.Message;
+                return View(locationVM);
             }
         }
-        public IActionResult EditLocation(int id)
+        public IActionResult EditLocation(LocationVM locationVM)
         {
             try
             {
-                return View(_LocationService.GetItem(x => x.Id == id));
+                var location = _LocationService.GetItem(x => x.Id == locationVM.Id);
+                location.Error = locationVM.Error;
+                return View(location);
             }
             catch (Exception ex)
             {
@@ -97,10 +105,15 @@ namespace Incharge.Controllers
 
         }
 
-        [HttpPost]
+        [HttpPost, ActionName("EditLocation")]
         [ValidateAntiForgeryToken]
-        public IActionResult EditClient(LocationVM locationVM)
+        public IActionResult EditLocationConfirm(LocationVM locationVM)
         {
+            if(ModelState.IsValid == false)
+            {
+                locationVM.Error = "Invalid inputs!";
+                return View(locationVM);
+            }
             try
             {
                 _LocationService.UpdateService(locationVM);
@@ -109,7 +122,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return NotFound();
+                locationVM.Error = ex.Message;
+                return View(locationVM);
             }
         }
 
@@ -119,7 +133,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                _LocationService.UpdateService(locationVM);
+                _LocationService.DeleteService(locationVM);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

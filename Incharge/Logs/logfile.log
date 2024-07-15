@@ -404,3 +404,60 @@ ProfilePicture
 2024-07-12 17:00:40,434 [25] ERROR Program - System.Exception: Client already have this product.
    at Incharge.Service.SalesService.AddService(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 76
    at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 74
+2024-07-15 10:03:56,943 [17] ERROR Program - System.NullReferenceException: Input Empty.
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 53
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 75
+2024-07-15 10:04:57,541 [15] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\PhotoService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 54
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 75
+2024-07-15 10:05:32,770 [10] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\PhotoService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 54
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 75
+2024-07-15 10:06:19,256 [20] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\PhotoService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 54
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 75
+2024-07-15 10:07:30,676 [24] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM)
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM)
+2024-07-15 10:07:57,126 [22] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM)
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM)
+2024-07-15 10:08:28,561 [19] ERROR Program - System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.PhotoService.AddPhotoAsync(IFormFile file)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM)
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM)
+2024-07-15 10:26:33,066 [15] ERROR Program - System.NullReferenceException: Photo Empty or Invalid.
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 56
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 75
+2024-07-15 11:13:33,584 [3] ERROR Program - System.NullReferenceException: Client Empty
+   at Incharge.Service.ClientService.GetItem(Func`2 predicate)
+   at Incharge.Controllers.ClientController.Details(ClientVM clientVM)

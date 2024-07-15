@@ -67,6 +67,7 @@
 			<div class="col-lg-8">
 				<div class="card">
 					<div class="card-body">
+						<partial name="_formErrorMessage" model="@Model"/>
 						<form asp-action="EditClient" method="post" asp-route-Uuid=@Model.Uuid enctype="multipart/form-data">
 							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 							<div class="row mb-3">
@@ -119,16 +120,24 @@
 							</div>
 							<div class="row mb-3">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Note</h6>
+									<h6 class="mb-0">Profile Picture</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
 									<input asp-for="PicutreInput" type="file" class="form-control" />
 								</div>
 							</div>
+
+							<!--Hidden input for model.validation purposes-->
+							<input type="hidden" asp-for="Uuid" value="@Model.Uuid" />
+							<input type="hidden" asp-for="ProfilePicture" value="@Model.ProfilePicture" />
+							<input type="hidden" asp-for="MembershipStatus" value="@Model.MembershipStatus" />
+							<input type="hidden" asp-for="Status" value="@Model.Status" />
+
+
 							<div class="row">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
-									<input type="submit" value="Edit Client" class="btn btn-primary" />
+									<input type="submit" value="EditClient" class="btn btn-primary" />
 								</div>
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9 text-secondary">
@@ -177,3 +186,7 @@
 		</div>
 	</div>
 </div>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

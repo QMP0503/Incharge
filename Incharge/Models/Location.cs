@@ -13,6 +13,7 @@ public partial class Location //add image column to help with search
     public int? Capacity { get; set; }
 
     public string? Description { get; set; }
+
     [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Under Maintance"})]
     public string? Status { get; set; }
     //Photo of location

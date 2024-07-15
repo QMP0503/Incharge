@@ -1,6 +1,9 @@
 ﻿@model Incharge.ViewModels.EquipmentVM;
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<partial name="_formErrorMessage" model="@Model" />
+
 <div class="form-group">
     <label asp-for="Name" class="control-label"></label>
     <input asp-for="Name" class="form-control" />
@@ -27,5 +30,10 @@
     <span asp-validation-for="PictureFile" class="text-danger"></span>
 </div>
 
+<input type="hidden" asp-for="Status" value="@Model.Status" />
+<input type="hidden" asp-for="Image" value="@Model.Image" />
+
 <a asp-action="Index" type="button" class="btn btn-primary">Cancel</a>
 <button type="submit" class="btn btn-primary">Save</button>
+
+<partial name="_ValidationScriptsPartial" />

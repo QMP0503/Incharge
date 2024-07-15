@@ -5,9 +5,21 @@
 }
 
 <div class="mt-2">
-        <h1>Add Client</h1>
+    <h1>Add Client</h1>
 </div>
 
+@* @if (Model.Error != null)
+{
+
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi me-2 flex-shrink-0" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+        <div>
+           @Model.Error
+        </div>
+    </div>
+} *@
+
+<partial name="_formErrorMessage" model="@Model"/>
 
 <div class="container">
     <div class="align-content-center p-2 m-2">

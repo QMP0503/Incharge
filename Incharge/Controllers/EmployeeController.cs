@@ -4,6 +4,7 @@ using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Incharge.Models;
 using Incharge.ViewModels;
+using MySqlX.XDevAPI;
 
 namespace Incharge.Controllers
 {
@@ -67,6 +68,12 @@ namespace Incharge.Controllers
         [HttpPost] //ONLY VISIBLE TO ADMIN TO HIRE PEOPLE
         public IActionResult AddEmployee( EmployeeVM employeeVM)
         {
+            if (!ModelState.IsValid)
+            {
+                var employee = _EmployeeDropDown.DropDownOptions();
+                employee.Error = "Invalid inputs";
+                return View(employee);
+            }
             try
             {
                 _EmployeeService.AddService(employeeVM);
@@ -82,7 +89,9 @@ namespace Incharge.Controllers
         {
             try
             {
-                return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
+                var employee = _EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid);
+                employee.Error = employeeVM.Error;
+                return View(employee);
             }
             catch(Exception ex)
             {
@@ -94,6 +103,11 @@ namespace Incharge.Controllers
         [HttpPost, ActionName("UpdateEmployee")]
         public IActionResult UpdateEmployeeConfirm(EmployeeVM employeeVM)
         {
+            if (!ModelState.IsValid)
+            {
+                employeeVM.Error = "Invalid inputs";
+                return RedirectToAction("UpdateEmloyee", new { uuid = employeeVM.Uuid, error = employeeVM.Error });
+            }
             try
             {
                 _EmployeeService.UpdateService(employeeVM);

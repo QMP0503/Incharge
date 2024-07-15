@@ -18,17 +18,21 @@ namespace Incharge.ViewModels
 
         [DataType(DataType.Date)]
         public DateTime? MaintanceDate { get; set; }
-        [AllowedValues(typeof(string), new string[] { "Available", "Unavailable", "Reserved", "Under Maintance" })]
 
-        public string Status { get; set; } = null!;
+        [AllowedValues("Available", "Unavailable", "Reserved", "Under Maintance", null)]
+        public string? Status { get; set; }
 
         public Gymclass? GymClass { get; set; }
 
         //Date retrieved from view
         public int? GymClassId { get; set; }
 
-        public IFormFile PictureFile { get; set; }
+        [DisplayName("Add Picture")]
+        [AllowedExtensions(new string[] { ".jpg", ".png", ".jpeg", ".jfif" })]
+        public IFormFile? PictureFile { get; set; }
        
+        //error message
+        public string? Error { get; set; }
     }
 }
 

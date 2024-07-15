@@ -66,12 +66,17 @@ namespace Incharge.Controllers
         }
         public IActionResult AddEquipment()
         {
-            return View();
+            return View(new EquipmentVM());
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddEquipment(EquipmentVM equipmentVM)
         {
+            if(!ModelState.IsValid)
+            {
+                equipmentVM.Error = "Invalid inputs!";
+                return View(equipmentVM);
+            }
             try
             {
                 _EquipmentService.AddService(equipmentVM);
@@ -80,14 +85,17 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                equipmentVM.Error = ex.Message;
+                return View(equipmentVM);
             }
         }
-        public IActionResult EditEquipment(int id)
+        public IActionResult EditEquipment(EquipmentVM equipmentVM)
         {
             try
             {
-                return View(_EquipmentService.GetItem(x=>x.Id == id));
+                var equipment = _EquipmentService.GetItem(x => x.Id == equipmentVM.Id);
+                equipment.Error = equipmentVM.Error;
+                return View(equipment);
             }
             catch (Exception ex)
             {
@@ -95,6 +103,28 @@ namespace Incharge.Controllers
                 return NotFound();
             }
 
+        }
+
+        [HttpPost, ActionName("EditEquipment")]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditEquipmentConfirm(EquipmentVM equipmentVM)
+        {
+            if (ModelState.IsValid == false)
+            {
+                equipmentVM.Error = "Invalid inputs!";
+                return View(equipmentVM);
+            }
+            try
+            {
+                _EquipmentService.UpdateService(equipmentVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                equipmentVM.Error = ex.Message;
+                return View(equipmentVM);
+            }
         }
 
         public IActionResult DeleteEquipment(int id)

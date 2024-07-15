@@ -3,6 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Security.Policy;
+using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Incharge.ViewModels
 {
@@ -19,14 +21,19 @@ namespace Incharge.ViewModels
         public string ProfilePicture { get; set; }
 
         public int? Phone { get; set; }
+
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
         //sign in and out of the gym, when payment is overdue they can no longer enter the gym
-        [AllowedValues(typeof(string), new string[] { "SignedIn", "SignedOut" })]
+
+        [AllowedValues("Signed In", "Signed Out")]
         public string? Status { get; set; }
-        [AllowedValues(typeof(string), new string[] { "Active", "Inactive", "Suspended", "Overdue" })]
-        public string? MembershipStatus { get; set; }
-        public string? MembershipName { get; set; }
+
+		[AllowedValues("Active", "Inactive", "Suspended", "Overdue", "No Membership")]
+		public string? MembershipStatus { get; set; }
+
+		[AllowNull]
+		public string? MembershipName { get; set; }
         public int MembershipProductId { get; set; } //for searching purposes
         [DataType(DataType.Date)]
         public DateTime MembershipExpiryDate { get; set; } //set in sales service
@@ -37,23 +44,28 @@ namespace Incharge.ViewModels
         public int TotalTrainingSessions { get; set; }
 
         public string? Note { get; set; }
-        public string Address { get; set; } //address of client
+        public string? Address { get; set; } //address of client
 
 
         //Icollection<object> to retrieve and display data.
+        [AllowNull]
         public virtual Paymentrecord? PaymentRecord { get; set; }
-        public virtual ICollection<Sale> Sales { get; set; }  //do i need this in dto??
-        public virtual ICollection<Employee> Employees { get; set; }
-       
-        //Consider going through DTO pushing into view. Don't need to see everything about gym class
-        public virtual ICollection<Gymclass> Gymclasses { get; set; } 
+        public virtual ICollection<Sale>? Sales { get; set; }  //do i need this in dto??
+        [AllowNull]
+        public virtual ICollection<Employee>? Employees { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        //Consider going through DTO pushing into view. Don't need to see everything about gym class
+        [AllowNull]
+        public virtual ICollection<Gymclass>? Gymclasses { get; set; }
+        [AllowNull]
+        public virtual ICollection<Product>? Products { get; set; }
 
 
 
         [Display(Name = "Gym Membership")]
-        public Product GymMembership { get; set; }
+		[AllowNull]
+		[ValidateNever]
+		public Product GymMembership { get; set; }
 
         //Selected object Id retrieved from view page
         public List<int?> SalesID { get; set; } = new List<int?>();
@@ -67,7 +79,10 @@ namespace Incharge.ViewModels
 
         //INPUT ONLY
         [DisplayName("Add Profile Picture")]
-        public IFormFile PicutreInput { get; set; }
+        [AllowedExtensions(new string[]{ ".jpg", ".png", ".jpeg", ".jfif" })]
+		public IFormFile? PicutreInput { get; set; }
 
+        //ERROR MESSAGE FOR VIEW ONLY
+        public string? Error { get; set; } //error message from server
     }
 }

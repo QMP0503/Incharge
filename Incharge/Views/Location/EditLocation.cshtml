@@ -1,0 +1,26 @@
+﻿@model Incharge.ViewModels.LocationVM;
+
+
+@{
+    ViewData["Title"] = "Edit Location";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Add New Location</h1>
+        </div>
+
+        <div class="card-body">
+            <partial name="_formErrorMessage" model="@Model" /> 
+
+            <form asp-action="EditLocation" method="post" enctype="multipart/form-data">
+                <partial name="_ValidationScriptsPartial" />
+                <!--Location Form fields partial view-->
+                <partial name="_LocationFormFields" model="@Model" />
+            </form>
+
+        </div>
+
+    </div>
+</div>

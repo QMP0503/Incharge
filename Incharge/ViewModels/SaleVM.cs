@@ -11,7 +11,7 @@ namespace Incharge.ViewModels
         public string Uuid { get; set; }  //relationship will still use regular id.
         public DateTime Date { get; set; }
 
-        [AllowedValues(typeof(string), new string[] { "Cash", "Credit", "Debit" })]
+        [AllowedValues("Cash", "Credit", "Debit")]
         public string? PaymentType { get; set; }
 
         //Makes retrieving data from views easier.

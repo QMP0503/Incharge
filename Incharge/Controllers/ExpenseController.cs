@@ -5,6 +5,7 @@ using Incharge.ViewModels;
 using log4net;
 using Incharge.Service.PagingService;
 using Microsoft.AspNetCore.Authorization;
+using MySqlX.XDevAPI;
 
 
 namespace Incharge.Controllers
@@ -64,6 +65,11 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddExpense(ExpenseVM expenseVM)
         {
+            if (!ModelState.IsValid)
+            {
+                expenseVM.Error = "Invalid inputs";
+                return View(expenseVM);
+            }
             try
             {
                 _ExpenseService.AddService(expenseVM);
@@ -94,6 +100,11 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditExpenseConfirm(ExpenseVM expenseVM)
         {
+            if (!ModelState.IsValid)
+            {
+                expenseVM.Error = "Invalid inputs";
+                return RedirectToAction("Details", new { uuid = expenseVM.Uuid, error = expenseVM.Error });
+            }
             try
             {
                 _ExpenseService.UpdateService(expenseVM);

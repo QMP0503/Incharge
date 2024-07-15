@@ -12,13 +12,16 @@ namespace Incharge.Service
         private readonly IRepository<Location> _LocationRepository;
         private readonly IFindRepository<Gymclass> _FindGymClassRepository;
         private readonly IMapper _Mapper;
-        public LocationService(IMapper mapper, IFindRepository<Location> findLocationRepository, IRepository<Location> locationRepository, IFindRepository<Gymclass> findGymClassRepository)
+        private readonly IPhotoService _PhotoService;    
+        public LocationService(IPhotoService photoService,IMapper mapper, IFindRepository<Location> findLocationRepository, IRepository<Location> locationRepository, IFindRepository<Gymclass> findGymClassRepository)
         {
             _FindLocationRepository = findLocationRepository;
             _LocationRepository = locationRepository;
             _FindGymClassRepository = findGymClassRepository;
             _Mapper = mapper;
+            _PhotoService = photoService;
         }
+
         public List<LocationVM> ListItem(Func<Location, bool> predicate)
         {
             var locationList = _FindLocationRepository.ListBy(predicate);
@@ -34,7 +37,13 @@ namespace Incharge.Service
         }
         public void AddService(LocationVM locationVM)
         {
-            if(locationVM == null) throw new ArgumentNullException("location don't exist");
+            if(locationVM == null) throw new ArgumentNullException("Location input don't exist");
+            if(locationVM.ImageFile != null)
+            {
+                var result = _PhotoService.AddPhotoAsync(locationVM.ImageFile).Result;
+                locationVM.Image = result.Url.ToString();
+            }
+            locationVM.Status = "Available";
             var location = _Mapper.Map<Location>(locationVM);
             _LocationRepository.Add(location);
             _LocationRepository.Save();
@@ -44,10 +53,16 @@ namespace Incharge.Service
             if(LocationVM == null) throw new ArgumentNullException("location don't exist");
             var location = _FindLocationRepository.FindBy(x => x.Id == LocationVM.Id);
             if(location == null) throw new ArgumentNullException("location don't exist");
-            location.Name = LocationVM.Name ?? location.Name;
-            location.Status = LocationVM.Status ?? location.Status;
-            location.Description = LocationVM.Description ?? location.Description;
-            location.Capacity = LocationVM.Capacity ?? location.Capacity;
+            if(LocationVM.ImageFile != null)
+            {
+                if(location.Image != null)
+                {
+                    var delete = _PhotoService.DeletePhotoAsync(location.Image).Result;
+                }
+                var result = _PhotoService.AddPhotoAsync(LocationVM.ImageFile).Result;
+                LocationVM.Image = result.Url.ToString();
+            }
+            _Mapper.Map(LocationVM, location);
             if(LocationVM.Gymclasses != null)
             {
                 foreach(var gymclass in LocationVM.Gymclasses)

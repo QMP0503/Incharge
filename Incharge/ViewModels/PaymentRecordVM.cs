@@ -6,7 +6,7 @@ namespace Incharge.ViewModels
     public class PaymentRecordVM
     {
         public string Uuid { get; set; }
-        [AllowedValues(typeof(string), new string[] {"Paided, Pending, Overdue"})]
+        [AllowedValues("Paided, Pending, Overdue")]
         public bool? Paymentstatus { get; set; } //find the membership payment to determine if membership is still valid
         public string? Description { get; set; }
         public int? ClientId { get; set; }
