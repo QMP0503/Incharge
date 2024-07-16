@@ -9,7 +9,7 @@
       "Incharge/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "BootstrapBlazor": "8.7.1",
+          "BootstrapBlazor": "8.7.2",
           "BootstrapIcons.AspNetCore": "1.11.0",
           "CloudinaryDotNet": "1.26.2",
           "Dapper": "2.1.35",
@@ -41,7 +41,7 @@
         }
       },
       "bootstrap/5.3.3": {},
-      "BootstrapBlazor/8.7.1": {
+      "BootstrapBlazor/8.7.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Authorization": "8.0.0",
           "Microsoft.AspNetCore.Components.Web": "8.0.0",
@@ -52,8 +52,8 @@
         },
         "runtime": {
           "lib/net8.0/BootstrapBlazor.dll": {
-            "assemblyVersion": "8.7.1.0",
-            "fileVersion": "8.7.1.0"
+            "assemblyVersion": "8.7.2.0",
+            "fileVersion": "8.7.2.0"
           }
         }
       },
@@ -2361,12 +2361,12 @@
       "path": "bootstrap/5.3.3",
       "hashPath": "bootstrap.5.3.3.nupkg.sha512"
     },
-    "BootstrapBlazor/8.7.1": {
+    "BootstrapBlazor/8.7.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xem5B3J6r2ZQIzcNKGhqS/FUL5Mv+3tkSIFlfV8Y6o81HWXdckQ8JBIv95ZuG1vkE057w+WDKf1w8Amn1znGGA==",
-      "path": "bootstrapblazor/8.7.1",
-      "hashPath": "bootstrapblazor.8.7.1.nupkg.sha512"
+      "sha512": "sha512-zMVZPZprga5dV4d14J5yPQRD0RwYvTl8ZAV/7uN/t1obuVl5kgFYWBOkxB8IAFP6sl+e691/kBs/gyYT2W10Pg==",
+      "path": "bootstrapblazor/8.7.2",
+      "hashPath": "bootstrapblazor.8.7.2.nupkg.sha512"
     },
     "BootstrapIcons.AspNetCore/1.11.0": {
       "type": "package",

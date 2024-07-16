@@ -243,7 +243,7 @@
           }
         }
       },
-      "BootstrapBlazor/8.7.1": {
+      "BootstrapBlazor/8.7.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Authorization": "8.0.0",
@@ -4145,14 +4145,14 @@
         "contentFiles/any/any/wwwroot/js/bootstrap.min.js.map"
       ]
     },
-    "BootstrapBlazor/8.7.1": {
-      "sha512": "Xem5B3J6r2ZQIzcNKGhqS/FUL5Mv+3tkSIFlfV8Y6o81HWXdckQ8JBIv95ZuG1vkE057w+WDKf1w8Amn1znGGA==",
+    "BootstrapBlazor/8.7.2": {
+      "sha512": "zMVZPZprga5dV4d14J5yPQRD0RwYvTl8ZAV/7uN/t1obuVl5kgFYWBOkxB8IAFP6sl+e691/kBs/gyYT2W10Pg==",
       "type": "package",
-      "path": "bootstrapblazor/8.7.1",
+      "path": "bootstrapblazor/8.7.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bootstrapblazor.8.7.1.nupkg.sha512",
+        "bootstrapblazor.8.7.2.nupkg.sha512",
         "bootstrapblazor.nuspec",
         "build/BootstrapBlazor.props",
         "build/Microsoft.AspNetCore.StaticWebAssets.props",
@@ -4202,6 +4202,7 @@
         "staticwebassets/Components/Message/Message.razor.js",
         "staticwebassets/Components/Modal/Modal.razor.js",
         "staticwebassets/Components/Modal/ModalDialog.razor.js",
+        "staticwebassets/Components/Popover/Popover.razor.js",
         "staticwebassets/Components/Print/PrintButton.razor.js",
         "staticwebassets/Components/Reconnector/ReconnectorContent.razor.js",
         "staticwebassets/Components/RibbonTab/RibbonTab.razor.js",
@@ -4247,7 +4248,6 @@
         "staticwebassets/modules/hub.js",
         "staticwebassets/modules/input.js",
         "staticwebassets/modules/noti.js",
-        "staticwebassets/modules/popover.js",
         "staticwebassets/modules/responsive.js",
         "staticwebassets/modules/theme.js",
         "staticwebassets/modules/title.js",
@@ -11581,7 +11581,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
-      "BootstrapBlazor >= 8.7.1",
+      "BootstrapBlazor >= 8.7.2",
       "BootstrapIcons.AspNetCore >= 1.11.0",
       "CloudinaryDotNet >= 1.26.2",
       "Dapper >= 2.1.35",
@@ -11654,7 +11654,7 @@
           },
           "BootstrapBlazor": {
             "target": "Package",
-            "version": "[8.7.1, )"
+            "version": "[8.7.2, )"
           },
           "BootstrapIcons.AspNetCore": {
             "target": "Package",

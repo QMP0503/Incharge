@@ -2,9 +2,7 @@
 using Incharge.Models;
 using Incharge.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
-using Incharge.ViewModels;
-using Microsoft.EntityFrameworkCore.Query;
-using Microsoft.AspNetCore.Mvc;
+
 
 namespace Incharge.Service.PagingService
 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Incharge.Models;
 
@@ -14,6 +15,9 @@ public partial class Gymclass
     public DateTime EndTime { get; set; } //end
 
     public string? Description { get; set; }
+
+    [AllowedValues("Active", "Cancelled", "Completed")]
+    public string Status { get; set; }
 
     public int? LocationId { get; set; }
 

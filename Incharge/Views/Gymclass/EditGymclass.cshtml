@@ -1,0 +1,19 @@
+﻿@model Incharge.ViewModels.GymClassVM;
+
+@{
+    ViewData["Title"] = "Edit Gym Class";
+}
+
+<div class="container">
+    <div class="row">
+        <h1 class="font-monospace fw-bold mt-3">Edit Gym Class</h1>
+    </div>
+    <div class="form-group">
+        <form asp-action="EditGymclass" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+
+            <partial name="_GymClassFormFields" model="Model" />
+
+        </form>
+    </div>
+</div>
+

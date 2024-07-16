@@ -461,3 +461,6 @@ ProfilePicture
 2024-07-15 11:13:33,584 [3] ERROR Program - System.NullReferenceException: Client Empty
    at Incharge.Service.ClientService.GetItem(Func`2 predicate)
    at Incharge.Controllers.ClientController.Details(ClientVM clientVM)
+2024-07-16 17:11:27,129 [3] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM)

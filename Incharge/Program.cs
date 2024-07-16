@@ -105,11 +105,14 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Expense>>, ExpensesPagin
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
 builder.Services.AddScoped<IDropDownOptions<SaleVM>, SalesService>();
 builder.Services.AddScoped<IDropDownOptions<EmployeeVM>, EmployeeService>();
+builder.Services.AddScoped<IDropDownOptions<GymClassVM>, GymClassService>();
 
 
 //CHECKER INJECTION
 builder.Services.AddScoped<IChecker<Client>, ClientChecker>();
 
+//CALENDAR INJECTION
+builder.Services.AddScoped<IGymclassCalendarService, GymclassCalendarService>();
 
 //add memory caching for client list and/or gym class list
 

@@ -1,12 +1,29 @@
-﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Gymclass>
+﻿@model List<WeekdayItem>
 @using Microsoft.AspNetCore.Identity;
 @using Incharge.Service.PagingService;
 @using Incharge.ViewModels;
+@using Incharge.ViewModels.Calendar;
 @inject SignInManager<Incharge.Models.User> SignInManager;
 @inject UserManager<Incharge.Models.User> UserManager;
 
 @{
     ViewData["Title"] = "Index";
+}
+
+@{
+    var timeSlots = new List<TimeSpan>();
+    for(int i = 7; i < 21; i++)
+    {
+        var time = TimeSpan.FromHours(i);
+        timeSlots.Add(time);
+    }
+
+    static string PrintFormattedTime(TimeSpan timeSpan)
+    {
+        DateTime dateTime = DateTime.Today.Add(timeSpan);
+        string formattedTime = dateTime.ToString("h tt");
+        return formattedTime;
+    }
 }
 
 <nav class="navbar-brand mb-5">
@@ -39,9 +56,6 @@
         <table class="table-bordered table text-center">
             <thead>
                 <tr class="bg-light-gray">
-                    <th class="text-uppercase">
-                        Time
-                    </th>
                     <th class="text-uppercase" id="monday">Monday</th>
                     <th class="text-uppercase" id="tuesday">Tuesday</th>
                     <th class="text-uppercase" id="wednesday">Wednesday</th>
@@ -53,98 +67,23 @@
 
             @*Row is time and columns are days. The columns are automatically sorted by days of the week.*@
             <tbody>
-                <tr>
-                    <td class="align-middle" id="7am">07:00am</td> @*Use asp-action to assigg the correct value to the correct square*@
-                    <td>
-                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Dance</span>
-                        <div class="margin-10px-top font-size14">9:00-10:00</div>
-                        <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-
-
-                <tr>
-                    <td class="align-middle">08:00am</td>
-                    <td>
-                        <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Music</span>
-                        <div class="margin-10px-top font-size14">10:00-11:00</div>
-                        <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td class="bg-light-gray">
-                
-                    <td class="bg-light-gray">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="align-middle">09:00am</td>
-                    <td>
-                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">
-                            Break</span>
-                        <div class="margin-10px-top font-size14">11:00-12:00</div>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">10:00am</td> @*Give this intity a value to make grid system to assign values to them.*@
-                    <td class="bg-light-gray">
-                    </td>
-                    
-                </tr>
-
-                <tr>
-                    <td class="align-middle">11:00am</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">12:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">01:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">02:00pm</td>
-
-                </tr>
-                <tr>
-                    <td class="align-middle">03:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">04:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">05:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">06:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">07:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">08:00pm</td>
-
-                </tr>
-
-                <tr>
-                    <td class="align-middle">09:00pm</td>
-
-                </tr>
+           
+                @foreach(var time in timeSlots)
+                {
+                    <tr>
+                        @{
+                            var gymclass = new List<WeekdayItem>();
+                            foreach (var item in Model)
+                            {
+                                if (item.TimeSlots.Contains(time))
+                                {
+                                    gymclass.Add(item);
+                                }
+                            }
+                            <partial name="_CalendarRowTime" model="gymclass" />
+                        }
+                    </tr>
+                }
 
             </tbody>
         </table>

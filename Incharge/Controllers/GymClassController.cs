@@ -11,24 +11,28 @@ namespace Incharge.Controllers
     public class GymclassController : Controller
     {
         private readonly IService<GymClassVM, Gymclass> _GymclassService;
+        private readonly IDropDownOptions<GymClassVM>  _DropdownOptions;
         private readonly IPagingService<PaginatedList<Gymclass>> _pagingService;
+        private readonly IGymclassCalendarService _gymclassCalendarService;
         private readonly ILog _logger;
         private readonly IMapper _mapper;
 
-        public GymclassController(IService<GymClassVM, Gymclass> GymclassService, IPagingService<PaginatedList<Gymclass>> pagingService, ILog logger, IMapper mapper)
+        public GymclassController(IService<GymClassVM, Gymclass> GymclassService, IPagingService<PaginatedList<Gymclass>> pagingService, ILog logger, IMapper mapper, IGymclassCalendarService gymclassCalendarService, IDropDownOptions<GymClassVM> dropdownOptions)
         {
             _GymclassService = GymclassService;
             _pagingService = pagingService;
             _logger = logger;
             _mapper = mapper;
+            _gymclassCalendarService = gymclassCalendarService;
+            _DropdownOptions = dropdownOptions;
         }
 
 
         [HttpGet] //straight calendar view
         public IActionResult Index()
         {
-
-            return View();
+            var WeekdayList = _gymclassCalendarService.CreateItemList();
+            return View(WeekdayList);
         }
 
         [HttpGet] //another view instead of the calendar
@@ -72,8 +76,8 @@ namespace Incharge.Controllers
         }
         public IActionResult AddGymclass()
         {
-            //Check if employee/trainger information is needed on display for when new client account is created
-            return View();
+            var gymclassVM = _DropdownOptions.DropDownOptions();
+            return View(gymclassVM);
         }
 
         [HttpPost]
@@ -91,11 +95,15 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        public IActionResult EditGymclass(int id)
+        public IActionResult EditGymclass(GymClassVM gymClassVM)
         {
             try
             {
-                return View(_GymclassService.GetItem(x => x.Id == id));
+                var gymclass = _GymclassService.GetItem(x => x.Id == gymClassVM.Id);
+                gymclass.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
+                gymclass.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
+                gymclass.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                return View(gymclass);
             }
             catch (Exception ex)
             {
@@ -105,9 +113,9 @@ namespace Incharge.Controllers
 
         }
 
-        [HttpPost]
+        [HttpPost, ActionName("EditGymclass")]
         [ValidateAntiForgeryToken]
-        public IActionResult EditClient(GymClassVM gymclassVM)
+        public IActionResult EditGymclassConfirm(GymClassVM gymclassVM)
         {
             try
             {
