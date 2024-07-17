@@ -1,6 +1,7 @@
 ﻿using Incharge.Models;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Incharge.ViewModels
 {
@@ -10,6 +11,9 @@ namespace Incharge.ViewModels
         
         public string Name { get; set; } = null!;
 
+        [AllowedValues("Private", "Group")]
+        public string Type { get; set; } = null!;
+
         [DisplayName("Start")]
         public DateTime Date { get; set; }
 
@@ -17,8 +21,8 @@ namespace Incharge.ViewModels
         public DateTime EndTime { get; set; } //end
 
 
-        [AllowedValues("Active","Cancelled","Completed")]
-        public string Status { get; set; }
+        [AllowedValues("Active","Cancelled","Completed", null)]
+        public string? Status { get; set; }
         public string? Description { get; set; }
 
         //selected from view list
@@ -26,7 +30,7 @@ namespace Incharge.ViewModels
         public int EmployeeId { get; set; }
         public List<int>? EquipmentId { get; set; }
         public List<int>? ClientsId { get; set; }
-  
+
 
         //object list
         public virtual Employee? Employee { get; set; }
@@ -40,7 +44,8 @@ namespace Incharge.ViewModels
 
         //LIST FOR SELECTION ONLY
         [DisplayName("Time Slots")]
-        public List<TimeSpan> TimeSlots { get; set; }
+        [AllowNull]
+        public List<TimeSpan>? TimeSlots { get; set; }
 
         [DisplayName("Instructor Names")]
         public List<Employee>? EmployeeOptions { get; set; }//to track the employee that made the sale
@@ -50,8 +55,15 @@ namespace Incharge.ViewModels
 
         [DisplayName("Equipments Required")]
         public List<Equipment>? EquipmentOptions { get; set; }
-        public List<string> StatusOptions { get; set; } = new List<string>() { "Active", "Cancelled", "Completed" };
 
+        [DisplayName("Clients")]
+        public List<Client>? ClientOptions { get; set; }
+
+        [DisplayName("Status")]
+        public List<string> StatusOptions { get; set; } = new List<string>() { "Active", "Cancelled", "Completed" };
+        
+        [DisplayName("Class Type")]
+        public List<string> TypeOptions { get; set; } = new List<string>() { "Private", "Group" };
         //Error
         public string? Error{ get; set; }
     }

@@ -110,8 +110,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/LocationSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcTG9jYXRpb25TY2hlZHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/TrainerSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcVHJhaW5lclNjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_AddGymclassDropDown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0FkZEd5bWNsYXNzRHJvcERvd24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_CalendarRowTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0NhbGVuZGFyUm93VGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_GymClassFormFields.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0d5bUNsYXNzRm9ybUZpZWxkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_Schedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX1NjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_WeekdayPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX1dlZWtkYXlQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Home/Index.cshtml]
@@ -166,10 +190,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_CalendarRowTime.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYWxlbmRhclJvd1RpbWUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_EmployeeFormFields.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZUZvcm1GaWVsZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -198,12 +218,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TYWxlc0Zvcm1GaWVsZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF90ZXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_WeekdayPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9XZWVrZGF5UGFydGlhbC5jc2h0bWw=
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/_ViewImports.cshtml]

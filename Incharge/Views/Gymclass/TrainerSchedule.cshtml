@@ -1,0 +1,49 @@
+﻿@model List<WeekdayItem>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@using Incharge.ViewModels.Calendar;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    var DropDownFilter = Model.FirstOrDefault(x => x.Weekday == "DropDown");
+    Model.Remove(DropDownFilter);
+}
+
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Gym Classes</h1>
+    </div>
+    <div class="row align-content-center pt-3 pb-3">
+
+        <!--Add gym classes drop down seperated by type-->
+        <partial name="_AddGymclassDropDown" />
+
+        <!--Best if filter could be made into filter-->
+        <div class="col align-content-end">
+            <form asp-action="TrainerSchedule" method="get" class="col">
+                <div class="d-flex gap-1 flex-row-reverse">
+                    <input type="submit" value="Filter" class="btn btn-primary" />
+                    <input id="dateSelected" name="dateSelected" type="date" class="form-control" />
+                    <select id="filter" name="filter" class="form-select">
+                        @foreach (var item in DropDownFilter.TrainerName)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+    </div>
+</nav>
+
+<partial name="_Schedule" model="@Model" />

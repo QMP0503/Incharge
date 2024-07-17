@@ -41,22 +41,42 @@ namespace Incharge.Service
             var gymClassVM = _Mapper.Map<GymClassVM>(gymClass);
             return gymClassVM;
         }
-        public void AddService(GymClassVM entity)
+        public void AddService(GymClassVM entity) //have switch case if feed back require more class types
         {
-            var checkGymClass = _FindGymClassRepository.FindBy(x => x.Name == entity.Name);
-            if(checkGymClass != null) { throw new Exception("GymClass already exist."); }
+
+
+            var location = _FindLocationRepository.FindBy(x => x.Id == entity.LocationId);
+            var employee = _FindEmployeeRepository.FindBy(x => x.Id == entity.EmployeeId);
+           
+            //Checking for element clash
+            var checkTimeAndLocation = _FindGymClassRepository.FindBy(x => (x.Date <= entity.EndTime && x.Date >= entity.Date) && x.LocationId == entity.LocationId);
+            if (checkTimeAndLocation != null) { throw new Exception("A class already exist within time frame and in the same location."); }
+            var checkTimeAndEmployee = _FindGymClassRepository.FindBy(x => (x.Date <= entity.EndTime && x.Date >= entity.Date) && x.EmployeeId == entity.EmployeeId);
+            if(checkTimeAndEmployee != null) { throw new Exception("A class already exist within time frame and with the same employee."); }
+
+            //Start Mapping
             var gymClass = _Mapper.Map<Gymclass>(entity);
             gymClass.Status = "Active";
-            //Adding Existing data from other tables
-            var location = _FindLocationRepository.FindBy(x => x.Id == entity.LocationId);
             gymClass.Location = location;
-            var employee = _FindEmployeeRepository.FindBy(x => x.Id == entity.EmployeeId);
             gymClass.Employee = employee;
 
-            foreach (var equipmentId in entity.EquipmentId)
+            if(entity.EquipmentId.Count() > 0)
             {
-                var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentId);
-                gymClass.Equipment.Add(equipment);
+                foreach (var equipmentId in entity.EquipmentId)
+                {
+                    var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentId);
+                    gymClass.Equipment.Add(equipment);
+                }
+            }
+
+            if(entity.Type == "Private")
+            {
+                foreach(var clientId in entity.ClientsId)
+                {
+                    var client = _FindClientRepository.FindBy(x => x.Id == clientId);
+                    if (client == null) { throw new Exception("Client don't exist."); }
+                    gymClass.Clients.Add(client);
+                }
             }
 
             _GymClassRepository.Add(gymClass);
@@ -78,7 +98,7 @@ namespace Incharge.Service
             //    gymClassToUpdate.Clients.Add(client);
             //}
             _GymClassRepository.Update(gymClassToUpdate);
-            _GymClassRepository.Save();
+            _GymClassRepository.Save(); 
         }
         public void DeleteService(GymClassVM entity)
         {
@@ -92,12 +112,12 @@ namespace Incharge.Service
         public GymClassVM DropDownOptions()
         {
             var employeeList = _FindEmployeeRepository.ListBy(x => true);
-           // var trainerList = employeeList.Where(x => x.EmployeeType.Name == "Trainer").ToList();
             var entity = new GymClassVM()
             {
                 LocationOptions = _FindLocationRepository.ListBy(x => true),
-                EmployeeOptions = _FindEmployeeRepository.ListBy(x => true),
+                EmployeeOptions = _FindEmployeeRepository.ListBy(x => x.Role.Type == "Trainer"),
                 EquipmentOptions = _FindEquipmentRepository.ListBy(x => true),
+                ClientOptions = _FindClientRepository.ListBy(x => true),
                 TimeSlots = new List<TimeSpan>()
             };
             for (int i = 7; i < 21; i++)

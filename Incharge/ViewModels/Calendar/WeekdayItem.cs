@@ -10,5 +10,10 @@ namespace Incharge.ViewModels.Calendar
         //only round down (if 7:20 will go under 7:00)
         public TimeSpan TimeStart { get; set; }
         public TimeSpan TimeEnd { get; set; }
+        
+
+        //DROP DOWN VIEW OPTION ONLY
+        public List<string> TrainerName { get; set; } = new List<string>();
+        public List<string> LocationName { get; set; } = new List<string>();
     }
 }

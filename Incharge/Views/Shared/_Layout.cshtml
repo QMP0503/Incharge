@@ -47,9 +47,19 @@
                             </li>
 
                             <li>
-                                <a href="/GymClass" class="nav-link px-0 align-middle">
+                                <a href="#gymMenu" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                                     <i class="fs-4 bi-calendar3"></i> <span class="ms-1 d-none d-sm-inline">Gym Schedule</span>
                                 </a>
+                                <ul class="nav flex-column ms-1 collapse" id="gymMenu" data-bs-parent="#menu">
+
+                                    @*SPLIT MEMEBERSHIP AND DISCOUNTS CONTROLLER TO HAVE TWO SEPERATE SET FROM PRODUCTS*@
+                                    <li class="w-100">
+                                        <a href="/GymClass/LocationSchedule" class="nav-link text-light">Location</a>
+                                    </li>
+                                    <li>
+                                        <a href="/GymClass/TrainerSchedule" class="nav-link text-light">Trainer</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">

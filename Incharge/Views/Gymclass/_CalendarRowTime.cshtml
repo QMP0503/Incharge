@@ -1,0 +1,37 @@
+﻿@model List<WeekdayItem>
+@using Incharge.ViewModels.Calendar;
+
+@{
+    var items = Model.ToList();
+    var Monday = items.FirstOrDefault(x => x.Weekday == "Monday");
+    var Tuesday = items.FirstOrDefault(x => x.Weekday == "Tuesday");
+    var Wednesday = items.FirstOrDefault(x => x.Weekday == "Wednesday");
+    var Thursday = items.FirstOrDefault(x => x.Weekday == "Thursday");
+    var Friday = items.FirstOrDefault(x => x.Weekday == "Friday");
+    var Saturday = items.FirstOrDefault(x => x.Weekday == "Saturday");
+
+    var WeekDay = new List<WeekdayItem>
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday
+    };
+}
+
+@for(int i =0; i < 6; i++)
+{
+    if (WeekDay[i] != null)
+    {
+        <partial name="_WeekdayPartial" model="WeekDay[i]"></partial>
+    }
+    else
+    {
+        <td>
+            <div class="margin-10px-top font-size14"></div>
+            <div class="font-size13 text-light-gray"></div>
+        </td>
+    }
+}

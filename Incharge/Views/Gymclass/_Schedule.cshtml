@@ -1,0 +1,64 @@
+﻿@model List<WeekdayItem>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@using Incharge.ViewModels.Calendar;
+
+@{
+    var timeSlots = new List<TimeSpan>();
+    for (int i = 7; i < 21; i++)
+    {
+        var time = TimeSpan.FromHours(i);
+        timeSlots.Add(time);
+    }
+
+    static string PrintFormattedTime(TimeSpan timeSpan)
+    {
+        DateTime dateTime = DateTime.Today.Add(timeSpan);
+        string formattedTime = dateTime.ToString("h tt");
+        return formattedTime;
+    }
+
+}
+
+<div class="overflow-visible">
+    <div class="timetable-img text-center">
+        <img src="img/content/timetable.png" alt="">
+    </div>
+    <div class="table-responsive">
+        <table class="table-bordered table text-center">
+            <thead>
+                <tr class="bg-light-gray">
+                    <th class="text-uppercase" id="monday">Monday</th>
+                    <th class="text-uppercase" id="tuesday">Tuesday</th>
+                    <th class="text-uppercase" id="wednesday">Wednesday</th>
+                    <th class="text-uppercase" id="thursday">Thursday</th>
+                    <th class="text-uppercase" id="friday">Friday</th>
+                    <th class="text-uppercase" id="saturday">Saturday</th>
+                </tr>
+            </thead>
+
+            @*Row is time and columns are days. The columns are automatically sorted by days of the week.*@
+            <tbody>
+
+                @foreach (var time in timeSlots)
+                {
+                    <tr>
+                        @{
+                            var gymclass = new List<WeekdayItem>();
+                            foreach (var item in Model)
+                            {
+                                if (item.TimeSlots.Contains(time))
+                                {
+                                    gymclass.Add(item);
+                                }
+                            }
+                            <partial name="_CalendarRowTime" model="gymclass" />
+                        }
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

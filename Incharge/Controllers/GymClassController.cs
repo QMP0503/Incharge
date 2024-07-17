@@ -5,6 +5,7 @@ using Incharge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
+using MySqlX.XDevAPI;
 
 namespace Incharge.Controllers
 {
@@ -27,15 +28,33 @@ namespace Incharge.Controllers
             _DropdownOptions = dropdownOptions;
         }
 
+        public IActionResult Test()
+        {
+            var gymclass = _GymclassService.GetItem(x => x.Id == 1);
+            return PartialView("_test" ,gymclass);
+        }
 
         [HttpGet] //straight calendar view
-        public IActionResult Index()
+        public IActionResult Index() //all passed in from UI
         {
-            var WeekdayList = _gymclassCalendarService.CreateItemList();
+            return View();
+        }
+
+        [HttpGet] 
+        public IActionResult TrainerSchedule(string filter, DateTime dateSelected)
+        {
+            var WeekdayList = _gymclassCalendarService.CreateItemList("trainer", filter, dateSelected);
+            return View(WeekdayList);
+        }
+        [HttpGet] 
+        public IActionResult LocationSchedule(string filter, DateTime dateSelected)
+        {
+            var WeekdayList = _gymclassCalendarService.CreateItemList("location",filter, dateSelected);
             return View(WeekdayList);
         }
 
-        [HttpGet] //another view instead of the calendar
+
+        [HttpGet] //will be the index
         public IActionResult GymclassList(
                                                          string sortOrder,
                                                          string currentFilter,
@@ -74,9 +93,12 @@ namespace Incharge.Controllers
                 return View();
             }
         }
-        public IActionResult AddGymclass()
+        public IActionResult AddGymclass(string type)
         {
             var gymclassVM = _DropdownOptions.DropDownOptions();
+            gymclassVM.Type = type;
+            gymclassVM.Date = DateTime.Now; //setting reasonable default value
+            gymclassVM.EndTime = DateTime.Now.AddHours(1);
             return View(gymclassVM);
         }
 
@@ -84,6 +106,15 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddGymclass(GymClassVM gymclassVM)
         {
+            if (!ModelState.IsValid)
+            {
+                gymclassVM.Error = "Invalid inputs";
+                gymclassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
+                gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
+                gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
+                return View(gymclassVM);
+            }
             try
             {
                 _GymclassService.AddService(gymclassVM);
@@ -92,7 +123,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                gymclassVM.Error = ex.Message;
+                return View(gymclassVM);
             }
         }
         public IActionResult EditGymclass(GymClassVM gymClassVM)
@@ -117,6 +149,11 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditGymclassConfirm(GymClassVM gymclassVM)
         {
+            if (!ModelState.IsValid)
+            {
+                gymclassVM.Error = "Invalid inputs";
+                return View(gymclassVM);
+            }
             try
             {
                 _GymclassService.UpdateService(gymclassVM);
@@ -125,7 +162,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return NotFound();
+                gymclassVM.Error = ex.Message;
+                return View(gymclassVM);
             }
         }
         public IActionResult DeleteGymClass(int id)

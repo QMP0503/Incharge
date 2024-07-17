@@ -14,6 +14,10 @@
             <form asp-action="AddGymclass" method="post" enctype="multipart/form-data">
                 <!--Location Form fields partial view-->
                 <partial name="_ValidationScriptsPartial" />
+
+                <input type="hidden" asp-for="Type" value="@Model.Type" />
+                <input type="hidden" asp-for="Status" value="Active" />
+
                 <partial name="_GymClassFormFields" model="@Model" />
             </form>
 

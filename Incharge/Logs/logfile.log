@@ -464,3 +464,9 @@ ProfilePicture
 2024-07-16 17:11:27,129 [3] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
    at Incharge.Service.GymClassService.AddService(GymClassVM entity)
    at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM)
+2024-07-17 16:03:50,438 [17] ERROR Program - System.Exception: GymClass already exist.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 47
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 110
+2024-07-17 16:16:33,557 [18] ERROR Program - System.Exception: GymClass already exist.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 47
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 120

@@ -10,6 +10,9 @@ public partial class Gymclass
 
     public string Name { get; set; } = null!;
 
+    [AllowedValues("Private", "Group")]
+    public string Type { get; set; } = null!;
+
     public DateTime Date { get; set; } //start
 
     public DateTime EndTime { get; set; } //end

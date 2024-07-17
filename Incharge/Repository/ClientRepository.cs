@@ -17,6 +17,7 @@ namespace Incharge.Repository
             return _context.Clients
                 .Include(x => x.Employees)
                 .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
+                .ThenInclude (x => x.Location)
                 .Include(x => x.Products)
                 .ThenInclude(x => x.ProductType)
                 .Include(x => x.PaymentRecord)
@@ -25,23 +26,24 @@ namespace Incharge.Repository
         public List<Client> ListBy(Func<Client, bool>? predicate)
         {
             return _context.Clients
-				.Include(x => x.Employees)
-				.Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
-				.Include(x => x.Products)
-				.ThenInclude(x => x.ProductType)
-				.Include(x => x.PaymentRecord)
-				.Where(predicate) //if theres issue use LinQ command in seperate method
+                .Include(x => x.Employees)
+                .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
+                .ThenInclude(x => x.Location)
+                .Include(x => x.Products)
+                .ThenInclude(x => x.ProductType)
+                .Include(x => x.PaymentRecord)
+                .Where(predicate) //if theres issue use LinQ command in seperate method
                 .ToList();
         }
         public IQueryable<Client> QueryBy(Func<Client, bool> predicate)
         {
             return _context.Clients
-				.Include(x => x.Employees)
-				.Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
-				.Include(x => x.Products)
-				.ThenInclude(x => x.ProductType)
-				.Include(x => x.PaymentRecord)
-				.Where(predicate)
+                .Include(x => x.Employees)
+                .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
+                .ThenInclude(x => x.Location)
+                .Include(x => x.Products)
+                .ThenInclude(x => x.ProductType)
+                .Include(x => x.PaymentRecord)
                 .AsQueryable(); //for index paging method.
         }
     }

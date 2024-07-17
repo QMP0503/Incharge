@@ -1,9 +1,0 @@
-﻿@model Incharge.ViewModels.Calendar.WeekdayItem;
-
-<td onclick="location.href = '@Url.Action("Details", "GymClass", new { id = @Model.Item.Id })'" class="padding-10px">
-    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">
-        @Model.Item.Name
-    </span>
-    <div class="margin-10px-top font-size14">@Model.Item.Date</div>
-    <div class="font-size13">@Model.Item.Location.Name</div>
-</td>

@@ -485,6 +485,10 @@ namespace Incharge.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 

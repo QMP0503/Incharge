@@ -22,7 +22,7 @@
 </div>
 <div class="mb-3">
     <label asp-for="EmployeeOptions" class="control-label"></label>
-    <select asp-for="Employee" class="form-select">
+    <select asp-for="EmployeeId" class="form-select">
         @foreach (var type in Model.EmployeeOptions)
         {
             <option value="@type.Id">@type.FirstName @type.LastName</option>
@@ -31,22 +31,36 @@
 </div>
 <div class="mb-3">
     <label asp-for="LocationOptions" class="control-label"></label>
-    <select asp-for="Location" class="form-select">
+    <select asp-for="LocationId" class="form-select">
         @foreach (var type in Model.LocationOptions)
         {
             <option value="@type.Id">@type.Name</option>
         }
     </select>
 </div>
+
 <div class="mb-3">
     <label asp-for="EquipmentOptions" class="control-label"></label>
-    <select asp-for="Equipment" class="form-select">
+    <select asp-for="EquipmentId" class="form-select">
         @foreach (var type in Model.EquipmentOptions)
         {
             <option value="@type.Id">@type.Name</option>
         }
     </select>
 </div>
+
+@if(Model.Type == "Private")
+{
+    <div class="mb-3">
+        <label asp-for="ClientOptions" class="control-label"></label>
+        <select asp-for="ClientsId" class="form-select">
+            @foreach (var type in Model.ClientOptions)
+            {
+                <option value="@type.Id">@type.FirstName @type.LastName</option>
+            }
+        </select>
+    </div>
+}
 
 <div class="mb-3">
     @*Will override price set in product type. Ok to be null*@
