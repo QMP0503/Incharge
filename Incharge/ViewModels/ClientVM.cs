@@ -10,6 +10,7 @@ namespace Incharge.ViewModels
 {
     public class ClientVM
     {
+        [AllowNull]
         public string Uuid { get; set; }  //info being fed back from the client
         [DisplayName("First Name")]
         public string FirstName { get; set; } = null!;
@@ -17,10 +18,11 @@ namespace Incharge.ViewModels
         public string LastName { get; set; } = null!;
 
         //display url link for profile picture
+        [AllowNull]
         [DisplayName("Profile Picture")]
         public string ProfilePicture { get; set; }
 
-        public int? Phone { get; set; }
+        public long? Phone { get; set; }
 
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
@@ -29,14 +31,15 @@ namespace Incharge.ViewModels
         [AllowedValues("Signed In", "Signed Out")]
         public string? Status { get; set; }
 
-		[AllowedValues("Active", "Inactive", "Suspended", "Overdue", "No Membership")]
+        [AllowNull]
+		[AllowedValues("Active", "Inactive", "Suspended", "Overdue", "No Membership", null)]
 		public string? MembershipStatus { get; set; }
 
 		[AllowNull]
 		public string? MembershipName { get; set; }
         public int MembershipProductId { get; set; } //for searching purposes
         [DataType(DataType.Date)]
-        public DateTime MembershipExpiryDate { get; set; } //set in sales service
+        public DateTime MembershipExpiryDate { get; set; }
 		[DataType(DataType.Date)]
 		public DateTime MembershipStartDate { get; set; }
 

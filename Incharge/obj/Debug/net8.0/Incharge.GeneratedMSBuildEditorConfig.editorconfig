@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Analytics/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hbHl0aWNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/AddClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEFkZENsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcVXBkYXRlRW1sb3llZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Employee/_EmployeeFormFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0VtcGxveWVlRm9ybUZpZWxkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Equipment/AddEquipment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XEFkZEVxdWlwbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Equipment/_EquipmentFormFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XF9FcXVpcG1lbnRGb3JtRmllbGRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/AddExpense.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRFeHBlbnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/_ExpenseFormFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxfRXhwZW5zZUZvcm1GaWVsZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/AddGymclass.cshtml]
@@ -122,12 +138,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0FkZEd5bWNsYXNzRHJvcERvd24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_CalendarRowTime.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0NhbGVuZGFyUm93VGltZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_GymClassFormFields.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0d5bUNsYXNzRm9ybUZpZWxkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_GymClassNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3ltY2xhc3NcX0d5bUNsYXNzTmF2LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Gymclass/_Schedule.cshtml]
@@ -158,6 +174,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Location/_LocationFormFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25cX0xvY2F0aW9uRm9ybUZpZWxkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Product/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -186,40 +206,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Sale/_SalesFormFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxfU2FsZXNGb3JtRmllbGRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_EmployeeFormFields.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZUZvcm1GaWVsZHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_EquipmentFormFields.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcXVpcG1lbnRGb3JtRmllbGRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_ExpenseFormFields.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FeHBlbnNlRm9ybUZpZWxkcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_formErrorMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9mb3JtRXJyb3JNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_LocationFormFields.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2NhdGlvbkZvcm1GaWVsZHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_Pagination.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_SalesFormFields.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TYWxlc0Zvcm1GaWVsZHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_test.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF90ZXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Shared/_ValidationScriptsPartial.cshtml]

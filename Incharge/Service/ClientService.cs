@@ -3,10 +3,10 @@ using Incharge.Models;
 using Incharge.Repository.IRepository;
 using K4os.Compression.LZ4;
 using Incharge.ViewModels;
-using ZstdSharp.Unsafe;
-using Incharge.DTO;
+using ZstdSharp.Unsafe; 
 using AutoMapper;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using static System.Net.WebRequestMethods;
 
 namespace Incharge.Service
 {
@@ -51,11 +51,18 @@ namespace Incharge.Service
         public void AddService(ClientVM clientVM) //cosider if there is a desire to add membership as soon as client profile is made..
         {
             if(clientVM == null || clientVM.FirstName == null || clientVM.LastName == null) { throw new NullReferenceException("Input Empty."); }
-            var result = _photoService.AddPhotoAsync(clientVM.PicutreInput).Result;
-            //Make whole program async when all tests are completed
-            if(result == null || result.Url==null) { throw new NullReferenceException("Photo Empty or Invalid."); }
-            var client = _mapper.Map<Client>(clientVM); //some is null so check if this is true
-            client.ProfilePicture = result.Url.ToString();
+            var client = _mapper.Map<Client>(clientVM);
+            if (clientVM.PicutreInput != null)
+            {
+                var result = _photoService.AddPhotoAsync(clientVM.PicutreInput).Result;
+                client.ProfilePicture = result.Url.ToString();
+
+            }
+            else
+            {
+                client.ProfilePicture = "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721294595/default_z7dhuq.png";
+            }
+            //some is null so check if this is true
             _ClientRepository.Add(client) ;
             _ClientRepository.Save();
         }

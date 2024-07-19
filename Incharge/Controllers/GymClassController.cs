@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
 using MySqlX.XDevAPI;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Incharge.ViewModels.Calendar;
 
 namespace Incharge.Controllers
 {
@@ -28,34 +30,9 @@ namespace Incharge.Controllers
             _DropdownOptions = dropdownOptions;
         }
 
-        public IActionResult Test()
-        {
-            var gymclass = _GymclassService.GetItem(x => x.Id == 1);
-            return PartialView("_test" ,gymclass);
-        }
-
-        [HttpGet] //straight calendar view
-        public IActionResult Index() //all passed in from UI
-        {
-            return View();
-        }
-
-        [HttpGet] 
-        public IActionResult TrainerSchedule(string filter, DateTime dateSelected)
-        {
-            var WeekdayList = _gymclassCalendarService.CreateItemList("trainer", filter, dateSelected);
-            return View(WeekdayList);
-        }
-        [HttpGet] 
-        public IActionResult LocationSchedule(string filter, DateTime dateSelected)
-        {
-            var WeekdayList = _gymclassCalendarService.CreateItemList("location",filter, dateSelected);
-            return View(WeekdayList);
-        }
-
 
         [HttpGet] //will be the index
-        public IActionResult GymclassList(
+        public IActionResult Index(
                                                          string sortOrder,
                                                          string currentFilter,
                                                          string searchString,
@@ -78,6 +55,38 @@ namespace Incharge.Controllers
             ViewData["CurrentFilter"] = searchString;
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
+        }
+
+        [HttpGet] 
+        public IActionResult TrainerSchedule(string filter, DateTime dateSelected)
+        {
+            try
+            {
+                var WeekdayList = _gymclassCalendarService.CreateItemList("trainer", filter, dateSelected);
+                return View(WeekdayList);
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex);
+                var Error = new List<WeekdayItem>();
+                Error.Add(new WeekdayItem() { Error = ex.Message });
+                return View(Error);
+            }
+        }
+        [HttpGet] 
+        public IActionResult LocationSchedule(string filter, DateTime dateSelected)
+        {
+            try
+            {
+                var WeekdayList = _gymclassCalendarService.CreateItemList("location", filter, dateSelected);
+                return View(WeekdayList);
+            }catch (Exception ex)
+            {
+                _logger.Error(ex);
+                var Error = new List<WeekdayItem>();
+                Error.Add(new WeekdayItem() { Error = ex.Message });
+                return View(Error);
+            }
         }
 
         [HttpGet]
@@ -123,6 +132,10 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
+                gymclassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
+                gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
+                gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
                 gymclassVM.Error = ex.Message;
                 return View(gymclassVM);
             }
@@ -152,6 +165,10 @@ namespace Incharge.Controllers
             if (!ModelState.IsValid)
             {
                 gymclassVM.Error = "Invalid inputs";
+                gymclassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
+                gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
+                gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
                 return View(gymclassVM);
             }
             try
@@ -163,6 +180,10 @@ namespace Incharge.Controllers
             {
                 _logger.Error(ex);
                 gymclassVM.Error = ex.Message;
+                gymclassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
+                gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
+                gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
                 return View(gymclassVM);
             }
         }
@@ -194,13 +215,13 @@ namespace Incharge.Controllers
                 return NotFound();
             }
         }
-        [HttpPost, ActionName("UpdateStatus")]
-        public IActionResult UpdateStatus(GymClassVM gymclassVM)//dont need bind if html id is used explicitly
+        [HttpPost]
+        public IActionResult UpdateStatus(GymClassVM gymclassVM)//accessed in detials page
         {
             try
             {
                 _GymclassService.UpdateService(gymclassVM);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", new { id = gymclassVM.Id });
             }
             catch (Exception ex)
             {

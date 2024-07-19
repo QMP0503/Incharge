@@ -14,7 +14,7 @@ namespace Incharge.Service.IService
         public BusinessReport CalculateRevenue(BusinessReport entity); 
         public BusinessReport CalculateCost(BusinessReport entity);
         public BusinessReport CalculateProfit(BusinessReport entity);
-        public BusinessReport CalculateTotalMembers(BusinessReport entity);//for the month
+        public BusinessReport CalculateMembershipData(BusinessReport entity);//for the month
         public BusinessReport CalculateAccountsReceivable(BusinessReport entity); //Money owed to business by client at the end of the month
         public BusinessReport CalculateAccountsPayable(BusinessReport entity); 
         public BusinessReport CalculateExpenses(BusinessReport entity);

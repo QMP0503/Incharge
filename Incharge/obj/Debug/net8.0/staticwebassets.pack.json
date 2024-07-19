@@ -181,12 +181,20 @@
       "PackagePath": "staticwebassets\\Incharge.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\css\\MultiSelect.css",
+      "PackagePath": "staticwebassets\\css\\MultiSelect.css"
+    },
+    {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\MultiSelect.js",
+      "PackagePath": "staticwebassets\\js\\MultiSelect.js"
     },
     {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\site.js",

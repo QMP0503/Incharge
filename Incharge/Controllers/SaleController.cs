@@ -1,5 +1,4 @@
-﻿using CloudinaryDotNet.Actions;
-using Incharge.Models;
+﻿using Incharge.Models;
 using Incharge.Service.IService;
 using Incharge.Service.PagingService;
 using Incharge.ViewModels;
@@ -78,7 +77,14 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return View(NotFound()); //Find logical location if fail instead of error 404
+                saleVM.ClientOptions = _SaleDropDown.DropDownOptions().ClientOptions;
+                saleVM.EmployeeOptions = _SaleDropDown.DropDownOptions().EmployeeOptions;
+                saleVM.ProductOptions = _SaleDropDown.DropDownOptions().ProductOptions;
+                saleVM.DiscountOptions = _SaleDropDown.DropDownOptions().DiscountOptions;
+                saleVM.Date = DateTime.Now;
+                saleVM.Error = ex.Message;
+                saleVM.ProductName = saleVM.ProductOptions.FirstOrDefault(x => x.Id == saleVM.ProductId).Name;
+                return View(saleVM); //Find logical location if fail instead of error 404
             }
         }
         [HttpPost, ActionName("DeleteSale")]
@@ -123,7 +129,13 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return View(NotFound());
+                saleVM.ClientOptions = _SaleDropDown.DropDownOptions().ClientOptions;
+                saleVM.EmployeeOptions = _SaleDropDown.DropDownOptions().EmployeeOptions;
+                saleVM.ProductOptions = _SaleDropDown.DropDownOptions().ProductOptions;
+                saleVM.DiscountOptions = _SaleDropDown.DropDownOptions().DiscountOptions;
+                saleVM.Date = DateTime.Now;
+                saleVM.Error = ex.Message;
+                return View(saleVM);
             }
         }
     }

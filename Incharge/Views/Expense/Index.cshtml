@@ -18,6 +18,20 @@
         @if (User.IsInRole("Admin"))
         {
             <a asp-action="AddExpense" class="btn btn-primary">Add Expense</a>
+
+@*             Add expense dropdown menu when finished business Report stuff
+            <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Add Expense
+                </button>
+                    <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow">
+                    <li><a class="dropdown-item rounded-2" asp-action="AddExpense" asp-route-Type="Wage">Wage</a></li>
+                    <li><a class="dropdown-item rounded-2" asp-action="AddExpense" asp-route-Type="Rent">Rent</a></li>
+                    <li><a class="dropdown-item rounded-2" asp-action="AddExpense" asp-route-Type="Equipment">Equipment</a></li>
+                    <li><hr class="dropdown-divider"></hr></li>
+                    <li><a class="dropdown-item rounded-2" asp-action="AddExpense" asp-route-Type="Other">Other</a></li>
+                </ul>
+            </div> *@
         }
         </div>
         @*Add filter column*@

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TaTnhbwXh2Glnp5xsXs1UBSi4IlgNjiX6sRbcS1z7tQ=",
+  "Hash": "iAYgbNUqjx5kcBz32/Lmts1l/Jdo7pHqdAxetnlKEuA=",
   "Source": "Incharge",
   "BasePath": "_content/Incharge",
   "Mode": "Default",
@@ -2620,6 +2620,25 @@
       "OriginalItemSpec": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Incharge.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\css\\MultiSelect.css",
+      "SourceId": "Incharge",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\",
+      "BasePath": "_content/Incharge",
+      "RelativePath": "css/MultiSelect.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\MultiSelect.css"
+    },
+    {
       "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\css\\site.css",
       "SourceId": "Incharge",
       "SourceType": "Discovered",
@@ -2656,6 +2675,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\MultiSelect.js",
+      "SourceId": "Incharge",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\",
+      "BasePath": "_content/Incharge",
+      "RelativePath": "js/MultiSelect.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\MultiSelect.js"
     },
     {
       "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\site.js",

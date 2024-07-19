@@ -7,72 +7,88 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\_gymclassformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\_gymclassformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\locationschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\locationschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\_schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\_schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_formerrormessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_formerrormessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\_calendarrowtime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\_calendarrowtime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\deleteclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\deleteclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\_weekdaypartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\_weekdaypartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\repository\\businessreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\repository\\businessreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\gymclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\gymclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\gymclasscalendarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\gymclasscalendarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\sale\\_salesformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\sale\\_salesformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\_addgymclassdropdown.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\_addgymclassdropdown.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\addgymclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\addgymclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\businessreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\businessreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\gymclassservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\gymclassservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\viewmodels\\businessreportvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\viewmodels\\businessreportvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\repository\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\repository\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\models\\businessreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\models\\businessreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\trainerschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\trainerschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\viewmodels\\gymclassvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\viewmodels\\gymclassvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\models\\gymclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\models\\gymclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\migrations\\20240717071529_gymclasstype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\migrations\\20240717071529_gymclasstype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -81,21 +97,46 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 1967,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 982,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GymClassController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\GymClassController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\GymClassController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAkwDIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T08:03:51.368Z",
-              "IsPinned": true,
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Details.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\Details.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T10:00:20.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeleteClient.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T10:00:12.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T09:55:13.048Z",
               "EditorCaption": ""
             },
             {
@@ -106,209 +147,244 @@
               "RelativeDocumentMoniker": "Incharge\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "Incharge\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwEIAAAAJAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAtwIsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T09:59:35.784Z",
+              "WhenOpened": "2024-07-19T08:58:51.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_GymClassFormFields.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAD4AAAABAAAA",
+              "DocumentIndex": 11,
+              "Title": "_SalesFormFields.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:57:31.747Z",
+              "WhenOpened": "2024-07-19T09:44:24.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Schedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T08:30:30.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_CalendarRowTime.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_CalendarRowTime.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_CalendarRowTime.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_CalendarRowTime.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_CalendarRowTime.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T09:22:56.567Z",
+              "DocumentIndex": 7,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\ClientController.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAvwH8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:58:51.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "_WeekdayPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAFAAAA",
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T08:30:33.551Z",
+              "WhenOpened": "2024-07-19T09:44:22.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_formErrorMessage.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T09:44:19.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BusinessReportVM.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\BusinessReportVM.cs",
+              "RelativeDocumentMoniker": "Incharge\\ViewModels\\BusinessReportVM.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\BusinessReportVM.cs",
+              "RelativeToolTip": "Incharge\\ViewModels\\BusinessReportVM.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAA7wCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T09:23:54.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BusinessReportRepository.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Repository\\BusinessReportRepository.cs",
+              "RelativeDocumentMoniker": "Incharge\\Repository\\BusinessReportRepository.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Repository\\BusinessReportRepository.cs",
+              "RelativeToolTip": "Incharge\\Repository\\BusinessReportRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T09:22:08.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LocationSchedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADYAAAAAAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Analytics\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:58:39.94Z",
+              "WhenOpened": "2024-07-19T09:18:22.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\EmployeeService.cs",
-              "RelativeToolTip": "Incharge\\Service\\EmployeeService.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwCkAAAAIAAAA",
+              "DocumentIndex": 12,
+              "Title": "AnalyticsController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\AnalyticsController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\AnalyticsController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T09:59:35.862Z",
+              "WhenOpened": "2024-07-19T09:17:06.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAG8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T09:17:40.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "AddGymclass.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\AddGymclass.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\AddGymclass.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\AddGymclass.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\AddGymclass.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:57:32.8Z"
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Program.cs",
+              "RelativeDocumentMoniker": "Incharge\\Program.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Program.cs",
+              "RelativeToolTip": "Incharge\\Program.cs",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAAAKsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T09:17:33.91Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GymclassCalendarService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\GymclassCalendarService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
-              "RelativeToolTip": "Incharge\\Service\\GymclassCalendarService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAAAIAAAA",
+              "DocumentIndex": 19,
+              "Title": "NOTES.txt",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\NOTES.txt",
+              "RelativeDocumentMoniker": "Incharge\\NOTES.txt",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\NOTES.txt",
+              "RelativeToolTip": "Incharge\\NOTES.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-19T09:12:03.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
+              "RelativeDocumentMoniker": "Incharge\\appsettings.json",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
+              "RelativeToolTip": "Incharge\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T09:12:02.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\package.json",
+              "RelativeDocumentMoniker": "Incharge\\package.json",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\package.json",
+              "RelativeToolTip": "Incharge\\package.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T09:11:56.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SaleController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\SaleController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\SaleController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAQwEUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T08:16:03.872Z",
+              "WhenOpened": "2024-07-19T08:58:51.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "_AddGymclassDropDown.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T09:36:56.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TrainerSchedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T08:05:57.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ClientRepository.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Repository\\ClientRepository.cs",
-              "RelativeDocumentMoniker": "Incharge\\Repository\\ClientRepository.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Repository\\ClientRepository.cs",
-              "RelativeToolTip": "Incharge\\Repository\\ClientRepository.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowCQAAAAJAAAA",
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\EmployeeService.cs",
+              "RelativeToolTip": "Incharge\\Service\\EmployeeService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAvwCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T09:20:23.226Z"
+              "WhenOpened": "2024-07-19T08:58:51.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GymClassService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\GymClassService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
-              "RelativeToolTip": "Incharge\\Service\\GymClassService.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAcwDoAAAAnAAAA",
+              "DocumentIndex": 21,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "Incharge\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Client.cs",
+              "RelativeToolTip": "Incharge\\Models\\Client.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAswBsAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:13:39.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:57:39.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20240717071529_gymClassType.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Migrations\\20240717071529_gymClassType.cs",
-              "RelativeDocumentMoniker": "Incharge\\Migrations\\20240717071529_gymClassType.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Migrations\\20240717071529_gymClassType.cs",
-              "RelativeToolTip": "Incharge\\Migrations\\20240717071529_gymClassType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:15:29.842Z"
+              "WhenOpened": "2024-07-19T08:47:34.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "GymClassVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\GymClassVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\GymClassVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\GymClassVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\GymClassVM.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAIwBcAAAA9AAAA",
+              "Title": "BusinessReport.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\BusinessReport.cs",
+              "RelativeDocumentMoniker": "Incharge\\Models\\BusinessReport.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\BusinessReport.cs",
+              "RelativeToolTip": "Incharge\\Models\\BusinessReport.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAwwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:15:04.387Z"
+              "WhenOpened": "2024-07-19T08:33:36.564Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Gymclass.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Gymclass.cs",
-              "RelativeDocumentMoniker": "Incharge\\Models\\Gymclass.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Gymclass.cs",
-              "RelativeToolTip": "Incharge\\Models\\Gymclass.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAwwA0AAAAtAAAA",
+              "DocumentIndex": 13,
+              "Title": "BusinessReportService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\BusinessReportService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\BusinessReportService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\BusinessReportService.cs",
+              "RelativeToolTip": "Incharge\\Service\\BusinessReportService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:13:48.117Z"
+              "WhenOpened": "2024-07-19T08:33:29.166Z",
+              "EditorCaption": ""
             }
           ]
         }

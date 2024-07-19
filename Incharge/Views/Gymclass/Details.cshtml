@@ -4,4 +4,88 @@
     ViewData["Title"] = "Details";
 }
 
-<a asp-action="EditGymclass" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body mt-1">
+                    <h3 class="mb-3">@Model.Name.ToUpper() DETAILS</h3>
+                    <!--Description-->
+                    <p class="mb-2 mt-2">@Model.Description</p>
+                    <div class="row align-content-center">
+                        <div class="col-2">
+                            <a asp-action="EditGymclass" asp-route-id="@Model.Id" class="btn btn-primary"> Edit </a>
+                        </div>
+                        <div class="col-2"> 
+                            <!--make sure that it opens a modal to confirm delete-->
+                            <form asp-action="DeleteGymClass" asp-route-id="@Model.Id" method="post">
+                                <input type="submit" value="Delete" class="btn btn-danger" />
+                            </form>
+                        </div>
+                        <div class="col-2">
+                            <!--Have modal dropdown to change status-->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Change Status
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <form asp-action="UpdateStatus" asp-route-Id="@Model.Id" method="post">
+                                    <li><input type="submit" id="GymClassVM.Status" name="Status" value="Active" class="dropdown-item"/></li>
+                                    <li><input type="submit" id="GymClassVM.Status" name="Status" value="Cancelled" class="dropdown-item"/></li>
+                                    <li><input type="submit" id="GymClassVM.Status" name="Status" value="Completed" class="dropdown-item"/></li>
+
+                                    <!--Hidden input for database-->
+                                    <input type="hidden" id="GymClassVM.EmployeeId" name="EmployeeId" value="@Model.EmployeeId" />
+                                    <input type="hidden" id="GymClassVM.LocationId" name="LocationId" value="@Model.LocationId" />
+                                    <input type="hidden" id="GymClassVM.Date" name="Date" value="@Model.Date" />
+                                    <input type="hidden" id="GymClassVM.EndTime" name="EndTime" value="@Model.EndTime" />
+                                    <input type="hidden" id="GymClassVM.EndTime" name="EndTime" value="@Model.EndTime" /> 
+                                    </form>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Have popup to register clients-->
+
+                    </div>
+                </div><!-- / project-info-box -->
+            </div>
+            <div class="card">
+                <div class="card-body p-2 mb-1">
+                    <p class="m-2"><b>Name:</b> @Model.Name</p>
+                    <p class="m-2"><b>Trainer:</b> @Model.Employee.FirstName @Model.Employee.LastName</p>
+                    <p class="m-2"><b>Date:</b> @Model.Date.ToShortDateString()</p>
+                    <p class="m-2"><b>Time:</b> @Model.Date.TimeOfDay.ToString(@"hh\:mm") - @Model.EndTime.TimeOfDay.ToString(@"hh\:mm")</p>
+                    <p class="m-2"><b>Status:</b> @Model.Status</p>
+                    <p class="m-2"><b>Type:</b> @Model.Type</p>
+
+                </div><!-- / project-info-box -->
+            </div>
+
+        </div>
+
+        <div class="col-md-7">
+            <!--Client List Table-->
+            <h5 class="fw-bold align-content-center ms-2">Client List</h5>
+            <table class="table-striped table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Clients)
+                    {
+                        <tr>
+                            <td><a asp-controller="Client" asp-action="Details" asp-route-Uuid="@item.Uuid">@item.FirstName @item.LastName</a></td>
+                            <td>@item.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

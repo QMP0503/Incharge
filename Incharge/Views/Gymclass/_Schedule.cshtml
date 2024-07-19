@@ -19,6 +19,25 @@
         return formattedTime;
     }
 
+    var items = Model.ToList();
+    var Monday = items.Where(x => x.Weekday == "Monday").ToList();
+    var Tuesday = items.Where(x => x.Weekday == "Tuesday").ToList();
+    var Wednesday = items.Where(x => x.Weekday == "Wednesday").ToList();
+    var Thursday = items.Where(x => x.Weekday == "Thursday").ToList();
+    var Friday = items.Where(x => x.Weekday == "Friday").ToList();
+    var Saturday = items.Where(x => x.Weekday == "Saturday").ToList();
+    var Sunday = items.Where(x => x.Weekday == "Sunday").ToList();
+
+    var WeekDay = new List<List<WeekdayItem>>
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    };
 }
 
 <div class="overflow-visible">
@@ -35,28 +54,34 @@
                     <th class="text-uppercase" id="thursday">Thursday</th>
                     <th class="text-uppercase" id="friday">Friday</th>
                     <th class="text-uppercase" id="saturday">Saturday</th>
+                    <th class="text-uppercase" id="saturday">Sunday</th>
+
                 </tr>
             </thead>
 
             @*Row is time and columns are days. The columns are automatically sorted by days of the week.*@
             <tbody>
-
-                @foreach (var time in timeSlots)
-                {
-                    <tr>
-                        @{
-                            var gymclass = new List<WeekdayItem>();
-                            foreach (var item in Model)
-                            {
-                                if (item.TimeSlots.Contains(time))
-                                {
-                                    gymclass.Add(item);
-                                }
-                            }
-                            <partial name="_CalendarRowTime" model="gymclass" />
+                <!--One big row to host small tables with different number of rows-->
+                <tr>
+                    @for (int i = 0; i < 7; i++)
+                    {
+                        if (WeekDay[i] != null)
+                        {
+                            <td>
+                                <partial name="_WeekdayPartial" model="WeekDay[i]"></partial>
+                            </td>
                         }
-                    </tr>
-                }
+                        else
+                        {
+                            <td>
+                                <table>
+                                    <tr>
+                                    </tr>
+                                </table>
+                            </td>
+                        }
+                    }
+                </tr>
 
             </tbody>
         </table>

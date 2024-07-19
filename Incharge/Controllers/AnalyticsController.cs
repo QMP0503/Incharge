@@ -21,7 +21,19 @@ namespace Incharge.Controllers
         [HttpGet] //torn between making them get a whole list of past years and summarize it or just display
         public IActionResult Index()
         {
-            return View();
+            try
+            {
+                var YearbusinessReportVM = _BusinessReportService.GetItem(x => x.Date.Year == DateTime.Now.Year);
+                return View(YearbusinessReportVM);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                var YearbusinessReportVM = _BusinessReportService.GetItem(x => x.Date.Year == DateTime.Now.Year);
+                YearbusinessReportVM.Error = ex.Message;
+                return View(YearbusinessReportVM);
+            }
+
         }
 
         [HttpGet] //display summarized information for the month report

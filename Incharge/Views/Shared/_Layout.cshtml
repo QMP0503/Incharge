@@ -9,6 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Incharge</title>
+    <link href="~/css/MultiSelect.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Incharge.styles.css" asp-append-version="true" />
@@ -59,6 +60,9 @@
                                     <li>
                                         <a href="/GymClass/TrainerSchedule" class="nav-link text-light">Trainer</a>
                                     </li>
+                                    <li>
+                                        <a href="/GymClass" class="nav-link text-light">Index</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -66,17 +70,16 @@
                                     <i class="fs-4 bi-bag-fill"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
                                 </a>
                                 <ul class="nav flex-column ms-1 collapse" id="submenu2" data-bs-parent="#menu">
-
-                                    @*SPLIT MEMEBERSHIP AND DISCOUNTS CONTROLLER TO HAVE TWO SEPERATE SET FROM PRODUCTS*@
                                     <li class="w-100">
-                                        <a href="/Product" class="nav-link text-light">Membership</a>
+                                        <a href="/Product" class="nav-link text-light">Gym Products</a>
                                     </li>
-                                    <li>
-                                        <a href="#" class="nav-link text-light"> Discounts</a>
-                                    </li>
-                                    <li> @*Option for gyms who want to sell more than just membership*@
-                                        <a href="#" class="nav-link text-light">Other</a>
-                                    </li>
+
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <li>
+                                            <a href="#" class="nav-link text-light"> Discounts</a>
+                                        </li>
+                                    }
                                 </ul>
                             </li>
                             <li>
@@ -174,7 +177,7 @@
     </footer> *@
 
 
-    
+    <script src="~/js/MultiSelect.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

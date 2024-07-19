@@ -68,11 +68,12 @@ namespace Incharge.Service
         {
             var currentReport = _FindBusinessReportRepository.FindBy(x => x.Date.Month == DateTime.Now.Month);
             if(currentReport == null) { throw new Exception("Report don't exist."); } //Should be very rare, but just in case
+
             currentReport = CalculateAccountsPayable(currentReport);
             //currentReport = CalculateAccountsReceivable(currentReport); don't have a use for it yet.
             currentReport = CalculateCost(currentReport);
             currentReport = CalculateProfit(currentReport);
-            currentReport = CalculateTotalMembers(currentReport);
+            currentReport = CalculateMembershipData(currentReport);
             currentReport = CalculateExpenses(currentReport);
             currentReport = CalculateRevenue(currentReport);
             _BusinessReportRepository.Update(currentReport);
@@ -86,9 +87,9 @@ namespace Incharge.Service
             _BusinessReportRepository.Save();
             
         }
-
-        //Financial data calculations (ONLY USED WHEN REPORT IS FOUND OUTSIDE OF METHOD)
-        public BusinessReport CalculateRevenue(BusinessReport entity)
+		
+		//Financial data calculations (ONLY USED WHEN REPORT IS FOUND OUTSIDE OF METHOD)
+		public BusinessReport CalculateRevenue(BusinessReport entity)
         {
             //var revenue = _FindSaleRepository.ListBy(x => x.BusinessReportId == entity.Id).Sum(x => x.TotalPrice);
             var revenue = entity.Sales.Sum(x => x.TotalPrice);
@@ -108,10 +109,18 @@ namespace Incharge.Service
             entity.Profit = profit;
             return entity;
         }
-        public BusinessReport CalculateTotalMembers(BusinessReport entity)
+        public BusinessReport CalculateMembershipData(BusinessReport entity)
         {
-            var numClient = _FindClientRepository.ListBy(x=>x.MembershipStatus == "Active").Count();
-            entity.MonthlyMembers = numClient;
+            var ClientMemberships = _FindClientRepository.ListBy(x => x.MembershipName != null);
+            entity.MonthlyMembers = ClientMemberships.Where(x => x.MembershipStatus == "Active").Count();
+            var MonthSales = ClientMemberships.Where(x => x.MembershipStartDate.GetValueOrDefault().Date.Month == DateTime.Now.Month);
+            double TotalSales = 0;
+            foreach(var item in MonthSales)
+            {
+                TotalSales += item.Sales.FirstOrDefault(x => x.Product.ProductType.Name == "Membership" && x.Date.Month == DateTime.Now.Month).TotalPrice;
+            }
+            entity.NewMembershipSales = MonthSales.Count();
+            entity.MembershipFee = TotalSales;
             return entity;
         }//for the month
         public BusinessReport CalculateAccountsReceivable(BusinessReport entity)
@@ -121,6 +130,7 @@ namespace Incharge.Service
         public BusinessReport CalculateAccountsPayable(BusinessReport entity)
         {
             var clientList = _FindClientRepository.ListBy(x=>x.MembershipStatus == "Overdue");
+            if(clientList == null) { return entity; }
             foreach(var client in clientList)
             {
                 entity.AccountsPayable += client.Sales.FirstOrDefault(x=>x.Product.ProductType.Name == "Membership").TotalPrice;
@@ -131,37 +141,46 @@ namespace Incharge.Service
         {
             //var expenseList = _FindExpenseRepository.ListBy(x => x.BusinessReportId == entity.Id);
             var expenseList = entity.Expenses;
+            var businessReportVM = new BusinessReportVM();
             foreach(var item in expenseList)
             {
                 if(item.Type == "Maintenance")
                 {
-                    entity.Mantaince += item.Cost;
+                    businessReportVM.Mantaince += item.Cost;
                 }
                 if(item.Type == "Equipment")
                 {
-                    entity.Equipment += item.Cost;
+                    businessReportVM.Equipment += item.Cost;
                 }
                 if(item.Type == "Utilities")
                 {
-                    entity.Utilities += item.Cost;
+                    businessReportVM.Utilities += item.Cost;
                 }
                 if(item.Type == "Insurance")
                 {
-                    entity.Insurance += item.Cost;
+                    businessReportVM.Insurance += item.Cost;
                 }
                 if(item.Type == "Other")
                 {
-                    entity.OtherExpenses += item.Cost;
+                    businessReportVM.OtherExpenses += item.Cost;
                 }
                 if(item.Type == "Wage")
                 {
-                    entity.Wages += item.Cost;
+                    businessReportVM.Wages += item.Cost;
                 }
                 if(item.Type == "Rent")
                 {
-                    entity.Rent += item.Cost;
+                    businessReportVM.Rent = item.Cost;
                 }
             }
+            entity.Mantaince = businessReportVM.Mantaince;
+            entity.Equipment = businessReportVM.Equipment;
+            entity.Utilities = businessReportVM.Utilities;
+            entity.Insurance = businessReportVM.Insurance;
+            entity.OtherExpenses = businessReportVM.OtherExpenses;
+            entity.Wages = businessReportVM.Wages;
+            entity.Rent = businessReportVM.Rent;
+
             return entity;
         }
 

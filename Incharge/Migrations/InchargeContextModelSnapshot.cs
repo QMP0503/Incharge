@@ -198,8 +198,8 @@ namespace Incharge.Migrations
                     b.Property<int?>("PaymentRecordId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<long>("Phone")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("ProfilePicture")
                         .HasColumnType("longtext");
@@ -224,19 +224,17 @@ namespace Incharge.Migrations
                     b.HasIndex("PaymentRecordId")
                         .IsUnique();
 
+                    b.HasIndex(new[] { "FirstName" }, "Client_FirstName");
+
                     b.HasIndex(new[] { "Id" }, "Client_Id_UNIQUE")
                         .IsUnique();
+
+                    b.HasIndex(new[] { "LastName" }, "Client_LastName");
 
                     b.HasIndex(new[] { "Uuid" }, "Client_Uuid_UNIQUE")
                         .IsUnique();
 
                     b.HasIndex(new[] { "Email" }, "Email_UNIQUE")
-                        .IsUnique();
-
-                    b.HasIndex(new[] { "FirstName" }, "FirstName_UNIQUE")
-                        .IsUnique();
-
-                    b.HasIndex(new[] { "LastName" }, "LastName_UNIQUE")
                         .IsUnique();
 
                     b.HasIndex(new[] { "PaymentRecordId" }, "PaymentRecordId_idx");
@@ -304,8 +302,8 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<long>("Phone")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("ProfilePicture")
                         .HasColumnType("longtext");
@@ -1011,7 +1009,6 @@ namespace Incharge.Migrations
                     b.HasOne("Incharge.Models.Location", "Location")
                         .WithMany("Gymclasses")
                         .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("LocationId");
 
                     b.Navigation("Employee");

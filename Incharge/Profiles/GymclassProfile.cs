@@ -14,6 +14,7 @@ namespace Incharge.Profiles
                {
                    opts.AllowNull();
                    opts.Condition((src, dest, srcMember) => srcMember != null);
+
                }); //.ReverseMap() is availabe if two-way mapping is needed.
         }
     }

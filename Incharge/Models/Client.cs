@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Incharge.Models;
 
@@ -12,7 +13,7 @@ public partial class Client
     public string Uuid { get; set; } //show to the public through mapping
     public string FirstName { get; set; }  
     public string LastName { get; set; }  
-    public int Phone { get; set; }
+    public long Phone { get; set; }
     public string? ProfilePicture { get; set; }
     [DataType(DataType.EmailAddress)]
     public string Email { get; set; }

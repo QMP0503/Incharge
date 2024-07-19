@@ -74,11 +74,11 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.HasIndex(e => e.Email, "Email_UNIQUE").IsUnique();
 
-            entity.HasIndex(e => e.FirstName, "FirstName_UNIQUE").IsUnique();
+            entity.HasIndex(e => e.FirstName, "Client_FirstName");
 
             entity.HasIndex(e => e.Id, "Client_Id_UNIQUE").IsUnique();
 
-            entity.HasIndex(e => e.LastName, "LastName_UNIQUE").IsUnique();
+            entity.HasIndex(e => e.LastName, "Client_LastName");
 
             entity.HasIndex(e => e.PaymentRecordId, "PaymentRecordId_idx");
 
@@ -253,12 +253,10 @@ public partial class InchargeContext : IdentityDbContext<User>
 
             entity.HasOne(d => d.Employee).WithMany(p => p.Gymclasses)
                 .HasForeignKey(d => d.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("EmployeeId");
 
             entity.HasOne(d => d.Location).WithMany(p => p.Gymclasses)
                 .HasForeignKey(d => d.LocationId)
-                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("LocationId");
         });
 

@@ -5,6 +5,7 @@ using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
 using Incharge.ViewModels.Calendar;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.WebSockets;
 
 namespace Incharge.Service
 {
@@ -38,7 +39,8 @@ namespace Incharge.Service
             switch (type.ToLower())
             {
                 case "trainer":
-                    var trainer = _FindEmployeeRepository.QueryBy(x => x.Role.Type == "Trainer");
+                    var trainer = _FindEmployeeRepository.QueryBy(x => x.Role.Type == "Trainer" && x.Gymclasses.Any());
+                    if(trainer.Count() == 0) throw new Exception("No Trainer have classes in the week");
                     if (filter == null)
                     {
                         filter = $"{trainer.First().FirstName} {trainer.First().LastName}";
@@ -54,7 +56,8 @@ namespace Incharge.Service
                     }
                     break;
                 case "location":
-                    var location = _FindLocationRepository.QueryBy(x => x.Gymclasses.Count > 0);
+                    var location = _FindLocationRepository.QueryBy(x => x.Gymclasses.Count() > 0);
+                    if(location.Count() == 0) throw new Exception("No Gymclass in any location");
                     if (filter == null)
                     {
                         filter = $"{location.First().Name}";
@@ -90,7 +93,7 @@ namespace Incharge.Service
                 });
             }
             //Last item in List will be dropdown option item
-            weekayItemList.Add(DropDownOptions());
+            weekayItemList.Add(DropDownOptions(filter, type, selectedDate));
 
             return weekayItemList;
         }
@@ -116,22 +119,51 @@ namespace Incharge.Service
             }
             return timeSlots;
         }
-        public WeekdayItem DropDownOptions()
+        public WeekdayItem DropDownOptions(string filter, string type, DateTime selectedDate)
         {
-            var trainer = _FindEmployeeRepository.QueryBy(x => x.Role.Type == "Trainer");
-            var location = _FindLocationRepository.QueryBy(x => x.Gymclasses.Count > 0);
             var entity = new WeekdayItem()
             {
                 Weekday = "DropDown"
             };
-            foreach (var item in trainer)
+
+            switch (type.ToLower())
             {
-                entity.TrainerName.Add($"{item.FirstName} {item.LastName}");
+                case "trainer":
+                    var trainer = _FindEmployeeRepository.QueryBy(x => x.Role.Type == "Trainer");
+                    foreach (var item in trainer)
+                    {
+                        entity.DropdownOption.Add($"{item.FirstName} {item.LastName}");
+                    }
+                    break;
+                case "location":
+                    var location = _FindLocationRepository.QueryBy(x => x.Gymclasses.Count > 0);
+                    foreach (var item in location)
+                    {
+                        entity.DropdownOption.Add($"{item.Name}");
+                    }
+                    break;
+                default:
+                    throw new Exception("Invalid type");
             }
-            foreach(var item in location)
+
+            if(filter != null)
             {
-                entity.LocationName.Add($"{item.Name}");
+                var itemFilter = entity.DropdownOption.Find(x => x == filter);
+                entity.DropdownOption.Remove(filter);
+                entity.DropdownOption.Insert(0, itemFilter);
             }
+
+            if(selectedDate != default(DateTime))
+            {
+                entity.DateFilter = selectedDate;
+            }
+            else
+            {
+                entity.DateFilter = DateTime.Now.Date;
+            }
+            entity.MondayOfFilter = GetMonday(entity.DateFilter);
+            entity.SundayOfFilter = GetSunday(entity.DateFilter);
+             
             return entity;
         }
         public DateTime RoundTime(DateTime time)

@@ -18,9 +18,8 @@ namespace Incharge.ViewModels
         public List<string> ExpensesUuid { get; set; }
         public List<string> SalesUuid { get; set; }
         //View ONLY
-        public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
-
-        public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>();
+        public virtual ICollection<Expense>? Expenses { get; set; }
+        public virtual ICollection<Sale>? Sales { get; set; }
 
 
         //Financial data calculated when program boot, not stored
@@ -39,6 +38,9 @@ namespace Incharge.ViewModels
         public double Equipment { get; set; }
         public double Mantaince { get; set; }
         public double OtherExpenses { get; set; }
+
+        //Error Message
+        public string? Error { get; set; }
         
     }
 }

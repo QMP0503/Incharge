@@ -46,6 +46,7 @@ namespace Incharge.Service
             var result = _PhotoService.AddPhotoAsync(entity.PicutreInput).Result;
             entity.ProfilePicture = result.Url.ToString();
             var employee = _Mapper.Map<Employee>(entity); //maps the entity to employee
+            employee.TotalSalary = entity.TotalSalary ?? employeeType.Salary;
             _EmployeeRepository.Add(employee);
             _EmployeeRepository.Save();
         }
@@ -63,6 +64,8 @@ namespace Incharge.Service
             var phoneNum = employeeToUpdate.Phone;
             _Mapper.Map(entity, employeeToUpdate); //maps the entity to employee
             if(employeeToUpdate.Phone == 0) { employeeToUpdate.Phone = phoneNum; }
+            //incase mapper maps 0
+            employeeToUpdate.TotalSalary = entity.TotalSalary ?? employeeToUpdate.Role.Salary;
             _EmployeeRepository.Update(employeeToUpdate);
             _EmployeeRepository.Save();
         }

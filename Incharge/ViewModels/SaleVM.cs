@@ -58,5 +58,8 @@ namespace Incharge.ViewModels
 
         [DisplayName("Discount Options")]
         public List<Discount>? DiscountOptions { get; set; }
+
+        //Error Message
+        public string? Error { get; set; }
     }
 }

@@ -5,6 +5,8 @@ using Incharge.ViewModels;
 using AutoMapper;
 using System.Data;
 using Google.Protobuf.WellKnownTypes;
+using Incharge.Repository;
+using ZstdSharp.Unsafe;
 namespace Incharge.Service
 {
     public class SalesService:IService<SaleVM, Sale>, IDropDownOptions<SaleVM>
@@ -15,14 +17,14 @@ namespace Incharge.Service
         private readonly IRepository<Product> _productRepository;
         private readonly IRepository<Client> _clientRepository;
 
-
         private readonly IFindRepository<Sale> _findSaleRepository;
         private readonly IFindRepository<Client> _findClientRepository;
         private readonly IFindRepository<Product> _findProductRepository;
         private readonly IFindRepository<Employee> _findEmployeeRepository;
         private readonly IFindRepository<Discount> _findDiscountRepository;
+        private readonly IFindRepository<BusinessReport> _FindBusinessReportRepository;
 
-        public SalesService(IRepository<Client> clientRepository, IRepository<Employee> employeeRepository, IRepository<Product> productRepository, IMapper mapper, IRepository<Sale> saleRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Client> findClientRepository, IFindRepository<Product> findProductRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Discount> findDiscountRepository)
+        public SalesService(IFindRepository<BusinessReport> FindBusinessReportRepository, IRepository<Client> clientRepository, IRepository<Employee> employeeRepository, IRepository<Product> productRepository, IMapper mapper, IRepository<Sale> saleRepository, IFindRepository<Sale> findSaleRepository, IFindRepository<Client> findClientRepository, IFindRepository<Product> findProductRepository, IFindRepository<Employee> findEmployeeRepository, IFindRepository<Discount> findDiscountRepository)
         {
             _mapper = mapper;
             _saleRepository = saleRepository;
@@ -34,6 +36,7 @@ namespace Incharge.Service
             _productRepository = productRepository;
             _findDiscountRepository = findDiscountRepository;
 			_clientRepository = clientRepository;
+			_FindBusinessReportRepository = FindBusinessReportRepository;
         }
 
         public List<SaleVM> ListItem(Func<Sale, bool> predicate)
@@ -50,6 +53,7 @@ namespace Incharge.Service
         }
         public void AddService(SaleVM entity) //NEED TO ADD DISCOUNTS
         { 
+            if(entity.Quantity == 0) { throw new ArgumentNullException("Quantity is 0"); }
             var sale = _mapper.Map<Sale>(entity);
             if(entity.ClientId == 0) { throw new ArgumentNullException("Client Empty.");}
             if(entity.ProductId == 0) { throw new ArgumentNullException("Product Empty."); }
@@ -71,7 +75,7 @@ namespace Incharge.Service
             sale.Date = DateTime.Now; //track sales date
 
             //CHECKING FOR DUPLICATE MEMBERSHIP
-            if(client.MembershipStatus == "Active" && client.MembershipName == product.Name)
+            if(client.MembershipStatus == "Active" && sale.Product.ProductType.Name.Contains("Membership"))
             {
                 throw new Exception("Client already have this product.");
             }
@@ -104,7 +108,12 @@ namespace Incharge.Service
 
 			product.Clients.Add(client);
 
-            _saleRepository.Add(sale);
+			//Add product to business report
+			var businessReport = _FindBusinessReportRepository.FindBy(x => x.Date.Month == sale.Date.Month && x.Date.Year == sale.Date.Year);
+			sale.BusinessReport = businessReport;
+            sale.BusinessReportId = businessReport.Id;
+
+			_saleRepository.Add(sale);
             _productRepository.Update(product);
             _saleRepository.Save();
             
@@ -123,9 +132,6 @@ namespace Incharge.Service
             
             var client = _findClientRepository.FindBy(x => x.Id == entity.ClientId);
             if (client == null) { throw new Exception("Client don't exist."); }
-
-
-         
 
 
             if (product.ProductType.Name.Contains("Training"))
@@ -182,7 +188,6 @@ namespace Incharge.Service
         }
         public void DeleteService(SaleVM entity)//ONLY USED IN THE EVENT OF HUGE ERROR.
         {
-             
             var saleToDelete = _findSaleRepository.FindBy(x => x.Uuid == entity.Uuid);
             if(saleToDelete == null) { throw new Exception("Sale don't exist."); }
             _saleRepository.Delete(saleToDelete);

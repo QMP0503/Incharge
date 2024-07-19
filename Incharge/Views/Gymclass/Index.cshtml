@@ -1,2 +1,102 @@
-﻿
-<h1>PAGE COMING SOON!!! GO BACK FOR NOW!</h1>
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Gymclass>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+
+@{
+    ViewData["Title"] = "Index";
+}
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Expenses</h1>
+    </div>
+    <div class="row align-content-center pt-3 pb-1">
+        <div class="col ms-3">
+            <partial name="_AddGymclassDropDown"/>
+        </div>
+
+        <form asp-action="Index" method="get" class="col-8">
+            <div class="d-flex gap-1 flex-row-reverse">
+                <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
+                <input class="form-control w-25" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            </div>
+        </form>
+
+        <div class="col-2 align-content-end">
+            <a asp-action="Index" class="btn btn-primary">Back to Full List</a>
+        </div>
+    </div>
+
+</nav>
+
+<div class="container">
+    <table class="table-responsive table-hover table">
+        <thead>
+            <tr>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a>
+                </th>
+                <th scope="col" class="col">
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["ClassDateSortParam"]" asp-route-currentFilter="@ViewData["ClassDateSortParam"]">Date</a>
+                </th>
+                <th scope="col" class="col">Time</th>
+                <th scope="col" class="col-1">Type</th>
+                <th scope="col" class="col-1">Status</th>
+                <th scope="col" class="col-1"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Date.ToShortDateString()</td>
+                    <td>@item.Date.TimeOfDay.ToString(@"hh\:mm") - @item.EndTime.TimeOfDay.ToString(@"hh\:mm") </td>
+                    <td>@item.Type</td>
+                    <td>@item.Status</td>
+                    <td>
+                        <div class="dropdown">
+                            @if(item.Status == "Active")
+                            {
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Change Status
+                                </button>
+                            }
+                            @if(item.Status == "Cancelled")
+                            {
+                                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Change Status
+                                </button>
+                            }
+                            @if(item.Status == "Completed")
+                            {
+                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Change Status
+                                </button>
+                            }
+                            <ul class="dropdown-menu">
+                                <form asp-action="UpdateStatus" asp-route-Id="@item.Id" method="post">
+                                <li><input type="submit" id="GymClassVM.Status" name="Status" value="Active" class="dropdown-item" /></li>
+                                <li><input type="submit" id="GymClassVM.Status" name="Status" value="Cancelled" class="dropdown-item" /></li>
+                                <li><input type="submit" id="GymClassVM.Status" name="Status" value="Completed" class="dropdown-item" /></li>
+
+                                <!--Hidden input for database-->
+                                <input type="hidden" id="GymClassVM.EmployeeId" name="EmployeeId" value="@item.EmployeeId" />
+                                <input type="hidden" id="GymClassVM.LocationId" name="LocationId" value="@item.LocationId" />
+                                <input type="hidden" id="GymClassVM.Date" name="Date" value="@item.Date" />
+                                <input type="hidden" id="GymClassVM.EndTime" name="EndTime" value="@item.EndTime" />
+                                <input type="hidden" id="GymClassVM.EndTime" name="EndTime" value="@item.EndTime" />
+                                </form>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />
+</div>

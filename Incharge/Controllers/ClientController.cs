@@ -71,11 +71,7 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddClient(ClientVM clientVM)
         {
-            if (!ModelState.IsValid)
-            {
-                clientVM.Error = "Invalid inputs";
-                return View(clientVM);
-            }
+
             try
             {
                 clientVM.Status = "Signed In";
@@ -95,11 +91,11 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditClient(ClientVM clientVM)
         {
-			if (!ModelState.IsValid)
-			{
-                clientVM.Error = "Invalid inputs";
-				return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error});
-			}
+			//if (!ModelState.IsValid)
+			//{
+   //             clientVM.Error = "Invalid inputs";
+			//	return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error});
+			//}
 			try
             {
                 _clientService.UpdateService(clientVM);
@@ -108,7 +104,8 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return NotFound();
+                clientVM.Error = ex.Message;
+                return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error });
             }
         }
 

@@ -1,0 +1,12 @@
+﻿@model Incharge.ViewModels.Calendar.WeekdayItem;
+
+<div class="d-flex gap-1 flex-row-reverse">
+    <input type="submit" value="Filter" class="btn btn-primary" />
+    <input type="text" placeholder="@Model.MondayOfFilter.ToShortDateString() - @Model.SundayOfFilter.ToShortDateString()" id="dateSelected" name="dateSelected" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" />
+    <select id="filter" name="filter" class="form-select">
+        @foreach (var item in Model.DropdownOption)
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+</div>

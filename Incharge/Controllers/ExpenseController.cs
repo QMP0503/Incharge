@@ -67,6 +67,7 @@ namespace Incharge.Controllers
         {
             if (!ModelState.IsValid)
             {
+                //Add method to see where the error is
                 expenseVM.Error = "Invalid inputs";
                 return View(expenseVM);
             }
@@ -79,7 +80,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _log.Error(ex);
-                return View();
+                expenseVM.Error = ex.Message;
+                return View(expenseVM);
             }
         }
 
@@ -92,7 +94,7 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _log.Error(ex);
-                return View();
+                return View(NotFound()); //very lazy but figure out later
             }
         }
 
@@ -114,7 +116,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _log.Error(ex);
-                return View();
+                expenseVM.Error = ex.Message;
+                return View(expenseVM);
             }
         }
 

@@ -11,7 +11,7 @@ namespace Incharge.ViewModels
         public string FirstName { get; set; } = null!;
         [DisplayName("Last Name")]
         public string LastName { get; set; } = null!;
-        public int Phone { get; set; }
+        public long Phone { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = null!;
         public string? Address { get; set; }

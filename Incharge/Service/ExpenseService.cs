@@ -12,13 +12,14 @@ namespace Incharge.Service
         private readonly IFindRepository<Expense> _FindExpenseRepository;
         private readonly IFindRepository<BusinessReport> _FindBusinessReportRepository;
         private readonly IMapper _mapper;
-
-        public ExpenseService(IFindRepository<Expense> FindExpenseRepository, IRepository<Expense> ExpenseRepository, IFindRepository<BusinessReport> FindBusinessReportRepository, IMapper mapper)
+        private readonly IBusinessReportService _BusinessReportService;
+        public ExpenseService(IBusinessReportService businessReportService, IFindRepository<Expense> FindExpenseRepository, IRepository<Expense> ExpenseRepository, IFindRepository<BusinessReport> FindBusinessReportRepository, IMapper mapper)
         {
             _ExpenseRepository = ExpenseRepository;
             _FindExpenseRepository = FindExpenseRepository;
             _FindBusinessReportRepository = FindBusinessReportRepository;
             _mapper = mapper;
+            _BusinessReportService = businessReportService;
         }
          
         public List<ExpenseVM> ListItem(Func<Expense, bool> predicate)
@@ -40,6 +41,7 @@ namespace Incharge.Service
             //Assigned to most recent business report (match expense date and year)
             var businessReport = _FindBusinessReportRepository.FindBy(x => x.Date.Month == entity.Date.Month && x.Date.Year == entity.Date.Year);
             expense.BusinessReport = businessReport;
+
             _ExpenseRepository.Add(expense);
             _ExpenseRepository.Save();
         }

@@ -122,18 +122,18 @@ namespace Incharge.Controllers
 
        
         //view page for delete employee
-        public IActionResult DeleteEmployee(EmployeeVM employeeVM)
-        {
-            try
-            {
-                return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
-            }
-            catch(Exception ex)
-            {
-                _logger.Error(ex);
-                return View();
-            }
-        }
+        //public IActionResult DeleteEmployee(EmployeeVM employeeVM)
+        //{
+        //    try
+        //    {
+        //        return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        _logger.Error(ex);
+        //        return View();
+        //    }
+        //}
 
         [HttpPost, ActionName("DeleteEmployee")]
         public IActionResult DeleteEmployeeConfirm(EmployeeVM employeeVM)

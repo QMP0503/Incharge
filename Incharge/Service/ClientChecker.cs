@@ -9,10 +9,12 @@ namespace Incharge.Service
     {
         private readonly IFindRepository<Client> _FindClientRepository;
         private readonly IRepository<Client> _ClientRepository;
+ 
         public ClientChecker(IFindRepository<Client> FindClientRepository, IRepository<Client> ClientRepository)
         {
             _FindClientRepository = FindClientRepository;
             _ClientRepository = ClientRepository;
+
         }
         //seriously need to maek async
         public void Check()
@@ -20,13 +22,16 @@ namespace Incharge.Service
             var ListAllClients = _FindClientRepository.ListBy(x => x.Id > 0);
             foreach (var client in ListAllClients)
             {
-                if (client.MembershipExpiryDate < DateTime.Now)
+                if(client.MembershipProductId != 0) //check if they even have a membership
                 {
-                    client.MembershipStatus = "Overdue";
-                    _ClientRepository.Update(client);
+                    if (client.MembershipExpiryDate < DateTime.Now)
+                    {
+                        client.MembershipStatus = "Overdue";
+                        _ClientRepository.Update(client);
+                    }
                 }
             }
-            _ClientRepository.Save();
+           
         }
     }
 }

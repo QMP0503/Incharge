@@ -1,4 +1,5 @@
 ﻿using Incharge.ViewModels;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Incharge.ViewModels.Calendar
 {
@@ -13,7 +14,13 @@ namespace Incharge.ViewModels.Calendar
         
 
         //DROP DOWN VIEW OPTION ONLY
-        public List<string> TrainerName { get; set; } = new List<string>();
-        public List<string> LocationName { get; set; } = new List<string>();
+        public List<string> DropdownOption { get; set; } = new List<string>();
+        public DateTime DateFilter { get; set; }
+        public DateTime MondayOfFilter { get; set; }
+        public DateTime SundayOfFilter { get; set; }
+
+        //Error message
+        [AllowNull]
+        public string Error { get; set; }
     }
 }

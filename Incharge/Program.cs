@@ -186,11 +186,11 @@ using (var scope = app.Services.CreateScope())
 }
 
 //for seeding intial data to program only
-//using (var scope = app.Services.CreateScope())
-//{
-//    var services = scope.ServiceProvider;
+using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
 
-//    SeedData.Initialize(services);
-//}
+        SeedData.Initialize(services);
+    }
 
 app.Run();

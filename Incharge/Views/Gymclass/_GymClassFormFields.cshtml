@@ -1,5 +1,8 @@
 ﻿@model Incharge.ViewModels.GymClassVM;
 
+
+
+
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 <partial name="_formErrorMessage" model="@Model" />
@@ -41,7 +44,7 @@
 
 <div class="mb-3">
     <label asp-for="EquipmentOptions" class="control-label"></label>
-    <select asp-for="EquipmentId" class="form-select">
+    <select asp-for="EquipmentId" class="form-select" multiple data-multi-select>
         @foreach (var type in Model.EquipmentOptions)
         {
             <option value="@type.Id">@type.Name</option>
@@ -53,8 +56,8 @@
 {
     <div class="mb-3">
         <label asp-for="ClientOptions" class="control-label"></label>
-        <select asp-for="ClientsId" class="form-select">
-            @foreach (var type in Model.ClientOptions)
+        <select asp-for="ClientsId" class="form-select" multiple data-multi-select>
+            @foreach (var type in Model.ClientOptions.Where(x => x.TotalTrainingSessions > 0))
             {
                 <option value="@type.Id">@type.FirstName @type.LastName</option>
             }
@@ -69,6 +72,7 @@
     <span asp-validation-for="Description" class="text-danger"></span>
 </div>
 
+<a asp-action="Index" class="btn btn-danger">Cancel</a>
+<input type="submit" value="Save" class="btn btn-primary"/>
 
-<button asp-action="Index" type="submit" class="btn btn-primary">Cancel</button>
-<input type="submit" value="Save" class="btn btn-primary"></input>
+
