@@ -1,6 +1,116 @@
-﻿
+﻿@model Incharge.ViewModels.HomeVM;
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@{
+    var active = Model.Clients.Where(x => x.MembershipStatus == "Active").Count();
+    var overdue = Model.Clients.Where(x => x.MembershipStatus == "Overdue").Count();
+    var NoMembership = Model.Clients.Where(x => x.MembershipStatus == "No Membership").Count();
+    var total = Model.Clients.Count();
+}
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" asp-append-version="true"></script>
+</head>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h1>Home Dashboard</h1>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Information card -->
+        <div class="col-6 mb-2 mt-1 p-1">
+            <h3>Payments This Month</h3>
+            <div class="card">
+                <canvas id="memberPie"></canvas>
+
+                <!--Pie Data-->
+                <input type="hidden" id="active" value="@Json.Serialize(active)"/>
+                <input type="hidden" id="overdue" value="@Json.Serialize(overdue)" />
+                <input type="hidden" id="noMembership" value="@Json.Serialize(NoMembership)"/>
+                <input type="hidden" id="total" value="@Json.Serialize(total)" />
+
+                <script>
+
+                    const ctx = document.getElementById('memberPie');
+
+                    const active = document.getElementById('active').value;
+                    const overdue = document.getElementById('overdue');
+                    const noMembership = document.getElementById('noMembership');
+
+                    const data = {
+                        labels: ['Active', 'Overdue', 'No Membership'],
+                        datasets: [
+                            {
+                                label: 'Membership data',
+                                data: [active.value, overdue.value, noMembership.value],
+                                backgroundColor: Object.values(Utils.CHART_COLORS),
+                            }
+                        ]
+                    };
+
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: data,
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Membership Status'
+                                }
+                            }
+                        },
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="col mb-2 mt-1">
+            <h3>     </h3>
+            <div class="card">
+                <h3 class="m-1">Upcoming Classes</h3>
+                <table class="table table-hover table-borderless">
+                    <thead>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.GymClasses)
+                        {
+                            <tr onclick="location.href='/GymClass/Details?Id=@item.Id'">
+                                <td>@item.Name</td>
+                                <td>@item.Date.TimeOfDay.ToString(@"hh\:mm") - @item.EndTime.TimeOfDay.ToString(@"hh\:mm")</td>
+                                @if (item.Status == "Cancelled")
+                                {
+                                    <td class="text-danger"><span class="badge bg-danger">@item.Status</span></td>
+                                }
+                                @if (item.Status == "Completed")
+                                {
+                                    <td class="text-success"><span class="badge bg-success">@item.Status</span></td>
+                                }
+                                @if (item.Status == "Active")
+                                {
+                                    <td class="text-primary"><span class="badge bg-primary">@item.Status</span></td>
+                                }
+                                <td>@item.Location</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

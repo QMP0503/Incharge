@@ -18,7 +18,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                EquipmentQuery = EquipmentQuery.Where(c => c.Name.Contains(searchString) || c.GymClass.Name.ToString().Contains(searchString) || c.Status.Contains(searchString));
+                searchString = searchString.ToLower();
+                EquipmentQuery = EquipmentQuery.Where(c => c.Name.ToLower().Contains(searchString) || c.GymClass.Name.ToString().ToLower().Contains(searchString) || c.Status.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)

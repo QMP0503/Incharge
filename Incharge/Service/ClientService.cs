@@ -62,6 +62,7 @@ namespace Incharge.Service
             {
                 client.ProfilePicture = "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721294595/default_z7dhuq.png";
             }
+            client.MembershipStatus = "No Membership";
             //some is null so check if this is true
             _ClientRepository.Add(client) ;
             _ClientRepository.Save();

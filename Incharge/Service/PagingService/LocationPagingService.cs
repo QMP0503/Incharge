@@ -18,7 +18,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                LocationQuery = LocationQuery.Where(l=> l.Name.Contains(searchString) || l.Status.Contains(searchString));
+                searchString = searchString.ToLower();
+                LocationQuery = LocationQuery.Where(l=> l.Name.ToLower().Contains(searchString) || l.Status.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)

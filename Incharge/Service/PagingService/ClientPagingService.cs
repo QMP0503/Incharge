@@ -20,7 +20,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                ClientQuery = ClientQuery.Where(c => c.FirstName.Contains(searchString) || c.LastName.Contains(searchString));
+                searchString = searchString.ToLower();
+                ClientQuery = ClientQuery.Where(c => c.FirstName.ToLower().Contains(searchString) || c.LastName.ToLower().Contains(searchString) || c.Status.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)

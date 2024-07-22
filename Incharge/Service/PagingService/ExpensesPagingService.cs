@@ -18,7 +18,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                ExpenseQuery = ExpenseQuery.Where(c => c.Name.Contains(searchString) || c.Type.Contains(searchString));           }
+                searchString = searchString.ToLower();
+                ExpenseQuery = ExpenseQuery.Where(c => c.Name.ToLower().Contains(searchString) || c.Type.ToLower().Contains(searchString));           }
 
             switch (sortOrder)
             {

@@ -19,7 +19,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                ProductQuery = ProductQuery.Where(c => c.Name.Contains(searchString) || c.ProductType.Name.Contains(searchString));
+                searchString = searchString.ToLower();
+                ProductQuery = ProductQuery.Where(c => c.Name.ToLower().Contains(searchString) || c.ProductType.Name.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)

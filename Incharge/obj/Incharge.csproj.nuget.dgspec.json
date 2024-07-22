@@ -111,10 +111,6 @@
             "log4net": {
               "target": "Package",
               "version": "[2.0.17, )"
-            },
-            "popper.js": {
-              "target": "Package",
-              "version": "[1.16.1, )"
             }
           },
           "imports": [

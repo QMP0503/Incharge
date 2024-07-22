@@ -27,13 +27,8 @@
             <a asp-action="AddProduct" class="btn btn-primary">Add Membership</a>
         </div>
         }
-        
-        <form asp-action="Index" method="get" class="col">
-            <div class="d-flex gap-1 flex-row-reverse">
-                <input class="btn btn-outline-primary" type="submit" value="Search" aria-label="search" />
-                <input class="form-control w-50" type="text" placeholder="Search" aria-label="Search" name="SearchString" value="@ViewData["CurrentFilter"]" />
-            </div>
-        </form>
+        <!--Search Bar and select page number-->
+        <partial name="_SearchAndPageSize" />
 
         <div class="col-2 align-content-end">
             <a asp-action="Index" class="btn btn-primary">Back to Full List</a>

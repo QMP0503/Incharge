@@ -197,6 +197,14 @@
       "PackagePath": "staticwebassets\\js\\MultiSelect.js"
     },
     {
+      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\PieChart.js",
+      "PackagePath": "staticwebassets\\js\\PieChart.js"
+    },
+    {
+      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\RevenueLineGraph.js",
+      "PackagePath": "staticwebassets\\js\\RevenueLineGraph.js"
+    },
+    {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

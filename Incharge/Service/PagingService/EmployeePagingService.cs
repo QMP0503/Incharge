@@ -18,7 +18,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                EmployeeQuery = EmployeeQuery.Where(c => c.FirstName.Contains(searchString) || c.LastName.Contains(searchString));
+                searchString = searchString.ToLower();
+                EmployeeQuery = EmployeeQuery.Where(c => c.FirstName.ToLower().Contains(searchString) || c.LastName.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)

@@ -29,7 +29,7 @@ namespace Incharge.Service
             var weekayItemList = new List<WeekdayItem>();
             if(selectedDate == default(DateTime))
             {
-                selectedDate = DateTime.Now.Date;
+                selectedDate = _FindGymclassRepository.QueryBy(x => x.Id > 0).OrderByDescending(x => x.Date).First().Date;
             }
             var monday = GetMonday(selectedDate);
             var sunday = GetSunday(selectedDate);
@@ -39,8 +39,8 @@ namespace Incharge.Service
             switch (type.ToLower())
             {
                 case "trainer":
-                    var trainer = _FindEmployeeRepository.QueryBy(x => x.Role.Type == "Trainer" && x.Gymclasses.Any());
-                    if(trainer.Count() == 0) throw new Exception("No Trainer have classes in the week");
+                    var trainer = _FindEmployeeRepository.QueryBy(x => x.Role.Type == "Trainer" && x.Gymclasses.Any(g => g.Date >= monday && g.Date <= sunday));
+                    if(trainer.Count() == 0) throw new Exception("No trainer with classes");
                     if (filter == null)
                     {
                         filter = $"{trainer.First().FirstName} {trainer.First().LastName}";
@@ -92,6 +92,9 @@ namespace Incharge.Service
                     TimeEnd = item.EndTime.TimeOfDay,
                 });
             }
+
+            if (weekayItemList.Count == 0) throw new Exception("No gymclasses found.");
+
             //Last item in List will be dropdown option item
             weekayItemList.Add(DropDownOptions(filter, type, selectedDate));
 
@@ -104,7 +107,7 @@ namespace Incharge.Service
         }
         public DateTime GetSunday(DateTime date)
         {
-            int difference = (7 + (date.DayOfWeek - DayOfWeek.Sunday)) % 7;
+            int difference = (7 + ((DayOfWeek.Sunday + 7) - date.DayOfWeek)) % 7; //Sunday is 0
             return date.AddDays(difference).Date;
         }
         public List<TimeSpan> AssignTimeSlots(DateTime start, DateTime end)
@@ -156,10 +159,6 @@ namespace Incharge.Service
             if(selectedDate != default(DateTime))
             {
                 entity.DateFilter = selectedDate;
-            }
-            else
-            {
-                entity.DateFilter = DateTime.Now.Date;
             }
             entity.MondayOfFilter = GetMonday(entity.DateFilter);
             entity.SundayOfFilter = GetSunday(entity.DateFilter);

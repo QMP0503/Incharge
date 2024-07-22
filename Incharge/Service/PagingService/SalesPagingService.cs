@@ -18,7 +18,8 @@ namespace Incharge.Service.PagingService
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                SaleQuery = SaleQuery.Where(c => c.PaymentType.Contains(searchString) || c.Client.FirstName.Contains(searchString) || c.Client.LastName.ToString().Contains(searchString) || c.Employee.FirstName.Contains(searchString) || c.Employee.LastName.Contains(searchString));
+                searchString = searchString.ToLower();
+                SaleQuery = SaleQuery.Where(c => c.PaymentType.ToLower().Contains(searchString) || c.Client.FirstName.ToLower().Contains(searchString) || c.Client.LastName.ToString().ToLower().Contains(searchString) || c.Employee.FirstName.ToLower().Contains(searchString) || c.Employee.LastName.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7A5nwo5lVDxAjE/IP66dj1tgHRAoVrGynNJ/JKoJfsHHrN5Ihu/iVmEr1D0mTm4Eu/DxHAwOXrQnUItIWS7Cjw==",
+  "dgSpecHash": "I6zkGQK8T2XMeR+hJ4WQ3YUJgMpjUmg5wwANIEIbMcsjfYAi7v8LOzrsEfro8mgAl3Jwx0btHbkVfBt6B/Fq1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.csproj",
   "expectedPackageFiles": [
@@ -151,7 +151,6 @@
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.2\\pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
-    "C:\\Users\\intern.pmquang1\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\intern.pmquang1\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

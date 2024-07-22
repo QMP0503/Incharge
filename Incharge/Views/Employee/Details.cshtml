@@ -15,7 +15,7 @@
 <div class="row m-4">
     <div class="col-2">
         <div class="mt-2 mx-1">
-            <img width="100" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary">
+            <img width="100" src=@Model.ProfilePicture alt="Admin" class="rounded-circle p-1 bg-primary">
         </div>
     </div>
     <div class="col">
@@ -27,7 +27,9 @@
             @if (User.IsInRole("Admin"))
             {
                 <a asp-action="UpdateEmloyee" asp-route-Uuid="@Model.Uuid" class="btn btn-primary w-25">Edit</a>
-                <a asp-action="DeleteEmployee" asp-route-Uuid="@Model.Uuid" class="btn btn-danger w-25">Delete</a>
+                <form asp-action="DeleteEmployee" asp-route-Uuid="@Model.Uuid" method="post" class="d-inline">
+                    <input type="submit" value="Delete" class="btn btn-danger w-25" />
+                </form>
             }
         </div>
     </div>
