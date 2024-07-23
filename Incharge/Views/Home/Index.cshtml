@@ -11,73 +11,37 @@
     var total = Model.Clients.Count();
 }
 
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" asp-append-version="true"></script>
-</head>
 
 <div class="container">
 
-    <div class="row">
+    <div class="row mb-2">
         <div class="col-12">
             <h1>Home Dashboard</h1>
         </div>
     </div>
     <div class="row">
         <!-- Information card -->
-        <div class="col-6 mb-2 mt-1 p-1">
-            <h3>Payments This Month</h3>
+        <div class="col-auto mb-2 mt-1 p-1">
+            <h3>Membership Status</h3>
             <div class="card">
-                <canvas id="memberPie"></canvas>
-
                 <!--Pie Data-->
-                <input type="hidden" id="active" value="@Json.Serialize(active)"/>
-                <input type="hidden" id="overdue" value="@Json.Serialize(overdue)" />
-                <input type="hidden" id="noMembership" value="@Json.Serialize(NoMembership)"/>
-                <input type="hidden" id="total" value="@Json.Serialize(total)" />
+                <input type="hidden" id="active" value="@active" />
+                <input type="hidden" id="overdue" value="@overdue" />
+                <input type="hidden" id="noMembership" value="@NoMembership" />
+                <input type="hidden" id="total" value="@total" />
 
-                <script>
+                <canvas id="myData" class=" m-2"></canvas>
 
-                    const ctx = document.getElementById('memberPie');
+                <script type="module" src="~/js/PieChart.js"></script>
+                  
 
-                    const active = document.getElementById('active').value;
-                    const overdue = document.getElementById('overdue');
-                    const noMembership = document.getElementById('noMembership');
-
-                    const data = {
-                        labels: ['Active', 'Overdue', 'No Membership'],
-                        datasets: [
-                            {
-                                label: 'Membership data',
-                                data: [active.value, overdue.value, noMembership.value],
-                                backgroundColor: Object.values(Utils.CHART_COLORS),
-                            }
-                        ]
-                    };
-
-                    new Chart(ctx, {
-                        type: 'pie',
-                        data: data,
-                        options: {
-                            responsive: true,
-                            plugins: {
-                                legend: {
-                                    position: 'top',
-                                },
-                                title: {
-                                    display: true,
-                                    text: 'Membership Status'
-                                }
-                            }
-                        },
-                    });
-                </script>
             </div>
         </div>
 
         <div class="col mb-2 mt-1">
-            <h3>     </h3>
+            <h3 class="m-1">Upcoming Classes</h3>
             <div class="card">
-                <h3 class="m-1">Upcoming Classes</h3>
+                
                 <table class="table table-hover table-borderless">
                     <thead>
                         <th>Name</th>
@@ -111,6 +75,61 @@
             </div>
         </div>
 
+    </div>
+    <div class="row">
+
+        <!-- Clients who have not paid -->
+        <div class="col mb-2 mt-1">
+            <h3 class="m-1">Clients List of shame</h3>
+            <div class="card p-2">
+                @if(Model.Clients.Where(x => x.MembershipStatus == "Overdue").Count() > 0)
+                {
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                        <th>Name</th>
+                        <th>Membership</th>
+                        <th>Status</th>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Clients.Where(x => x.MembershipStatus == "Overdue"))
+                            {
+                                <tr onclick="location.href='/Client/Details?Uuid=@item.Uuid'">
+                                    <td>@item.FirstName @item.LastName</td>
+                                    <td>@item.MembershipName</td>
+                                    <td>@item.MembershipStatus</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="m-2">No clients with overdue membership</p>
+                }
+            </div>
+
+        </div>
+
+        <div class="col mb-2 p-1">
+            <h3 class="m-1">Trainer Available</h3>
+                <div class="card p-2">
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                            <th>Name</th>
+                            <th>Phone</th>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Employees.Where(x=>x.Role.Type=="Trainer" && !x.Gymclasses.Any(g => g.Date <= DateTime.Now.Date && g.EndTime >= DateTime.Now.Date)))
+                            {
+                                <tr onclick="location.href='/Employee/Details?Uuid=@item.Uuid'">
+                                    <td>@item.FirstName @item.LastName</td>
+                                    <td>@item.Phone</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+        </div>
     </div>
 
 </div>

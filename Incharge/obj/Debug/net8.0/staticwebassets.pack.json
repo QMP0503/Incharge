@@ -193,6 +193,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\LineGraph.js",
+      "PackagePath": "staticwebassets\\js\\LineGraph.js"
+    },
+    {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\MultiSelect.js",
       "PackagePath": "staticwebassets\\js\\MultiSelect.js"
     },

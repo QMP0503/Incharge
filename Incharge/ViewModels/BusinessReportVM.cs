@@ -21,7 +21,6 @@ namespace Incharge.ViewModels
         public virtual ICollection<Expense>? Expenses { get; set; }
         public virtual ICollection<Sale>? Sales { get; set; }
 
-
         //Financial data calculated when program boot, not stored
         public double AccountsPayable {  get; set; }
         public double AccountsRecievable { get; set; }

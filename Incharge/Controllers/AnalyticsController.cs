@@ -23,18 +23,19 @@ namespace Incharge.Controllers
         {
             try
             {
-                var YearbusinessReportVM = _BusinessReportService.GetItem(x => x.Date.Year == DateTime.Now.Year);
+                var YearbusinessReportVM = _BusinessReportService.ListItem(x => x.Date.Year == DateTime.Now.Year);
                 return View(YearbusinessReportVM);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                var YearbusinessReportVM = _BusinessReportService.GetItem(x => x.Date.Year == DateTime.Now.Year);
-                YearbusinessReportVM.Error = ex.Message;
+                var YearbusinessReportVM = _BusinessReportService.ListItem(x => x.Date.Year == DateTime.Now.Year);
+                YearbusinessReportVM.First().Error = ex.Message;
                 return View(YearbusinessReportVM);
             }
 
         }
+
 
         [HttpGet] //display summarized information for the month report
         public IActionResult Detail(BusinessReportVM businessReportVM)

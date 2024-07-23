@@ -88,15 +88,17 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Time</th>
                     <th scope="col">Location</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in GymClassList)
                 {
-                    <tr>
+                    <tr onclick="location.href='/GymClass/Details/@item.Id'">
                         <td href="/GymClass/Details/@item.Id">@item.Name</td>
-                        <td>@item.Date</td>
+                        <td>@item.Date.ToShortDateString()</td>
+                        <td>@item.Date.TimeOfDay.ToString(@"hh\:mm") - @item.EndTime.TimeOfDay.ToString(@"hh\:mm")</td>
                         <td>@item.Location.Name</td>
                     </tr>
                 }

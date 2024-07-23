@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9TqJFVBhk4D/Vu+VzYrYwm8ZXSurM7Hiizh0L/oVYKs=",
+  "Hash": "+pRjrFIp1/oAsQ4nqlL2oaKNeT5PKQSR3/SbwLbjtYQ=",
   "Source": "Incharge",
   "BasePath": "_content/Incharge",
   "Mode": "Default",
@@ -2675,6 +2675,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\LineGraph.js",
+      "SourceId": "Incharge",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\",
+      "BasePath": "_content/Incharge",
+      "RelativePath": "js/LineGraph.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\LineGraph.js"
     },
     {
       "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\MultiSelect.js",

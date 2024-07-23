@@ -3,10 +3,7 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
-    "gulp": "4.0.2",
-    "@types/jquery": "3.5.29"
-  },
-  "dependencies": {
-    "chart.js": "^4.4.3"
+    "@types/jquery": "3.5.29",
+    "gulp": "4.0.2"
   }
 }

@@ -1,5 +1,4 @@
-﻿@model Incharge.ViewModels.BusinessReportVM;
-
+﻿@model List<Incharge.ViewModels.BusinessReportVM>;
 @using Microsoft.AspNetCore.Mvc.RazorPages;
 
 @{
@@ -16,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
 </head>
+
+<partial name="_formErrorMessage" model="@Model.First()" />
 
 <body id="page-top">
 
@@ -49,9 +50,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)
+                                                Revenue (@DateTime.Now.Month)
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.FirstOrDefault(x=>x.Date.Month == DateTime.Now.Month).Revenue</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -68,9 +69,9 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)
+                                                Cost (@DateTime.Now.Month)
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.FirstOrDefault(x=>x.Date.Month == DateTime.Now.Month).Cost</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -159,6 +160,8 @@
                                 <div class="card-body">
                                     <div class="chart-area">
                                         <canvas id="LineGraph"></canvas>
+
+                                        <script type="module" src="~/js/LineGraph.js"></script>
                                     </div>
                                 </div>
                             </div>
@@ -392,156 +395,8 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    <!--Graph scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" asp-append-version="true"></script>
 
-    <script>
 
-        const ctx = document.getElementById('LineGraph');
-
-        const actions = [
-            {
-                name: 'pointStyle: circle (default)',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'circle';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: cross',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'cross';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: crossRot',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'crossRot';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: dash',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'dash';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: line',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'line';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: rect',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'rect';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: rectRounded',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'rectRounded';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: rectRot',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'rectRot';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: star',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'star';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: triangle',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = 'triangle';
-                    });
-                    chart.update();
-                }
-            },
-            {
-                name: 'pointStyle: false',
-                handler: (chart) => {
-                    chart.data.datasets.forEach(dataset => {
-                        dataset.pointStyle = false;
-                    });
-                    chart.update();
-                }
-            }
-        ];
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'Revenue',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    fill: false,
-                    borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: (ctx) => 'Point Style: ' + ctx.chart.data.datasets[0].pointStyle,
-                    }
-                }
-            }
-        });
-
-    </script>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

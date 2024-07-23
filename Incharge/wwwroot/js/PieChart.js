@@ -1,25 +1,26 @@
-﻿import Chart from 'chart.js/auto'
+﻿
 
-const ctx = document.getElementById('memberPie');
+const active = document.getElementById('active').value;
+const overdue = document.getElementById('overdue').value;
+const noMembership = document.getElementById('noMembership').value;
 
-const active = document.getElementById('active');
-const overdue = document.getElementById('overdue');
-const noMembership = document.getElementById('noMembership');
-
-const data = {
-    labels: ['Active', 'Overdue', 'No Membership'],
-    datasets: [
-        {
-            label: 'Membership data',
-            data: [active.value, overdue.value, noMembership.value],
-            backgroundColor: Object.values(Utils.CHART_COLORS),
-        }
-    ]
+var pieData = {
+    labels: ["Active", "Overdue", "No Membership"],
+    datasets: [{
+        data: [active, overdue, noMembership],
+        backgroundColor: [
+            "#878BB6",
+            "#4ACAB4",
+            "#FF8153"
+        ]
+    }]
 };
+
+var ctx = document.getElementById("myData").getContext("2d");
 
 new Chart(ctx, {
     type: 'pie',
-    data: data,
+    data: pieData,
     options: {
         responsive: true,
         plugins: {
@@ -28,7 +29,7 @@ new Chart(ctx, {
             },
             title: {
                 display: true,
-                text: 'Membership Status'
+                text: 'Memebership Distribution'
             }
         }
     },

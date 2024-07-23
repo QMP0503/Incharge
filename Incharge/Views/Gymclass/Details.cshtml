@@ -5,7 +5,7 @@
 }
 
 
-<div class="container">
+<div class="container mt-2">
     <div class="row">
         <div class="col-md-5">
             <div class="card">
@@ -13,17 +13,18 @@
                     <h3 class="mb-3">@Model.Name.ToUpper() DETAILS</h3>
                     <!--Description-->
                     <p class="mb-2 mt-2">@Model.Description</p>
-                    <div class="row align-content-center">
+
+                    <div class="row p-2">
                         <div class="col-2">
                             <a asp-action="EditGymclass" asp-route-id="@Model.Id" class="btn btn-primary"> Edit </a>
                         </div>
-                        <div class="col-2"> 
+                        <div class="col"> 
                             <!--make sure that it opens a modal to confirm delete-->
                             <form asp-action="DeleteGymClass" asp-route-id="@Model.Id" method="post">
                                 <input type="submit" value="Delete" class="btn btn-danger" />
                             </form>
                         </div>
-                        <div class="col-2">
+                        <div class="col">
                             <!--Have modal dropdown to change status-->
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,27 +66,30 @@
 
         </div>
 
-        <div class="col-md-7">
-            <!--Client List Table-->
-            <h5 class="fw-bold align-content-center ms-2">Client List</h5>
-            <table class="table-striped table">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Clients)
-                    {
+        @if(Model.Type == "Private")
+        {
+            <div class="col-md-7">
+                <!--Client List Table-->
+                <h5 class="fw-bold align-content-center ms-2">Client List</h5>
+                <table class="table-striped table">
+                    <thead>
                         <tr>
-                            <td><a asp-controller="Client" asp-action="Details" asp-route-Uuid="@item.Uuid">@item.FirstName @item.LastName</a></td>
-                            <td>@item.Status</td>
+                            <th scope="col">Name</th>
+                            <th scope="col">Status</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Clients)
+                        {
+                            <tr>
+                                <td><a asp-controller="Client" asp-action="Details" asp-route-Uuid="@item.Uuid">@item.FirstName @item.LastName</a></td>
+                                <td>@item.Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
     </div>
 
 </div>
