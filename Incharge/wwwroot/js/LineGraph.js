@@ -103,18 +103,42 @@ const actions = [
     }
 ];
 
+let revenueString = document.getElementById("RevenueGraph").value;
+let revenuelist = JSON.parse(revenueString);
+let months = revenuelist.map(x => x.Month);
+let revenue = revenuelist.map(x => x.Revenue);
+
+let costString = document.getElementById("CostGraph").value;
+let costList = JSON.parse(costString);
+let cost = costList.map(x => x.Cost);
+//let months = [];
+//let revenue = [];
+//business.forEach(element => {
+//    months.push(element.Month);
+//    revenue.push(element.Revenue);
+//});
+
+const data = {
+    labels: months,
+    datasets: [{
+        label: 'Revenue',
+        data: revenue,
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1
+    },
+    {
+        label: 'Cost',
+        data: cost,
+        fill: false,
+        borderColor: 'rgb(255, 99, 132)',
+        tension: 0.1
+    }]
+};
+
 new Chart(ctx, {
     type: 'line',
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'Revenue',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.1
-        }]
-    },
+    data: data,
     options: {
         responsive: true,
         plugins: {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+pRjrFIp1/oAsQ4nqlL2oaKNeT5PKQSR3/SbwLbjtYQ=",
+  "Hash": "yOtdHo/uLe08RHaFPt7iy0v5l0KwARDiUAotFRSiGoE=",
   "Source": "Incharge",
   "BasePath": "_content/Incharge",
   "Mode": "Default",
@@ -2677,6 +2677,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\CostPieChart.js",
+      "SourceId": "Incharge",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\",
+      "BasePath": "_content/Incharge",
+      "RelativePath": "js/CostPieChart.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\CostPieChart.js"
+    },
+    {
       "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\LineGraph.js",
       "SourceId": "Incharge",
       "SourceType": "Discovered",
@@ -2732,25 +2751,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\PieChart.js"
-    },
-    {
-      "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\RevenueLineGraph.js",
-      "SourceId": "Incharge",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\",
-      "BasePath": "_content/Incharge",
-      "RelativePath": "js/RevenueLineGraph.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\RevenueLineGraph.js"
     },
     {
       "Identity": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\site.js",

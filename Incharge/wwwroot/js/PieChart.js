@@ -26,10 +26,6 @@ new Chart(ctx, {
         plugins: {
             legend: {
                 position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Memebership Distribution'
             }
         }
     },

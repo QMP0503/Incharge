@@ -1,10 +1,46 @@
 ﻿@model List<Incharge.ViewModels.BusinessReportVM>;
 @using Microsoft.AspNetCore.Mvc.RazorPages;
+@using Incharge.ViewModels;
+@using System.Text.Json;
 
 @{
     ViewData["Title"] = "Index";
 }
+@{
 
+    var revenueData = new List<RevenueVM>();
+    // foreach(var item in Model.Where(x=>x.Date.Year == DateTime.Now.Year))
+    // {
+    //     revenueData.Add(new RevenueVM
+    //     {
+    //         Month = item.Date.Month.ToString("MMMM"),
+    //         Revenue = item.Revenue
+    //     });
+    // }
+
+    var costData = new List<CostVM>();
+    for(int i = 0; i<12; i++)
+    {
+        costData.Add(new CostVM
+        {
+            Month = DateTime.Now.AddMonths(i).ToString("MMMM"),
+            Cost = new Random().Next(1000,5001)
+        });
+    }
+    var costDataString = JsonSerializer.Serialize(costData);
+
+    for(int i = 0; i<12; i++)
+    {
+        revenueData.Add(new RevenueVM
+        {
+            Month = DateTime.Now.AddMonths(i).ToString("MMMM"),
+            Revenue = new Random().Next(1000,5001)
+        });
+    }
+
+    var revenueDataString = JsonSerializer.Serialize(revenueData);
+}
+}
 
 
 <!DOCTYPE html>
@@ -43,73 +79,63 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Revenue (Monthly) Card -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Revenue (@DateTime.Now.Month)
+                                                Revenue (@DateTime.Now.ToString("MMMM"))
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.FirstOrDefault(x=>x.Date.Month == DateTime.Now.Month).Revenue</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-money-bill-wave fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Cost (Monthly) Card -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Cost (@DateTime.Now.Month)
+                                                Cost (@DateTime.Now.ToString("MMMM"))
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.FirstOrDefault(x=>x.Date.Month == DateTime.Now.Month).Cost</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-receipt fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Total Monthly Members Card -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Tasks
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Active Members
                                             </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                             style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).MonthlyMembers</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -159,6 +185,9 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
+                                        <input type="hidden" id="RevenueGraph" value="@revenueDataString" />
+                                        <input type="hidden" id="CostGraph" value="@costDataString" />
+
                                         <canvas id="LineGraph"></canvas>
 
                                         <script type="module" src="~/js/LineGraph.js"></script>
@@ -191,19 +220,13 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
+                                        
+                                        <!--Have input for pie chart data-->
                                         <canvas id="myPieChart"></canvas>
+
+                                        <script type="module" src="~/js/CostPieChart.js"></script>
                                     </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

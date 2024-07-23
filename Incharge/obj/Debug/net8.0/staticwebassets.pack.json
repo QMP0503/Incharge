@@ -193,6 +193,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\CostPieChart.js",
+      "PackagePath": "staticwebassets\\js\\CostPieChart.js"
+    },
+    {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\LineGraph.js",
       "PackagePath": "staticwebassets\\js\\LineGraph.js"
     },
@@ -203,10 +207,6 @@
     {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\PieChart.js",
       "PackagePath": "staticwebassets\\js\\PieChart.js"
-    },
-    {
-      "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\RevenueLineGraph.js",
-      "PackagePath": "staticwebassets\\js\\RevenueLineGraph.js"
     },
     {
       "Id": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\site.js",
