@@ -41,12 +41,29 @@ namespace Incharge.Service
         public void AddService(EmployeeVM entity)//employee type
         {
             if (entity == null) { throw new ArgumentNullException("employee empty"); }
+
+            //email and phone checker
+            PhoneChecker(entity);
+            EmailChecker(entity);
+
             var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == entity.RoleId);
             if (employeeType == null) { throw new ArgumentNullException("employee type don't exist"); }
-            var result = _PhotoService.AddPhotoAsync(entity.PicutreInput).Result;
-            entity.ProfilePicture = result.Url.ToString();
-            var employee = _Mapper.Map<Employee>(entity); //maps the entity to employee
+
+            var employee = _Mapper.Map<Employee>(entity);
+
+            if (entity.PicutreInput != null)
+            {
+                var result = _PhotoService.AddPhotoAsync(entity.PicutreInput).Result;
+                employee.ProfilePicture = result.Url.ToString();
+
+            }
+            else
+            {
+                employee.ProfilePicture = "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721294595/default_z7dhuq.png";
+            }
+            ; //maps the entity to employee
             employee.TotalSalary = entity.TotalSalary ?? employeeType.Salary;
+            employee.Role = employeeType;
             _EmployeeRepository.Add(employee);
             _EmployeeRepository.Save();
         }
@@ -55,14 +72,34 @@ namespace Incharge.Service
             if (entity == null) { throw new ArgumentNullException("employee empty"); }
             var employeeToUpdate = _FindEmployeeRepository.FindBy(e => e.Uuid == entity.Uuid);
             if (employeeToUpdate == null) { throw new ArgumentNullException("Employee don't exist"); }
+
+            //email and phone checker
+            if(entity.Phone != employeeToUpdate.Phone)
+            {
+                PhoneChecker(entity);
+            }
+            if(entity.Email != employeeToUpdate.Email)
+            {
+                EmailChecker(entity);
+            }
+
+
             var employeeType = _FindEmployeeTypeRepository.FindBy(e => e.Id == entity.RoleId);
             if (employeeType == null) { throw new ArgumentNullException("employee type don't exist"); }
             entity.Role = employeeType;
             var result = entity.PicutreInput != null ? _PhotoService.AddPhotoAsync(entity.PicutreInput).Result : null;
-            if (result != null) { entity.ProfilePicture = result.Url.ToString(); }
-            var delete = _PhotoService.DeletePhotoAsync(employeeToUpdate.ProfilePicture).Result;
+            if (result != null) 
+            {
+                entity.ProfilePicture = result.Url.ToString();
+                if(employeeToUpdate.ProfilePicture != null && employeeToUpdate.ProfilePicture!= "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721294595/default_z7dhuq.png")
+                {
+                    var delete = _PhotoService.DeletePhotoAsync(employeeToUpdate.ProfilePicture).Result;
+                }
+            }
             var phoneNum = employeeToUpdate.Phone;
+
             _Mapper.Map(entity, employeeToUpdate); //maps the entity to employee
+
             if(employeeToUpdate.Phone == 0) { employeeToUpdate.Phone = phoneNum; }
             //incase mapper maps 0
             employeeToUpdate.TotalSalary = entity.TotalSalary ?? employeeToUpdate.Role.Salary;
@@ -85,6 +122,21 @@ namespace Incharge.Service
                 EmployeeTypeOptions = _FindEmployeeTypeRepository.ListBy(x => true)
             };
             return entity;
+        }
+        public void PhoneChecker(EmployeeVM entity)
+        {
+            //phone checker
+            var clientPhoneCheck = _FindClientRepository.FindBy(x => x.Phone == entity.Phone);
+            var employeePhoneCheck = _FindEmployeeRepository.FindBy(x => x.Phone == entity.Phone);
+            if (clientPhoneCheck != null || employeePhoneCheck != null) { throw new Exception("Phone number already exist."); }
+            
+        }
+        public void EmailChecker(EmployeeVM entity)
+        {
+            //email checker
+            var clientEmailCheck = _FindClientRepository.FindBy(x => x.Email == entity.Email);
+            var employeeEmailCheck = _FindEmployeeRepository.FindBy(x => x.Email == entity.Email);
+            if (clientEmailCheck != null || employeeEmailCheck != null) { throw new Exception("Email already exist."); }
         }
 
 

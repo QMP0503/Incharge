@@ -667,3 +667,7 @@ Name
    at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
    at Incharge.Service.ClientService.UpdateService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 127
    at Incharge.Controllers.ClientController.EditClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 101
+2024-07-24 17:11:09,201 [9] ERROR Program - System.Exception: Phone number already exist.
+   at Incharge.Service.ClientService.InfoChecker(ClientVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 152
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 53
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 78

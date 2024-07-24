@@ -1,12 +1,10 @@
 ﻿using Incharge.Service.IService;
 using Incharge.Models;
 using Incharge.Repository.IRepository;
-using K4os.Compression.LZ4;
 using Incharge.ViewModels;
-using ZstdSharp.Unsafe; 
 using AutoMapper;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using static System.Net.WebRequestMethods;
+using static Dapper.SqlMapper;
+
 
 namespace Incharge.Service
 {
@@ -51,6 +49,11 @@ namespace Incharge.Service
         public void AddService(ClientVM clientVM) //cosider if there is a desire to add membership as soon as client profile is made..
         {
             if(clientVM == null || clientVM.FirstName == null || clientVM.LastName == null) { throw new NullReferenceException("Input Empty."); }
+
+            //checking phone and email
+            PhoneChecker(clientVM);
+            EmailChecker(clientVM);
+
             var client = _mapper.Map<Client>(clientVM);
             if (clientVM.PicutreInput != null)
             {
@@ -70,12 +73,25 @@ namespace Incharge.Service
         public void UpdateService(ClientVM clientVM) //email, phone, firstname and lastname are required
         {
             var clientToUpdate = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
+            if (clientToUpdate == null) { throw new NullReferenceException("Client Empty."); }
+
+            //checking phone and email
+
+            if (clientVM.Phone != clientToUpdate.Phone)
+            {
+                PhoneChecker(clientVM);
+            }
+            if (clientVM.Email != clientToUpdate.Email)
+            {
+                EmailChecker(clientVM);
+            }
+
+
             if (clientVM.PicutreInput != null)
             {
-                if (clientToUpdate.ProfilePicture != null && clientVM.PicutreInput != null)
+                if (clientToUpdate.ProfilePicture != null && clientVM.PicutreInput != null && clientToUpdate.ProfilePicture != "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721294595/default_z7dhuq.png")
                 {
                     var delete = _photoService.DeletePhotoAsync(clientToUpdate.ProfilePicture).Result;
-                    if (clientToUpdate == null) { throw new NullReferenceException("Client Empty."); }
                     Console.WriteLine(delete.ToString());
                 }
 
@@ -131,34 +147,31 @@ namespace Incharge.Service
             if(clientVM == null) { throw new NullReferenceException("Input Empty."); }
             var clientToDelete = _FindClientRepository.FindBy(x => x.Uuid == clientVM.Uuid);
             if(clientToDelete == null) { throw new NullReferenceException("Client Empty."); }
-			var delete = _photoService.DeletePhotoAsync(clientToDelete.ProfilePicture).Result;
-			_ClientRepository.Delete(clientToDelete);
+            if(clientToDelete.ProfilePicture != null && clientToDelete.ProfilePicture != "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721294595/default_z7dhuq.png")
+            {
+                var delete = _photoService.DeletePhotoAsync(clientToDelete.ProfilePicture).Result;
+            }
+            _ClientRepository.Delete(clientToDelete);
             _ClientRepository.Save();
         }
 
-        //public DateTime GetEndDate(ClientVM entity)
-        //{
-        //    var product = _FindProductRepository.FindBy(x => x.ProductType.Id == entity.GymMembership.ProductTypeId);
-        //    if (product == null) { throw new NullReferenceException("ProductType cannot be found."); }
-        //    TimeSpan duration = TimeSpan.FromDays(1); //for trial membership
+        //Make generic method tmr 
+        public void PhoneChecker(ClientVM entity)
+        {
+            //phone checker
+            var clientPhoneCheck = _FindClientRepository.FindBy(x => x.Phone == entity.Phone);
+            var employeePhoneCheck = _FindEmployeeRepository.FindBy(x => x.Phone == entity.Phone);
+            if (clientPhoneCheck != null || employeePhoneCheck != null) { throw new Exception("Phone number already exist."); }
 
-        //    //could use switch case
-        //    if (product.ProductType.Recurance == "Weekly")
-        //    {
-        //        duration = TimeSpan.FromDays(7);
-        //    }
-        //    if (product.ProductType.Recurance == "Monthly")
-        //    {
-        //        duration = TimeSpan.FromDays(30); //assuming regular month
-        //    }
-        //    if (product.ProductType.Recurance == "Yearly")
-        //    {
-        //        duration = TimeSpan.FromDays(365); //assuming regular year
-        //    }
-        //    var EndDate = duration;
+        }
+        public void EmailChecker(ClientVM entity)
+        {
+            //email checker
+            var clientEmailCheck = _FindClientRepository.FindBy(x => x.Email == entity.Email);
+            var employeeEmailCheck = _FindEmployeeRepository.FindBy(x => x.Email == entity.Email);
+            if (clientEmailCheck != null || employeeEmailCheck != null) { throw new Exception("Email already exist."); }
+        }
 
-        //    return DateTime.Now.AddDays(EndDate.Days);
-        //}
 
 
     } //consider adding save after actiong is executed in controller.

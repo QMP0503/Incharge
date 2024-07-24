@@ -3,60 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\iservice\\ichecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\iservice\\ichecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\addclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\addclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\deleteclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\deleteclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\sale\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\sale\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\expense\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\expense\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\expense\\editexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\expense\\editexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\viewmodels\\businessreportvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\viewmodels\\businessreportvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\wwwroot\\js\\linegraph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\wwwroot\\js\\linegraph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\editequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\editequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\viewmodels\\expensesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\viewmodels\\expensesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\wwwroot\\js\\costpiechart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\wwwroot\\js\\costpiechart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\viewmodels\\employeevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\viewmodels\\employeevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,124 +82,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 982,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Analytics\\Detail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T04:28:08.567Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T04:40:56.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Details.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\Details.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T04:40:51.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddClient.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\AddClient.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\AddClient.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T04:40:49.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DeleteClient.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T04:40:48.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Details.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Location\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T04:32:55.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AnalyticsController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\AnalyticsController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\AnalyticsController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDYAAAApAAAA",
+              "Title": "IChecker.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\IService\\IChecker.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\IService\\IChecker.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\IService\\IChecker.cs",
+              "RelativeToolTip": "Incharge\\Service\\IService\\IChecker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T04:27:09.087Z",
+              "WhenOpened": "2024-07-24T10:02:48.491Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T03:56:24.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BusinessReportVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\BusinessReportVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\BusinessReportVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\BusinessReportVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\BusinessReportVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T03:12:42.127Z"
             },
             {
               "$type": "Document",
@@ -193,58 +105,217 @@
               "RelativeDocumentMoniker": "Incharge\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T03:13:05.636Z",
+              "WhenOpened": "2024-07-24T09:54:56.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:51.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\Index.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:43.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ClientService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\ClientService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ClientService.cs",
+              "RelativeToolTip": "Incharge\\Service\\ClientService.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAowDYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T09:31:52.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\EmployeeService.cs",
+              "RelativeToolTip": "Incharge\\Service\\EmployeeService.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAmwEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T09:31:48.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Location\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:59.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:55:08.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Sale\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:55:16.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditExpense.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:41.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:35.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "LineGraph.js",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\LineGraph.js",
-              "RelativeDocumentMoniker": "Incharge\\wwwroot\\js\\LineGraph.js",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\LineGraph.js",
-              "RelativeToolTip": "Incharge\\wwwroot\\js\\LineGraph.js",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIcAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-24T02:36:09.952Z"
+              "Title": "EditEquipment.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:35.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ExpensesVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpensesVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\ExpensesVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpensesVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\ExpensesVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T02:28:31.997Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:54:28.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "CostPieChart.js",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\CostPieChart.js",
-              "RelativeDocumentMoniker": "Incharge\\wwwroot\\js\\CostPieChart.js",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\js\\CostPieChart.js",
-              "RelativeToolTip": "Incharge\\wwwroot\\js\\CostPieChart.js",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-24T02:28:19.472Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:53:47.802Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Index.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Analytics\\Index.cshtml",
-              "ViewState": "AQIAAMYAAAAAAAAAAAAAAOUAAAAiAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T02:27:59.551Z",
+              "WhenOpened": "2024-07-24T09:53:41.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmployeeVM.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\EmployeeVM.cs",
+              "RelativeDocumentMoniker": "Incharge\\ViewModels\\EmployeeVM.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\EmployeeVM.cs",
+              "RelativeToolTip": "Incharge\\ViewModels\\EmployeeVM.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAuwCkAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T09:47:09.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAlwE0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T09:31:39.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\ClientController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAA9wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T09:31:33.156Z",
               "EditorCaption": ""
             }
           ]

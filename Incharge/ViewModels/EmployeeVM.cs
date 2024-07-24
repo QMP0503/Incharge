@@ -1,6 +1,7 @@
 ﻿using Incharge.Models;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Incharge.ViewModels
 {
@@ -39,6 +40,7 @@ namespace Incharge.ViewModels
 
         [DisplayName("Add Profile Picture")]
 		[AllowedExtensions(new string[] { ".jpg", ".png", ".jpeg" })]
+        [AllowNull]
 		public IFormFile PicutreInput { get; set; }
 
 
