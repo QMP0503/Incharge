@@ -104,7 +104,7 @@ namespace Incharge.Migrations
                     b.Property<double>("Insurance")
                         .HasColumnType("double");
 
-                    b.Property<double>("Mantaince")
+                    b.Property<double>("Maintenance")
                         .HasColumnType("double");
 
                     b.Property<double>("MembershipFee")

@@ -30,7 +30,7 @@ public partial class BusinessReport
     public double Rent { get; set; }
     public double Utilities { get; set; } //might not even need
     public double Insurance { get; set; }
-    public double Mantaince { get; set; } //overall maintance cost
+    public double Maintenance { get; set; } //overall maintance cost
     public double Equipment { get; set; } //for purchase of new equipment
     public double OtherExpenses { get; set; }
 }

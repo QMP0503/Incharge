@@ -146,7 +146,7 @@ namespace Incharge.Service
             {
                 if(item.Type == "Maintenance")
                 {
-                    businessReportVM.Mantaince += item.Cost;
+                    businessReportVM.Maintenance += item.Cost;
                 }
                 if(item.Type == "Equipment")
                 {
@@ -173,7 +173,7 @@ namespace Incharge.Service
                     businessReportVM.Rent = item.Cost;
                 }
             }
-            entity.Mantaince = businessReportVM.Mantaince;
+            entity.Maintenance = businessReportVM.Maintenance;
             entity.Equipment = businessReportVM.Equipment;
             entity.Utilities = businessReportVM.Utilities;
             entity.Insurance = businessReportVM.Insurance;

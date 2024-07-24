@@ -21,11 +21,12 @@ namespace Incharge.ViewModels
         public virtual ICollection<Expense>? Expenses { get; set; }
         public virtual ICollection<Sale>? Sales { get; set; }
 
-        //Financial data calculated when program boot, not stored
         public double AccountsPayable {  get; set; }
         public double AccountsRecievable { get; set; }
+
         //income
         public double Profit { get; set; }
+
         public double MembershipFee { get; set; } //earnings from memberships
         public double NewMembershipSales { get; set; }
 
@@ -35,11 +36,12 @@ namespace Incharge.ViewModels
         public double Utilities { get; set; } //might not even need
         public double Insurance { get; set; }
         public double Equipment { get; set; }
-        public double Mantaince { get; set; }
+        public double Maintenance { get; set; }
         public double OtherExpenses { get; set; }
 
         //Error Message
         public string? Error { get; set; }
+
         
     }
 }

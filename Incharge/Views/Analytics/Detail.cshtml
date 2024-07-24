@@ -1,0 +1,80 @@
+﻿@model Incharge.ViewModels.BusinessReportVM;
+@using Microsoft.AspNetCore.Mvc.RazorPages;
+@using Incharge.ViewModels;
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@{
+    var expenseData = new ExpensesVM()
+            {
+                Wages = Model.Wages,
+                Rent = Model.Rent,
+                Utilities = Model.Utilities,
+                Insurance = Model.Insurance,
+                Equipment = Model.Equipment,
+                OtherExpenses = Model.OtherExpenses,
+                Maintenance = Model.Maintenance
+            };
+    var expenseDataString = JsonSerializer.Serialize(expenseData);
+
+}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+
+            <div class="card">
+                <div class="card-header mt-1">
+                    <h3 class="mb-3 mt-3">BUSINESS REPORT: @Model.Date.ToString("MMMM - yyyy") </h3>
+                </div>
+                <div class="card-body p-2 mb-1">
+                    <p class="m-2"><b>Revenue:</b> $@Model.Revenue</p>
+                    <p class="m-2"><b>Cost:</b> $@Model.Cost</p>
+                    <p class="m-2"><b>Profit:</b> $@Model.Profit</p>
+                    <p class="m-2"><b>Total Members:</b> @Model.MonthlyMembers</p>
+                    <p class="m-2"><b>New Memberships Sold:</b> @Model.NewMembershipSales</p>
+                    <p class="m-2"><b>Membership Sales:</b> $@Model.MembershipFee </p>
+
+                    <!--Delete Button-->
+                    <div class="mt-4 mb-3 ms-2">
+                        <form asp-action="DeleteReport" asp-route-Uuid="@Model.Uuid" method="post">
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-5">
+            <!--Expense Distribution Graph-->
+
+            <div class="card mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold">Expense Destribution</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+
+                        <input type="hidden" id="expenseString" value="@expenseDataString" />
+
+                        <!--Have input for pie chart data-->
+                        <canvas id="myPieChart"></canvas>
+
+                        <script type="module" src="~/js/CostPieChart.js"></script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
