@@ -110,6 +110,7 @@ builder.Services.AddScoped<IDropDownOptions<GymClassVM>, GymClassService>();
 
 //CHECKER INJECTION
 builder.Services.AddScoped<IChecker<Client>, ClientChecker>();
+builder.Services.AddScoped<IChecker<LocationVM>, LocationService>();
 
 //CALENDAR INJECTION
 builder.Services.AddScoped<IGymclassCalendarService, GymclassCalendarService>();
@@ -187,10 +188,10 @@ using (var scope = app.Services.CreateScope())
 
 //for seeding intial data to program only
 using (var scope = app.Services.CreateScope())
-    {
-        var services = scope.ServiceProvider;
+{
+    var services = scope.ServiceProvider;
 
-        SeedData.Initialize(services);
-    }
+    SeedData.Initialize(services);
+}
 
 app.Run();

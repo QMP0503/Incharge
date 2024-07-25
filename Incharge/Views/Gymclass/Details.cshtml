@@ -56,6 +56,7 @@
                 <div class="card-body p-2 mb-1">
                     <p class="m-2"><b>Name:</b> @Model.Name</p>
                     <p class="m-2"><b>Trainer:</b> @Model.Employee.FirstName @Model.Employee.LastName</p>
+                    <p class="m-2"><b>Location:</b> @Model.Location.Name</p>
                     <p class="m-2"><b>Date:</b> @Model.Date.ToShortDateString()</p>
                     <p class="m-2"><b>Time:</b> @Model.Date.TimeOfDay.ToString(@"hh\:mm") - @Model.EndTime.TimeOfDay.ToString(@"hh\:mm")</p>
                     <p class="m-2"><b>Status:</b> @Model.Status</p>

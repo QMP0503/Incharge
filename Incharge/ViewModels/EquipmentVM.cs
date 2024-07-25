@@ -7,16 +7,20 @@ namespace Incharge.ViewModels
     public class EquipmentVM
     {
         public int Id { get; set; }
-
+        [Required]
         public string Name { get; set; } = null!;
         public string? Description { get; set; }
 
         public string? Image { get; set; }//picture of equipment
 
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayName("Purchase Date")]
+      //  [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+
         public DateTime? PurchaseDate { get; set; }
 
         [DataType(DataType.Date)]
+        [DisplayName("Maintance Date")]
         public DateTime? MaintanceDate { get; set; }
 
         [AllowedValues("Available", "Unavailable", "Reserved", "Under Maintance", null)]

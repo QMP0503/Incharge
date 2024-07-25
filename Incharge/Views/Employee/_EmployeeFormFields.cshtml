@@ -2,6 +2,8 @@
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+<partial name="_formErrorMessage" model="@Model" />
+
 <div class="form-group">
     <label asp-for="FirstName" class="control-label"></label>
     <input asp-for="FirstName" class="form-control" />

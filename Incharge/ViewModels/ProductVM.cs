@@ -39,5 +39,8 @@ namespace Incharge.ViewModels
 
         public virtual ICollection<Discount> Discounts { get; set; } = new List<Discount>();
 
+        //Error String
+        public string? Error { get; set; }
+
     }
 }

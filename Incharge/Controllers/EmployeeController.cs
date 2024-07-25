@@ -82,7 +82,10 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if (ex.InnerException != null) { employeeVM.Error = ex.InnerException.Message; }
+                else { employeeVM.Error = ex.Message; }
+                employeeVM.EmployeeTypeOptions = _EmployeeDropDown.DropDownOptions().EmployeeTypeOptions;
+                return View(employeeVM);
             }
         }
         public IActionResult UpdateEmloyee(EmployeeVM employeeVM)
@@ -96,18 +99,17 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if (ex.InnerException != null) { employeeVM.Error = ex.InnerException.Message; }
+                else { employeeVM.Error = ex.Message; }
+                employeeVM.EmployeeTypeOptions = _EmployeeDropDown.DropDownOptions().EmployeeTypeOptions;
+                return View(employeeVM);
             }
         }
 
         [HttpPost, ActionName("UpdateEmployee")]
         public IActionResult UpdateEmployeeConfirm(EmployeeVM employeeVM)
         {
-            if (!ModelState.IsValid)
-            {
-                employeeVM.Error = "Invalid inputs";
-                return RedirectToAction("UpdateEmloyee", new { uuid = employeeVM.Uuid, error = employeeVM.Error });
-            }
+
             try
             {
                 _EmployeeService.UpdateService(employeeVM);
@@ -116,7 +118,10 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if (ex.InnerException != null) { employeeVM.Error = ex.InnerException.Message; }
+                else { employeeVM.Error = ex.Message; }
+                employeeVM.EmployeeTypeOptions = _EmployeeDropDown.DropDownOptions().EmployeeTypeOptions;
+                return View(employeeVM);
             }
         }
 
@@ -146,7 +151,9 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if (ex.InnerException != null) { employeeVM.Error = ex.InnerException.Message; }
+                else { employeeVM.Error = ex.Message; }
+                return View(employeeVM);
             }
         }
     }

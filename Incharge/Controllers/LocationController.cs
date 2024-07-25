@@ -14,15 +14,17 @@ namespace Incharge.Controllers
     {
         private readonly IService<LocationVM, Location> _LocationService;
         private readonly IPagingService<PaginatedList<Location>> _pagingService;
+        private readonly IChecker<LocationVM> _locationChecker;
         private readonly ILog _logger;
         private readonly IMapper _mapper;
 
-        public LocationController(IService<LocationVM, Location> LocationService, IPagingService<PaginatedList<Location>> pagingService, ILog logger, IMapper mapper)
+        public LocationController(IService<LocationVM, Location> LocationService, IPagingService<PaginatedList<Location>> pagingService, ILog logger, IMapper mapper, IChecker<LocationVM> locationChecker)
         {
             _LocationService = LocationService;
             _pagingService = pagingService;
             _logger = logger;
             _mapper = mapper;
+            _locationChecker = locationChecker;
         }
 
 
@@ -48,6 +50,8 @@ namespace Incharge.Controllers
             }
 
             ViewData["CurrentFilter"] = searchString;
+
+            _locationChecker.Check();
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
@@ -85,7 +89,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                locationVM.Error = ex.Message;
+                if(ex.InnerException != null) { locationVM.Error = ex.InnerException.Message; }
+                else { locationVM.Error = ex.Message; }
                 return View(locationVM);
             }
         }
@@ -122,7 +127,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                locationVM.Error = ex.Message;
+                if (ex.InnerException != null) { locationVM.Error = ex.InnerException.Message; }
+                else { locationVM.Error = ex.Message; }
                 return View(locationVM);
             }
         }

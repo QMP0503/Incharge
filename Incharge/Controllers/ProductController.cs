@@ -79,7 +79,9 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if(ex.InnerException != null) { productVM.Error = ex.InnerException.Message; }
+                else { productVM.Error = ex.Message; }
+                return View(productVM);
             }
         }
         public IActionResult UpdateProduct(int id)
@@ -93,7 +95,9 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if (ex.InnerException != null) { productVM.Error = ex.InnerException.Message; }
+                else { productVM.Error = ex.Message; }
+                return View(productVM);
             }
         }
         [HttpPost]
@@ -107,7 +111,9 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                return View();
+                if (ex.InnerException != null) { productVM.Error = ex.InnerException.Message; }
+                else { productVM.Error = ex.Message; }
+                return View(productVM);
             }
         }
 

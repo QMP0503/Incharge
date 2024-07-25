@@ -36,103 +36,42 @@
 <!--Add sorting by switching to table layout-->
 
 <div class="container">
-<div class="row">
-        <div class="col-xl-12">
-            <div class="card m-1">
-                <div class="card-body mb-1">
-                    <div class="row align-items-center">
-                        <div class="table-reposive px-3 table overflow-y-visible">
-                            <table class="table-nowrap table align-middle">
-                                <tbody>
-                                    @foreach(var item in Model)
-                                    {
-                                        
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <h5 class="font-size-18 align-middle"><a asp-action="Details" asp-route-id="@item.Id" class="text-dark">@item.Name</a></h5>
-                                                </div>
-                                            </td>
-
-                                            <td style="width: 220px;">
-                                                <h3 class="mb-0 font-size-20"><span class="text-muted me-2"></span><b>$@item.TotalPrice</b></h3>
-                                            </td>
-
-                                            <td>
-                                                 @*Too ficking tilted to figure out partial view (so adding it directly to index) fix later when not angry*@
-                                                @* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SaleModal" data-bs-Name="@item.Name" data-bs-Id="@item.Id">
-                                                    <i class="bi bi-cart me-2 font-size-15"></i> Add
-                                                </button> *@
-
-                                                
-                                                <a asp-controller="Sale" asp-action="AddSale" asp-route-ProductId="@item.Id" asp-route-ProductName="@item.Name" type="button" class="btn btn-primary">
-                                                    <i class="bi bi-cart me-2 font-size-15"></i> Add
-                                                </a>
-                                            </td>
-                                            @if (User.IsInRole("Admin"))
-                                            {
-                                                <td>
-                                                    <div class="dropdown float-end">
-                                                        <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
-                                                            <!-- this look nasty as fuck, fix when not angry -->
-                                                            <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">
-                                                                <input class="dropdown-item" value="Delete" type="submit"/>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            }
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
+    <div class="row">
+        <div class="col-xl-12">       
+            @foreach(var item in Model)
+            {
+                <div class="card">
+                    <div class="row align-content-center m-3 p-2">
+                        <div class="col align-content-center">
+                            <h5 href="/Product/Details?Id=@item.Id" class="mb-0 font-size-20 align-content-center">@item.Name</h5>
+                        </div>
+                        <div class="col col align-content-center" style="width: 220px;">
+                            <h3 class="mb-0 font-size-20 align-content-center"><span class="text-muted me-2"></span><b>$@item.TotalPrice</b></h3>
+                        </div>
+                        <div class="col">
+                            <a asp-controller="Sale" asp-action="AddSale" asp-route-ProductId="@item.Id" asp-route-ProductName="@item.Name" type="button" class="btn btn-primary">
+                                <i class="bi bi-cart me-2 font-size-15"></i> Add
+                            </a>
+                        </div>
+                        <div class="col align-content-center">
+                            <div class="dropdown float-end">
+                                <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
+                                    <!-- this look nasty as fuck, fix when not angry -->
+                                    <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">
+                                        <input class="dropdown-item" value="Delete" type="submit" />
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-</div>
-</div>
-
-<!--MODAL VIEW INSIDE INDEX. DO NOT RECOMMEND LEAVING FOR FINAL VERSION-->
-<div class="modal fade" id="SaleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form asp-controller="Sale" asp-action="AddSale">
-                    <div class="mb-3">
-                        <label class="col-form-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
-            </div>
+            }
         </div>
     </div>
 </div>
-
-
-@*
-    --Use Partial View Tag Helper--
-    <partial name="_*Name of partial view*", model="NAME OF MODEL" />
-
-    --use html tag helper--
-    @await html.PartialAsync("_*Name of partial view*", Model)
-*@
 
 
 <div class="btn-group border-bottom">

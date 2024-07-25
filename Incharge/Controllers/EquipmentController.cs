@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using AutoMapper;
 using log4net;
 using Incharge.Service;
+using Incharge.Migrations;
 
 namespace Incharge.Controllers
 {
@@ -56,7 +57,12 @@ namespace Incharge.Controllers
         {
             try
             {
-                return View(_EquipmentService.GetItem(x=>x.Id == id));
+                var equipment = _EquipmentService.GetItem(x => x.Id == id);
+                if (equipment.GymClass == null)
+                {
+                    equipment.GymClass = new Gymclass() { Name = "No Class" };
+                }
+                return View(equipment);
             }
             catch (Exception ex)
             {
@@ -85,7 +91,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                equipmentVM.Error = ex.Message;
+                if (ex.InnerException != null) { equipmentVM.Error = ex.InnerException.Message; }
+                else { equipmentVM.Error = ex.Message; }
                 return View(equipmentVM);
             }
         }
@@ -100,7 +107,9 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return NotFound();
+                equipmentVM = _EquipmentService.GetItem(x => x.Id == equipmentVM.Id);
+                equipmentVM.Error = ex.Message;
+                return View(equipmentVM);
             }
 
         }
@@ -109,11 +118,6 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditEquipmentConfirm(EquipmentVM equipmentVM)
         {
-            if (ModelState.IsValid == false)
-            {
-                equipmentVM.Error = "Invalid inputs!";
-                return View(equipmentVM);
-            }
             try
             {
                 _EquipmentService.UpdateService(equipmentVM);
@@ -122,7 +126,7 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                equipmentVM.Error = ex.Message;
+                equipmentVM.Error = ex.InnerException.Message ?? ex.Message;
                 return View(equipmentVM);
             }
         }

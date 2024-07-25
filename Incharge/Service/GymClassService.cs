@@ -1,11 +1,8 @@
 ﻿using Incharge.Models;
 using Incharge.ViewModels;
 using Incharge.Service.IService;
-using Incharge.Data;
 using Incharge.Repository.IRepository;
 using AutoMapper;
-using Incharge.ViewModels.Calendar;
-
 
 namespace Incharge.Service
 {
@@ -19,7 +16,8 @@ namespace Incharge.Service
         readonly IRepository<Gymclass> _GymClassRepository;
         readonly IRepository<Client> _ClientRepository;
         readonly IMapper _Mapper;
-        public GymClassService(IFindRepository<Equipment> FindEquipmentRepository, IMapper mapper, IFindRepository<Gymclass> FindGymClassRepository, IRepository<Gymclass> GymClassRepository, IFindRepository<Location> locationRepository, IFindRepository<Employee> employeeRepository, IFindRepository<Client> clientRepository, IRepository<Client> ClientRepository)
+        readonly IChecker<LocationVM> _locationStatusChecker;
+        public GymClassService(IChecker<LocationVM> locationStatusChecker, IFindRepository<Equipment> FindEquipmentRepository, IMapper mapper, IFindRepository<Gymclass> FindGymClassRepository, IRepository<Gymclass> GymClassRepository, IFindRepository<Location> locationRepository, IFindRepository<Employee> employeeRepository, IFindRepository<Client> clientRepository, IRepository<Client> ClientRepository)
         {
             _Mapper = mapper;
             _FindGymClassRepository = FindGymClassRepository;
@@ -29,6 +27,7 @@ namespace Incharge.Service
             _FindClientRepository = clientRepository;
             _FindEquipmentRepository = FindEquipmentRepository;
             _ClientRepository = ClientRepository;
+            _locationStatusChecker = locationStatusChecker;
         }
         public List<GymClassVM> ListItem(Func<Gymclass, bool> predicate) //test if automapper work with lists
         {
@@ -68,6 +67,7 @@ namespace Incharge.Service
                 foreach (var equipmentId in entity.EquipmentId)
                 {
                     var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentId);
+                    equipment.Status = "Reserved";
                     gymClass.Equipment.Add(equipment);
                 }
             }
@@ -150,6 +150,8 @@ namespace Incharge.Service
             {
                 gymClassToUpdate.LocationId = gymClassToUpdate.Location.Id;
             }
+
+            _locationStatusChecker.Check();
 
             _GymClassRepository.Update(gymClassToUpdate);
             _GymClassRepository.Save(); 

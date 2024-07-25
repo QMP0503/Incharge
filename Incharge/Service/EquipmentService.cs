@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
+using CloudinaryDotNet.Core;
 using Incharge.Data;
 using Incharge.Models;
 using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
 using Incharge.ViewModels;
+using MySqlX.XDevAPI;
+using static System.Net.WebRequestMethods;
 
 namespace Incharge.Service
 {
@@ -32,14 +35,21 @@ namespace Incharge.Service
             var equipmentVM = _Mapper.Map<EquipmentVM>(equipment);
             return equipmentVM;
         }
-
         public void AddService(EquipmentVM equipmentVM) //make sure no null data point error
         {
             if (equipmentVM == null) { throw new NullReferenceException("Input Empty."); }
-            var result = _PhotoService.AddPhotoAsync(equipmentVM.PictureFile).Result;
-            if (result == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
-            equipmentVM.Image = result.Url.ToString();
             var equipment = _Mapper.Map<Equipment>(equipmentVM);
+            if (equipmentVM.PictureFile != null)
+            {
+                var result = _PhotoService.AddPhotoAsync(equipmentVM.PictureFile).Result;
+                equipment.Image = result.Url.ToString();
+
+            }
+            else
+            {
+                equipment.Image = "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721892186/dumbell_mbp1rf.png";
+            }
+            
             _EquipmentRepository.Add(equipment);
             _EquipmentRepository.Save();
 
@@ -57,20 +67,20 @@ namespace Incharge.Service
             {
                 throw new NullReferenceException("Equipment Empty.");
             }
-
             //delete photo first before new one can be generated
-            if(equipment.Image != null)
-            {
-                var delete = _PhotoService.DeletePhotoAsync(equipment.Image).Result;
-                if (delete == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
-            }
-
+   
             if (equipmentVM.PictureFile != null)
             {
+                if (equipment.Image != null && equipmentVM.PictureFile != null && equipment.Image != "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721892186/dumbell_mbp1rf.png")
+                {
+                    var delete = _PhotoService.DeletePhotoAsync(equipment.Image).Result;
+                    Console.WriteLine(delete.ToString());
+                }
+
                 var result = _PhotoService.AddPhotoAsync(equipmentVM.PictureFile).Result;
-                if (result == null) { throw new NullReferenceException("Photo Empty or Invalid."); }
                 equipmentVM.Image = result.Url.ToString();
             }
+
             _Mapper.Map(equipmentVM, equipment);
             _EquipmentRepository.Update(equipment);
             _EquipmentRepository.Save();

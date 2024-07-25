@@ -41,6 +41,7 @@ namespace Incharge.Service
         public void AddService(EmployeeVM entity)//employee type
         {
             if (entity == null) { throw new ArgumentNullException("employee empty"); }
+            if(entity.FirstName == null || entity.LastName == null || entity.Email == null || entity.Phone == 0 || entity.RoleId == 0) { throw new Exception("A value input is empty. Please try again."); }
 
             //email and phone checker
             PhoneChecker(entity);

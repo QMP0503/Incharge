@@ -34,16 +34,16 @@
         <thead>
             <tr>
                 <th scope="col" class="col-1"></th> @*will juat be colour indicator for if the client is signed in/out or payment is overdued.*@
-                <th scope="col" class="col">
+                <th scope="col" class="col-auto col-lg-2">
                     <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">First</a>
                 </th>
-                <th scope="col" class="col">
+                <th scope="col" class="col-auto col-lg-2">
                     <a asp-action="Index" asp-route-sortOrder="@ViewData["LastNameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Last</a>
                 </th>
                 <th scope="col" class="col">Phone</th>
                 <th scope="col" class="col">Status</th>
-                <th scope="col" class="col">Update Status</th>
-                <th scope="col" class="col">Membership Status</th>
+                <th scope="col" class="col-auto col-lg-2 align">Update Status</th>
+                <th scope="col" class="col-auto col-lg-2">Membership Status</th>
             </tr>
         </thead>
         <tbody>
@@ -55,12 +55,12 @@
                         <!--Checkbox to help sign in-->
                         <input type="checkbox"/> 
                     </td>
-                    <td>@item.FirstName</td>
-                    <td>@item.LastName</td>
+                    <td class="text-break text-wrap">@item.FirstName</td>
+                    <td class="text-break text-wrap">@item.LastName</td>
                     <td>@item.Phone</td>
                     <td>@item.Status</td>
                     <td>
-                        <div class="col-2 me-1">
+                        <div class="col-2 me-1 align-content-center">
                             <form asp-action="UpdateStatus" method="post" asp-route-Uuid=@item.Uuid>
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 @if (item.Status == "Signed Out")

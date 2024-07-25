@@ -45,6 +45,8 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
+            
+
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
         [HttpGet]
@@ -81,7 +83,8 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                clientVM.Error = ex.Message;
+                if (ex.InnerException != null) { clientVM.Error = ex.InnerException.Message; }
+                else { clientVM.Error = ex.Message; }
                 return View(clientVM);
             }
         }
@@ -104,7 +107,8 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
-                clientVM.Error = ex.Message;
+                if (ex.InnerException != null) { clientVM.Error = ex.InnerException.Message; }
+                else { clientVM.Error = ex.Message; }
                 return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error });
             }
         }

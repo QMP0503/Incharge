@@ -3,6 +3,7 @@ using Incharge.Service.IService;
 using Incharge.ViewModels;
 using log4net;
 using Microsoft.AspNetCore.Authorization;
+using Incharge.Models;
 
 namespace Incharge.Controllers
 {
@@ -30,7 +31,8 @@ namespace Incharge.Controllers
             {
                 _logger.Error(ex);
                 var YearbusinessReportVM = _BusinessReportService.ListItem(x => x.Date.Year == DateTime.Now.Year);
-                YearbusinessReportVM.First().Error = ex.Message;
+                if (ex.InnerException != null) { YearbusinessReportVM.First().Error = ex.InnerException.Message; }
+                else { YearbusinessReportVM.First().Error = ex.Message; }
                 return View(YearbusinessReportVM);
             }
 

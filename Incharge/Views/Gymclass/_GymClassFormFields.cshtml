@@ -9,18 +9,17 @@
 
 <div class="mb-3 mt-3">
     <label asp-for="Name" class="control-label"></label>
-    <input asp-for="Name" class="form-control" />
-    <span asp-validation-for="Name" class="text-danger"></span>
+    <input asp-for="Name" class="form-control" required />
 </div>
 <div class="mb-3 mt-3">
     <label asp-for="Date" class="control-label"></label>
-    <input asp-for="Date" class="form-control" />
+    <input asp-for="Date" class="form-control" required />
     <span asp-validation-for="Date" class="text-danger"></span>
 </div>
 <div class="mb-3">
     @*Will override price set in product type. Ok to be null*@
     <label asp-for="EndTime" class="control-label"></label>
-    <input asp-for="EndTime" class="form-control" />
+    <input asp-for="EndTime" class="form-control" required />
     <span asp-validation-for="EndTime" class="text-danger"></span>
 </div>
 <div class="mb-3">

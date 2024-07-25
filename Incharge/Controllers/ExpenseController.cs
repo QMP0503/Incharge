@@ -80,7 +80,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _log.Error(ex);
-                expenseVM.Error = ex.Message;
+                if(ex.InnerException != null) { expenseVM.Error = ex.InnerException.Message; }
+                else { expenseVM.Error = ex.Message; }
                 return View(expenseVM);
             }
         }
@@ -116,7 +117,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _log.Error(ex);
-                expenseVM.Error = ex.Message;
+                if (ex.InnerException != null) { expenseVM.Error = ex.InnerException.Message; }
+                else { expenseVM.Error = ex.Message; }
                 return View(expenseVM);
             }
         }

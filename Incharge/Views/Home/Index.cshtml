@@ -91,6 +91,7 @@
                                 <tr onclick="location.href='/GymClass/Details?Id=@item.Id'">
                                     <td>@item.Name</td>
                                     <td>@item.Date.TimeOfDay.ToString(@"hh\:mm") - @item.EndTime.TimeOfDay.ToString(@"hh\:mm")</td>
+                                    <td>@item.Location.Name</td>
                                     @if (item.Status == "Cancelled")
                                     {
                                         <td class="text-danger"><span class="badge bg-danger">@item.Status</span></td>
@@ -103,7 +104,7 @@
                                     {
                                         <td class="text-primary"><span class="badge bg-primary">@item.Status</span></td>
                                     }
-                                    <td>@item.Location</td>
+                                   
                                 </tr>
                             }
                         </tbody>

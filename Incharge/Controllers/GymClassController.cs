@@ -19,8 +19,9 @@ namespace Incharge.Controllers
         private readonly IGymclassCalendarService _gymclassCalendarService;
         private readonly ILog _logger;
         private readonly IMapper _mapper;
+        private readonly IChecker<LocationVM> _locationStatusChecker;
 
-        public GymclassController(IService<GymClassVM, Gymclass> GymclassService, IPagingService<PaginatedList<Gymclass>> pagingService, ILog logger, IMapper mapper, IGymclassCalendarService gymclassCalendarService, IDropDownOptions<GymClassVM> dropdownOptions)
+        public GymclassController(IChecker<LocationVM> locationStatusChecker , IService<GymClassVM, Gymclass> GymclassService, IPagingService<PaginatedList<Gymclass>> pagingService, ILog logger, IMapper mapper, IGymclassCalendarService gymclassCalendarService, IDropDownOptions<GymClassVM> dropdownOptions)
         {
             _GymclassService = GymclassService;
             _pagingService = pagingService;
@@ -28,6 +29,7 @@ namespace Incharge.Controllers
             _mapper = mapper;
             _gymclassCalendarService = gymclassCalendarService;
             _DropdownOptions = dropdownOptions;
+            _locationStatusChecker = locationStatusChecker;
         }
 
 
@@ -53,6 +55,7 @@ namespace Incharge.Controllers
             }
 
             ViewData["CurrentFilter"] = searchString;
+            _locationStatusChecker.Check();
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
@@ -63,6 +66,7 @@ namespace Incharge.Controllers
             try
             {
                 var WeekdayList = _gymclassCalendarService.CreateItemList("trainer", filter, dateSelected);
+                _locationStatusChecker.Check();
                 return View(WeekdayList);
             }
             catch(Exception ex)
@@ -79,6 +83,7 @@ namespace Incharge.Controllers
             try
             {
                 var WeekdayList = _gymclassCalendarService.CreateItemList("location", filter, dateSelected);
+                _locationStatusChecker.Check();
                 return View(WeekdayList);
             }catch (Exception ex)
             {
@@ -115,15 +120,6 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddGymclass(GymClassVM gymclassVM)
         {
-            if (!ModelState.IsValid)
-            {
-                gymclassVM.Error = "Invalid inputs";
-                gymclassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
-                gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
-                gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
-                gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
-                return View(gymclassVM);
-            }
             try
             {
                 _GymclassService.AddService(gymclassVM);
@@ -136,7 +132,8 @@ namespace Incharge.Controllers
                 gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
                 gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
                 gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
-                gymclassVM.Error = ex.Message;
+                if(ex.InnerException != null) { gymclassVM.Error = ex.InnerException.Message; }
+                else { gymclassVM.Error = ex.Message; }
                 return View(gymclassVM);
             }
         }
@@ -179,7 +176,8 @@ namespace Incharge.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                gymclassVM.Error = ex.Message;
+                if (ex.InnerException != null) { gymclassVM.Error = ex.InnerException.Message; }
+                else { gymclassVM.Error = ex.Message; }
                 gymclassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
                 gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
                 gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
@@ -225,7 +223,7 @@ namespace Incharge.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex);
+                _logger.Error(ex);}
                 return NotFound();
             }
         }

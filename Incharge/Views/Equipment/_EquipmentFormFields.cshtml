@@ -6,18 +6,16 @@
 
 <div class="form-group">
     <label asp-for="Name" class="control-label"></label>
-    <input asp-for="Name" class="form-control" />
-    <span asp-validation-for="Name" class="text-danger"></span>
+    <input asp-for="Name" class="form-control" autocomplete="@Model.Name" type="text" required/>
+
 </div>
 <div class="form-group">
     <label asp-for="PurchaseDate" class="control-label"></label>
-    <input asp-for="PurchaseDate" class="form-control" />
-    <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+    <input asp-for="PurchaseDate" class="form-control" required />
 </div>
 <div class="form-group">
     <label asp-for="MaintanceDate" class="control-label"></label>
-    <input asp-for="MaintanceDate" class="form-control" />
-    <span asp-validation-for="MaintanceDate" class="text-danger"></span>
+    <input asp-for="MaintanceDate" class="form-control" required/>
 </div>
 <div class="form-group">
     <label asp-for="Description" class="control-label"></label>
@@ -33,7 +31,9 @@
 <input type="hidden" asp-for="Status" value="@Model.Status" />
 <input type="hidden" asp-for="Image" value="@Model.Image" />
 
-<a asp-action="Index" type="button" class="btn btn-primary">Cancel</a>
-<button type="submit" class="btn btn-primary">Save</button>
+<div class="mt-2">
+    <a asp-action="Index" type="button" class="btn btn-primary ">Cancel</a>
+    <button type="submit" class="btn btn-primary">Save</button>
+</div>
 
 <partial name="_ValidationScriptsPartial" />

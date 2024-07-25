@@ -82,7 +82,9 @@ namespace Incharge.Controllers
                 saleVM.ProductOptions = _SaleDropDown.DropDownOptions().ProductOptions;
                 saleVM.DiscountOptions = _SaleDropDown.DropDownOptions().DiscountOptions;
                 saleVM.Date = DateTime.Now;
-                saleVM.Error = ex.Message;
+                _logger.Error(ex);
+                if (ex.InnerException != null) { saleVM.Error = ex.InnerException.Message; }
+                else { saleVM.Error = ex.Message; }
                 saleVM.ProductName = saleVM.ProductOptions.FirstOrDefault(x => x.Id == saleVM.ProductId).Name;
                 return View(saleVM); //Find logical location if fail instead of error 404
             }
@@ -134,7 +136,8 @@ namespace Incharge.Controllers
                 saleVM.ProductOptions = _SaleDropDown.DropDownOptions().ProductOptions;
                 saleVM.DiscountOptions = _SaleDropDown.DropDownOptions().DiscountOptions;
                 saleVM.Date = DateTime.Now;
-                saleVM.Error = ex.Message;
+                if (ex.InnerException != null) { saleVM.Error = ex.InnerException.Message; }
+                else { saleVM.Error = ex.Message; }
                 return View(saleVM);
             }
         }
