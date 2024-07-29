@@ -19,19 +19,13 @@ namespace Incharge.Service.PagingService
             if (!string.IsNullOrEmpty(searchString))
             {
                 searchString = searchString.ToLower();
-                EquipmentQuery = EquipmentQuery.Where(c => c.Name.ToLower().Contains(searchString) || c.GymClass.Name.ToString().ToLower().Contains(searchString) || c.Status.ToLower().Contains(searchString));
+                EquipmentQuery = EquipmentQuery.Where(c => c.Name.ToLower().Contains(searchString) || c.Status.ToLower().Contains(searchString));
             }
 
             switch (sortOrder)
             {
                 case "Name_desc":
                     EquipmentQuery = EquipmentQuery.OrderByDescending(c => c.Name);
-                    break;
-                case "GymClass.Name_asc":
-                    EquipmentQuery = EquipmentQuery.OrderBy(c => c.GymClass.Name);
-                    break;
-                case "GymClass.Name_desc":
-                    EquipmentQuery = EquipmentQuery.OrderByDescending(c => c.GymClass.Name);
                     break;
                 case "Status_asc":
                     EquipmentQuery = EquipmentQuery.OrderBy(c => c.Status);

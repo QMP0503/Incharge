@@ -10,7 +10,9 @@
     </div>
     <div class="form-group">
         <form asp-action="EditGymclass" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+            <partial name="_ValidationScriptsPartial" />
 
+            <input type="hidden" asp-for="Type" value="@Model.Type" />
             <partial name="_GymClassFormFields" model="Model" />
 
         </form>

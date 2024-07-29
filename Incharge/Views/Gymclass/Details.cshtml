@@ -4,6 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
+<partial name="_formErrorMessage" model="@Model"/>
 
 <div class="container mt-2">
     <div class="row">
@@ -66,10 +67,10 @@
             </div>
 
         </div>
-
+        <div class="col-md-7">
         @if(Model.Type == "Private")
         {
-            <div class="col-md-7">
+           
                 <!--Client List Table-->
                 <h5 class="fw-bold align-content-center ms-2">Client List</h5>
                 <table class="table-striped table">
@@ -89,8 +90,30 @@
                         }
                     </tbody>
                 </table>
-            </div>
+            
         }
+            <!--Equipment List Table-->
+            <h5 class="fw-bold align-content-center ms-2">Equipment List</h5>
+            <table class="table-striped table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Equipment)
+                    {
+                        <tr>
+                            <td><a asp-controller="Equipment" asp-action="Details" asp-route-Id="@item.Id">@item.Name</a></td>
+                            <td>@item.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
+   
 </div>

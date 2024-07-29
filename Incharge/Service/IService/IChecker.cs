@@ -1,7 +1,10 @@
 ﻿namespace Incharge.Service.IService
 {
-    public interface IChecker<T> where T : class
+    public interface IChecker
     {
-        public void Check();
+        //Checking status column of different tables
+        public void ClientCheck();
+        public void LocationCheck();
+        public void EquipmentCheck();
     }
 }

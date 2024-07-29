@@ -96,10 +96,13 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPaging
 builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>(); 
 builder.Services.AddScoped<IPagingService<PaginatedList<Sale>>, SalesPagingService>(); 
 
-builder.Services.AddScoped<IBusinessReportService, BusinessReportService>(); //no paging yet
+builder.Services.AddScoped<IBusinessReportService, BusinessReportService>(); 
 
 builder.Services.AddScoped<IService<ExpenseVM, Expense>, ExpenseService>(); 
 builder.Services.AddScoped<IPagingService<PaginatedList<Expense>>, ExpensesPagingService>(); 
+
+builder.Services.AddScoped<IService<DiscountVM, Discount>, DiscountService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Discount>>, DiscountPagingService>();
 
 //dropdown menu view options
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
@@ -109,8 +112,7 @@ builder.Services.AddScoped<IDropDownOptions<GymClassVM>, GymClassService>();
 
 
 //CHECKER INJECTION
-builder.Services.AddScoped<IChecker<Client>, ClientChecker>();
-builder.Services.AddScoped<IChecker<LocationVM>, LocationService>();
+builder.Services.AddScoped<IChecker, CheckerService>();
 
 //CALENDAR INJECTION
 builder.Services.AddScoped<IGymclassCalendarService, GymclassCalendarService>();
@@ -182,8 +184,8 @@ using(var scope = app.Services.CreateScope())
 
 using (var scope = app.Services.CreateScope())
 {
-    var initializationService = scope.ServiceProvider.GetRequiredService<IChecker<Client>>();
-    initializationService.Check(); //run to add new business report if new month begins
+    var initializationService = scope.ServiceProvider.GetRequiredService<IChecker>();
+    initializationService.ClientCheck(); //run to add new business report if new month begins
 }
 
 //for seeding intial data to program only

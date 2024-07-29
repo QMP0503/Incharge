@@ -783,3 +783,27 @@ Name
 2024-07-25 14:38:05,458 [29] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
    at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 55
    at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 134
+2024-07-29 11:09:30,699 [17] ERROR Program - System.Exception: Equipment is not available
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 165
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 173
+2024-07-29 11:10:22,604 [3] ERROR Program - System.Exception: Equipment is not available
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 165
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 173
+2024-07-29 12:00:42,762 [17] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.CheckerService.<>c.<EquipmentCheck>b__9_0(Equipment x) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\CheckerService.cs:line 64
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.ToList()
+   at Incharge.Repository.EquipmentRepository.ListBy(Func`2 predicate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\EquipmentRepository.cs:line 27
+   at Incharge.Service.CheckerService.EquipmentCheck() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\CheckerService.cs:line 64
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-07-29 12:02:29,531 [17] ERROR Program - System.Exception: Cannot complete a cancelled class
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 142
+   at Incharge.Controllers.GymclassController.UpdateStatus(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 227
+2024-07-29 13:53:48,281 [18] ERROR Program - System.Exception: Cannot complete a cancelled class
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 142
+   at Incharge.Controllers.GymclassController.UpdateStatus(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 233
+2024-07-29 13:55:43,651 [10] ERROR Program - System.Exception: Cannot complete a cancelled class
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 142
+   at Incharge.Controllers.GymclassController.UpdateStatus(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 235
+2024-07-29 15:32:25,330 [18] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 57
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 136

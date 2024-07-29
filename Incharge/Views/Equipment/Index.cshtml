@@ -42,16 +42,12 @@
                 <th scope="col" class="col">
                     <a asp-action="Index" asp-route-sortOrder="@ViewData["StatusSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Capacity</a>
                 </th>
-@*                 <th scope="col" class="col">
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["GymClassSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Gym Class</a>
-                </th> *@
                 <th scope="col" class="col">
                     Purchase Date
                 </th>
                 <th scope="col" class="col">
                     Maintance Date
                 </th>
-
             </tr>
         </thead>
         <tbody>
@@ -61,9 +57,8 @@
 
                     <td class="col">@item.Name</td>
                     <td>@item.Status</td>
-@*                     <td>@item.GymClass.Name</td>
- *@                    <td>@item.PurchaseDate</td>
-                    <td>@item.MaintanceDate</td>
+                    <td>@item.PurchaseDate.ToShortDateString()</td>
+                    <td>@item.MaintanceDate.ToShortDateString()</td>
                 </tr>
             }
         </tbody>

@@ -53,7 +53,7 @@
                         <tbody>
                             @foreach(var client in Model.Clients)
                             {
-                                <tr class=""> 
+                                <tr onclick="location.href='/Client/Details?Uuid=@client.Uuid';">
                                     <td class="col">
                                         @client.FirstName @client.LastName
                                     </td>

@@ -43,10 +43,17 @@
 
 <div class="mb-3">
     <label asp-for="EquipmentOptions" class="control-label"></label>
-    <select asp-for="EquipmentId" class="form-select" multiple data-multi-select>
+    <select asp-for="EquipmentId" class="form-select" data-placeholder="Select Equipment" multiple data-multi-select>
         @foreach (var type in Model.EquipmentOptions)
         {
-            <option value="@type.Id">@type.Name</option>
+            if(Model.Equipment.FirstOrDefault(x => x.Id == type.Id) != null)
+            {
+                <option value="@type.Id" selected>@type.Name</option>
+            }
+            else
+            {
+                <option value="@type.Id">@type.Name</option>
+            }
         }
     </select>
 </div>
@@ -55,12 +62,28 @@
 {
     <div class="mb-3">
         <label asp-for="ClientOptions" class="control-label"></label>
-        <select asp-for="ClientsId" class="form-select" multiple data-multi-select>
-            @foreach (var type in Model.ClientOptions.Where(x => x.TotalTrainingSessions > 0))
-            {
-                <option value="@type.Id">@type.FirstName @type.LastName</option>
-            }
-        </select>
+        @if (Model.ClientOptions.Where(x => x.TotalTrainingSessions > 0) == null)
+        {
+            <select asp-for="ClientsId" class="form-select" data-placeholder="No Clients Available" multiple data-multi-select>
+            </select>
+        }
+        else
+        {
+            <select asp-for="ClientsId" class="form-select" data-placeholder="Select CLient" multiple data-multi-select>
+                @foreach (var type in Model.ClientOptions.Where(x => x.TotalTrainingSessions > 0))
+                {
+                    if(Model.Clients.FirstOrDefault(x => x.Id == type.Id) != null)
+                    {
+                        <option value="@type.Id" selected>@type.FirstName @type.LastName</option>
+                    }
+                    else
+                    {
+                    <option value="@type.Id">@type.FirstName @type.LastName</option>
+                    }
+                }
+                
+            </select>
+        }
     </div>
 }
 

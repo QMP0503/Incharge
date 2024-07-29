@@ -1,0 +1,74 @@
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.Discount>
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+@inject SignInManager<Incharge.Models.User> SignInManager;
+@inject UserManager<Incharge.Models.User> UserManager;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+<nav class="navbar-brand mb-5">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Discounts</h1>
+    </div>
+
+    <div class="row align-content-center pt-3 pb-3">
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="col pr-2">
+                <a asp-action="AddDiscount" class="btn btn-primary">Add Discounts</a>
+            </div>
+        }
+        <!--Search Bar and select page number-->
+        <partial name="_SearchAndPageSize" />
+
+    </div>
+</nav>
+
+<!--Add sorting by switching to table layout-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="row align-content-center m-3 p-2">
+                        <div class="col align-content-center">
+                            <h5 class="mb-0 font-size-20 align-content-center">@item.Name</h5>
+                        </div>
+                        <div class="col col align-content-center" style="width: 220px;">
+                            <h3 class="mb-0 font-size-20 align-content-center"><span class="text-muted me-2"></span><b>@(item.DiscountValue*100)%</b></h3>
+                        </div>
+                        <div class="col align-content-center">
+                            <div class="dropdown float-end">
+                                <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a asp-action="UpdateDiscount" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
+                                    <!-- this look nasty as fuck, fix when not angry -->
+                                    <form asp-action="DeleteDiscount" asp-route-id="@item.Id" method="post">
+                                        <input class="dropdown-item" value="Delete" type="submit" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<div class="btn-group border-bottom">
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />
+</div>

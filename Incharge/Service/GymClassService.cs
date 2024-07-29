@@ -16,8 +16,9 @@ namespace Incharge.Service
         readonly IRepository<Gymclass> _GymClassRepository;
         readonly IRepository<Client> _ClientRepository;
         readonly IMapper _Mapper;
-        readonly IChecker<LocationVM> _locationStatusChecker;
-        public GymClassService(IChecker<LocationVM> locationStatusChecker, IFindRepository<Equipment> FindEquipmentRepository, IMapper mapper, IFindRepository<Gymclass> FindGymClassRepository, IRepository<Gymclass> GymClassRepository, IFindRepository<Location> locationRepository, IFindRepository<Employee> employeeRepository, IFindRepository<Client> clientRepository, IRepository<Client> ClientRepository)
+        readonly IChecker _checker;
+        readonly IRepository<Equipment> _EquipmentRepository;
+        public GymClassService(IRepository<Equipment> equipmentRepository, IChecker checker, IFindRepository<Equipment> FindEquipmentRepository, IMapper mapper, IFindRepository<Gymclass> FindGymClassRepository, IRepository<Gymclass> GymClassRepository, IFindRepository<Location> locationRepository, IFindRepository<Employee> employeeRepository, IFindRepository<Client> clientRepository, IRepository<Client> ClientRepository)
         {
             _Mapper = mapper;
             _FindGymClassRepository = FindGymClassRepository;
@@ -27,7 +28,8 @@ namespace Incharge.Service
             _FindClientRepository = clientRepository;
             _FindEquipmentRepository = FindEquipmentRepository;
             _ClientRepository = ClientRepository;
-            _locationStatusChecker = locationStatusChecker;
+            _checker = checker;
+            _EquipmentRepository = equipmentRepository;
         }
         public List<GymClassVM> ListItem(Func<Gymclass, bool> predicate) //test if automapper work with lists
         {
@@ -72,7 +74,8 @@ namespace Incharge.Service
                 }
             }
 
-            if(entity.Type == "Private")
+
+            if (entity.Type == "Private")
             {
                 if(entity.ClientsId == null) { throw new Exception("Private class must have a client"); }
                 foreach(var clientId in entity.ClientsId)
@@ -93,23 +96,69 @@ namespace Incharge.Service
             var gymClassToUpdate = _FindGymClassRepository.FindBy(x => x.Id == entity.Id);
             if(gymClassToUpdate == null) { throw new Exception("GymClass don't exist."); }
 
-            //for private training for client have refund options
-            if (gymClassToUpdate.Type == "Private" && entity.Status == "Cancelled" && gymClassToUpdate.Status == "Active")
+            //for changing class status only
+            switch (entity.Status)
             {
-                foreach (var client in gymClassToUpdate.Clients)
-                {
-                    client.TotalTrainingSessions += 1;
-                    _ClientRepository.Update(client);
-                }
+                case "Active":
+                    if(gymClassToUpdate.Status == "Cancelled") //would be a strange case but should have the option
+                    {
+                        if(entity.Type == "Private")
+                        {
+                            foreach (var client in gymClassToUpdate.Clients)
+                            {
+                                client.TotalTrainingSessions -= 1;
+                                _ClientRepository.Update(client);
+                            }
+                        }
+                        gymClassToUpdate.Status = "Active";
+                        _GymClassRepository.Save();
+                        return;
+                    }
+                    if(gymClassToUpdate.Status == "Completed")
+                    {
+                        throw new Exception("Cannot activate a completed class. If mistake was made be make new entry for class.");
+                    };
+                    break;
+                case "Cancelled":
+                    if (gymClassToUpdate.Status == "Active")
+                    {
+                        if(entity.Type == "Private")
+                        {
+                            foreach (var client in gymClassToUpdate.Clients)
+                            {
+                                client.TotalTrainingSessions += 1;
+                                _ClientRepository.Update(client);
+                            }
+                        }
+                        gymClassToUpdate.Status = "Cancelled";
+                        _GymClassRepository.Save();
+                        return;
+                    }
+                    if(gymClassToUpdate.Status == "Completed")
+                    {
+                        throw new Exception("Cannot cancel a completed class.  If mistake was made be make new entry for class.");
+                    };
+                    break;
+                case "Completed":
+                    if(gymClassToUpdate.Status == "Cancelled")
+                    {
+                        throw new Exception("Cannot complete a cancelled class.  If mistake was made be make new entry for class.");
+                    };
+                    if(gymClassToUpdate.Status == "Active")
+                    {
+                        gymClassToUpdate.Status = "Complete";
+                        _GymClassRepository.Save();
+                        return;
+                    };
+                    break;
+                default:
+                    break;
             }
-            if (gymClassToUpdate.Type == "Private" && entity.Status == "Active" && gymClassToUpdate.Status == "Cancelled")
-            {
-                foreach (var client in gymClassToUpdate.Clients)
-                {
-                    client.TotalTrainingSessions -= 1;
-                    _ClientRepository.Update(client);
-                }
-            }
+            
+
+            //For when class is ACTUALLY editted
+
+            
 
             _Mapper.Map(entity, gymClassToUpdate);
 
@@ -130,18 +179,43 @@ namespace Incharge.Service
                 var employee = _FindEmployeeRepository.FindBy(x => x.Id == entity.EmployeeId);
                 gymClassToUpdate.Employee = employee;
             }
-            if(entity.ClientsId != null)
+            if (entity.ClientsId != null)
             {
+                //reset client training session counter to make edit easier
+                foreach (var client in gymClassToUpdate.Clients)
+                {
+                    client.TotalTrainingSessions += 1;
+                    gymClassToUpdate.Clients.Remove(client);
+                    _ClientRepository.Update(client);
+                }
                 foreach (var clientId in entity.ClientsId)
                 {
                     var client = _FindClientRepository.FindBy(x => x.Id == clientId);
-                    if(client == null) { throw new Exception("Cannot find clients"); }
+                    if (client == null) { throw new Exception("Client don't exist."); }
+                    if (client.TotalTrainingSessions <= 0) { throw new Exception("Client don't have enough training sessions."); }
+                    client.TotalTrainingSessions -= 1;
                     gymClassToUpdate.Clients.Add(client);
+                    _ClientRepository.Update(client);
                 }
             }
-
-            
-
+            if (entity.EquipmentId != null)
+            {
+                //reset equipment list to make things easier
+                foreach (var equipment in gymClassToUpdate.Equipment)
+                {
+                    gymClassToUpdate.Equipment.Remove(equipment);
+                }
+                foreach (var equipmentId in entity.EquipmentId)
+                {
+                    var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentId);
+                    if(equipment == null) { throw new Exception("Cannot find equipment"); }
+                    if(equipment.Status == "Unavailable") { throw new Exception("Equipment is unavailable."); }
+                    if(equipment.GymClasses.Any(x => x.Date <= gymClassToUpdate.Date && x.EndTime >= gymClassToUpdate.EndTime)) { throw new Exception("Equipment already registered in class a selected time."); }
+                    gymClassToUpdate.Equipment.Add(equipment);
+                }
+                
+                
+            }
             if (gymClassToUpdate.Employee != null)
             {
                 gymClassToUpdate.EmployeeId = gymClassToUpdate.Employee.Id;
@@ -151,8 +225,7 @@ namespace Incharge.Service
                 gymClassToUpdate.LocationId = gymClassToUpdate.Location.Id;
             }
 
-            _locationStatusChecker.Check();
-
+            _checker.LocationCheck();
             _GymClassRepository.Update(gymClassToUpdate);
             _GymClassRepository.Save(); 
         }
@@ -172,7 +245,7 @@ namespace Incharge.Service
             {
                 LocationOptions = _FindLocationRepository.ListBy(x => true),
                 EmployeeOptions = _FindEmployeeRepository.ListBy(x => x.Role.Type == "Trainer"),
-                EquipmentOptions = _FindEquipmentRepository.ListBy(x => true),
+                EquipmentOptions = _FindEquipmentRepository.ListBy(x => x.Status=="Available"),
                 ClientOptions = _FindClientRepository.ListBy(x => true),
                 TimeSlots = new List<TimeSpan>()
             };

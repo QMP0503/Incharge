@@ -78,6 +78,21 @@ namespace Incharge.Migrations
                     b.ToTable("client_product", (string)null);
                 });
 
+            modelBuilder.Entity("EquipmentGymclass", b =>
+                {
+                    b.Property<int>("EquipmentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GymClassesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EquipmentId", "GymClassesId");
+
+                    b.HasIndex("GymClassesId");
+
+                    b.ToTable("EquipmentGymclass");
+                });
+
             modelBuilder.Entity("Incharge.Models.BusinessReport", b =>
                 {
                     b.Property<int>("Id")
@@ -255,19 +270,8 @@ namespace Incharge.Migrations
                         .HasColumnType("double")
                         .HasColumnName("Discount");
 
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime");
-
                     b.Property<string>("Name")
-                        .HasMaxLength(45)
-                        .HasColumnType("varchar(45)");
-
-                    b.Property<string>("Recurance")
-                        .HasMaxLength(45)
-                        .HasColumnType("varchar(45)");
-
-                    b.Property<DateTime?>("StartDate")
-                        .HasColumnType("datetime");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
@@ -377,7 +381,7 @@ namespace Incharge.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime?>("MaintanceDate")
+                    b.Property<DateTime>("MaintanceDate")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Name")
@@ -385,7 +389,7 @@ namespace Incharge.Migrations
                         .HasMaxLength(45)
                         .HasColumnType("varchar(45)");
 
-                    b.Property<DateTime?>("PurchaseDate")
+                    b.Property<DateTime>("PurchaseDate")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Status")
@@ -954,6 +958,21 @@ namespace Incharge.Migrations
                         .HasConstraintName("client_product_ibfk_1");
                 });
 
+            modelBuilder.Entity("EquipmentGymclass", b =>
+                {
+                    b.HasOne("Incharge.Models.Equipment", null)
+                        .WithMany()
+                        .HasForeignKey("EquipmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Incharge.Models.Gymclass", null)
+                        .WithMany()
+                        .HasForeignKey("GymClassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Incharge.Models.Client", b =>
                 {
                     b.HasOne("Incharge.Models.Paymentrecord", "PaymentRecord")
@@ -975,16 +994,6 @@ namespace Incharge.Migrations
                         .HasConstraintName("RoleId");
 
                     b.Navigation("Role");
-                });
-
-            modelBuilder.Entity("Incharge.Models.Equipment", b =>
-                {
-                    b.HasOne("Incharge.Models.Gymclass", "GymClass")
-                        .WithMany("Equipment")
-                        .HasForeignKey("GymClassId")
-                        .HasConstraintName("GymClassId");
-
-                    b.Navigation("GymClass");
                 });
 
             modelBuilder.Entity("Incharge.Models.Expense", b =>
@@ -1159,11 +1168,6 @@ namespace Incharge.Migrations
             modelBuilder.Entity("Incharge.Models.EmployeeType", b =>
                 {
                     b.Navigation("Employees");
-                });
-
-            modelBuilder.Entity("Incharge.Models.Gymclass", b =>
-                {
-                    b.Navigation("Equipment");
                 });
 
             modelBuilder.Entity("Incharge.Models.Location", b =>

@@ -49,7 +49,7 @@ namespace Incharge.Service
             {
                 equipment.Image = "https://res.cloudinary.com/dmmlhlebe/image/upload/v1721892186/dumbell_mbp1rf.png";
             }
-            
+            equipment.Status = "Available";
             _EquipmentRepository.Add(equipment);
             _EquipmentRepository.Save();
 

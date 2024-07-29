@@ -3,11 +3,9 @@ using Incharge.Service.PagingService;
 using Incharge.Models;
 using Incharge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using AutoMapper;
 using log4net;
-using Incharge.Service;
-using Incharge.Migrations;
+
 
 namespace Incharge.Controllers
 {
@@ -17,13 +15,15 @@ namespace Incharge.Controllers
         private readonly IPagingService<PaginatedList<Equipment>> _pagingService;
         private readonly ILog _logger;
         private readonly IMapper _mapper;
+        private readonly IChecker _checker;
 
-        public EquipmentController(IService<EquipmentVM, Equipment> EquipmentService, IPagingService<PaginatedList<Equipment>> pagingService, ILog logger, IMapper mapper)
+        public EquipmentController(IChecker checker, IService<EquipmentVM, Equipment> EquipmentService, IPagingService<PaginatedList<Equipment>> pagingService, ILog logger, IMapper mapper)
         {
             _EquipmentService = EquipmentService;
             _pagingService = pagingService;
             _logger = logger;
             _mapper = mapper;
+            _checker = checker;
         }
 
 
@@ -49,6 +49,7 @@ namespace Incharge.Controllers
             }
 
             ViewData["CurrentFilter"] = searchString;
+            _checker.EquipmentCheck();
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
@@ -58,10 +59,6 @@ namespace Incharge.Controllers
             try
             {
                 var equipment = _EquipmentService.GetItem(x => x.Id == id);
-                if (equipment.GymClass == null)
-                {
-                    equipment.GymClass = new Gymclass() { Name = "No Class" };
-                }
                 return View(equipment);
             }
             catch (Exception ex)

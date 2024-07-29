@@ -95,6 +95,7 @@ namespace Incharge.Controllers
             catch(Exception ex)
             {
                 _logger.Error(ex);
+                var productVM = _ProductService.GetItem(x => x.Id == id);
                 if (ex.InnerException != null) { productVM.Error = ex.InnerException.Message; }
                 else { productVM.Error = ex.Message; }
                 return View(productVM);

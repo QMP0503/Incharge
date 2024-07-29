@@ -43,7 +43,7 @@
                 <div class="card">
                     <div class="row align-content-center m-3 p-2">
                         <div class="col align-content-center">
-                            <h5 href="/Product/Details?Id=@item.Id" class="mb-0 font-size-20 align-content-center">@item.Name</h5>
+                            <h5 class="mb-0 font-size-20 align-content-center">@item.Name</h5>
                         </div>
                         <div class="col col align-content-center" style="width: 220px;">
                             <h3 class="mb-0 font-size-20 align-content-center"><span class="text-muted me-2"></span><b>$@item.TotalPrice</b></h3>
@@ -58,6 +58,7 @@
                                 <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="dropdown-item">Details</a>
                                     <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
                                     <!-- this look nasty as fuck, fix when not angry -->
                                     <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">

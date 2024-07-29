@@ -17,7 +17,7 @@ namespace Incharge.Repository
         public Equipment FindBy(Func<Equipment, bool> predicate)
         {
             return _context.Equipment
-                .Include(x => x.GymClass)
+                .Include(x => x.GymClasses)
                 .ThenInclude(x => x.Employee)
                 .FirstOrDefault(predicate);
         }
@@ -25,7 +25,7 @@ namespace Incharge.Repository
         public List<Equipment> ListBy(Func<Equipment, bool> predicate)
         {
             return _context.Equipment
-                .Include(x => x.GymClass)
+                .Include(x => x.GymClasses)
                 .ThenInclude(x => x.Employee)
                 .Where(predicate)
                 .ToList();
@@ -33,7 +33,7 @@ namespace Incharge.Repository
         public IQueryable<Equipment> QueryBy(Func<Equipment, bool> predicate)
         {
             return _context.Equipment
-                .Include(x => x.GymClass)
+                .Include(x => x.GymClasses)
                 .ThenInclude(x => x.Employee)
                 .Where(predicate)
                 .AsQueryable(); //for index paging method. 

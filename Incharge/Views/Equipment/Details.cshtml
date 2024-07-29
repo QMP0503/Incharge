@@ -29,9 +29,8 @@
                 <div class="card-body p-2 mb-1">
                     <p class="m-2"><b>Name:</b> @Model.Name</p>
                     <p class="m-2"><b>Status:</b> @Model.Status</p>
-                    <p class="m-2"><b>Purchase Date:</b> @Model.PurchaseDate</p>
-                    <p class="m-2"><b>Maintanance Date:</b> @Model.MaintanceDate</p>
-                    <p class="m-2"><b>Gym Class:</b> @Model.GymClass.Name</p>
+                    <p class="m-2"><b>Purchase Date:</b> @Model.PurchaseDate.ToShortDateString()</p>
+                    <p class="m-2"><b>Maintanance Date:</b> @Model.MaintanceDate.ToShortDateString()</p>
                     <p class="m-2"><b>Description:</b> @Model.Description</p>
 
                 </div><!-- / project-info-box -->
@@ -42,6 +41,36 @@
         <div class="col-md-7"> 
             <img src="@Model.Image" alt="project-image" class="rounded">
         </div><!-- / column (image) -->
+    </div>
+    <div class="row">
+        <!--Add paging-->
+        <div class="card card-body">
+            <div class="mb-2">
+                <h5><strong>Gym Class Booking History</strong></h5>
+            </div>
+            <table class="table-hover table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.GymClasses.OrderByDescending(x => x.Date))
+                    {
+                        <tr onclick="location.href='/GymClass/Details/@item.Id'" class="table-light">
+                            <td>@item.Name</td>
+                            <td>@item.Date</td>
+                            <td>@item.Employee.FirstName @item.Employee.LastName</td>
+                            <td>@item.Description</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
     </div>
     
 </div>

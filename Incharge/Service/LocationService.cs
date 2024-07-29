@@ -6,7 +6,7 @@ using AutoMapper;
 
 namespace Incharge.Service
 {
-    public class LocationService : IService<LocationVM, Location>, IChecker<LocationVM>
+    public class LocationService : IService<LocationVM, Location>
     {
         private readonly IFindRepository<Location> _FindLocationRepository;
         private readonly IRepository<Location> _LocationRepository;
@@ -80,26 +80,6 @@ namespace Incharge.Service
             var location = _FindLocationRepository.FindBy(x => x.Id == LocationVM.Id);
             if(location == null) throw new ArgumentNullException("location don't exist");
             _LocationRepository.Delete(location);
-            _LocationRepository.Save();
-        }
-
-        //called whenever location is called (Make async to check and assign location)
-        public async void Check()
-        {
-            //find all location with class happening right now to change status to not available
-            var checkLocationStatus = _FindLocationRepository.ListBy(x => x.Gymclasses.Any(y => y.Date <= DateTime.Now && y.EndTime >= DateTime.Now && y.Status == "Active"));
-            foreach(var location in checkLocationStatus)
-            {
-                location.Status = "Unavailable";
-                _LocationRepository.Update(location);
-            }
-            var checkLocationUnavailable = _FindLocationRepository.ListBy(x => x.Status == "Unavailable" && (x.Gymclasses.Any(y => y.Date <= DateTime.Now && y.EndTime >= DateTime.Now && y.Status == "Active")==false));
-            foreach(var location in checkLocationUnavailable)
-            {
-                location.Status = "Available";
-                _LocationRepository.Update(location);
-            }
-
             _LocationRepository.Save();
         }
     }

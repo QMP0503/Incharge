@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using Incharge.Models;
+﻿using Incharge.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Incharge.Data;
 
@@ -148,10 +144,7 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.Property(e => e.DiscountValue)
                 .HasPrecision(10)
                 .HasColumnName("Discount");
-            entity.Property(e => e.EndDate).HasColumnType("datetime");
-            entity.Property(e => e.Name).HasMaxLength(45);
-            entity.Property(e => e.Recurance).HasMaxLength(45);
-            entity.Property(e => e.StartDate).HasColumnType("datetime");
+
         });
 
         modelBuilder.Entity<Employee>(entity =>
@@ -208,9 +201,7 @@ public partial class InchargeContext : IdentityDbContext<User>
                 .HasMaxLength(45)
                 .HasDefaultValueSql("'Available'");
 
-            entity.HasOne(d => d.GymClass).WithMany(p => p.Equipment)
-                .HasForeignKey(d => d.GymClassId)
-                .HasConstraintName("GymClassId");
+            entity.HasMany(d => d.GymClasses).WithMany(p => p.Equipment);
         });
 
         modelBuilder.Entity<Expense>(entity =>

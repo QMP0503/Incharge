@@ -34,6 +34,16 @@ namespace Incharge.Service
             var client = _FindClientRepository.FindBy(predicate);
             if(client == null) { throw new NullReferenceException("Client Empty"); }
             var clientVM = _mapper.Map<ClientVM>(client);
+            //mapping gym classes
+            //var gymClasses = _FindGymClassRepository.ListBy(x => x.Clients.Contains(client));
+            //foreach(var gymClass in gymClasses)
+            //{
+            //    if(gymClass != null)
+            //    {
+            //        clientVM.Gymclasses.Add(gymClass);
+            //    }
+            //}
+
             if(client.Products.FirstOrDefault(x => x.ProductType.Name.Equals("Membership")) != null)
             {
 				clientVM.GymMembership = client.Products.FirstOrDefault(x => x.ProductType.Name.Equals("Membership")); //this is kinda stupid but oh well haha

@@ -5,23 +5,22 @@ using Incharge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
-using MySqlX.XDevAPI;
-using Microsoft.AspNetCore.Mvc.Filters;
 using Incharge.ViewModels.Calendar;
+using MySqlX.XDevAPI;
 
 namespace Incharge.Controllers
 {
     public class GymclassController : Controller
     {
         private readonly IService<GymClassVM, Gymclass> _GymclassService;
-        private readonly IDropDownOptions<GymClassVM>  _DropdownOptions;
+        private readonly IDropDownOptions<GymClassVM> _DropdownOptions;
         private readonly IPagingService<PaginatedList<Gymclass>> _pagingService;
         private readonly IGymclassCalendarService _gymclassCalendarService;
         private readonly ILog _logger;
         private readonly IMapper _mapper;
-        private readonly IChecker<LocationVM> _locationStatusChecker;
+        private readonly IChecker _checker;
 
-        public GymclassController(IChecker<LocationVM> locationStatusChecker , IService<GymClassVM, Gymclass> GymclassService, IPagingService<PaginatedList<Gymclass>> pagingService, ILog logger, IMapper mapper, IGymclassCalendarService gymclassCalendarService, IDropDownOptions<GymClassVM> dropdownOptions)
+        public GymclassController(IChecker checker, IService<GymClassVM, Gymclass> GymclassService, IPagingService<PaginatedList<Gymclass>> pagingService, ILog logger, IMapper mapper, IGymclassCalendarService gymclassCalendarService, IDropDownOptions<GymClassVM> dropdownOptions)
         {
             _GymclassService = GymclassService;
             _pagingService = pagingService;
@@ -29,7 +28,7 @@ namespace Incharge.Controllers
             _mapper = mapper;
             _gymclassCalendarService = gymclassCalendarService;
             _DropdownOptions = dropdownOptions;
-            _locationStatusChecker = locationStatusChecker;
+            _checker = checker;
         }
 
 
@@ -42,8 +41,9 @@ namespace Incharge.Controllers
                                                          int pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
-            ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "Name_desc" : string.Empty;
-            ViewData["ClassDateSortParam"] = sortOrder == "ClassDate_desc" ? "ClassDate_asc" : "ClassDate_desc";
+            ViewData["NameSortParam"] = sortOrder == "Name_desc" ? "Name_asc" : "Name_desc";
+            ViewData["ClassDateSortParam"] = string.IsNullOrEmpty(sortOrder) ? "ClassDate_desc" : string.Empty;
+
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -55,21 +55,22 @@ namespace Incharge.Controllers
             }
 
             ViewData["CurrentFilter"] = searchString;
-            _locationStatusChecker.Check();
-
+            _checker.LocationCheck();
+            _checker.EquipmentCheck();
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
 
-        [HttpGet] 
+        [HttpGet]
         public IActionResult TrainerSchedule(string filter, DateTime dateSelected)
         {
             try
             {
                 var WeekdayList = _gymclassCalendarService.CreateItemList("trainer", filter, dateSelected);
-                _locationStatusChecker.Check();
+                _checker.LocationCheck();
+                _checker.EquipmentCheck();
                 return View(WeekdayList);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.Error(ex);
                 var Error = new List<WeekdayItem>();
@@ -77,15 +78,17 @@ namespace Incharge.Controllers
                 return View(Error);
             }
         }
-        [HttpGet] 
+        [HttpGet]
         public IActionResult LocationSchedule(string filter, DateTime dateSelected)
         {
             try
             {
                 var WeekdayList = _gymclassCalendarService.CreateItemList("location", filter, dateSelected);
-                _locationStatusChecker.Check();
+                _checker.LocationCheck();
+                _checker.EquipmentCheck();
                 return View(WeekdayList);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 _logger.Error(ex);
                 var Error = new List<WeekdayItem>();
@@ -95,20 +98,29 @@ namespace Incharge.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details(int id) //id will be sent when client profile is clicked. Also when all is working change to async
+        public IActionResult Details(GymClassVM gymClassVM) //id will be sent when client profile is clicked. Also when all is working change to async
         {
             try
             {
-                return View(_GymclassService.GetItem(x => x.Id == id));
+                _checker.EquipmentCheck();
+                _checker.LocationCheck();
+                var gymclassVM = _GymclassService.GetItem(x => x.Id == gymClassVM.Id);
+                gymclassVM.Error = gymClassVM.Error;
+                return View(gymclassVM);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex);
+                var gymclassVM = _GymclassService.GetItem(x=> x.Id == gymClassVM.Id);
+                if (ex.InnerException != null) { gymclassVM.Error = ex.InnerException.Message; }
+                else { gymclassVM.Error = ex.Message; }
                 return View();
             }
         }
         public IActionResult AddGymclass(string type)
         {
+            _checker.EquipmentCheck();
+            _checker.LocationCheck();
             var gymclassVM = _DropdownOptions.DropDownOptions();
             gymclassVM.Type = type;
             gymclassVM.Date = DateTime.Now; //setting reasonable default value
@@ -132,7 +144,7 @@ namespace Incharge.Controllers
                 gymclassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
                 gymclassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
                 gymclassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
-                if(ex.InnerException != null) { gymclassVM.Error = ex.InnerException.Message; }
+                if (ex.InnerException != null) { gymclassVM.Error = ex.InnerException.Message; }
                 else { gymclassVM.Error = ex.Message; }
                 return View(gymclassVM);
             }
@@ -141,16 +153,25 @@ namespace Incharge.Controllers
         {
             try
             {
+                _checker.EquipmentCheck();
+                _checker.LocationCheck();
                 var gymclass = _GymclassService.GetItem(x => x.Id == gymClassVM.Id);
                 gymclass.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
                 gymclass.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
                 gymclass.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                gymclass.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
                 return View(gymclass);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex);
-                return NotFound();
+                gymClassVM.LocationOptions = _DropdownOptions.DropDownOptions().LocationOptions;
+                gymClassVM.EquipmentOptions = _DropdownOptions.DropDownOptions().EquipmentOptions;
+                gymClassVM.EmployeeOptions = _DropdownOptions.DropDownOptions().EmployeeOptions;
+                gymClassVM.ClientOptions = _DropdownOptions.DropDownOptions().ClientOptions;
+                if (ex.InnerException != null) { gymClassVM.Error = ex.InnerException.Message; }
+                else { gymClassVM.Error = ex.Message; }
+                return View(gymClassVM);
             }
 
         }
@@ -204,7 +225,7 @@ namespace Incharge.Controllers
         {
             try
             {
-                _GymclassService.UpdateService(gymclassVM);
+                _GymclassService.DeleteService(gymclassVM);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -223,9 +244,12 @@ namespace Incharge.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex);}
-                return NotFound();
+                _logger.Error(ex);
+                if (ex.InnerException != null) { gymclassVM.Error = ex.InnerException.Message; }
+                else { gymclassVM.Error = ex.Message; }
+                return RedirectToAction("Details", "GymClass", new { id = gymclassVM.Id, error = gymclassVM.Error });
             }
         }
     }
 }
+

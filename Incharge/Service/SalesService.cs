@@ -98,9 +98,23 @@ namespace Incharge.Service
                 client.MembershipStartDate = sale.Date;
 			}
 
-            //PRICING
-            sale.TotalPrice = product.ProductType.Price * sale.Quantity;
-            //sale.TotalPrice = priceCalulator(sale, client);
+            //DISCOUNTS and pricing
+            if(entity.DiscountId != null)
+            {
+                foreach(var discountId in entity.DiscountId)
+                {
+                    var dsicount = _findDiscountRepository.FindBy(x => x.Id ==  discountId);
+                    sale.Discounts.Add(dsicount);
+                }
+                var discountSum = sale.Discounts.Sum(x => x.DiscountValue);
+                var price = product.ProductType.Price * sale.Quantity;
+                sale.TotalPrice = price - (price*discountSum);
+            }
+            else
+            {
+                sale.TotalPrice = product.ProductType.Price * sale.Quantity;
+            }
+
 
             //adding product to client
             client.Products.Add(product);
@@ -206,21 +220,7 @@ namespace Incharge.Service
 
             return salveVM;
         }
-        //public double priceCalulator(Sale sale, Client client)
-        //{
-        //    //CHECKING IF PRODUCT IS MEMBERSHIP
-        //    if (sale.Product.ProductType.Name.Contains("Membership"))
-        //    {
-        //        if (client.MembershipExpiryDate > sale.Date)
-        //        {
-        //            return sale.Product.ProductType.Price;
-        //        }
-        //        else
-        //        {
-        //            return 0;
-        //        }
-        //    }
-            
-        //}
+
+     
     }
 }

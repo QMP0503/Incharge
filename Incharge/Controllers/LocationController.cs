@@ -14,17 +14,17 @@ namespace Incharge.Controllers
     {
         private readonly IService<LocationVM, Location> _LocationService;
         private readonly IPagingService<PaginatedList<Location>> _pagingService;
-        private readonly IChecker<LocationVM> _locationChecker;
+        private readonly IChecker _checker;
         private readonly ILog _logger;
         private readonly IMapper _mapper;
 
-        public LocationController(IService<LocationVM, Location> LocationService, IPagingService<PaginatedList<Location>> pagingService, ILog logger, IMapper mapper, IChecker<LocationVM> locationChecker)
+        public LocationController(IChecker checker, IService<LocationVM, Location> LocationService, IPagingService<PaginatedList<Location>> pagingService, ILog logger, IMapper mapper)
         {
             _LocationService = LocationService;
             _pagingService = pagingService;
             _logger = logger;
             _mapper = mapper;
-            _locationChecker = locationChecker;
+            _checker = checker;
         }
 
 
@@ -51,7 +51,7 @@ namespace Incharge.Controllers
 
             ViewData["CurrentFilter"] = searchString;
 
-            _locationChecker.Check();
+            _checker.LocationCheck();
 
             return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
         }
