@@ -19,12 +19,13 @@ namespace Incharge.Controllers
             _logger = logger;
         }
 
-        [HttpGet] //torn between making them get a whole list of past years and summarize it or just display
+        [HttpGet] 
         public IActionResult Index()
         {
             try
             {
                 var YearbusinessReportVM = _BusinessReportService.ListItem(x => x.Date.Year == DateTime.Now.Year);
+                _BusinessReportService.UpdateService();
                 return View(YearbusinessReportVM);
             }
             catch (Exception ex)

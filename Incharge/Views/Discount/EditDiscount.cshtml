@@ -1,0 +1,22 @@
+﻿@model Incharge.ViewModels.DiscountVM;
+
+@{
+    ViewData["Title"] = "Edit Discount";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Edit Discount</h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="EditDiscount" asp-route-id="@Model.Id" method="post">
+
+                <partial name="_DiscountFormFields" model="@Model" />
+
+            </form>
+
+        </div>
+
+    </div>
+</div>

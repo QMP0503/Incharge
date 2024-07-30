@@ -93,9 +93,6 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Gymclass>>, GymclassPagi
 builder.Services.AddScoped<IService<ProductVM, Product>, ProductService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPagingService>();
 
-builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>(); 
-builder.Services.AddScoped<IPagingService<PaginatedList<Sale>>, SalesPagingService>(); 
-
 builder.Services.AddScoped<IBusinessReportService, BusinessReportService>(); 
 
 builder.Services.AddScoped<IService<ExpenseVM, Expense>, ExpenseService>(); 
@@ -104,12 +101,16 @@ builder.Services.AddScoped<IPagingService<PaginatedList<Expense>>, ExpensesPagin
 builder.Services.AddScoped<IService<DiscountVM, Discount>, DiscountService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Discount>>, DiscountPagingService>();
 
-//dropdown menu view options
+//Sale Service with payment confirmation
+builder.Services.AddScoped<IService<SaleVM, Sale>, SalesService>();
+builder.Services.AddScoped<IPagingService<PaginatedList<Sale>>, SalesPagingService>();
+builder.Services.AddScoped<IConfirmation<SaleVM>, SalesService>();
+
+//Dropdown menu view options
 builder.Services.AddScoped<IDropDownOptions<ProductVM>, ProductService>();
 builder.Services.AddScoped<IDropDownOptions<SaleVM>, SalesService>();
 builder.Services.AddScoped<IDropDownOptions<EmployeeVM>, EmployeeService>();
 builder.Services.AddScoped<IDropDownOptions<GymClassVM>, GymClassService>();
-
 
 //CHECKER INJECTION
 builder.Services.AddScoped<IChecker, CheckerService>();
@@ -117,9 +118,8 @@ builder.Services.AddScoped<IChecker, CheckerService>();
 //CALENDAR INJECTION
 builder.Services.AddScoped<IGymclassCalendarService, GymclassCalendarService>();
 
+
 //add memory caching for client list and/or gym class list
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -180,6 +180,7 @@ using(var scope = app.Services.CreateScope())
 {
     var initializationService = scope.ServiceProvider.GetRequiredService<IBusinessReportService>();
     initializationService.AddService(); //run to add new business report if new month begins
+    initializationService.UpdateService();
 }
 
 using (var scope = app.Services.CreateScope())

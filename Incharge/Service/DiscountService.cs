@@ -43,7 +43,7 @@ namespace Incharge.Service
         public void UpdateService(DiscountVM entity)
         {
             var discountToUpdate = _FindDiscountRepository.FindBy(x => x.Id == entity.Id);
-            if(discountToUpdate != null) { throw new Exception("Discount don't exist."); }
+            if(discountToUpdate == null) { throw new Exception("Discount don't exist."); }
             _mapper.Map(entity, discountToUpdate);
             _DiscountRepository.Update(discountToUpdate);
             _DiscountRepository.Save();

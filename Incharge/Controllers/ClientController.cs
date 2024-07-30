@@ -4,7 +4,6 @@ using Incharge.Service.IService;
 using log4net;
 using Incharge.Service.PagingService;
 using Incharge.ViewModels;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Incharge.Controllers
 {
@@ -94,11 +93,6 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditClient(ClientVM clientVM)
         {
-			//if (!ModelState.IsValid)
-			//{
-   //             clientVM.Error = "Invalid inputs";
-			//	return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error});
-			//}
 			try
             {
                 _clientService.UpdateService(clientVM);
@@ -112,19 +106,6 @@ namespace Incharge.Controllers
                 return RedirectToAction("Details", new { uuid = clientVM.Uuid, error = clientVM.Error });
             }
         }
-
-        //public IActionResult DeleteClient(string Uuid)
-        //{
-        //    try
-        //    {
-        //        return View(_clientService.GetItem(x => x.Uuid == Uuid));
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        _logger.Error(ex);
-        //        return NotFound();
-        //    }
-        //}
 
         [HttpPost, ActionName("DeleteClient")]
         [ValidateAntiForgeryToken]

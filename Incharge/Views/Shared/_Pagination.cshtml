@@ -11,6 +11,7 @@
            asp-route-sortOrder="@ViewData["CurrentSort"]"
            asp-route-pageNumber="@(Model.PageIndex - 1)"
            asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           asp-route-pageSize="@Model.PageSize"
            class="btn btn-default @prevDisabled">
             <i class="bi bi-arrow-left"></i>
         </a>
@@ -18,6 +19,7 @@
            asp-route-sortOrder="@ViewData["CurrentSort"]"
            asp-route-pageNumber="@(Model.PageIndex + 1)"
            asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           asp-route-pageSize="@Model.PageSize"
            class="btn btn-default @nextDisabled">
             <i class="bi bi-arrow-right"></i>
         </a>

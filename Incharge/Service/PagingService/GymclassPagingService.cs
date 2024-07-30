@@ -30,11 +30,11 @@ namespace Incharge.Service.PagingService
                 case "Name_asc":
                     GymClassQuery = GymClassQuery.OrderBy(c => c.Name);
                     break;
-                case "ClassDate_desc":
-                    GymClassQuery = GymClassQuery.OrderByDescending(c => c.Date);
-                    break;
-                default: //Date_asc
+                case "ClassDate_asc":
                     GymClassQuery = GymClassQuery.OrderBy(c => c.Date);
+                    break;
+                default: //Date_desc
+                    GymClassQuery = GymClassQuery.OrderByDescending(c => c.Date);
                     break;
             }
             int setPageSize = pageSize>0? pageSize: 10;

@@ -1,4 +1,5 @@
 ﻿using Incharge.Models;
+using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
 using Incharge.Service.PagingService;
 using Incharge.ViewModels;
@@ -15,15 +16,19 @@ namespace Incharge.Controllers
         private readonly IBusinessReportService _BusinessReportService;
         private readonly IDropDownOptions<SaleVM> _SaleDropDown;
         private readonly IPagingService<PaginatedList<Sale>> _PagingService;
+        private readonly IFindRepository<Product> _FindProductRepository;
         private readonly ILog _logger;
+        private readonly IConfirmation<SaleVM> _Confirmation;
 
-        public SaleController(IPagingService<PaginatedList<Sale>> pagingService, IService<SaleVM, Sale> SaleService, ILog logger, IDropDownOptions<SaleVM> dropDownOptions, IBusinessReportService businessReportService)
+        public SaleController(IFindRepository<Product> FindProductRepository, IConfirmation<SaleVM> confirmation, IPagingService<PaginatedList<Sale>> pagingService, IService<SaleVM, Sale> SaleService, ILog logger, IDropDownOptions<SaleVM> dropDownOptions, IBusinessReportService businessReportService)
         {
             _SaleService = SaleService;
             _logger = logger;
             _SaleDropDown = dropDownOptions;
             _BusinessReportService = businessReportService;
             _PagingService = pagingService;
+            _Confirmation = confirmation;
+            _FindProductRepository = FindProductRepository;
         }
 
         [HttpGet]
@@ -61,11 +66,30 @@ namespace Incharge.Controllers
             saleVM.EmployeeOptions = _SaleDropDown.DropDownOptions().EmployeeOptions;
             saleVM.ProductOptions = _SaleDropDown.DropDownOptions().ProductOptions;
             saleVM.DiscountOptions = _SaleDropDown.DropDownOptions().DiscountOptions;
+            if(saleVM.ProductId != 0)
+            {
+                saleVM.ProductName = _FindProductRepository.FindBy(x => x.Id == saleVM.ProductId).Name;
+            }
             saleVM.Date=DateTime.Now;
             return View(saleVM); //for ease of selection
         }
+        public IActionResult PaymentConfirmation(SaleVM saleVM)
+        {
+            try
+            {
+                _Confirmation.paymentConfirmation(saleVM);
+                return View(saleVM);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+                if (ex.InnerException != null) { saleVM.Error = ex.InnerException.Message; }
+                else { saleVM.Error = ex.Message; }
+                return RedirectToAction("AddSale", saleVM);
+            }
+        }
 
-        [HttpPost, ActionName("AddSale")]
+        [HttpPost]
         public IActionResult AddSaleConfirm(SaleVM saleVM)
         {
             try
@@ -86,9 +110,12 @@ namespace Incharge.Controllers
                 if (ex.InnerException != null) { saleVM.Error = ex.InnerException.Message; }
                 else { saleVM.Error = ex.Message; }
                 saleVM.ProductName = saleVM.ProductOptions.FirstOrDefault(x => x.Id == saleVM.ProductId).Name;
-                return View(saleVM); //Find logical location if fail instead of error 404
+
+                return RedirectToAction("AddSale", saleVM);
             }
         }
+
+
         [HttpPost, ActionName("DeleteSale")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]

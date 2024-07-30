@@ -6,11 +6,11 @@
     <label class="control-label">Product Selected: </label>
     <select asp-for="ProductId" class="form-select">
         <option selected value="@Model.ProductId">@Model.ProductName</option>
-        @foreach (var enitity in Model.ProductOptions)
+        @foreach (var entity in Model.ProductOptions)
         {
-            if (enitity.Id != Model.ProductId)
+            if (entity.Id != Model.ProductId)
             {
-                <option value="@enitity.Id">@enitity.Name</option>
+                <option value="@entity.Id">@entity.Name</option>
             }
 
         }
@@ -27,29 +27,41 @@
 <div class="mb-3">
     <label asp-for="Client" class="control-label"></label>
     <select asp-for="ClientId" class="form-select">
-        @foreach (var enitity in Model.ClientOptions)
+        @foreach (var entity in Model.ClientOptions)
         {
-            <option value="@enitity.Id">@enitity.FirstName @enitity.LastName</option>
+            <option value="@entity.Id">@entity.FirstName @entity.LastName</option>
         }
     </select>
 </div>
 <div class="mb-3">
     <label asp-for="Employee" class="control-label"></label>
     <select asp-for="EmployeeId" class="form-select">
-        @foreach (var enitity in Model.EmployeeOptions)
+        @foreach (var entity in Model.EmployeeOptions)
         {
-            <option value="@enitity.Id">@enitity.FirstName @enitity.LastName</option>
+            <option value="@entity.Id">@entity.FirstName @entity.LastName</option>
         }
     </select>
 </div>
+
+<div class="mb-3">
+    <label asp-for="Discount" class="control-label"></label>
+    <select asp-for="DiscountId" class="form-select" data-placeholder="Select Discount" multiple data-multi-select>
+        @foreach (var entity in Model.DiscountOptions)
+        {
+            <option value="@entity.Id">@entity.Name: @(entity.DiscountValue*100)%</option>
+        }
+    </select>
+</div>
+
 <div class="mb-3">
     <label asp-for="PaymentType" class="control-label"></label>
     <select asp-for="PaymentType" class="form-select">
-        @foreach (var enitity in Model.PaymentOptions)
+        @foreach (var entity in Model.PaymentOptions)
         {
-            <option value="@enitity">@enitity</option>
+            <option value="@entity">@entity</option>
         }
     </select>
 </div>
+
 <a asp-controller="Product" asp-action="Index" type="button" class="btn btn-primary">Cancel</a>
 <button type="submit" class="btn btn-primary">Save</button>

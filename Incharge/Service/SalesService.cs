@@ -9,7 +9,7 @@ using Incharge.Repository;
 using ZstdSharp.Unsafe;
 namespace Incharge.Service
 {
-    public class SalesService:IService<SaleVM, Sale>, IDropDownOptions<SaleVM>
+    public class SalesService:IService<SaleVM, Sale>, IDropDownOptions<SaleVM>, IConfirmation<SaleVM>
     {
         private readonly IMapper _mapper;
         private readonly IRepository<Sale> _saleRepository;
@@ -52,19 +52,19 @@ namespace Incharge.Service
             return saleVM;
         }
         public void AddService(SaleVM entity) //NEED TO ADD DISCOUNTS
-        { 
-            if(entity.Quantity == 0) { throw new ArgumentNullException("Quantity is 0"); }
+        {
+            if (entity.Quantity == 0) { throw new ArgumentNullException("Quantity is 0"); }
             var sale = _mapper.Map<Sale>(entity);
-            if(entity.ClientId == 0) { throw new ArgumentNullException("Client Empty.");}
-            if(entity.ProductId == 0) { throw new ArgumentNullException("Product Empty."); }
-            if(entity.EmployeeId == 0) { throw new ArgumentNullException("Employee Empty."); }
+            if (entity.ClientId == 0) { throw new ArgumentNullException("Client Empty."); }
+            if (entity.ProductId == 0) { throw new ArgumentNullException("Product Empty."); }
+            if (entity.EmployeeId == 0) { throw new ArgumentNullException("Employee Empty."); }
 
             var product = _findProductRepository.FindBy(x => x.Id == entity.ProductId);
-            if(product == null) { throw new Exception("Product don't exist."); }
+            if (product == null) { throw new Exception("Product don't exist."); }
             sale.Product = product;
 
             var employee = _findEmployeeRepository.FindBy(x => x.Id == entity.EmployeeId);
-            if(employee == null) { throw new ArgumentException("Employee don't exist."); }
+            if (employee == null) { throw new ArgumentException("Employee don't exist."); }
             sale.Employee = employee;
 
             var client = _findClientRepository.FindBy(x => x.Id == entity.ClientId);
@@ -75,7 +75,7 @@ namespace Incharge.Service
             sale.Date = DateTime.Now; //track sales date
 
             //CHECKING FOR DUPLICATE MEMBERSHIP
-            if(client.MembershipStatus == "Active" && sale.Product.ProductType.Name.Contains("Membership"))
+            if (client.MembershipStatus == "Active")
             {
                 throw new Exception("Client already have this product.");
             }
@@ -88,27 +88,27 @@ namespace Incharge.Service
             }
 
             //CLIENT CAN ONLY BUY 1 MONTH MEMBERSHIP!
-            if(product.ProductType.Name.Contains("Membership"))
-			{
+            if (product.ProductType.Name.Contains("Membership"))
+            {
                 sale.Quantity = 1;
-				client.MembershipStatus = "Active";
+                client.MembershipStatus = "Active";
                 client.MembershipExpiryDate = sale.Date.AddMonths(1); //Set number of months members bought
                 client.MembershipName = product.Name;
                 client.MembershipProductId = product.Id;
                 client.MembershipStartDate = sale.Date;
-			}
+            }
 
             //DISCOUNTS and pricing
-            if(entity.DiscountId != null)
+            if (entity.DiscountId != null)
             {
-                foreach(var discountId in entity.DiscountId)
+                foreach (var discountId in entity.DiscountId)
                 {
-                    var dsicount = _findDiscountRepository.FindBy(x => x.Id ==  discountId);
+                    var dsicount = _findDiscountRepository.FindBy(x => x.Id == discountId);
                     sale.Discounts.Add(dsicount);
                 }
                 var discountSum = sale.Discounts.Sum(x => x.DiscountValue);
                 var price = product.ProductType.Price * sale.Quantity;
-                sale.TotalPrice = price - (price*discountSum);
+                sale.TotalPrice = price - (price * discountSum);
             }
             else
             {
@@ -118,19 +118,19 @@ namespace Incharge.Service
 
             //adding product to client
             client.Products.Add(product);
-			_clientRepository.Update(client);
+            _clientRepository.Update(client);
 
-			product.Clients.Add(client);
+            product.Clients.Add(client);
 
-			//Add product to business report
-			var businessReport = _FindBusinessReportRepository.FindBy(x => x.Date.Month == sale.Date.Month && x.Date.Year == sale.Date.Year);
-			sale.BusinessReport = businessReport;
+            //Add product to business report
+            var businessReport = _FindBusinessReportRepository.FindBy(x => x.Date.Month == sale.Date.Month && x.Date.Year == sale.Date.Year);
+            sale.BusinessReport = businessReport;
             sale.BusinessReportId = businessReport.Id;
 
-			_saleRepository.Add(sale);
+            _saleRepository.Add(sale);
             _productRepository.Update(product);
             _saleRepository.Save();
-            
+
         }
         public void UpdateService(SaleVM entity)//should NEVER use unless there is a massive error
         {
@@ -186,6 +186,7 @@ namespace Incharge.Service
             }
 
             var totalDiscount = discount.Sum(x => x.DiscountValue);
+            if (totalDiscount >= 1) { throw new Exception("Discount cannot be equal or greater than 100%"); }
 
 
             if (totalDiscount > 0)
@@ -198,7 +199,7 @@ namespace Incharge.Service
             }
 
             _saleRepository.Update(saleToUpdate);
-            _saleRepository.Save();
+            
         }
         public void DeleteService(SaleVM entity)//ONLY USED IN THE EVENT OF HUGE ERROR.
         {
@@ -212,7 +213,7 @@ namespace Incharge.Service
         {
             var salveVM = new SaleVM()
             {
-                ClientOptions = _findClientRepository.ListBy(x => x.Id > 0),
+                ClientOptions = _findClientRepository.ListBy(x => x.Id > 0 && x.MembershipStatus != "Active"),
                 EmployeeOptions = _findEmployeeRepository.ListBy(x => x.Id > 0),
                 ProductOptions = _findProductRepository.ListBy(x => x.Id > 0),
                 DiscountOptions = _findDiscountRepository.ListBy(x => x.Id > 0)
@@ -221,6 +222,62 @@ namespace Incharge.Service
             return salveVM;
         }
 
+        public SaleVM paymentConfirmation(SaleVM entity)
+        {
+            if (entity.Quantity == 0) { throw new ArgumentNullException("Quantity is 0"); }
+            
+            if (entity.ClientId == 0) { throw new ArgumentNullException("Client Empty."); }
+            if (entity.ProductId == 0) { throw new ArgumentNullException("Product Empty."); }
+            if (entity.EmployeeId == 0) { throw new ArgumentNullException("Employee Empty."); }
+
+            var product = _findProductRepository.FindBy(x => x.Id == entity.ProductId);
+            if (product == null) { throw new Exception("Product don't exist."); }
+            entity.Product = product;
+
+            var employee = _findEmployeeRepository.FindBy(x => x.Id == entity.EmployeeId);
+            if (employee == null) { throw new ArgumentException("Employee don't exist."); }
+            entity.Employee = employee;
+
+            var client = _findClientRepository.FindBy(x => x.Id == entity.ClientId);
+            if (client == null) { throw new Exception("Client don't exist."); }
+
+            entity.Client = client;
+
+            //find a way to add tax (think it will be set by employee)
+            entity.Date = DateTime.Now; //track sales date
+
+            //CHECKING FOR DUPLICATE MEMBERSHIP
+            if (client.MembershipStatus == "Active")
+            {
+                throw new Exception("Client already have this product.");
+            }
+
+            //might change later
+            if(entity.Quantity>1 && entity.Product.ProductType.Name.Contains("Membership"))
+            {
+                throw new Exception("Membership can only be bought for one month at a time");
+            }
+
+            //DISCOUNTS and pricing
+            if (entity.DiscountId != null)
+            {
+                foreach (var discountId in entity.DiscountId)
+                {
+                    var discount = _findDiscountRepository.FindBy(x => x.Id == discountId);
+                    entity.Discount.Add(discount);
+                }
+                var discountSum = entity.Discount.Sum(x => x.DiscountValue);
+                if (discountSum >= 1) { throw new Exception("Discount cannot be equal or greater than 100%"); }
+                var price = product.ProductType.Price * entity.Quantity;
+                entity.TotalPrice = price - (price * discountSum);
+            }
+            else
+            {
+                entity.TotalPrice = product.ProductType.Price * entity.Quantity;
+            }
+
+            return entity;
+        }
      
     }
 }

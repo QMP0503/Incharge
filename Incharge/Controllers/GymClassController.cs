@@ -42,7 +42,7 @@ namespace Incharge.Controllers
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParam"] = sortOrder == "Name_desc" ? "Name_asc" : "Name_desc";
-            ViewData["ClassDateSortParam"] = string.IsNullOrEmpty(sortOrder) ? "ClassDate_desc" : string.Empty;
+            ViewData["ClassDateSortParam"] = string.IsNullOrEmpty(sortOrder) ? "ClassDate_asc" : string.Empty;
 
 
             if (!string.IsNullOrEmpty(searchString))

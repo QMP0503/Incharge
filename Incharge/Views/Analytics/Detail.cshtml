@@ -37,7 +37,7 @@
                     <p class="m-2"><b>Cost:</b> $@Model.Cost</p>
                     <p class="m-2"><b>Profit:</b> $@Model.Profit</p>
                     <p class="m-2"><b>Total Members:</b> @Model.MonthlyMembers</p>
-                    <p class="m-2"><b>New Memberships Sold:</b> @Model.NewMembershipSales</p>
+                    <p class="m-2"><b>Memberships Sold:</b> @Model.NewMembershipSales</p>
                     <p class="m-2"><b>Membership Sales:</b> $@Model.MembershipFee </p>
 
                     <!--Delete Button-->
@@ -75,6 +75,35 @@
             </div>
         </div>
     </div>
-    
+    <div class="row">
+        <div class="container">
+            <h3>Sales</h3>
+            <table class="table-responsive table-hover table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="col">Product</th>
+                        <th scope="col" class="col">Payment Type</th>
+                        <th scope="col" class="col">Date</th>
+                        <th scope="col" class="col">Total Price</th>
+                        <th scope="col" class="col">Client Name</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Sales)
+                    {
+                        <tr>
+                            <td>@item.Product.Name</td>
+                            <td>@item.PaymentType</td>
+                            <td>@item.Date</td>
+                            <td>$@item.TotalPrice</td>
+                            <td>@item.Client.FirstName @item.Client.LastName</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
 </div>
 

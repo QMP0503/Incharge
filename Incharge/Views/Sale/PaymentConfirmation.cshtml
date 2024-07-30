@@ -1,0 +1,108 @@
+﻿@model Incharge.ViewModels.SaleVM;
+@using Microsoft.AspNetCore.Mvc;
+
+@{
+    ViewData["Title"] = "Payment Confirmation";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Payment Confirmation</h1>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>#</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td class="col-md-9"><h6>@Model.Product.Name</h6></td>
+                        <td class="col-md-1" style="text-align: center"> @Model.Quantity </td>
+                        <td class="col-md-1 text-center">@Model.Product.TotalPrice</td>
+                        <td class="col-md-1 text-center">@(Model.Quantity * Model.Product.TotalPrice)</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>Discount</th>
+                        <th></th>
+                        <th></th>
+                        <th class="text-center">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var discount in Model.Discount)
+                    {
+                        <tr>
+                            <td class="col-md-9"><h6>@discount.Name</h6></td>
+                            <td class="col-md-1" style="text-align: center"></td>
+                            <td class="col-md-1 text-center"></td>
+                            <td class="col-md-1 text-center">@(discount.DiscountValue*100)%</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <table class="table table-borderless">
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td class="text-right">
+                        <p>
+                            <strong>Discount Total: </strong>
+                        </p>
+                        <p>
+                            <strong>Discounted Value: </strong>
+                        </p>
+                    </td>
+                    <td class="text-center">
+                        <p>
+                            <strong>@(Model.Discount.Sum(x => x.DiscountValue) * 100)%</strong>
+                        </p>
+                        <p>
+                            <strong>@(Model.Discount.Sum(x => x.DiscountValue) * Model.Quantity * Model.Product.TotalPrice)</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                    <td class="text-center text-danger"><h4><strong>$@Model.TotalPrice</strong></h4></td>
+                </tr>
+               
+            </table>
+
+            <form asp-action="AddSaleConfirm" method="post">
+                <input type="hidden" asp-for="Uuid" value="@Model.Uuid" />
+                <input type="hidden" asp-for="Date" value="@Model.Date" />
+                <input type="hidden" asp-for="PaymentType" value="@Model.PaymentType" />
+                <input type="hidden" asp-for="TotalPrice" value="@Model.TotalPrice" />
+                <input type="hidden" asp-for="Quantity" value="@Model.Quantity" />
+                <input type="hidden" asp-for="ClientId" value="@Model.Client.Id" />
+                <input type="hidden" asp-for="EmployeeId" value="@Model.Employee.Id"/>
+                <input type="hidden" asp-for="ProductId" value="@Model.Product.Id" />
+                @foreach(var discount in Model.Discount)
+                {
+                    <input type="hidden" asp-for="DiscountId" value="@discount.Id" />
+                }
+
+                <a asp-controller="Sale" asp-action="AddSale" asp-route-ProductId="@Model.Product.Id" asp-route-Quantity="@Model.Quantity" type="button" class="btn btn-danger">Cancel</a>
+                <input type="submit" value="Confirm" class="btn btn-primary"/>
+            </form>
+
+        </div>
+
+    </div>
+</div>

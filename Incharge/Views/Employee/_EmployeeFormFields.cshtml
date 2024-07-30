@@ -39,9 +39,9 @@
 <div class="mb-3">
     <label asp-for="Role" class="control-label"></label>
     <select asp-for="RoleId" class="form-select">
-        @foreach (var enitity in Model.EmployeeTypeOptions)
+        @foreach (var entity in Model.EmployeeTypeOptions)
         {
-            <option value="@enitity.Id">@enitity.Type</option>
+            <option value="@entity.Id">@entity.Type</option>
         }
     </select>
 </div>

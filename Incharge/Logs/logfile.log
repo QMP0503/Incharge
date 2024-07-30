@@ -807,3 +807,46 @@ Name
 2024-07-29 15:32:25,330 [18] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
    at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 57
    at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 136
+2024-07-30 09:27:35,447 [21] ERROR Program - System.Exception: Discount don't exist.
+   at Incharge.Service.DiscountService.UpdateService(DiscountVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\DiscountService.cs:line 46
+   at Incharge.Controllers.DiscountController.EditDiscountConfirm(DiscountVM discountVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\DiscountController.cs:line 100
+2024-07-30 11:05:18,854 [21] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.AddService(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 80
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73
+2024-07-30 11:05:20,320 [21] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.AddService(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 80
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73
+2024-07-30 11:12:43,761 [10] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.AddService(SaleVM entity)
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM)
+2024-07-30 11:12:43,849 [10] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.AddService(SaleVM entity)
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM)
+2024-07-30 11:14:31,224 [17] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.AddService(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 110
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73
+2024-07-30 11:14:31,323 [17] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.AddService(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 110
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73
+2024-07-30 11:15:55,910 [21] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.BusinessReportService.CalculateMembershipData(BusinessReport entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\BusinessReportService.cs:line 120
+   at Incharge.Service.BusinessReportService.UpdateService() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\BusinessReportService.cs:line 76
+   at Incharge.Controllers.SaleController.EditSaleConfirm(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 128
+2024-07-30 15:08:48,223 [9] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-07-30 15:08:49,388 [9] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-07-30 15:09:43,797 [9] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-07-30 15:09:45,262 [9] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-07-30 15:11:53,599 [10] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 270
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73
+2024-07-30 15:13:03,632 [7] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 270
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73

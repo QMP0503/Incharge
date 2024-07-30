@@ -15,6 +15,7 @@ namespace Incharge.Repository
         public Client FindBy(Func<Client, bool> predicate)
         {
             return _context.Clients
+                .Include(x => x.Sales)
                 .Include(x => x.Employees)
                 .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
                 .ThenInclude (x => x.Location)
@@ -26,6 +27,7 @@ namespace Incharge.Repository
         public List<Client> ListBy(Func<Client, bool>? predicate)
         {
             return _context.Clients
+                .Include(x => x.Sales)
                 .Include(x => x.Employees)
                 .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
                 .ThenInclude(x => x.Location)
@@ -38,12 +40,14 @@ namespace Incharge.Repository
         public IQueryable<Client> QueryBy(Func<Client, bool> predicate)
         {
             return _context.Clients
+                .Include(x => x.Sales)
                 .Include(x => x.Employees)
                 .Include(x => x.Gymclasses) //Include location if direct link to gymclass page doesn't work
                 .ThenInclude(x => x.Location)
                 .Include(x => x.Products)
                 .ThenInclude(x => x.ProductType)
                 .Include(x => x.PaymentRecord)
+                .Where(predicate)
                 .AsQueryable(); //for index paging method.
         }
     }

@@ -71,11 +71,11 @@ namespace Incharge.Service
 
             currentReport = CalculateAccountsPayable(currentReport);
             //currentReport = CalculateAccountsReceivable(currentReport); don't have a use for it yet.
+            currentReport = CalculateRevenue(currentReport);
             currentReport = CalculateCost(currentReport);
             currentReport = CalculateProfit(currentReport);
             currentReport = CalculateMembershipData(currentReport);
             currentReport = CalculateExpenses(currentReport);
-            currentReport = CalculateRevenue(currentReport);
             _BusinessReportRepository.Update(currentReport);
             _BusinessReportRepository.Save();
         }
@@ -113,13 +113,9 @@ namespace Incharge.Service
         {
             var ClientMemberships = _FindClientRepository.ListBy(x => x.MembershipName != null);
             entity.MonthlyMembers = ClientMemberships.Where(x => x.MembershipStatus == "Active").Count();
-            var MonthSales = ClientMemberships.Where(x => x.MembershipStartDate.GetValueOrDefault().Date.Month == DateTime.Now.Month);
-            double TotalSales = 0;
-            foreach(var item in MonthSales)
-            {
-                TotalSales += item.Sales.FirstOrDefault(x => x.Product.ProductType.Name == "Membership" && x.Date.Month == DateTime.Now.Month).TotalPrice;
-            }
-            entity.NewMembershipSales = MonthSales.Count();
+            var MonthSales = _FindSaleRepository.ListBy(x => x.BusinessReportId == entity.Id && x.Product.ProductType.Name == "Membership");
+            var TotalSales = MonthSales.Sum(x => x.TotalPrice);
+            entity.NewMembershipSales = MonthSales.Count(); //fix this to just show membership sold this month
             entity.MembershipFee = TotalSales;
             return entity;
         }//for the month

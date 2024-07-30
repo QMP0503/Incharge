@@ -27,7 +27,7 @@
         }
         <!--Search Bar and select page number-->
         <partial name="_SearchAndPageSize" />
-
+        
     </div>
 </nav>
 
@@ -51,7 +51,7 @@
                                 <a class="text-muted dropdown-toggle font-size-20" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <a asp-action="UpdateDiscount" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
+                                    <a asp-action="EditDiscount" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
                                     <!-- this look nasty as fuck, fix when not angry -->
                                     <form asp-action="DeleteDiscount" asp-route-id="@item.Id" method="post">
                                         <input class="dropdown-item" value="Delete" type="submit" />

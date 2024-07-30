@@ -1,0 +1,22 @@
+﻿@model Incharge.ViewModels.DiscountVM;
+
+@{
+    ViewData["Title"] = "Add Discount";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Add Discount</h1>
+        </div>
+        <div class="card-body">
+            <form asp-action="AddDiscount" method="post">
+
+                <partial name="_DiscountFormFields" model="@Model" />
+
+            </form>
+
+        </div>
+
+    </div>
+</div>

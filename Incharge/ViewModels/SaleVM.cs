@@ -42,6 +42,8 @@ namespace Incharge.ViewModels
 
         public virtual Product Product { get; set; }
 
+        public virtual ICollection<Discount>? Discount { get; set; } = new List<Discount>();
+
         public virtual List<int>? DiscountId { get; set; } 
 
         //for view only

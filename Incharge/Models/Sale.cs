@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Incharge.Models;
 
@@ -12,7 +13,6 @@ public partial class Sale
     public int Quantity { get; set; }
     //Membership will be counted by months
     public double TotalPrice { get; set; } //edit the rest of sales
-
     public int ProductId { get; set; }
 
     [AllowedValues(typeof(string), new string[] { "Cash", "Credit", "Debit" })]
@@ -33,5 +33,7 @@ public partial class Sale
     public virtual Product Product { get; set; } = null!;
 
     //list of discounts if more than one discount applies
+    [AllowNull]
     public virtual ICollection<Discount> Discounts { get; set; } = new List<Discount>();
+
 }
