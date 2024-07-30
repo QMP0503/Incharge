@@ -4,7 +4,7 @@ using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Incharge.Models;
 using Incharge.ViewModels;
-using MySqlX.XDevAPI;
+ 
 
 namespace Incharge.Controllers
 {

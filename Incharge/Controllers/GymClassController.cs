@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
 using Incharge.ViewModels.Calendar;
-using MySqlX.XDevAPI;
+ 
 
 namespace Incharge.Controllers
 {

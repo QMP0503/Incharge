@@ -4,8 +4,6 @@ using Incharge.Models;
 using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
 using Incharge.ViewModels.Calendar;
-using Microsoft.AspNetCore.Mvc;
-using System.Net.WebSockets;
 
 namespace Incharge.Service
 {

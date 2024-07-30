@@ -3,7 +3,6 @@ using Incharge.ViewModels;
 using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
 using AutoMapper;
-using System.Runtime.Serialization;
 
 namespace Incharge.Service
 {

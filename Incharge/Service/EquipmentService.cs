@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
-using CloudinaryDotNet.Core;
-using Incharge.Data;
 using Incharge.Models;
 using Incharge.Repository.IRepository;
 using Incharge.Service.IService;
 using Incharge.ViewModels;
-using MySqlX.XDevAPI;
-using static System.Net.WebRequestMethods;
+
 
 namespace Incharge.Service
 {

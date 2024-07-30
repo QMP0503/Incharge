@@ -3,10 +3,8 @@ using Incharge.Service.PagingService;
 using Incharge.Models;
 using Incharge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using AutoMapper;
 using log4net;
-using Incharge.Repository;
 
 namespace Incharge.Controllers
 {

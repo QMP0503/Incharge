@@ -9,11 +9,7 @@ using Incharge.Repository;
 using Incharge.Service.IService;
 using Incharge.Service;
 using Incharge.Service.PagingService;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using CloudinaryDotNet;
-using CloudinaryDotNet.Actions;
 using dotenv.net;
-using Microsoft.Build.Framework;
 using Incharge.Helper;
 using MyMovies.Models;
 

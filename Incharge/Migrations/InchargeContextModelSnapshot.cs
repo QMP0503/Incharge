@@ -236,9 +236,6 @@ namespace Incharge.Migrations
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 
-                    b.HasIndex("PaymentRecordId")
-                        .IsUnique();
-
                     b.HasIndex(new[] { "FirstName" }, "Client_FirstName");
 
                     b.HasIndex(new[] { "Id" }, "Client_Id_UNIQUE")
@@ -533,42 +530,6 @@ namespace Incharge.Migrations
                     b.ToTable("location", (string)null);
                 });
 
-            modelBuilder.Entity("Incharge.Models.Paymentrecord", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("ClientId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("description");
-
-                    b.Property<bool?>("Paymentstatus")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("tinyint(1)")
-                        .HasColumnName("paymentstatus")
-                        .HasDefaultValueSql("'0'");
-
-                    b.Property<string>("Uuid")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("Id")
-                        .HasName("PRIMARY");
-
-                    b.HasIndex(new[] { "Uuid" }, "PaymentRecord_Uuid_UNIQUE")
-                        .IsUnique();
-
-                    b.ToTable("paymentrecord", (string)null);
-                });
-
             modelBuilder.Entity("Incharge.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -645,9 +606,6 @@ namespace Incharge.Migrations
                     b.Property<string>("PaymentType")
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("PaymentrecordId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -666,8 +624,6 @@ namespace Incharge.Migrations
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
-
-                    b.HasIndex("PaymentrecordId");
 
                     b.HasIndex(new[] { "BusinessReportId" }, "BusinessReportId_idx");
 
@@ -973,17 +929,6 @@ namespace Incharge.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Incharge.Models.Client", b =>
-                {
-                    b.HasOne("Incharge.Models.Paymentrecord", "PaymentRecord")
-                        .WithOne("Clients")
-                        .HasForeignKey("Incharge.Models.Client", "PaymentRecordId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .HasConstraintName("PaymentRecordId");
-
-                    b.Navigation("PaymentRecord");
-                });
-
             modelBuilder.Entity("Incharge.Models.Employee", b =>
                 {
                     b.HasOne("Incharge.Models.EmployeeType", "Role")
@@ -1057,10 +1002,6 @@ namespace Incharge.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("Employe_idfk");
-
-                    b.HasOne("Incharge.Models.Paymentrecord", null)
-                        .WithMany("ClientSales")
-                        .HasForeignKey("PaymentrecordId");
 
                     b.HasOne("Incharge.Models.Product", "Product")
                         .WithMany("Sales")
@@ -1173,14 +1114,6 @@ namespace Incharge.Migrations
             modelBuilder.Entity("Incharge.Models.Location", b =>
                 {
                     b.Navigation("Gymclasses");
-                });
-
-            modelBuilder.Entity("Incharge.Models.Paymentrecord", b =>
-                {
-                    b.Navigation("ClientSales");
-
-                    b.Navigation("Clients")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Incharge.Models.Product", b =>

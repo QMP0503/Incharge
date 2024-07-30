@@ -5,7 +5,7 @@ using Incharge.ViewModels;
 using log4net;
 using Incharge.Service.PagingService;
 using Microsoft.AspNetCore.Authorization;
-using MySqlX.XDevAPI;
+ 
 
 
 namespace Incharge.Controllers
@@ -140,5 +140,6 @@ namespace Incharge.Controllers
                 return View();
             }
         }
+
     }
 }

@@ -850,3 +850,6 @@ Name
 2024-07-30 15:13:03,632 [7] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
    at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 270
    at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 73
+2024-07-30 17:30:00,303 [9] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 268
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 80

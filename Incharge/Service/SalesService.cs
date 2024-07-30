@@ -3,10 +3,8 @@ using Incharge.Repository.IRepository;
 using Incharge.Models;
 using Incharge.ViewModels;
 using AutoMapper;
-using System.Data;
-using Google.Protobuf.WellKnownTypes;
-using Incharge.Repository;
-using ZstdSharp.Unsafe;
+
+
 namespace Incharge.Service
 {
     public class SalesService:IService<SaleVM, Sale>, IDropDownOptions<SaleVM>, IConfirmation<SaleVM>
@@ -213,7 +211,7 @@ namespace Incharge.Service
         {
             var salveVM = new SaleVM()
             {
-                ClientOptions = _findClientRepository.ListBy(x => x.Id > 0 && x.MembershipStatus != "Active"),
+                ClientOptions = _findClientRepository.ListBy(x => x.Id > 0),
                 EmployeeOptions = _findEmployeeRepository.ListBy(x => x.Id > 0),
                 ProductOptions = _findProductRepository.ListBy(x => x.Id > 0),
                 DiscountOptions = _findDiscountRepository.ListBy(x => x.Id > 0)

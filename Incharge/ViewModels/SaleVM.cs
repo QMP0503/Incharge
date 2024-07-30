@@ -6,7 +6,7 @@ using System.Security.Policy;
 
 namespace Incharge.ViewModels
 {
-    public class SaleVM //need discount :(((
+    public class SaleVM 
     {
         public string Uuid { get; set; }  //relationship will still use regular id.
         public DateTime Date { get; set; }
@@ -31,7 +31,8 @@ namespace Incharge.ViewModels
         public string ClientUuid { get; set; }
         public string EmployeeUuid { get; set; }
 
-        public int? BusinessReportId { get; set; } //send to business report within the month, will be made during the background.
+        public int? BusinessReportId { get; set; }
+        //send to business report within the month, will be made during the background.
 
         [DisplayName("Business Report")]
         public virtual BusinessReport? BusinessReport { get; set; }
@@ -53,9 +54,9 @@ namespace Incharge.ViewModels
         public List<string> PaymentOptions { get; set; } = new List<string>() { "Cash", "Credit", "Debit" };
         public List<Product>? ProductOptions { get; set; }
         [DisplayName("Employee Names")]
-        public List<Employee>? EmployeeOptions { get; set; }//to track the employee that made the sale
+        public List<Employee>? EmployeeOptions { get; set; }
 
-        [DisplayName("Product Name")] //don't think i need this
+        [DisplayName("Product Name")] 
         public string ProductName { get; set; }
 
         [DisplayName("Discount Options")]

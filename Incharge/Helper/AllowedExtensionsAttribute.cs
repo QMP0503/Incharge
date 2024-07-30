@@ -1,8 +1,5 @@
-﻿using System;
+﻿
 using System.ComponentModel.DataAnnotations;
-using System.IO;
-using Microsoft.AspNetCore.Http;
-
 public class AllowedExtensionsAttribute : ValidationAttribute
 {
 	private readonly string[] _extensions;

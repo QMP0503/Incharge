@@ -2,11 +2,10 @@
 using AutoMapper;
 using Incharge.Models;
 using Incharge.Service.IService;
-using Incharge.Service.PagingService;
 using Incharge.ViewModels;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+
 
 namespace Incharge.Controllers
 {

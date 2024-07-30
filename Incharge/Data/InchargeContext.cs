@@ -27,8 +27,6 @@ public partial class InchargeContext : IdentityDbContext<User>
 
     public virtual DbSet<Location> Locations { get; set; }
 
-    public virtual DbSet<Paymentrecord> Paymentrecords { get; set; }
-
     public virtual DbSet<Product> Products { get; set; }
 
     public virtual DbSet<Producttype> Producttypes { get; set; }
@@ -85,11 +83,6 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.Property(e => e.FirstName).HasMaxLength(45);
             entity.Property(e => e.LastName).HasMaxLength(45);
             entity.Property(e => e.Status).HasMaxLength(45);
-
-            entity.HasOne(d => d.PaymentRecord).WithOne(p => p.Clients)
-                .HasForeignKey<Client>(d => d.PaymentRecordId)
-                .OnDelete(DeleteBehavior.Cascade)
-                .HasConstraintName("PaymentRecordId");
 
             entity.HasMany(d => d.Employees).WithMany(p => p.Clients)
                 .UsingEntity<Dictionary<string, object>>(
@@ -260,28 +253,6 @@ public partial class InchargeContext : IdentityDbContext<User>
             entity.Property(e => e.Description).HasColumnType("text");
             entity.Property(e => e.Name).HasMaxLength(45);
             entity.Property(e => e.Status).HasDefaultValueSql("Available");
-        });
-
-        modelBuilder.Entity<Paymentrecord>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity.ToTable("paymentrecord");
-
-
-            entity.HasIndex(e => e.Uuid, "PaymentRecord_Uuid_UNIQUE").IsUnique();
-
-            //entity.Property(e => e.Uuid)
-            //      .HasDefaultValueSql("(uuid())")
-            //      .IsFixedLength();
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Description)
-                .HasMaxLength(255)
-                .HasColumnName("description");
-            entity.Property(e => e.Paymentstatus)
-                .HasDefaultValueSql("'0'")
-                .HasColumnName("paymentstatus");
         });
 
         modelBuilder.Entity<Product>(entity =>

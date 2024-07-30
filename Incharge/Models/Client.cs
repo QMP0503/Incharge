@@ -1,9 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Incharge.Models;
 
@@ -42,7 +39,6 @@ public partial class Client
     public int? PaymentRecordId { get; set; }
 
     public string Address { get; set; } //address of client
-    public virtual Paymentrecord? PaymentRecord { get; set; }
     public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>();
     //will act as record to track membership payments.
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();

@@ -1,8 +1,6 @@
 ﻿using Incharge.Models;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using System.Security.Policy;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
@@ -51,8 +49,6 @@ namespace Incharge.ViewModels
 
 
         //Icollection<object> to retrieve and display data.
-        [AllowNull]
-        public virtual Paymentrecord? PaymentRecord { get; set; }
         public virtual ICollection<Sale>? Sales { get; set; }  //do i need this in dto??
         [AllowNull]
         public virtual ICollection<Employee>? Employees { get; set; }

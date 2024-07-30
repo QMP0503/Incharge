@@ -21,7 +21,6 @@ namespace Incharge.Repository
                 .ThenInclude (x => x.Location)
                 .Include(x => x.Products)
                 .ThenInclude(x => x.ProductType)
-                .Include(x => x.PaymentRecord)
                 .FirstOrDefault(predicate);
         }
         public List<Client> ListBy(Func<Client, bool>? predicate)
@@ -33,7 +32,6 @@ namespace Incharge.Repository
                 .ThenInclude(x => x.Location)
                 .Include(x => x.Products)
                 .ThenInclude(x => x.ProductType)
-                .Include(x => x.PaymentRecord)
                 .Where(predicate) //if theres issue use LinQ command in seperate method
                 .ToList();
         }
@@ -46,7 +44,6 @@ namespace Incharge.Repository
                 .ThenInclude(x => x.Location)
                 .Include(x => x.Products)
                 .ThenInclude(x => x.ProductType)
-                .Include(x => x.PaymentRecord)
                 .Where(predicate)
                 .AsQueryable(); //for index paging method.
         }

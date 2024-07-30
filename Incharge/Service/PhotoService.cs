@@ -2,7 +2,6 @@
 using CloudinaryDotNet.Actions;
 using Incharge.Helper;
 using Incharge.Service.IService;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Options;
 
 namespace Incharge.Service
