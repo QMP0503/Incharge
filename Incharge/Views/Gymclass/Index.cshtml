@@ -42,31 +42,32 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr onclick="location.href='/Gymclass/Details?Id=@item.Id'">
-                    <td>@item.Name</td>
-                    <td>@item.Date.ToShortDateString()</td>
-                    <td>@item.Date.TimeOfDay.ToString(@"hh\:mm") - @item.EndTime.TimeOfDay.ToString(@"hh\:mm") </td>
-                    <td>@item.Type</td>
-                    <td>@item.Status</td>
+                <tr>
+                    <td onclick="location.href='/Gymclass/Details?Id=@item.Id'">@item.Name</td>
+                    <td onclick="location.href='/Gymclass/Details?Id=@item.Id'">@item.Date.ToShortDateString()</td>
+                    <td onclick="location.href='/Gymclass/Details?Id=@item.Id'">@item.Date.TimeOfDay.ToString(@"hh\:mm") - @item.EndTime.TimeOfDay.ToString(@"hh\:mm") </td>
+                    <td onclick="location.href='/Gymclass/Details?Id=@item.Id'">@item.Type</td>
+                    <td onclick="location.href='/Gymclass/Details?Id=@item.Id'">@item.Status</td>
+                    
                     <td>
                         <div class="dropdown">
                             @if(item.Status == "Active")
                             {
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                     Change Status
-                                </button>
+                                </a>
                             }
                             @if(item.Status == "Cancelled")
                             {
-                                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="btn btn-danger dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
                                     Change Status
-                                </button>
+                                </a>
                             }
                             @if(item.Status == "Completed")
                             {
-                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                     Change Status
-                                </button>
+                                </a>
                             }
                             <ul class="dropdown-menu">
                                 <form asp-action="UpdateStatus" asp-route-Id="@item.Id" method="post">

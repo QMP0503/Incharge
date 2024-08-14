@@ -4,11 +4,14 @@ using Incharge.Models;
 using Incharge.Service.IService;
 using Incharge.ViewModels;
 using log4net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Packaging;
 
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IService<GymClassVM, Gymclass> _GymclassService;
@@ -38,16 +41,21 @@ namespace Incharge.Controllers
             _EquipmentService = equipmentService;
             _mapper = mapper;
         }
-
+        [Authorize]
+        [Route("/Home")]
         public IActionResult Index() //make this a dashboard
         {
+            var GymClass = _GymclassService.ListItem(x => x.Date.Date == DateTime.Now.Date);
+         // var Location = _LocationService.ListItem(x => x.Id > 0);
+            var Employee = _EmployeeService.ListItem(x => x.Role.Type == "Trainer" && !x.Gymclasses.Any(g => g.Date <= DateTime.Now.Date && g.EndTime >= DateTime.Now.Date));
+            var Client = _ClientService.ListItem(x => x.Id > 0);
+         // var Equipment = _EquipmentService.ListItem(x => x.Id > 0);
+
             var homeVM = new HomeVM()
             {
-                GymClasses = _GymclassService.ListItem(x => x.Date.Date == DateTime.Now.Date),
-                Locations = _LocationService.ListItem(x => x.Id > 0),
-                Employees = _EmployeeService.ListItem(x => x.Role.Type == "Trainer"),
-                Clients = _ClientService.ListItem(x => x.Id > 0),
-                Equipment = _EquipmentService.ListItem(x => x.Id > 0)
+                GymClasses = GymClass.Take(5).ToList(),
+                Employees = Employee.ToList(),
+                Clients = Client,
             };
             return View(homeVM);
         }

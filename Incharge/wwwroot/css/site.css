@@ -5,6 +5,12 @@
     align-items: stretch;
 }
 
+.form-signin {
+    max-width: 800px;
+    min-width: 300px;
+    padding: 1rem;
+}
+
 html {
   font-size: 14px;
 }
@@ -35,6 +41,16 @@ main {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/*Navbar*/
+
+
+        /* Styling for each link in the navbar */
+.nav ul li {
+    color: rgb(22, 202, 233); /* Text color with 85% opacity */
+}
+
+            
 /*starting side bar problem*/
 
 
@@ -264,7 +280,8 @@ a {
     border-bottom: 1px solid #d5dadb;
 }
 
-p {
+p 
+{
     font-family: "Barlow", sans-serif !important;
     font-weight: 300;
     font-size: 1rem;
@@ -272,6 +289,7 @@ p {
     margin-bottom: 10px;
 }
 
-b, strong {
+b, strong 
+{
     font-weight: 700 !important;
 }

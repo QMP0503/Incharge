@@ -255,15 +255,7 @@ C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\scop
 C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.Up2Date
 C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\Incharge.genruntimeconfig.cache
 C:\Users\quang\OneDrive\Desktop\Projects\Incharge\Incharge\obj\Debug\net8.0\ref\Incharge.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.AssemblyReference.cache
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.AssemblyInfoInputs.cache
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.AssemblyInfo.cs
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.CoreCompileInputs.cache
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.RazorAssemblyInfo.cache
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.RazorAssemblyInfo.cs
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.sourcelink.json
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Logs\log4net.config
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\appsettings.json
@@ -273,8 +265,6 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.staticwe
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.exe
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.deps.json
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.runtimeconfig.json
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.dll
-C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.pdb
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\BootstrapBlazor.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\BootstrapIcons.AspNetCore.dll
@@ -496,6 +486,15 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.AssemblyReference.cache
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.AssemblyInfoInputs.cache
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.AssemblyInfo.cs
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.csproj.CoreCompileInputs.cache
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.RazorAssemblyInfo.cache
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.RazorAssemblyInfo.cs
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.sourcelink.json
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\staticwebassets\msbuild.Incharge.Microsoft.AspNetCore.StaticWebAssets.props
@@ -511,4 +510,5 @@ C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\refint\Incharge.dll
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.pdb
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\Incharge.genruntimeconfig.cache
+C:\Users\intern.pmquang1\C#\Incharge\Incharge\bin\Debug\net8.0\Incharge.pdb
 C:\Users\intern.pmquang1\C#\Incharge\Incharge\obj\Debug\net8.0\ref\Incharge.dll

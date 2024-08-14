@@ -12,7 +12,7 @@ public partial class Employee
     public string Address { get; set; } //employee address
     public string LastName { get; set; } = null!;
     public string? ProfilePicture { get; set; } //get cloudinary working for image upload
-    public long Phone { get; set; }
+    public long Phone { get; set; } //cannot display numbers that start with a 0
     [DataType(DataType.EmailAddress)]
     public string Email { get; set; } = null!;
 

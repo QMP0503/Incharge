@@ -1,0 +1,78 @@
+﻿@model Incharge.Service.PagingService.PaginatedList<Incharge.Models.BusinessReport>;
+@using Microsoft.AspNetCore.Identity;
+@using Incharge.Service.PagingService;
+@using Incharge.ViewModels;
+
+
+@{
+    ViewData["Title"] = "Report List";
+}
+
+<nav class="navbar-brand mb-3">
+    <div class="row align-content-center">
+        <h1 class="text-black m-3 align-text-top font-bold">Business Report</h1>
+    </div>
+    <div class="row pt-3 pb-3">
+        <div class="col-auto pr-2">
+            <a asp-action="Index" class="btn btn-primary">Back To Insight</a>
+        </div>
+        <div class="dropdown col-auto">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Page Size
+            </button>
+
+
+            <ul class="dropdown-menu">
+                <li><a asp-action="Index" asp-route-pageSize="10" class="dropdown-item">10</a></li>
+                <li><a asp-action="Index" asp-route-pageSize="20" class="dropdown-item">20</a></li>
+                <li><a asp-action="Index" asp-route-pageSize="30" class="dropdown-item">30</a></li>
+            </ul>
+
+        </div>
+    </div>
+   
+</nav>
+<div class="container">
+    <table class="table-responsive table-hover table">
+        <thead>
+            <tr>
+                <th scope="col" class="col-auto">
+                    <a asp-action="ReportList" asp-route-sortOrder="@ViewData["DateSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
+                </th>
+                <th scope="col" class="col-auto">
+                    <a asp-action="ReportList" asp-route-sortOrder="@ViewData["RevenueSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Revenue</a>
+                </th>
+                <th scope="col" class="col-auto">
+                    <a asp-action="ReportList" asp-route-sortOrder="@ViewData["CostSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cost</a>
+                </th>
+                <th scope="col" class="col-auto">
+                    <a asp-action="ReportList" asp-route-sortOrder="@ViewData["ActiveMembersSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Active Members</a>
+                </th>
+                <th scope="col" class="col-auto">
+                    <a asp-action="ReportList" asp-route-sortOrder="@ViewData["NewMembershipsSoldSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">New Memberships Sold</a>
+                </th>
+                <th scope="col" class="col-auto">
+                    <a asp-action="ReportList" asp-route-sortOrder="@ViewData["ProfitsSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Profits</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr onclick="location.href='/Analytics/Detail?Uuid=@item.Uuid'">
+                    <td>@item.Date.ToString("MMMM") - @item.Date.Year</td>
+                    <td>@item.Revenue</td>
+                    <td>@item.Cost</td>
+                    <td>@item.MonthlyMembers</td>
+                    <td>@item.NewMembershipSales</td>
+                    <td>@item.Profit</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @*Pagination partial view*@
+
+    <partial name="_Pagination" model="@Model" />
+
+</div>

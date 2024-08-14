@@ -160,7 +160,7 @@ namespace Incharge.Service
                 {
                     businessReportVM.OtherExpenses += item.Cost;
                 }
-                if(item.Type == "Wage")
+                if(item.Type == "Wages")
                 {
                     businessReportVM.Wages += item.Cost;
                 }

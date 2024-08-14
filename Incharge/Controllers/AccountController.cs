@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Incharge.ViewModels;
 using Incharge.Models;
+using Microsoft.AspNetCore.Authorization;
 namespace Incharge.Controllers
 {
     public class AccountController : Controller
@@ -13,12 +14,14 @@ namespace Incharge.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
+        [Authorize]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Register(RegisterVM model)
         {
             if (!ModelState.IsValid)

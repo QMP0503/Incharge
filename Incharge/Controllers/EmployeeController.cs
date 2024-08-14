@@ -4,10 +4,12 @@ using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Incharge.Models;
 using Incharge.ViewModels;
- 
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         readonly IService<EmployeeVM, Employee> _EmployeeService;
@@ -22,6 +24,8 @@ namespace Incharge.Controllers
             _EmployeeDropDown = EmployeeDropDown;
         }
         [HttpGet]
+        [Route("/Employee")]
+
         public IActionResult Index(
                                                  string sortOrder,
                                                  string currentFilter,

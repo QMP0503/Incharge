@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class DiscountController : Controller
     {
         readonly ILog _logger;
@@ -22,6 +23,8 @@ namespace Incharge.Controllers
         }
 
         [HttpGet] //will be the index
+        [Route("/Discount")]
+
         public IActionResult Index(
                                                          string sortOrder,
                                                          string currentFilter,

@@ -4,9 +4,11 @@ using Incharge.Service.IService;
 using log4net;
 using Incharge.Service.PagingService;
 using Incharge.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     [BindProperties]
     public class ClientController : Controller
     {
@@ -22,6 +24,7 @@ namespace Incharge.Controllers
             _photoService = photoService;
         }
         [HttpGet] //there will be a button in index to check client in. Design a button/page to do so. Check them in and out.
+        [Route("/Client")]
         public IActionResult Index(
                                                  string sortOrder,
                                                  string currentFilter,

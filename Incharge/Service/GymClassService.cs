@@ -17,8 +17,7 @@ namespace Incharge.Service
         readonly IRepository<Client> _ClientRepository;
         readonly IMapper _Mapper;
         readonly IChecker _checker;
-        readonly IRepository<Equipment> _EquipmentRepository;
-        public GymClassService(IRepository<Equipment> equipmentRepository, IChecker checker, IFindRepository<Equipment> FindEquipmentRepository, IMapper mapper, IFindRepository<Gymclass> FindGymClassRepository, IRepository<Gymclass> GymClassRepository, IFindRepository<Location> locationRepository, IFindRepository<Employee> employeeRepository, IFindRepository<Client> clientRepository, IRepository<Client> ClientRepository)
+        public GymClassService(IChecker checker, IFindRepository<Equipment> FindEquipmentRepository, IMapper mapper, IFindRepository<Gymclass> FindGymClassRepository, IRepository<Gymclass> GymClassRepository, IFindRepository<Location> locationRepository, IFindRepository<Employee> employeeRepository, IFindRepository<Client> clientRepository, IRepository<Client> ClientRepository)
         {
             _Mapper = mapper;
             _FindGymClassRepository = FindGymClassRepository;
@@ -29,7 +28,6 @@ namespace Incharge.Service
             _FindEquipmentRepository = FindEquipmentRepository;
             _ClientRepository = ClientRepository;
             _checker = checker;
-            _EquipmentRepository = equipmentRepository;
         }
         public List<GymClassVM> ListItem(Func<Gymclass, bool> predicate) //test if automapper work with lists
         {
@@ -56,7 +54,10 @@ namespace Incharge.Service
             var checkTimeAndLocation = _FindGymClassRepository.FindBy(x =>( (x.EndTime <= entity.EndTime && x.EndTime >= entity.Date)||(x.Date <= entity.EndTime && x.Date >= entity.Date))&& x.LocationId == entity.LocationId);
             if (checkTimeAndLocation != null) { throw new Exception("A class already exist within time frame and in the same location."); }
             var checkTimeAndEmployee = _FindGymClassRepository.FindBy(x =>( (x.EndTime <= entity.EndTime && x.EndTime >= entity.Date) || (x.Date <= entity.EndTime && x.Date >= entity.Date)) && x.EmployeeId == entity.EmployeeId);
-            if(checkTimeAndEmployee != null) { throw new Exception("A class already exist within time frame and with the same employee."); }
+            if(checkTimeAndEmployee != null) throw new Exception("A class already exist within time frame and with the same employee.");
+
+            //Check that gym class must be on the same day
+            if(entity.Date.Date != entity.EndTime.Date) throw new Exception("Classes can not be longer than one day.");
 
             //Start Mapping
             var gymClass = _Mapper.Map<Gymclass>(entity);
@@ -64,25 +65,29 @@ namespace Incharge.Service
             gymClass.Location = location;
             gymClass.Employee = employee;
 
-            if(entity.EquipmentId != null)
+            if (entity.EquipmentId != null)
             {
                 foreach (var equipmentId in entity.EquipmentId)
                 {
                     var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentId);
-                    equipment.Status = "Reserved";
+                    if (equipment == null) { throw new Exception("Cannot find equipment"); }
+                    if (equipment.GymClasses.Any(x => ((x.EndTime <= entity.EndTime && x.EndTime >= entity.Date) || (x.Date <= entity.EndTime && x.Date >= entity.Date)) && x.Id != entity.Id))
+                    {
+                        throw new Exception("Equipment already registered in class a selected time.");
+                    }
                     gymClass.Equipment.Add(equipment);
                 }
-            }
 
+            }
 
             if (entity.Type == "Private")
             {
-                if(entity.ClientsId == null) { throw new Exception("Private class must have a client"); }
+                if(entity.ClientsId == null) throw new Exception("Private class must have a client");
                 foreach(var clientId in entity.ClientsId)
                 {
                     var client = _FindClientRepository.FindBy(x => x.Id == clientId);
-                    if (client == null) { throw new Exception("Client don't exist."); }
-                    if(client.TotalTrainingSessions <= 0) { throw new Exception("Client don't have enough training sessions."); }
+                    if (client == null) throw new Exception("Client don't exist.");
+                    if(client.TotalTrainingSessions <= 0) throw new Exception("Client don't have enough training sessions.");
                     client.TotalTrainingSessions -= 1;
                     gymClass.Clients.Add(client);
                     _ClientRepository.Update(client);
@@ -91,10 +96,14 @@ namespace Incharge.Service
             _GymClassRepository.Add(gymClass);
             _GymClassRepository.Save();
         }
-        public void UpdateService(GymClassVM entity)
+        public void UpdateService(GymClassVM entity) //catch same day error
         {          
             var gymClassToUpdate = _FindGymClassRepository.FindBy(x => x.Id == entity.Id);
-            if(gymClassToUpdate == null) { throw new Exception("GymClass don't exist."); }
+            if(gymClassToUpdate == null) throw new Exception("GymClass don't exist.");
+
+
+            //Check that gym class must be on the same day
+            if (entity.Date.Date != entity.EndTime.Date) throw new Exception("Classes can not be longer than one day.");
 
             //for changing class status only
             switch (entity.Status)
@@ -102,7 +111,7 @@ namespace Incharge.Service
                 case "Active":
                     if(gymClassToUpdate.Status == "Cancelled") //would be a strange case but should have the option
                     {
-                        if(entity.Type == "Private")
+                        if(entity.Type == "Private" || gymClassToUpdate.Type == "Private")
                         {
                             foreach (var client in gymClassToUpdate.Clients)
                             {
@@ -122,7 +131,7 @@ namespace Incharge.Service
                 case "Cancelled":
                     if (gymClassToUpdate.Status == "Active")
                     {
-                        if(entity.Type == "Private")
+                        if(entity.Type == "Private" || gymClassToUpdate.Type == "Private")
                         {
                             foreach (var client in gymClassToUpdate.Clients)
                             {
@@ -154,19 +163,25 @@ namespace Incharge.Service
                 default:
                     break;
             }
-            
+
 
             //For when class is ACTUALLY editted
 
+            //Checking for element clash
+            var checkTimeAndLocation = _FindGymClassRepository.FindBy(x => ((x.EndTime <= entity.EndTime && x.EndTime >= entity.Date) || (x.Date <= entity.EndTime && x.Date >= entity.Date)) && x.LocationId == entity.LocationId && x.Id != entity.Id);
+            if (checkTimeAndLocation != null) { throw new Exception("A class already exist within time frame and in the same location."); }
+            var checkTimeAndEmployee = _FindGymClassRepository.FindBy(x => ((x.EndTime <= entity.EndTime && x.EndTime >= entity.Date) || (x.Date <= entity.EndTime && x.Date >= entity.Date)) && x.EmployeeId == entity.EmployeeId && x.Id != entity.Id);
+            if (checkTimeAndEmployee != null) { throw new Exception("A class already exist within time frame and with the same employee."); }
             
+
 
             _Mapper.Map(entity, gymClassToUpdate);
 
             if(entity.LocationId != 0)
             {
                 //checking for clash
-                var checkTimeAndLocation = _FindGymClassRepository.FindBy(x => (x.EndTime <= entity.EndTime && x.EndTime >= entity.Date)&&(x.Date <= entity.EndTime && x.Date >= entity.Date) && x.LocationId == entity.LocationId);
-                if (checkTimeAndLocation != null && checkTimeAndLocation.Id != entity.Id) { throw new Exception("A class already exist within time frame and in the same location."); }
+                //var checkTimeAndLocation = _FindGymClassRepository.FindBy(x => (x.EndTime <= entity.EndTime && x.EndTime >= entity.Date)&&(x.Date <= entity.EndTime && x.Date >= entity.Date) && x.LocationId == entity.LocationId);
+                //if (checkTimeAndLocation != null && checkTimeAndLocation.Id != entity.Id) { throw new Exception("A class already exist within time frame and in the same location."); }
 
                 var location = _FindLocationRepository.FindBy(x => x.Id == entity.LocationId);
                 gymClassToUpdate.Location = location;
@@ -174,8 +189,8 @@ namespace Incharge.Service
             if(entity.EmployeeId != 0)
             {
                 //checking for clash
-                var checkTimeAndEmployee = _FindGymClassRepository.FindBy(x => (x.EndTime <= entity.EndTime && x.EndTime >= entity.Date) &&(x.Date <= entity.EndTime && x.Date >= entity.Date) && x.EmployeeId == entity.EmployeeId);
-                if (checkTimeAndEmployee != null && checkTimeAndEmployee.Id != entity.Id) { throw new Exception("A class already exist within time frame and with the same employee."); }
+                //var checkTimeAndEmployee = _FindGymClassRepository.FindBy(x => (x.EndTime <= entity.EndTime && x.EndTime >= entity.Date) &&(x.Date <= entity.EndTime && x.Date >= entity.Date) && x.EmployeeId == entity.EmployeeId);
+                //if (checkTimeAndEmployee != null && checkTimeAndEmployee.Id != entity.Id) { throw new Exception("A class already exist within time frame and with the same employee."); }
                 var employee = _FindEmployeeRepository.FindBy(x => x.Id == entity.EmployeeId);
                 gymClassToUpdate.Employee = employee;
             }
@@ -208,13 +223,14 @@ namespace Incharge.Service
                 foreach (var equipmentId in entity.EquipmentId)
                 {
                     var equipment = _FindEquipmentRepository.FindBy(x => x.Id == equipmentId);
-                    if(equipment == null) { throw new Exception("Cannot find equipment"); }
-                    if(equipment.Status == "Unavailable") { throw new Exception("Equipment is unavailable."); }
-                    if(equipment.GymClasses.Any(x => x.Date <= gymClassToUpdate.Date && x.EndTime >= gymClassToUpdate.EndTime)) { throw new Exception("Equipment already registered in class a selected time."); }
+                    if(equipment == null) { throw new Exception("Cannot find equipment"); }                  
+                    if(equipment.GymClasses.Any(x => ((x.EndTime <= gymClassToUpdate.EndTime && x.EndTime >= gymClassToUpdate.Date) || (x.Date <= gymClassToUpdate.EndTime && x.Date >= gymClassToUpdate.Date)) && x.Id != gymClassToUpdate.Id))
+                    { 
+                        throw new Exception("Equipment already registered in class a selected time."); 
+                    }
                     gymClassToUpdate.Equipment.Add(equipment);
                 }
-                
-                
+                 
             }
             if (gymClassToUpdate.Employee != null)
             {

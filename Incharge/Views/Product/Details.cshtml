@@ -5,6 +5,9 @@
 @{
     ViewData["Title"] = "Details";
 }
+@{
+    var clientList = Model.Clients.OrderByDescending(c => c.Sales.FirstOrDefault(x => x.ProductId == Model.Id).Date);
+}
 
 <div class="container">
     <hr class="mt-0 mb-4">
@@ -38,9 +41,8 @@
                 <div class="card-header">
                     <h4 class="mt-1">Registered Clients</h4>
                 </div>
-                <table class="ms-3 table-responsive">
-                    <div class="p-1 table-hover table-borderless">   
-                        <thead>
+                <table class="table table-responsive table-hover table-borderless">
+                    <thead>
                             <tr class="">
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
@@ -49,27 +51,26 @@
                                 <th scope="col">Date Purchased</th>
                                 <!--Add Special column for membership to check if membership is experied and date renewed-->
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach(var client in Model.Clients)
-                            {
-                                <tr onclick="location.href='/Client/Details?Uuid=@client.Uuid';">
-                                    <td class="col">
-                                        @client.FirstName @client.LastName
-                                    </td>
-                                    <td class="col">
-                                    @client.Email
-                                    </td>
-                                    <td class="col">
-                                    @client.Status
-                                    </td>
-                                    <td class="col">
-                                    @client.Sales.FirstOrDefault(x => x.ProductId == @Model.Id).Date.ToShortDateString()
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </div>
+                    </thead>
+                    <tbody>
+                        @foreach (var client in clientList)
+                        {
+                            <tr onclick="location.href='/Client/Details?Uuid=@client.Uuid';">
+                                <td class="col">
+                                    @client.FirstName @client.LastName
+                                </td>
+                                <td class="col">
+                                @client.Email
+                                </td>
+                                <td class="col">
+                                @client.Status
+                                </td>
+                                <td class="col">
+                                @client.Sales.FirstOrDefault(x => x.ProductId == Model.Id).Date.ToShortDateString()
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
         </div>

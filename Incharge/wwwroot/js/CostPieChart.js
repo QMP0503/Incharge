@@ -13,7 +13,7 @@ const OtherExpenses = expenseData.OtherExpenses;
 const Maintenance = expenseData.Maintenance;
 
 var pieData = {
-    labels: ["Wage", "Rent", "Utilities", "Insurance", "Equipment", "Other", "Maintenance"],
+    labels: ["Wages", "Rent", "Utilities", "Insurance", "Equipment", "Other", "Maintenance"],
     datasets: [{
         data: [Wages, Rent, Utilities, Insurance, Equipment, OtherExpenses, Maintenance],
         backgroundColor: [

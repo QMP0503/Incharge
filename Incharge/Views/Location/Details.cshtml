@@ -57,7 +57,7 @@
                 <tbody>
                     @foreach(var item in Model.Gymclasses.OrderByDescending(x => x.Date))
                     {
-                    <tr>
+                    <tr onclick="location.href='/GymClass/Details/@item.Id'">
                         <td>@item.Name</td>
                         <td>@item.Date</td>
                         <td>@item.Employee.FirstName @item.Employee.LastName</td>

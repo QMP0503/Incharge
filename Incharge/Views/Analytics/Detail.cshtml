@@ -33,9 +33,9 @@
                     <h3 class="mb-3 mt-3">BUSINESS REPORT: @Model.Date.ToString("MMMM - yyyy") </h3>
                 </div>
                 <div class="card-body p-2 mb-1">
-                    <p class="m-2"><b>Revenue:</b> $@Model.Revenue</p>
-                    <p class="m-2"><b>Cost:</b> $@Model.Cost</p>
-                    <p class="m-2"><b>Profit:</b> $@Model.Profit</p>
+                    <p class="m-2"><b>Revenue:</b> $@Math.Round(Model.Revenue??0,2)</p>
+                    <p class="m-2"><b>Cost:</b> $@Math.Round(Model.Cost??0,2)</p>
+                    <p class="m-2"><b>Profit:</b> $@Math.Round(Model.Profit, 2)</p>
                     <p class="m-2"><b>Total Members:</b> @Model.MonthlyMembers</p>
                     <p class="m-2"><b>Memberships Sold:</b> @Model.NewMembershipSales</p>
                     <p class="m-2"><b>Membership Sales:</b> $@Model.MembershipFee </p>

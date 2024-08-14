@@ -76,6 +76,7 @@ namespace Incharge.Service
                     
             }
             
+            if(weekClasses == null) throw new Exception("No gymclasses found.");
 
             foreach (var item in weekClasses)
             {

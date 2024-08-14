@@ -15,7 +15,7 @@ namespace Incharge.ViewModels
 
         public string? Description { get; set; }
 
-        [AllowedValues("Available", "Unavailable", "Reserved", "Under Maintance")]
+        [AllowedValues("Available", "Unavailable", "Reserved", "Under Maintance", null)]
         public string? Status { get; set; }
 
         //object list to display on view

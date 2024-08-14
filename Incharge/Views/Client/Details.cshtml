@@ -154,24 +154,16 @@
 									@*will juat be colour indicator for if the client is signed in/out or payment is overdued.*@
 									<th scope="col" class="col">Name</th>
 									<th scope="col" class="col">Date</th>
-									<th scope="col" class="col">Trainer</th>
 									<th scope="col" class="col">Location</th>
-									<th scope="col" class="col"></th>
 								</tr>
 							</thead>
 							<tbody>
 								@foreach (var item in Model.Gymclasses)
 								{
-									<tr>
+									<tr onclick="location.href='/Gymclass/Details/@item.Id'">
 										<th>@item.Name</th>
 										<th>@item.Date</th>
-										<td>@item.Employee</td>
-										<td>@item.Location.Name</td> @*If null is will crash*@
-										<td>
-											<a asp-controller="Gymclasses" asp-action="DeleteGymclass" asp-route-Id="@item.Id" class="btn btn-primary">
-												<i class="bi bi-info-square"></i>
-											</a> @*why is this here?*@
-										</td>
+										<td>@item.Location.Name</td> @*If null it will crash*@
 									</tr>
 								}
 							</tbody>

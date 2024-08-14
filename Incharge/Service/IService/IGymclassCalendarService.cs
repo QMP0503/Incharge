@@ -9,5 +9,7 @@ namespace Incharge.Service.IService
         public DateTime GetMonday(DateTime date);
         public DateTime GetSunday(DateTime date);
         public List<TimeSpan> AssignTimeSlots(DateTime start, DateTime end);
+        public WeekdayItem DropDownOptions(string filter, string type, DateTime selectedDate);
+
     }
 }

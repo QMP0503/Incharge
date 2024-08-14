@@ -4,9 +4,11 @@ using Incharge.ViewModels;
 using Incharge.Models;
 using log4net;
 using Incharge.Service.PagingService;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         readonly IService<ProductVM, Product> _ProductService;
@@ -23,6 +25,7 @@ namespace Incharge.Controllers
         }
 
         [HttpGet]
+        [Route("/Product")]
         public IActionResult Index(
                                                  string sortOrder,
                                                  string currentFilter,

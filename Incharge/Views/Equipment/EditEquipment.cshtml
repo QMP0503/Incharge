@@ -12,6 +12,7 @@
         <form asp-action="EditEquipment" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data" class="p-2" autocomplete="on">
             
             <partial name="_EquipmentFormFields" model="Model" />
+            <a asp-action="Details" asp-route-id="@Model.Id" type="button" class="btn btn-primary ">Cancel</a>
 
         </form>
     </div>

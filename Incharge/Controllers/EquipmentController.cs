@@ -5,10 +5,12 @@ using Incharge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class EquipmentController : Controller
     {
         private readonly IService<EquipmentVM, Equipment> _EquipmentService;
@@ -28,6 +30,7 @@ namespace Incharge.Controllers
 
 
         [HttpGet]
+        [Route("/Equipment")]
         public IActionResult Index(
                                                          string sortOrder,
                                                          string currentFilter,

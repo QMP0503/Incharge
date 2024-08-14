@@ -5,9 +5,11 @@ using Incharge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class LocationController : Controller
     {
         private readonly IService<LocationVM, Location> _LocationService;
@@ -27,6 +29,7 @@ namespace Incharge.Controllers
 
 
         [HttpGet]
+        [Route("/Location")]
         public IActionResult Index(
                                                          string sortOrder,
                                                          string currentFilter,
@@ -74,11 +77,6 @@ namespace Incharge.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddLocation(LocationVM locationVM)
         {
-            if(ModelState.IsValid == false)
-            {
-                locationVM.Error = "Invalid inputs!";
-                return View(locationVM);
-            }
             try
             {
                 _LocationService.AddService(locationVM);

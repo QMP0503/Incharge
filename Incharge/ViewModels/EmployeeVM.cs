@@ -28,6 +28,7 @@ namespace Incharge.ViewModels
         public virtual ICollection<Sale>? Sales { get; set; } 
         public virtual ICollection<Client>? Clients { get; set; } 
         
+
         //VIEW ONLY
         public List<EmployeeType>? EmployeeTypeOptions { get; set; }
 
@@ -37,6 +38,7 @@ namespace Incharge.ViewModels
         public int RoleId { get; set; }
         public virtual List<int>? SalesId { get; set; }
         public virtual List<int>? ClientId { get; set; } //check if this is a security risk to display client int id.
+
 
         [DisplayName("Add Profile Picture")]
 		[AllowedExtensions(new string[] { ".jpg", ".png", ".jpeg" })]

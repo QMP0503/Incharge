@@ -5,6 +5,7 @@ using Incharge.Models;
 using Incharge.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Incharge.Repository.IRepository;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Incharge.Repository;
 using Incharge.Service.IService;
 using Incharge.Service;
@@ -41,6 +42,17 @@ builder.Services.AddDbContext<InchargeContext>(options =>
 {
     options.UseMySql(conectionString, ServerVersion.AutoDetect(conectionString));
 });
+
+builder.Services.AddAuthentication(
+    CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option =>
+    {
+        option.LoginPath = "/Account/Login";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    });
+
+
+
 
 builder.Services.AddIdentity<User, IdentityRole>(
     options =>
@@ -90,9 +102,11 @@ builder.Services.AddScoped<IService<ProductVM, Product>, ProductService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Product>>, ProductPagingService>();
 
 builder.Services.AddScoped<IBusinessReportService, BusinessReportService>(); 
+builder.Services.AddScoped<IPagingService<PaginatedList<BusinessReport>>, BusinessReportPagingService>();
 
 builder.Services.AddScoped<IService<ExpenseVM, Expense>, ExpenseService>(); 
 builder.Services.AddScoped<IPagingService<PaginatedList<Expense>>, ExpensesPagingService>(); 
+builder.Services.AddScoped<IRecurringExpenseService, ExpenseService>();
 
 builder.Services.AddScoped<IService<DiscountVM, Discount>, DiscountService>();
 builder.Services.AddScoped<IPagingService<PaginatedList<Discount>>, DiscountPagingService>();
@@ -126,6 +140,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 using (var scope = app.Services.CreateScope()) //add roles for manager/employee below.
@@ -167,11 +182,9 @@ app.UseAuthorization();
 
 app.MapControllerRoute( //edit to make all pages require authentication
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 
-    //check if they put remember me will it work..
-    //pattern: "{controller=Employee}/{action=Index}/{id?}"); //for testing purposes
 using(var scope = app.Services.CreateScope())
 {
     var initializationService = scope.ServiceProvider.GetRequiredService<IBusinessReportService>();
@@ -182,7 +195,7 @@ using(var scope = app.Services.CreateScope())
 using (var scope = app.Services.CreateScope())
 {
     var initializationService = scope.ServiceProvider.GetRequiredService<IChecker>();
-    initializationService.ClientCheck(); //run to add new business report if new month begins
+    initializationService.ClientCheck(); //check everytime program starts
 }
 
 //for seeding intial data to program only

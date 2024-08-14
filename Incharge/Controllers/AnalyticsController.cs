@@ -4,6 +4,7 @@ using Incharge.ViewModels;
 using log4net;
 using Microsoft.AspNetCore.Authorization;
 using Incharge.Models;
+using Incharge.Service.PagingService;
 
 namespace Incharge.Controllers
 {
@@ -12,14 +13,17 @@ namespace Incharge.Controllers
     {
         private readonly IBusinessReportService _BusinessReportService;
         private readonly ILog _logger;
+        private readonly IPagingService<PaginatedList<BusinessReport>> _pagingService;
 
-        public AnalyticsController(IBusinessReportService businessReportService, ILog logger)
+        public AnalyticsController(IBusinessReportService businessReportService, ILog logger, IPagingService<PaginatedList<BusinessReport>> pagingService)
         {
             _BusinessReportService = businessReportService;
             _logger = logger;
+            _pagingService = pagingService;
         }
 
-        [HttpGet] 
+        [HttpGet]
+        [Route("/Analytics")]
         public IActionResult Index()
         {
             try
@@ -70,5 +74,37 @@ namespace Incharge.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult ReportList(
+                                                 string sortOrder,
+                                                 string currentFilter,
+                                                 string searchString,
+                                                 int? pageNumber,
+                                                 int pageSize)
+        {
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["DateSortParam"] = string.IsNullOrEmpty(sortOrder) ? "Date_asc" : string.Empty; ;
+            ViewData["RevenueSortParam"] = sortOrder == "Revenue_asc" ? "Revenue_desc" : "Revenue_asc";
+            ViewData["CostSortParam"] = sortOrder == "Cost_asc" ? "Cost_desc" : "Cost_asc";
+            ViewData["ActiveMembersSortParam"] = sortOrder == "ActiveMembers_asc" ? "ActiveMembers_desc" : "ActiveMembers_asc";
+            ViewData["NewMembershipsSoldSortParam"] = sortOrder == "NewMembershipsSold_asc" ? "NewMembershipsSold_desc" : "NewMembershipsSold_asc";
+            ViewData["ProfitsSortParam"] = sortOrder == "Profits_asc" ? "Profits_desc" : "Profits_asc";
+
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+
+
+            return View(_pagingService.IndexPaging(sortOrder, currentFilter, searchString, pageNumber, pageSize));
+        }
     }
 }

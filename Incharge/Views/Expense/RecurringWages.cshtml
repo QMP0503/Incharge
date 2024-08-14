@@ -1,0 +1,38 @@
+﻿@model Incharge.ViewModels.ExpenseVM;
+
+@{
+    ViewData["Title"] = "Recurring Wages";
+}
+
+<div class="container">
+    <div class="row">
+        <h1 class="font-monospace fw-bold mt-3">Add Recurring Wages</h1>
+    </div>
+    <div class="form-group">
+        <form asp-action="RecurringWages" asp-route-Uuid="@Model.Uuid" method="post">
+            <partial name="_formErrorMessage" model="Model" />
+
+            <div class="mb-3 mt-3">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="control-label">Select Employee</label>
+                <select asp-for="EmployeeUuids" class="form-select" data-placeholder="Select Employee" multiple data-multi-select>
+                    @foreach (var employee in Model.EmployeeList)
+                    {
+                        <option value="@employee.Uuid">@employee.FirstName @employee.LastName : $@employee.TotalSalary</option>
+                    }
+                </select>
+            </div>
+            
+            <a asp-action="Index" type="submit" class="btn btn-primary">Cancel</a>
+
+                <input type="submit" value="Save" class="btn btn-primary" />
+
+            @*Have confirmation option later*@
+        </form>
+    </div>
+</div>

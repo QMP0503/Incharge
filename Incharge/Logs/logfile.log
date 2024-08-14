@@ -853,3 +853,321 @@ Name
 2024-07-30 17:30:00,303 [9] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
    at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 268
    at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 80
+2024-08-12 10:12:40,403 [40] ERROR Program - System.Exception: End time must be after start time
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 50
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 137
+2024-08-12 10:31:25,470 [7] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 250
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 80
+2024-08-12 10:31:36,291 [18] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 250
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 80
+2024-08-12 10:34:17,978 [5] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-08-12 10:35:51,211 [19] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 250
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 80
+2024-08-12 10:53:01,993 [29] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-08-12 10:54:02,528 [7] ERROR Program - System.Exception: Membership can only be bought for one month at a time
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-08-12 11:03:04,713 [26] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 94
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 86
+2024-08-12 11:03:19,746 [40] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 94
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 86
+2024-08-12 11:03:33,544 [40] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 80
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 68
+2024-08-12 11:17:57,982 [17] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 94
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-12 11:18:07,229 [10] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 94
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-12 11:18:39,982 [19] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:18:47,798 [5] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:18:58,593 [10] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:19:07,474 [20] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:19:12,640 [5] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:19:16,454 [20] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:19:45,221 [10] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:20:30,976 [3] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:20:36,210 [24] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:20:40,171 [25] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:20:41,387 [25] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:46:52,013 [30] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 11:50:07,945 [35] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM)
+2024-08-12 14:04:43,413 [19] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-12 14:05:05,393 [21] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-12 14:14:18,281 [32] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 15:18:50,291 [3] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-12 15:19:13,110 [3] ERROR Program - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'Name' at row 1
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in /_/src/MySqlConnector/MySqlCommand.cs:line 290
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 90
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 139
+2024-08-12 15:19:24,074 [36] ERROR Program - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'Name' at row 1
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 90
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 139
+2024-08-12 15:20:00,288 [38] ERROR Program - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'Name' at row 1
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
+   at Incharge.Service.CheckerService.LocationCheck() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\CheckerService.cs:line 61
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 226
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 196
+2024-08-12 15:22:53,434 [38] ERROR Program - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'Name' at row 1
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 894
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 37
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 130
+   at MySqlConnector.MySqlDataReader.InitAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 483
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 357
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
+   at Incharge.Service.CheckerService.LocationCheck() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\CheckerService.cs:line 61
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 226
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 196
+2024-08-12 15:31:44,014 [3] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity)
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM)
+2024-08-12 15:33:21,785 [15] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.BusinessReportService.CalculateAccountsPayable(BusinessReport entity)
+   at Incharge.Service.BusinessReportService.UpdateService()
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM)
+2024-08-12 15:33:21,857 [15] ERROR Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at Incharge.Service.BusinessReportService.CalculateAccountsPayable(BusinessReport entity)
+   at Incharge.Service.BusinessReportService.UpdateService()
+   at Incharge.Controllers.SaleController.AddSaleConfirm(SaleVM saleVM)
+2024-08-12 15:42:44,778 [20] ERROR Program - System.NullReferenceException: Input Empty.
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 61
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 79
+2024-08-12 15:48:10,991 [17] ERROR Program - System.Exception: Cannot complete a cancelled class.  If mistake was made be make new entry for class.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.UpdateStatus(GymClassVM gymclassVM)
+2024-08-12 15:54:10,240 [38] ERROR Program - System.Exception: Equipment already registered in class a selected time.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-12 15:55:00,330 [41] ERROR Program - System.Exception: Equipment already registered in class a selected time.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-12 15:55:26,586 [41] ERROR Program - System.Exception: Equipment already registered in class a selected time.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-12 15:55:49,749 [39] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 15:56:03,848 [41] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 15:57:29,606 [44] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-12 16:11:10,117 [55] ERROR Program - System.Exception: Equipment already registered in class a selected time.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-13 11:00:58,760 [16] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-13 11:06:38,001 [16] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 87
+2024-08-13 11:14:38,426 [3] ERROR Program - System.Exception: No Employees Selected
+   at Incharge.Service.ExpenseService.AddWageExpense(ExpenseVM entity)
+   at Incharge.Controllers.ExpenseController.RecurringWagesConfirm(ExpenseVM expenseVM)
+2024-08-13 11:17:39,157 [19] ERROR Program - System.Exception: No Employees Selected
+   at Incharge.Service.ExpenseService.AddWageExpense(ExpenseVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ExpenseService.cs:line 70
+   at Incharge.Controllers.ExpenseController.RecurringWagesConfirm(ExpenseVM expenseVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 217
+2024-08-13 14:47:57,023 [20] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 14:48:33,990 [5] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 14:49:39,565 [3] ERROR Program - System.Exception:  have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 14:50:07,545 [23] ERROR Program - System.Exception:  have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 14:51:03,063 [27] ERROR Program - System.Exception: Insurance have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 14:58:33,155 [23] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 165
+2024-08-13 15:17:34,224 [21] ERROR Program - System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at Incharge.Controllers.ExpenseController.RecurringWages(ExpenseVM expenseVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 248
+2024-08-13 15:18:45,694 [5] ERROR Program - System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at Incharge.Controllers.ExpenseController.RecurringWages(ExpenseVM expenseVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 248
+2024-08-13 15:19:48,448 [19] ERROR Program - System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at Incharge.Controllers.ExpenseController.RecurringWages(ExpenseVM expenseVM)
+2024-08-13 15:20:05,943 [5] ERROR Program - System.Exception: All Employees Have been Paid! Please leave the page
+   at Incharge.Controllers.ExpenseController.RecurringWages(ExpenseVM expenseVM)
+2024-08-13 15:20:15,872 [20] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 15:21:13,284 [19] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 166
+2024-08-13 15:21:20,658 [10] ERROR Program - System.Exception: Insurance have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 194
+2024-08-13 15:21:47,351 [19] ERROR Program - System.Exception: All Employees Have been Paid! Please leave the page
+   at Incharge.Controllers.ExpenseController.RecurringWages(ExpenseVM expenseVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 251
+2024-08-13 16:00:54,244 [17] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-13 16:28:39,268 [41] ERROR Program - System.Exception: All Employees Have been Paid! Please leave the page
+   at Incharge.Controllers.ExpenseController.RecurringWages(ExpenseVM expenseVM)
+2024-08-13 16:28:51,953 [41] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 16:29:05,936 [42] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option)
+2024-08-13 16:42:08,357 [41] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-13 16:46:08,950 [34] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate)
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected)
+2024-08-13 16:48:31,830 [31] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM)
+2024-08-13 16:48:55,445 [9] ERROR Program - System.Exception: A class already exist within time frame and with the same employee.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM)
+2024-08-13 16:54:58,237 [19] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 164
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 199
+2024-08-13 16:55:17,877 [20] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 164
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 199
+2024-08-13 16:56:10,340 [20] ERROR Program - System.Exception: Classes can not be longer than one day.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-13 16:56:18,933 [20] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-13 16:56:53,354 [21] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity)
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM)
+2024-08-13 17:07:53,127 [5] ERROR Program - System.Exception: Equipment already registered in class a selected time.
+   at Incharge.Service.GymClassService.UpdateService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 225
+   at Incharge.Controllers.GymclassController.EditGymclassConfirm(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 199
+2024-08-14 10:21:39,597 [18] ERROR Program - System.Exception: End time must be after start time
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 48
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 142
+2024-08-14 10:22:33,535 [16] ERROR Program - System.Exception: Private class must have a client
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 85
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 142
+2024-08-14 13:44:55,701 [7] ERROR Program - System.NullReferenceException: Input Empty.
+   at Incharge.Service.ClientService.AddService(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ClientService.cs:line 61
+   at Incharge.Controllers.ClientController.AddClient(ClientVM clientVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ClientController.cs:line 82

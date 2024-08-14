@@ -37,68 +37,68 @@
         <div id="sidebar">
             <div class="fixed-start">
                 <div class="bg-dark d-flex flex-column align-items-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/Home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none fw-bold">
-                        <span class="fs-5 d-none d-sm-inline navbar-brand">Incharge</span>
+                    <a href="/Home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-primary text-decoration-none fw-bold">
+                        <span class="fs-5 d-none d-sm-inline navbar-brand mt-4"><i class="fa-solid fa-dumbbell"></i>  Incharge </span>
                     </a>
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                            <li class="nav-item">
-                                <a href="/Home " class="nav-link px-0 align-middle">
+                            <li class="nav-item nav">
+                                <a href="/Home " class="nav-link px-0 align-middle text-white">
                                     <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">People</span>
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-light">
+                                    <i class="fs-4 bi-people-fill list-group-item-primary"></i> <span class="ms-1 d-none d-sm-inline">People</span>
                                 </a>
                                 <ul class="nav flex-column ms-1 collapse" id="submenu1" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a href="/Client" class="nav-link px-2 text-white">Clients</a>
+                                        <a href="/Client" class="nav-link px-0 text-white">Clients</a>
                                     </li>
                                     <li>
-                                        <a href="/Employee" class="nav-link px-2 text-white">Employee </a>
+                                        <a href="/Employee" class="nav-link px-0 text-white">Employee </a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="#gymMenu" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <a href="#gymMenu" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-light">
                                     <i class="fs-4 bi-calendar3"></i> <span class="ms-1 d-none d-sm-inline">Gym Schedule</span>
                                 </a>
                                 <ul class="nav flex-column ms-1 collapse" id="gymMenu" data-bs-parent="#menu">
 
                                     @*SPLIT MEMEBERSHIP AND DISCOUNTS CONTROLLER TO HAVE TWO SEPERATE SET FROM PRODUCTS*@
                                     <li class="w-100">
-                                        <a href="/GymClass/LocationSchedule" class="nav-link text-light">Location</a>
+                                        <a href="/GymClass/LocationSchedule" class="nav-link px-0 text-light">Location</a>
                                     </li>
                                     <li>
-                                        <a href="/GymClass/TrainerSchedule" class="nav-link text-light">Trainer</a>
+                                        <a href="/GymClass/TrainerSchedule" class="nav-link px-0 text-light">Trainer</a>
                                     </li>
                                     <li>
-                                        <a href="/GymClass" class="nav-link text-light">Index</a>
+                                        <a href="/GymClass" class="nav-link px-0 text-light">Class List</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-light">
                                     <i class="fs-4 bi-bag-fill"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
                                 </a>
                                 <ul class="nav flex-column ms-1 collapse" id="submenu2" data-bs-parent="#menu">
                                     <li class="w-100">
-                                        <a href="/Product" class="nav-link text-light">Gym Products</a>
+                                        <a href="/Product" class="nav-link px-0 text-light">Gym Products</a>
                                     </li>
 
                                     @if (User.IsInRole("Admin"))
                                     {
                                         <li>
-                                            <a href="/Discount" class="nav-link text-light"> Discounts</a>
+                                            <a href="/Discount" class="nav-link px-0 text-light"> Discounts</a>
                                         </li>
                                     }
                                 </ul>
                             </li>
                             <li>
-                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-light">
                                     <i class="fs-4 bi-bicycle"></i> <span class="ms-1 d-none d-sm-inline">Gym Activity</span>
                                 </a>
                                 <ul class="nav flex-column ms-1 text-light collapse" id="submenu3" data-bs-parent="#menu">
@@ -112,8 +112,8 @@
                             </li>
                             @if (User.IsInRole("Admin"))
                             {
-                                <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi bi-graph-up-arrow"></i> <span class="ms-1 d-none d-sm-inline">Analytics</span>
+                                <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-light">
+                                    <i class="fs-4 bi bi-graph-up-arrow"></i> <span class="ms-1 d-none d-sm-inline ">Analytics</span>
                                 </a>
                                 <ul class="nav flex-column ms-1 text-light collapse" id="submenu4" data-bs-parent="#menu">
                                     <li class="w-100">
@@ -125,6 +125,9 @@
                                     <li>
                                         <a href="/Analytics" class="nav-link px-0 text-light">Business Insight</a>
                                     </li>
+                                   @*  <li>
+                                        <a href="/Analytics/ReportList" class="nav-link px-0 text-light">Report List</a>
+                                    </li> *@
                                 </ul>
                             }
                         </ul>
@@ -140,12 +143,12 @@
                                     <span a class="d-none d-sm-inline mx-1"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                                <li><a class="dropdown-item" href="#">New project...</a></li>
+                               @*  <li><a class="dropdown-item" href="#">New project...</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Profile</a></li> @*Make profile page for this thing...*@
+                                <li><a class="dropdown-item" href="#">Profile</a></li> @*Make profile page for this thing...
                                 <li>
                                     <hr class="dropdown-divider">
-                                </li>
+                                </li> *@
                                 @if (User.IsInRole("Admin"))
                                 {
                                     <li><a href="~/account/register" class="dropdown-item">Register New Account</a></li>

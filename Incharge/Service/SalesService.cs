@@ -73,7 +73,7 @@ namespace Incharge.Service
             sale.Date = DateTime.Now; //track sales date
 
             //CHECKING FOR DUPLICATE MEMBERSHIP
-            if (client.MembershipStatus == "Active")
+            if (client.MembershipStatus == "Active" && product.ProductType.Name.Contains("Membership"))
             {
                 throw new Exception("Client already have this product.");
             }
@@ -105,12 +105,12 @@ namespace Incharge.Service
                     sale.Discounts.Add(dsicount);
                 }
                 var discountSum = sale.Discounts.Sum(x => x.DiscountValue);
-                var price = product.ProductType.Price * sale.Quantity;
+                var price = product.TotalPrice * sale.Quantity;
                 sale.TotalPrice = price - (price * discountSum);
             }
             else
             {
-                sale.TotalPrice = product.ProductType.Price * sale.Quantity;
+                sale.TotalPrice = product.TotalPrice * sale.Quantity;
             }
 
 
@@ -245,7 +245,7 @@ namespace Incharge.Service
             entity.Date = DateTime.Now; //track sales date
 
             //CHECKING FOR DUPLICATE MEMBERSHIP
-            if (client.MembershipStatus == "Active")
+            if (client.MembershipStatus == "Active" && product.ProductType.Name.Contains("Membership"))
             {
                 throw new Exception("Client already have this product.");
             }
@@ -266,12 +266,12 @@ namespace Incharge.Service
                 }
                 var discountSum = entity.Discount.Sum(x => x.DiscountValue);
                 if (discountSum >= 1) { throw new Exception("Discount cannot be equal or greater than 100%"); }
-                var price = product.ProductType.Price * entity.Quantity;
+                var price = product.TotalPrice * entity.Quantity;
                 entity.TotalPrice = price - (price * discountSum);
             }
             else
             {
-                entity.TotalPrice = product.ProductType.Price * entity.Quantity;
+                entity.TotalPrice = product.TotalPrice * entity.Quantity;
             }
 
             return entity;

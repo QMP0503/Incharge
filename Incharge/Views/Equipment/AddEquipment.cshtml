@@ -11,6 +11,8 @@
     <div class="form-group">
         <form asp-action="AddEquipment" method="post" enctype="multipart/form-data">
             <partial name="_EquipmentFormFields" model="@Model" />
+            <a asp-action="Index" type="button" class="btn btn-primary ">Cancel</a>
+
         </form>
     </div>
 </div>

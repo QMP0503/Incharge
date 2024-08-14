@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hbHl0aWNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Analytics/ReportList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hbHl0aWNzXFJlcG9ydExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Client/AddClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEFkZENsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -124,6 +128,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/RecurringExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxSZWN1cnJpbmdFeHBlbnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/RecurringWages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxSZWN1cnJpbmdXYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/intern.pmquang1/C\#/Incharge/Incharge/Views/Expense/_ExpenseFormFields.cshtml]

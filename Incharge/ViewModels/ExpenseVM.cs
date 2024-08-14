@@ -32,11 +32,16 @@ namespace Incharge.ViewModels
 
         //VIEW ONLY TO SELECT:
         public List<string> TypeOptions { get; set; } = new List<string>() { "Wages","Rent", "Utilities", "Insurance", "Equipment", "Maintance", "Other" };
+        public List<EmployeeVM>? EmployeeList { get; set; } //for wage payments only
+        public List<ExpenseVM>? RecurringList { get; set; } //Use for utilities and insurance
 
-        //Filter based on recurrance type?
-        public List<string> PaymentTypes { get; set; } = new List<string>() { "Recurring", "One Time" };
+        //Input for wage only
+        public List<string>? EmployeeUuids { get; set; }
+        public List<string>? RecurringListUuids { get; set; } //Use for utilities and insurance
 
         //Error Message
         public string? Error { get; set; }
+
+
     }
 }

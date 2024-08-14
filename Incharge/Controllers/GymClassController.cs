@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using log4net;
 using Incharge.ViewModels.Calendar;
- 
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Incharge.Controllers
 {
+    [Authorize]
     public class GymclassController : Controller
     {
         private readonly IService<GymClassVM, Gymclass> _GymclassService;
@@ -33,6 +35,7 @@ namespace Incharge.Controllers
 
 
         [HttpGet] //will be the index
+        [Route("/GymClass")]
         public IActionResult Index(
                                                          string sortOrder,
                                                          string currentFilter,
@@ -75,6 +78,7 @@ namespace Incharge.Controllers
                 _logger.Error(ex);
                 var Error = new List<WeekdayItem>();
                 Error.Add(new WeekdayItem() { Error = ex.Message });
+                Error.Add(_gymclassCalendarService.DropDownOptions(filter, "trainer", dateSelected));
                 return View(Error);
             }
         }
@@ -93,6 +97,7 @@ namespace Incharge.Controllers
                 _logger.Error(ex);
                 var Error = new List<WeekdayItem>();
                 Error.Add(new WeekdayItem() { Error = ex.Message });
+                Error.Add(_gymclassCalendarService.DropDownOptions(filter, "location", dateSelected));
                 return View(Error);
             }
         }
@@ -123,8 +128,8 @@ namespace Incharge.Controllers
             _checker.LocationCheck();
             var gymclassVM = _DropdownOptions.DropDownOptions();
             gymclassVM.Type = type;
-            gymclassVM.Date = DateTime.Now; //setting reasonable default value
-            gymclassVM.EndTime = DateTime.Now.AddHours(1);
+            gymclassVM.Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute,0); //setting reasonable default value
+            gymclassVM.EndTime = gymclassVM.Date.AddHours(1);
             return View(gymclassVM);
         }
 
