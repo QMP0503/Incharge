@@ -155,7 +155,7 @@ namespace Incharge.Service
                     };
                     if(gymClassToUpdate.Status == "Active")
                     {
-                        gymClassToUpdate.Status = "Complete";
+                        gymClassToUpdate.Status = "Completed";
                         _GymClassRepository.Save();
                         return;
                     };

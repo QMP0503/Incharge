@@ -31,38 +31,38 @@
 
     var expenseData = new ExpenseTypeVM()
             {
-                Wages = new Random().Next(100, 1000),
-                Rent = new Random().Next(700, 1000),
-                Utilities = new Random().Next(100, 1000),
-                Insurance = new Random().Next(100, 1000),
-                Equipment = new Random().Next(100, 1000),
-                OtherExpenses = new Random().Next(100, 1000),
-                Maintenance = new Random().Next(100, 1000)
+                 Wages = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Wages,
+                Rent = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Rent,
+                Utilities = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Utilities,
+                Insurance = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Insurance,
+                Equipment = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Equipment,
+                OtherExpenses = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).OtherExpenses,
+                Maintenance = Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Maintenance
             };
 
     var expenseDataString = JsonSerializer.Serialize(expenseData);
 
     var costData = new List<CostVM>();
-    for(int i = 0; i<12; i++)
+    foreach(var cost in Model)
     {
         costData.Add(new CostVM
         {
-            Month = DateTime.Now.AddMonths(i).ToString("MMMM"),
-            Cost = new Random().Next(1000,5001)
+            Month = cost.Date.ToString("MMMM"),
+            Cost = cost.Cost
         });
     }
-    var costDataString = JsonSerializer.Serialize(costData);
+    var costDataString = JsonSerializer.Serialize(costData.OrderBy(x=>x.Month).ToList());
 
-    for(int i = 0; i<12; i++)
+    foreach(var revenue in Model)
     {
         revenueData.Add(new RevenueVM
         {
-            Month = DateTime.Now.AddMonths(i).ToString("MMMM"),
-            Revenue = new Random().Next(1000,5001)
+            Month = revenue.Date.ToString("MMMM"),
+            Revenue = revenue.Revenue
         });
     }
 
-    var revenueDataString = JsonSerializer.Serialize(revenueData);
+    var revenueDataString = JsonSerializer.Serialize(revenueData.OrderBy(x => x.Month).ToList());
 
 }
 
@@ -248,7 +248,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach (var item in Model.Take(5).ToList())
+                                        @foreach (var item in Model.OrderByDescending(x=>x.Date).Take(5).ToList())
                                         {
                                             <tr onclick="location.href='/Analytics/Detail?Uuid=@item.Uuid'">
                                                 <td>@item.Date.ToString("MMMM") - @item.Date.Year</td>
@@ -262,7 +262,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            @if(Model.Count() > 1)                         
+                            @if(Model.Count() == 5)                         
                             {
                                 <div class="card-footer text-center">
                                     <div class="d-flex flex-row-reverse">

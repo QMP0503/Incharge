@@ -59,11 +59,14 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
                                     <a asp-action="Details" asp-route-id="@item.Id" class="dropdown-item">Details</a>
-                                    <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
-                                    <!-- this look nasty as fuck, fix when not angry -->
-                                    <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">
-                                        <input class="dropdown-item" value="Delete" type="submit" />
-                                    </form>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a asp-action="UpdateProduct" asp-route-id="@item.Id" class="dropdown-item">Edit</a>
+                                        <!-- this look nasty as fuck, fix when not angry -->
+                                        <form asp-action="DeleteProduct" asp-route-id="@item.Id" method="post">
+                                            <input class="dropdown-item" value="Delete" type="submit" />
+                                        </form>
+                                    }
                                 </div>
                             </div>
                         </div>

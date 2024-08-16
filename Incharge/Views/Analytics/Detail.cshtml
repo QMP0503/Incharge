@@ -22,6 +22,7 @@
             };
     var expenseDataString = JsonSerializer.Serialize(expenseData);
 
+    var sale = Model.Sales.OrderByDescending(x => x.Date).ToList();
 }
 
 <div class="container">
@@ -90,7 +91,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.Sales)
+                    @foreach (var item in sale)
                     {
                         <tr>
                             <td>@item.Product.Name</td>

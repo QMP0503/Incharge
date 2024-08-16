@@ -31,7 +31,9 @@ namespace Incharge.Controllers
             _FindProductRepository = FindProductRepository;
         }
 
+        
         [HttpGet]
+        [Route("/Sale")]
         public IActionResult Index(
                                                 string sortOrder,
                                                 string currentFilter,

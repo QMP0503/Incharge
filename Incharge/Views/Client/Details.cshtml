@@ -33,10 +33,14 @@
 								 @*Add variable in vm for just membership product*@
 								<div class="row row-cols-2">
 								<div class="col">
-								<form asp-action="DeleteClient" asp-route-Uuid="@Model.Uuid" method="post">
-									<input type="submit" value="Delete" class="btn btn-danger"/>
-								</form>
+									@if (User.IsInRole("Admin"))
+									{
+										<form asp-action="DeleteClient" asp-route-Uuid="@Model.Uuid" method="post">
+											<input type="submit" value="Delete" class="btn btn-danger" />
+										</form>
 
+									}
+								
 								</div>
 								<form asp-action="UpdateStatus" method="post" asp-route-Uuid=@Model.Uuid class="col">
 									@if (Model.Status == "Signed Out")

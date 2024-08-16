@@ -29,8 +29,11 @@
                         <strong>Product Type: </strong>@Model.ProductType.Name
                     </div>
                     <div class="row align-content-center mt-4">
-                        <a asp-action="UpdateProduct" asp-route-id="@Model.Id" type="submit" class="btn btn-primary col">Edit</a>
-                        <a asp-action="DeleteProduct" asp-route-id="@Model.Id" type="submit" class="btn btn-danger ms-2 col">Delete</a>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="UpdateProduct" asp-route-id="@Model.Id" type="submit" class="btn btn-primary col">Edit</a>
+                            <a asp-action="DeleteProduct" asp-route-id="@Model.Id" type="submit" class="btn btn-danger ms-2 col">Delete</a>
+                        }
                     </div>
                 </div>
             </div>

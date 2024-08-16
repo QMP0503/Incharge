@@ -15,6 +15,8 @@ public static class SeedData
         * - EMPLOYEE TYPE
         * - PRODUCT TYPE
         * - DISCOUNT
+        * - 10 CLIENT
+        * - 10 EMPLOYEE
         */
 
         using (var context = new InchargeContext(

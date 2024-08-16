@@ -15,12 +15,18 @@
                     <p class="mb-2 mt-2">@Model.Description</p>
                     <div class="row align-content-center">
                         <div class="col-2">
-                            <a asp-action="EditEquipment" asp-route-id="@Model.Id" class="btn btn-primary"> Edit </a>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a asp-action="EditEquipment" asp-route-id="@Model.Id" class="btn btn-primary"> Edit </a>
+                            }
                         </div>
                         <div class="col-2">
-                            <form asp-action="DeleteEquipment" asp-route-id="@Model.Id" method="post">
-                                <input type="submit" value="Delete" class="btn btn-danger" />
-                            </form>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <form asp-action="DeleteEquipment" asp-route-id="@Model.Id" method="post">
+                                    <input type="submit" value="Delete" class="btn btn-danger" />
+                                </form>
+                            }
                         </div>
                     </div>
                 </div><!-- / project-info-box -->
