@@ -54,10 +54,6 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
-            "BootstrapBlazor": {
-              "target": "Package",
-              "version": "[8.7.2, )"
-            },
             "BootstrapIcons.AspNetCore": {
               "target": "Package",
               "version": "[1.11.0, )"

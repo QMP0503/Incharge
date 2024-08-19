@@ -1,8 +1,0 @@
-﻿
-Need to add:
-
-- add address to client and employee to make it more realistic
-- add payment method 
-- make an option to add tax and other legal information
-- figure out something to do with IA
--implement tax system if theres extra time
