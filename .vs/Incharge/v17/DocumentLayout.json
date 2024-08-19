@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\pagingservice\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\pagingservice\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -209,17 +221,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1126,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Index.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Analytics\\Index.cshtml",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAAAPoAAABgAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAPoAAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-14T03:28:20.391Z",
               "IsPinned": true,
@@ -227,7 +239,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\Index.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAC8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T02:38:17.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Pagination.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAD0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T02:24:03.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaginatedList.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "RelativeToolTip": "Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T02:21:48.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Details.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Product\\Details.cshtml",
@@ -235,12 +286,11 @@
               "RelativeToolTip": "Incharge\\Views\\Product\\Details.cshtml",
               "ViewState": "AQIAADkAAAAAAAAAAAAAAEAAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:52:13.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:52:13.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Product\\Index.cshtml",
@@ -248,12 +298,11 @@
               "RelativeToolTip": "Incharge\\Views\\Product\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T08:19:27.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T08:19:27.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "GymClassController.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
               "RelativeDocumentMoniker": "Incharge\\Controllers\\GymClassController.cs",
@@ -261,12 +310,11 @@
               "RelativeToolTip": "Incharge\\Controllers\\GymClassController.cs",
               "ViewState": "AQIAAGsAAAAAAAAAAAAswPMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T05:08:28.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T05:08:28.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ExpenseController.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ExpenseController.cs",
               "RelativeDocumentMoniker": "Incharge\\Controllers\\ExpenseController.cs",
@@ -274,12 +322,11 @@
               "RelativeToolTip": "Incharge\\Controllers\\ExpenseController.cs",
               "ViewState": "AQIAAKkAAAAAAAAAAAAAAOkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T08:25:20.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:25:20.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Detail.cshtml",
@@ -287,12 +334,11 @@
               "RelativeToolTip": "Incharge\\Views\\Analytics\\Detail.cshtml",
               "ViewState": "AQIAAE4AAAAAAAAAAAAAAGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T03:35:39.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T03:35:39.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "AddLocation.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\AddLocation.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\AddLocation.cshtml",
@@ -300,12 +346,11 @@
               "RelativeToolTip": "Incharge\\Views\\Location\\AddLocation.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:15.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:51:15.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Details.cshtml",
@@ -313,12 +358,11 @@
               "RelativeToolTip": "Incharge\\Views\\Location\\Details.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:15.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:51:15.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "EditLocation.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\EditLocation.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\EditLocation.cshtml",
@@ -326,12 +370,11 @@
               "RelativeToolTip": "Incharge\\Views\\Location\\EditLocation.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:16.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:51:16.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Index.cshtml",
@@ -339,12 +382,11 @@
               "RelativeToolTip": "Incharge\\Views\\Location\\Index.cshtml",
               "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:22.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:51:22.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Index.cshtml",
@@ -352,12 +394,11 @@
               "RelativeToolTip": "Incharge\\Views\\Equipment\\Index.cshtml",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:50:54.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:50:54.962Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "EditEquipment.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
@@ -365,12 +406,11 @@
               "RelativeToolTip": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:50:53.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:50:53.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Details.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Details.cshtml",
@@ -378,12 +418,11 @@
               "RelativeToolTip": "Incharge\\Views\\Equipment\\Details.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:49:56.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:49:56.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Details.cshtml",
@@ -391,12 +430,11 @@
               "RelativeToolTip": "Incharge\\Views\\Client\\Details.cshtml",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAACoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:48:32.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T08:48:32.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "SaleController.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
               "RelativeDocumentMoniker": "Incharge\\Controllers\\SaleController.cs",
@@ -408,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "GymClassService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\GymClassService.cs",
@@ -416,12 +454,11 @@
               "RelativeToolTip": "Incharge\\Service\\GymClassService.cs",
               "ViewState": "AQIAAIwAAAAAAAAAAAAkwJ8AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:03:35.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T03:03:35.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "_WeekdayPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
@@ -433,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "_EquipmentFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
@@ -441,12 +478,11 @@
               "RelativeToolTip": "Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:16:16.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T10:16:16.605Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "LocationSchedule.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
@@ -458,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "SalesService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\SalesService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\SalesService.cs",
@@ -470,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Details.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Details.cshtml",
@@ -482,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Index.cshtml",
@@ -494,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "Incharge\\Data\\SeedData.cs",
@@ -506,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "AddClient.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Client\\AddClient.cshtml",
@@ -518,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "GymclassCalendarService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\GymclassCalendarService.cs",
@@ -530,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "_Schedule.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
@@ -542,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "_EmployeeFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
@@ -554,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "_AddGymclassDropDown.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
@@ -566,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "TrainerSchedule.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
@@ -578,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "_LocationFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\_LocationFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\_LocationFormFields.cshtml",
@@ -590,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "_SalesFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
@@ -602,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Layout.cshtml",
@@ -614,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "_DiscountFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Discount\\_DiscountFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Discount\\_DiscountFormFields.cshtml",
@@ -626,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "_ExpenseFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
@@ -638,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "_GymClassFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
@@ -650,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "_SearchAndPageSize.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_SearchAndPageSize.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_SearchAndPageSize.cshtml",
@@ -662,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
               "RelativeDocumentMoniker": "Incharge\\appsettings.json",
@@ -674,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "Incharge.env",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env",
               "RelativeDocumentMoniker": "Incharge\\Incharge.env",
@@ -686,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Home\\Index.cshtml",
@@ -698,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Incharge\\Controllers\\HomeController.cs",
@@ -710,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ReportList.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\ReportList.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\ReportList.cshtml",
@@ -722,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "BusinessReportPagingService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\BusinessReportPagingService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\BusinessReportPagingService.cs",
@@ -734,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "AnalyticsController.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
               "RelativeDocumentMoniker": "Incharge\\Controllers\\AnalyticsController.cs",
@@ -746,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Program.cs",
               "RelativeDocumentMoniker": "Incharge\\Program.cs",
@@ -758,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Incharge\\wwwroot\\css\\site.css",
@@ -770,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "bootstrap.css",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
               "RelativeDocumentMoniker": "..\\..\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
@@ -783,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Account\\Login.cshtml",
@@ -795,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Account\\Register.cshtml",
@@ -807,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "ClientController.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
               "RelativeDocumentMoniker": "Incharge\\Controllers\\ClientController.cs",
@@ -819,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "ClientPagingService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\ClientPagingService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\ClientPagingService.cs",
