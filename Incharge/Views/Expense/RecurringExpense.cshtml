@@ -23,7 +23,7 @@
                 <select asp-for="RecurringListUuids" class="form-select" data-placeholder="Select @Model.Type" multiple data-multi-select>
                     @foreach (var expense in Model.RecurringList)
                     {
-                        <option value="@expense.Uuid">@expense.Name : $@expense.Cost</option>
+                        <option value="@expense.Uuid">@expense.Name : $@String.Format("{0:N2}", expense.Cost)</option>
                     }
                 </select>
             </div>

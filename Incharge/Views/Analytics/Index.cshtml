@@ -112,7 +112,7 @@
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Revenue (@DateTime.Now.ToString("MMMM"))
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.FirstOrDefault(x=>x.Date.Month == DateTime.Now.Month).Revenue</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$@String.Format("{0:N2}",Model.FirstOrDefault(x=>x.Date.Month == DateTime.Now.Month).Revenue)</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-money-bill-wave fa-2x text-gray-300"></i>
@@ -131,7 +131,7 @@
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                                                 Cost (@DateTime.Now.ToString("MMMM"))
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Cost</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$@String.Format("{0:N2}", Model.FirstOrDefault(x => x.Date.Month == DateTime.Now.Month).Cost)</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-receipt fa-2x text-gray-300"></i>
@@ -211,7 +211,7 @@
                             <div class="card   mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Expense Destribution</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Expense Destribution  (@DateTime.Now.ToString("MMMM"))</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -254,11 +254,11 @@
                                         {
                                             <tr onclick="location.href='/Analytics/Detail?Uuid=@item.Uuid'">
                                                 <td>@item.Date.ToString("MMMM") - @item.Date.Year</td>
-                                                <td>@item.Revenue</td>
-                                                <td>@item.Cost</td>
+                                                <td>@String.Format("{0:N2}", item.Revenue)</td>
+                                                <td>@String.Format("{0:N2}", item.Cost)</td>
                                                 <td>@item.MonthlyMembers</td>
                                                 <td>@item.NewMembershipSales</td>
-                                                <td>@item.Profit</td>
+                                                <td>@String.Format("{0:N2}", item.Profit)</td>
                                             </tr>
                                         }
                                     </tbody>

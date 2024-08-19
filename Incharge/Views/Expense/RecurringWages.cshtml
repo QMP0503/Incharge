@@ -23,7 +23,7 @@
                 <select asp-for="EmployeeUuids" class="form-select" data-placeholder="Select Employee" multiple data-multi-select>
                     @foreach (var employee in Model.EmployeeList)
                     {
-                        <option value="@employee.Uuid">@employee.FirstName @employee.LastName : $@employee.TotalSalary</option>
+                        <option value="@employee.Uuid">@employee.FirstName @employee.LastName : $@String.Format("{0:N2}", (employee.TotalSalary/12))</option>
                     }
                 </select>
             </div>

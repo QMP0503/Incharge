@@ -61,11 +61,11 @@
             {
                 <tr onclick="location.href='/Analytics/Detail?Uuid=@item.Uuid'">
                     <td>@item.Date.ToString("MMMM") - @item.Date.Year</td>
-                    <td>@item.Revenue</td>
-                    <td>@item.Cost</td>
+                    <td>@String.Format("{0:N2}", item.Revenue)</td>
+                    <td>@String.Format("{0:N2}", item.Cost)</td>
                     <td>@item.MonthlyMembers</td>
                     <td>@item.NewMembershipSales</td>
-                    <td>@item.Profit</td>
+                    <td>@String.Format("{0:N2}", item.Profit)</td>
                 </tr>
             }
         </tbody>

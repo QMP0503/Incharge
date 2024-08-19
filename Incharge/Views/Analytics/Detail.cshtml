@@ -34,11 +34,11 @@
                     <h3 class="mb-3 mt-3">BUSINESS REPORT: @Model.Date.ToString("MMMM - yyyy") </h3>
                 </div>
                 <div class="card-body p-2 mb-1">
-                    <p class="m-2"><b>Revenue:</b> $@Math.Round(Model.Revenue??0,2)</p>
-                    <p class="m-2"><b>Cost:</b> $@Math.Round(Model.Cost??0,2)</p>
-                    <p class="m-2"><b>Profit:</b> $@Math.Round(Model.Profit, 2)</p>
+                    <p class="m-2"><b>Revenue:</b> $@String.Format("{0:N2}", Model.Revenue ?? 0)</p>
+                    <p class="m-2"><b>Cost:</b> $@String.Format("{0:N2}", Model.Cost??0)</p>
+                    <p class="m-2"><b>Profit:</b> $@String.Format("{0:N2}",Model.Profit)</p>
                     <p class="m-2"><b>Total Members:</b> @Model.MonthlyMembers</p>
-                    <p class="m-2"><b>Memberships Sold:</b> @Model.NewMembershipSales</p>
+                    <p class="m-2"><b>Memberships Sold:</b> @String.Format("{0:N2}", Model.NewMembershipSales)</p>
                     <p class="m-2"><b>Membership Sales:</b> $@Model.MembershipFee </p>
 
                     <!--Delete Button-->
@@ -97,7 +97,7 @@
                             <td>@item.Product.Name</td>
                             <td>@item.PaymentType</td>
                             <td>@item.Date</td>
-                            <td>$@item.TotalPrice</td>
+                            <td>$@String.Format("{0:N2}", item.TotalPrice)</td>
                             <td>@item.Client.FirstName @item.Client.LastName</td>
                         </tr>
                     }

@@ -25,8 +25,8 @@
                     <tr>
                         <td class="col-md-9"><h6>@Model.Product.Name</h6></td>
                         <td class="col-md-1" style="text-align: center"> @Model.Quantity </td>
-                        <td class="col-md-1 text-center">@Model.Product.TotalPrice</td>
-                        <td class="col-md-1 text-center">@(Model.Quantity * Model.Product.TotalPrice)</td>
+                        <td class="col-md-1 text-center">@String.Format("{0:N2}", Model.Product.TotalPrice)</td>
+                        <td class="col-md-1 text-center">@String.Format("{0:N2}", (Model.Quantity * Model.Product.TotalPrice))</td>
                     </tr>
                    
                 </tbody>
@@ -71,7 +71,7 @@
                             <strong>@(Model.Discount.Sum(x => x.DiscountValue) * 100)%</strong>
                         </p>
                         <p>
-                            <strong>@(Model.Discount.Sum(x => x.DiscountValue) * Model.Quantity * Model.Product.TotalPrice)</strong>
+                            <strong>@String.Format("{0:N2}", (Model.Discount.Sum(x => x.DiscountValue) * Model.Quantity * Model.Product.TotalPrice))</strong>
                         </p>
                     </td>
                 </tr>
@@ -79,7 +79,7 @@
                     <td>   </td>
                     <td>   </td>
                     <td class="text-right"><h4><strong>Total: </strong></h4></td>
-                    <td class="text-center text-danger"><h4><strong>$@Model.TotalPrice</strong></h4></td>
+                    <td class="text-center text-danger"><h4><strong>$@String.Format("{0:N2}", Model.TotalPrice)</strong></h4></td>
                 </tr>
                
             </table>
