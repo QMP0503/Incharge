@@ -4,5 +4,7 @@
     {
         public string? Month { get; set; }
         public double? Revenue { get; set; }
+        public DateTime? Date { get; set; }
+
     }
 }

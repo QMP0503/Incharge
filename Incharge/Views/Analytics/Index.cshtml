@@ -48,21 +48,23 @@
         costData.Add(new CostVM
         {
             Month = cost.Date.ToString("MMMM"),
-            Cost = cost.Cost
+            Cost = cost.Cost,
+            Date = cost.Date
         });
     }
-    var costDataString = JsonSerializer.Serialize(costData.OrderBy(x=>x.Month).ToList());
+    var costDataString = JsonSerializer.Serialize(costData.OrderBy(x=>x.Date).ToList());
 
     foreach(var revenue in Model)
     {
         revenueData.Add(new RevenueVM
         {
             Month = revenue.Date.ToString("MMMM"),
-            Revenue = revenue.Revenue
+            Revenue = revenue.Revenue,
+            Date = revenue.Date
         });
     }
 
-    var revenueDataString = JsonSerializer.Serialize(revenueData.OrderBy(x => x.Month).ToList());
+    var revenueDataString = JsonSerializer.Serialize(revenueData.OrderBy(x => x.Date).ToList());
 
 }
 

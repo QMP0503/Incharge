@@ -1244,3 +1244,63 @@ Name
    at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 142
 2024-08-16 16:19:53,234 [36] ERROR Program - System.Exception: Rent have already been paid
    at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 162
+2024-08-19 10:30:47,957 [30] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 268
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 82
+2024-08-19 10:54:08,709 [35] ERROR Program - System.InvalidOperationException: The association between entity types 'Product' and 'Sale' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.HandleConceptualNulls(Boolean sensitiveLoggingEnabled, Boolean force, Boolean isCascadeDelete)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.CascadeDelete(InternalEntityEntry entry, Boolean force, IEnumerable`1 foreignKeys)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry.set_State(EntityState value)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at Incharge.Repository.Repository`1.Delete(T entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 46
+2024-08-19 10:54:08,907 [35] ERROR Program - System.InvalidOperationException: The association between entity types 'Product' and 'Sale' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.HandleConceptualNulls(Boolean sensitiveLoggingEnabled, Boolean force, Boolean isCascadeDelete)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.CascadeChanges(Boolean force)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Incharge.Repository.Repository`1.Save() in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Repository\Repository.cs:line 52
+   at Incharge.Service.ProductService.DeleteService(ProductVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\ProductService.cs:line 89
+   at Incharge.Controllers.ProductController.DeleteProduct(ProductVM productVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ProductController.cs:line 144
+2024-08-19 11:00:22,098 [7] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 268
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 82
+2024-08-19 11:03:20,806 [41] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-19 11:03:39,439 [42] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-19 11:04:27,094 [42] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 162
+2024-08-19 11:04:31,204 [39] ERROR Program - System.Exception: Insurance have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 190
+2024-08-19 11:04:34,408 [42] ERROR Program - System.Exception: Utility have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 175
+2024-08-19 11:24:24,101 [14] ERROR Program - System.Exception: Discount cannot be equal or greater than 100%
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 268
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 82
+2024-08-19 11:24:46,723 [40] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-19 11:24:53,109 [5] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-19 11:25:41,777 [26] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-19 11:26:06,976 [5] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-19 11:26:52,595 [30] ERROR Program - System.Exception: Rent have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 162
+2024-08-19 11:27:11,182 [30] ERROR Program - System.Exception: Insurance have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 190
+2024-08-19 11:27:13,472 [38] ERROR Program - System.Exception: Utility have already been paid
+   at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 175

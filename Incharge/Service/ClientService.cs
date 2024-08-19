@@ -110,6 +110,12 @@ namespace Incharge.Service
             }
             
 			var phone = clientToUpdate.Phone;
+            var membershipStatus = clientToUpdate.MembershipStatus;
+            var membershipType = clientToUpdate.MembershipName;
+            var membershipStartDate = clientToUpdate.MembershipStartDate;
+            var membershipEndDate = clientToUpdate.MembershipExpiryDate;
+            var TotalTrainingSessions = clientToUpdate.TotalTrainingSessions;
+
 			_mapper.Map(clientVM, clientToUpdate);
             if(clientToUpdate.Phone == 0) { clientToUpdate.Phone = phone; }
 
@@ -129,7 +135,30 @@ namespace Incharge.Service
                     clientToUpdate.Products.Add(products);
                 }
             }
-            if(clientVM.Gymclasses != null)
+            
+
+            if (string.IsNullOrEmpty(clientToUpdate.MembershipStatus))
+            {
+                clientToUpdate.MembershipStatus = membershipStatus;
+            }
+
+            if (string.IsNullOrEmpty(clientToUpdate.MembershipName))
+            {
+                clientToUpdate.MembershipName = membershipType;
+            }
+
+            if (clientToUpdate.MembershipStartDate == default(DateTime))
+            {
+                clientToUpdate.MembershipStartDate = membershipStartDate;
+            }
+
+            if (clientToUpdate.MembershipExpiryDate == default(DateTime))
+            {
+                clientToUpdate.MembershipExpiryDate = membershipEndDate;
+            }
+            clientToUpdate.TotalTrainingSessions = TotalTrainingSessions;
+
+            if (clientVM.Gymclasses != null)
             {
                 foreach (var clientGymclasses in clientVM.GymClassID)
                 {
