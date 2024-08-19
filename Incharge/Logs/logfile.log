@@ -1304,3 +1304,6 @@ Name
    at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 190
 2024-08-19 11:27:13,472 [38] ERROR Program - System.Exception: Utility have already been paid
    at Incharge.Controllers.ExpenseController.RecurringExpense(String Option) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\ExpenseController.cs:line 175
+2024-08-19 14:06:44,347 [21] ERROR Program - System.Exception: Client already have this product.
+   at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 250
+   at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 82

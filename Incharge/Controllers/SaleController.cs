@@ -98,7 +98,15 @@ namespace Incharge.Controllers
             {
                 _SaleService.AddService(saleVM);
                 _BusinessReportService.UpdateService();
-                return RedirectToAction("Index", "Product"); //lead back to product cause that is the only place u can add a sale
+                if (User.IsInRole("Admin"))
+                {
+                    return RedirectToAction("Index", "Sale");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Product");
+                }
+                 //lead back to product cause that is the only place u can add a sale
             }
             catch (Exception ex)
             {
