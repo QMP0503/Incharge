@@ -33,10 +33,12 @@
   - DotNetEnv : File type used to store connection string and cloudinary API key
   
 - ### Installation and Setup
-  Having Visual Studio 2022 would help with the installation and running process as all the package I used were installed on Visual Studio and have not
+  Having Visual Studio 2022 would help with the installation and running process as all the package I used were installed on Visual Studio. I have not
   tested using another IDE to run my application. I also used MySQL workbench which helps with database managament.
 
-  #### Steps (After cloning the project and assuming you have a Cloudinary account and MySQL installed):
+  The application uses cloudinary for all image uploads you would need to create a cloudinary account and have my SQL installed before doing any of the steps mentioned below.
+
+  #### Steps (After cloning the project and have installed MySQL):
   1. Create and .env file to store your personal Cloudinary API key and connection string and place inside application folder
        - The program.cs file was configured to read the .env file using this format:
          
