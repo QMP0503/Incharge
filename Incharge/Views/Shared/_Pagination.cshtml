@@ -4,8 +4,7 @@
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
-@if(Model.TotalPages > 1)
-{
+
 @*     <div class="btn-group border-bottom">
         <a asp-action="Index"
            asp-route-sortOrder="@ViewData["CurrentSort"]"
@@ -25,7 +24,28 @@
         </a>
     </div> *@
     <nav aria-label="Page navigation example">
-        <ul class="pagination">
+
+
+    <div class="d-flex justify-content-between">
+
+            <!--Page number filter-->
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Page Size
+                </button>
+
+
+                <ul class="dropdown-menu">
+                    <li><a asp-action="Index" asp-route-pageSize="10" class="dropdown-item">10</a></li>
+                    <li><a asp-action="Index" asp-route-pageSize="20" class="dropdown-item">20</a></li>
+                    <li><a asp-action="Index" asp-route-pageSize="30" class="dropdown-item">30</a></li>
+                </ul>
+
+
+            </div>
+        @if (Model.TotalPages > 1)
+        {
+            <ul class="pagination">
             <li class="page-item">
                 <a asp-action="Index"
                    asp-route-sortOrder="@ViewData["CurrentSort"]"
@@ -75,6 +95,8 @@
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </li>
-        </ul>
+            </ul>
+            }
+        </div>
     </nav>
-}
+
