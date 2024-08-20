@@ -72,7 +72,7 @@ namespace Incharge.Controllers
         }
         public IActionResult AddEquipment()
         {
-            return View(new EquipmentVM());
+            return View(new EquipmentVM() { PurchaseDate = DateTime.Now, MaintanceDate = DateTime.Now.AddMonths(1)});
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

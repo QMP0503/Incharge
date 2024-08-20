@@ -18,9 +18,17 @@ using MyMovies.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 
+// Get the base directory of the application (e.g., bin\Debug\net6.0\)
+string baseDir = AppDomain.CurrentDomain.BaseDirectory;
 
-DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] {"C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env"}));
+// Define the relative path to the .env file from the base directory
+string relativePath = @"..\..\..\Incharge.env";
 
+// Combine the base directory with the relative path to get the full path
+string envFilePath = Path.Combine(baseDir, relativePath);
+
+// Load the .env file using the constructed path
+DotEnv.Load(options: new DotEnvOptions(envFilePaths: new[] { envFilePath }));
 
 builder.Services.AddControllersWithViews();
 

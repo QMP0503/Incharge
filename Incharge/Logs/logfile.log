@@ -1307,3 +1307,12 @@ Name
 2024-08-19 14:06:44,347 [21] ERROR Program - System.Exception: Client already have this product.
    at Incharge.Service.SalesService.paymentConfirmation(SaleVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\SalesService.cs:line 250
    at Incharge.Controllers.SaleController.PaymentConfirmation(SaleVM saleVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\SaleController.cs:line 82
+2024-08-20 09:32:45,371 [15] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 95
+   at Incharge.Controllers.GymclassController.LocationSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 90
+2024-08-20 09:43:12,056 [44] ERROR Program - System.Exception: A class already exist within time frame and in the same location.
+   at Incharge.Service.GymClassService.AddService(GymClassVM entity) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymClassService.cs:line 55
+   at Incharge.Controllers.GymclassController.AddGymclass(GymClassVM gymclassVM) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 142
+2024-08-20 09:43:42,043 [44] ERROR Program - System.Exception: No gymclasses found.
+   at Incharge.Service.GymclassCalendarService.CreateItemList(String type, String filter, DateTime selectedDate) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Service\GymclassCalendarService.cs:line 79
+   at Incharge.Controllers.GymclassController.TrainerSchedule(String filter, DateTime dateSelected) in C:\Users\intern.pmquang1\C#\Incharge\Incharge\Controllers\GymClassController.cs:line 71
