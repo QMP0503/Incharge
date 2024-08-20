@@ -61,12 +61,7 @@
                 if(i == Model.PageIndex)
                 {
                     <li class="page-item active">
-                        <a class="page-link" @* asp-action="Index"
-                           asp-route-sortOrder="@ViewData["CurrentSort"]"
-                           asp-route-pageNumber="@(i)"
-                           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                           asp-route-pageSize="@Model.PageSize" *@
-                           >
+                        <a class="page-link">
                             @i
                         </a>
                     </li>

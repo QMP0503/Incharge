@@ -3,76 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\helper\\customdatetimenow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\helper\\customdatetimenow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\helper\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\helper\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\reportlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\reportlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_searchandpagesize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_searchandpagesize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\helper\\allowedextensionsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\helper\\allowedextensionsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\data\\inchargecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\data\\inchargecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\editequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\editequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\addequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\addequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\_equipmentformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\_equipmentformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,12 +67,52 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\incharge.env||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\incharge.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_searchandpagesize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_searchandpagesize.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\shared\\_formerrormessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\shared\\_formerrormessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\sale\\paymentconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -111,16 +135,80 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\sale\\_salesformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\updateproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\updateproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\editlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\editlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\editlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\editlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\addlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\addlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\_locationformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\_locationformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\analytics\\reportlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\reportlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\editequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\editequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\addequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\addequipment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\equipment\\_equipmentformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\equipment\\_equipmentformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\expense\\recurringexpense.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -155,24 +243,12 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\analytics\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\salecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\client\\deleteclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\client\\deleteclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\viewmodels\\revenuevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -195,10 +271,6 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -207,20 +279,8 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\pagingservice\\paginatedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\gymclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\gymclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\addlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\addlocation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\gymclassservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -271,20 +331,12 @@
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\trainerschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\location\\_locationformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\location\\_locationformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\discount\\_discountformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\discount\\_discountformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\views\\gymclass\\_gymclassformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\views\\gymclass\\_gymclassformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\pagingservice\\businessreportpagingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -306,10 +358,6 @@
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\.nuget\\packages\\bootstrap\\5.3.3\\contentfiles\\any\\any\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|c:\\users\\intern.pmquang1\\c#\\incharge\\incharge\\service\\pagingservice\\clientpagingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8CD469E-0174-43F2-8BD7-5B81F82BC537}|Incharge\\Incharge.csproj|solutionrelative:incharge\\service\\pagingservice\\clientpagingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -321,17 +369,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1126,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 42,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Index.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Index.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Analytics\\Index.cshtml",
-              "ViewState": "AQIAAOoAAAAAAAAAAAAAABIBAAAeAAAA",
+              "ViewState": "AQIAAAIBAAAAAAAAAAAAAAoAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-14T03:28:20.391Z",
               "IsPinned": true,
@@ -339,59 +387,346 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Program.cs",
               "RelativeDocumentMoniker": "Incharge\\Program.cs",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Program.cs",
               "RelativeToolTip": "Incharge\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAswCcAAAAAAAAA",
+              "ViewState": "AQIAAMYAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-14T04:31:26.175Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Pagination.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Pagination.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Pagination.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Pagination.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Shared\\_Pagination.cshtml",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T02:24:03.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReportList.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\ReportList.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\ReportList.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\ReportList.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Analytics\\ReportList.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T03:42:22.673Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CustomDateTimeNow.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Helper\\CustomDateTimeNow.cs",
+              "RelativeDocumentMoniker": "Incharge\\Helper\\CustomDateTimeNow.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Helper\\CustomDateTimeNow.cs",
+              "RelativeToolTip": "Incharge\\Helper\\CustomDateTimeNow.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:56:59.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CloudinarySettings.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Helper\\CloudinarySettings.cs",
+              "RelativeDocumentMoniker": "Incharge\\Helper\\CloudinarySettings.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Helper\\CloudinarySettings.cs",
+              "RelativeToolTip": "Incharge\\Helper\\CloudinarySettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:56:58.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllowedExtensionsAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Helper\\AllowedExtensionsAttribute.cs",
+              "RelativeDocumentMoniker": "Incharge\\Helper\\AllowedExtensionsAttribute.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Helper\\AllowedExtensionsAttribute.cs",
+              "RelativeToolTip": "Incharge\\Helper\\AllowedExtensionsAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:56:57.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InchargeContext.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\InchargeContext.cs",
+              "RelativeDocumentMoniker": "Incharge\\Data\\InchargeContext.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\InchargeContext.cs",
+              "RelativeToolTip": "Incharge\\Data\\InchargeContext.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAiwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:54:53.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\LocationController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\LocationController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\LocationController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\LocationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:54:32.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T03:32:54.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Incharge\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\SeedData.cs",
+              "RelativeToolTip": "Incharge\\Data\\SeedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:40:28.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SaleController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\SaleController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\SaleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T02:23:54.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExpenseController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ExpenseController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\ExpenseController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ExpenseController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\ExpenseController.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAAAP8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T08:25:20.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EquipmentController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EquipmentController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\EquipmentController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EquipmentController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\EquipmentController.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAAwE8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T02:45:59.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T02:45:54.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAuwH0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:52:03.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DiscountController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\DiscountController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\DiscountController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\DiscountController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\DiscountController.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:52:00.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\package.json",
+              "RelativeDocumentMoniker": "Incharge\\package.json",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\package.json",
+              "RelativeToolTip": "Incharge\\package.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T09:34:50.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAcwEwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:40:52.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AnalyticsController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\AnalyticsController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\AnalyticsController.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAcwFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T03:36:07.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\ClientController.cs",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAuwCgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T03:36:42.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Incharge.env",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env",
+              "RelativeDocumentMoniker": "Incharge\\Incharge.env",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env",
+              "RelativeToolTip": "Incharge\\Incharge.env",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-14T07:54:21.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Incharge\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.Development.json",
+              "RelativeToolTip": "Incharge\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T09:34:28.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
+              "RelativeDocumentMoniker": "Incharge\\appsettings.json",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
+              "RelativeToolTip": "Incharge\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-14T07:56:04.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:51:30.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:51:26.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:50:48.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAAALoAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-14T04:33:12.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 25,
+              "Title": "_Pagination.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_Pagination.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAIwFkAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T02:24:03.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "_SearchAndPageSize.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_SearchAndPageSize.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_SearchAndPageSize.cshtml",
@@ -404,285 +739,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\Index.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFQAAAAxAAAA",
+              "DocumentIndex": 27,
+              "Title": "_formErrorMessage.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Shared\\_formErrorMessage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T02:38:17.213Z",
+              "WhenOpened": "2024-08-20T08:50:14.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAAAKsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T02:38:29.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\package.json",
-              "RelativeDocumentMoniker": "Incharge\\package.json",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\package.json",
-              "RelativeToolTip": "Incharge\\package.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-19T09:34:50.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EquipmentController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EquipmentController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\EquipmentController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\EquipmentController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\EquipmentController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAA9wE8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T02:45:59.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AddEquipment.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\AddEquipment.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\AddEquipment.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\AddEquipment.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Equipment\\AddEquipment.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-20T02:47:15.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "Incharge\\Data\\SeedData.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Data\\SeedData.cs",
-              "RelativeToolTip": "Incharge\\Data\\SeedData.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBQAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:40:28.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
-              "RelativeDocumentMoniker": "Incharge\\appsettings.json",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.json",
-              "RelativeToolTip": "Incharge\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-14T07:56:04.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Incharge\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\appsettings.Development.json",
-              "RelativeToolTip": "Incharge\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-19T09:34:28.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Equipment\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:50:54.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EditEquipment.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:50:53.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Details.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Details.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Details.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Equipment\\Details.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:49:56.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_EquipmentFormFields.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:16:16.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Incharge\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Incharge\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-19T09:40:28.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T09:40:52.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AnalyticsController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\AnalyticsController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\AnalyticsController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\AnalyticsController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowFsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:36:07.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\Index.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\Index.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\Index.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Sale\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:31:32.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AddProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\AddProduct.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Product\\AddProduct.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\AddProduct.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Product\\AddProduct.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:31:22.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Incharge.env",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env",
-              "RelativeDocumentMoniker": "Incharge\\Incharge.env",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Incharge.env",
-              "RelativeToolTip": "Incharge\\Incharge.env",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-08-14T07:54:21.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PaymentConfirmation.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:31:33.354Z"
+              "WhenOpened": "2024-08-19T08:31:32.057Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "RecurringExpense.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringExpense.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\RecurringExpense.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringExpense.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Expense\\RecurringExpense.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:28:38.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "EditLocation.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\EditLocation.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\EditLocation.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\EditLocation.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Location\\EditLocation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:16.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "_SalesFormFields.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAEIAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:12:32.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AddSale.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\AddSale.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\AddSale.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\AddSale.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Sale\\AddSale.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T07:03:24.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
               "Title": "EditSale.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\EditSale.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\EditSale.cshtml",
@@ -690,287 +773,142 @@
               "RelativeToolTip": "Incharge\\Views\\Sale\\EditSale.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T07:03:41.023Z"
+              "WhenOpened": "2024-08-19T07:03:41.023Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "RecurringWages.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringWages.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\RecurringWages.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringWages.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Expense\\RecurringWages.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAABSAAAA",
+              "Title": "AddSale.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\AddSale.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\AddSale.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\AddSale.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Sale\\AddSale.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:28:51.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "_ExpenseFormFields.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:15:58.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AddExpense.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\AddExpense.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\AddExpense.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\AddExpense.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Expense\\AddExpense.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:29:29.993Z"
+              "WhenOpened": "2024-08-19T07:03:24.479Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Details.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Location\\Details.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAAAAAA",
+              "Title": "PaymentConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Sale\\PaymentConfirmation.cshtml",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAA8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:15.922Z"
+              "WhenOpened": "2024-08-19T08:31:33.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Expense\\Index.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFIAAAAeAAAA",
+              "DocumentIndex": 32,
+              "Title": "_SalesFormFields.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Sale\\_SalesFormFields.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:28:00.467Z"
+              "WhenOpened": "2024-08-14T10:12:32.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UpdateProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\UpdateProduct.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Product\\UpdateProduct.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\UpdateProduct.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Product\\UpdateProduct.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T08:49:59.621Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "EditExpense.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\EditExpense.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\EditExpense.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\EditExpense.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Expense\\EditExpense.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T08:28:34.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAwwE4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T03:32:54.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Analytics\\Detail.cshtml",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGUAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T03:35:39.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "SaleController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\SaleController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\SaleController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\SaleController.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAgwKIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:23:54.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Details.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\Details.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:48:32.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "DeleteClient.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\DeleteClient.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T07:03:05.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Sale.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Sale.cs",
-              "RelativeDocumentMoniker": "Incharge\\Models\\Sale.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Sale.cs",
-              "RelativeToolTip": "Incharge\\Models\\Sale.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T07:02:50.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "CostVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\CostVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\CostVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\CostVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\CostVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T04:09:44.084Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ExpenseTypeVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseTypeVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\ExpenseTypeVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseTypeVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\ExpenseTypeVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T04:10:04.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ExpenseVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\ExpenseVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\ExpenseVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T04:10:04.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Product\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T08:19:27.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "RevenueVM.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\RevenueVM.cs",
-              "RelativeDocumentMoniker": "Incharge\\ViewModels\\RevenueVM.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\RevenueVM.cs",
-              "RelativeToolTip": "Incharge\\ViewModels\\RevenueVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T04:10:07.714Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ProductService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\ProductService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ProductService.cs",
-              "RelativeToolTip": "Incharge\\Service\\ProductService.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAwwBAAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T03:32:44.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "ClientService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ClientService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\ClientService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ClientService.cs",
-              "RelativeToolTip": "Incharge\\Service\\ClientService.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAcwKAAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T03:12:34.154Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "PaginatedList.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\PaginatedList.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\PaginatedList.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\PaginatedList.cs",
-              "RelativeToolTip": "Incharge\\Service\\PagingService\\PaginatedList.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T02:21:48.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Details.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Product\\Details.cshtml",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Details.cshtml",
               "RelativeToolTip": "Incharge\\Views\\Product\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAOAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAE4AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:52:13.161Z"
+              "WhenOpened": "2024-08-16T08:52:13.161Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "GymClassController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\GymClassController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\GymClassController.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAswPMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T05:08:28.327Z"
+              "DocumentIndex": 36,
+              "Title": "AddProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\AddProduct.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Product\\AddProduct.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\AddProduct.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Product\\AddProduct.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T08:31:22.489Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ExpenseController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ExpenseController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\ExpenseController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ExpenseController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\ExpenseController.cs",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAAAOkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T08:25:20.331Z"
+              "DocumentIndex": 37,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Location\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:51:22.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 34,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAADgAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T08:19:27.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EditLocation.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\EditLocation.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\EditLocation.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\EditLocation.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Location\\EditLocation.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:51:16.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Details.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Details.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Location\\Details.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:51:15.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "AddLocation.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\AddLocation.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\AddLocation.cshtml",
@@ -978,167 +916,12 @@
               "RelativeToolTip": "Incharge\\Views\\Location\\AddLocation.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:15.306Z"
+              "WhenOpened": "2024-08-16T08:51:15.306Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Location\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Location\\Index.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:51:22.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "GymClassService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\GymClassService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
-              "RelativeToolTip": "Incharge\\Service\\GymClassService.cs",
-              "ViewState": "AQIAAIwAAAAAAAAAAAAkwJ8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:03:35.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "_WeekdayPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T05:02:35.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "LocationSchedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T05:05:12.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "SalesService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\SalesService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\SalesService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\SalesService.cs",
-              "RelativeToolTip": "Incharge\\Service\\SalesService.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAqwDQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T02:23:54.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Details.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Details.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Details.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\Details.cshtml",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAACgAAACCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T05:08:06.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Index.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T08:18:52.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "AddClient.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\AddClient.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Client\\AddClient.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADYAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T07:56:25.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "GymclassCalendarService.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
-              "RelativeDocumentMoniker": "Incharge\\Service\\GymclassCalendarService.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
-              "RelativeToolTip": "Incharge\\Service\\GymclassCalendarService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T05:09:02.927Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "_Schedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T05:02:28.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "_EmployeeFormFields.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:16:30.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "_AddGymclassDropDown.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:14:07.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "TrainerSchedule.cshtml",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "RelativeToolTip": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T05:05:23.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 41,
               "Title": "_LocationFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Location\\_LocationFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Location\\_LocationFormFields.cshtml",
@@ -1146,11 +929,519 @@
               "RelativeToolTip": "Incharge\\Views\\Location\\_LocationFormFields.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:12:46.541Z"
+              "WhenOpened": "2024-08-14T10:12:46.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAnwHsAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T02:38:29.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\Index.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAIBJwFQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T02:38:17.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ReportList.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\ReportList.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\ReportList.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\ReportList.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Analytics\\ReportList.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAIBJwCIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T03:42:22.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "AddEquipment.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\AddEquipment.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\AddEquipment.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\AddEquipment.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\AddEquipment.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-20T02:47:15.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\Index.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:50:54.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "EditEquipment.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\EditEquipment.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:50:53.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Details.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\Details.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\Details.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\Details.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwBEAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:49:56.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "_EquipmentFormFields.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Equipment\\_EquipmentFormFields.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T10:16:16.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Incharge\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Incharge\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T09:40:28.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "RecurringExpense.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringExpense.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\RecurringExpense.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringExpense.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\RecurringExpense.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAIBJwB4AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T08:28:38.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "RecurringWages.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringWages.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\RecurringWages.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\RecurringWages.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\RecurringWages.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwB4AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T08:28:51.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "_ExpenseFormFields.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\_ExpenseFormFields.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAIBJwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T10:15:58.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "AddExpense.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\AddExpense.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\AddExpense.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\AddExpense.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\AddExpense.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T08:29:29.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\Index.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAIBJwFIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T08:28:00.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "EditExpense.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Expense\\EditExpense.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T08:28:34.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Analytics\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Analytics\\Detail.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Analytics\\Detail.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAIBJwGUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T03:35:39.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\Details.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\Details.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\Details.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAIBJwCoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:48:32.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "DeleteClient.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\DeleteClient.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T07:03:05.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Sale.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Sale.cs",
+              "RelativeDocumentMoniker": "Incharge\\Models\\Sale.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Models\\Sale.cs",
+              "RelativeToolTip": "Incharge\\Models\\Sale.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T07:02:50.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "CostVM.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\CostVM.cs",
+              "RelativeDocumentMoniker": "Incharge\\ViewModels\\CostVM.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\CostVM.cs",
+              "RelativeToolTip": "Incharge\\ViewModels\\CostVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T04:09:44.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ExpenseTypeVM.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseTypeVM.cs",
+              "RelativeDocumentMoniker": "Incharge\\ViewModels\\ExpenseTypeVM.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseTypeVM.cs",
+              "RelativeToolTip": "Incharge\\ViewModels\\ExpenseTypeVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T04:10:04.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ExpenseVM.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseVM.cs",
+              "RelativeDocumentMoniker": "Incharge\\ViewModels\\ExpenseVM.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\ExpenseVM.cs",
+              "RelativeToolTip": "Incharge\\ViewModels\\ExpenseVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T04:10:04.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "RevenueVM.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\RevenueVM.cs",
+              "RelativeDocumentMoniker": "Incharge\\ViewModels\\RevenueVM.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\ViewModels\\RevenueVM.cs",
+              "RelativeToolTip": "Incharge\\ViewModels\\RevenueVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T04:10:07.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\ProductService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ProductService.cs",
+              "RelativeToolTip": "Incharge\\Service\\ProductService.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwBAAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T03:32:44.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ClientService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\ClientService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\ClientService.cs",
+              "RelativeToolTip": "Incharge\\Service\\ClientService.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAcwKAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T03:12:34.154Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 68,
+              "Title": "PaginatedList.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "RelativeToolTip": "Incharge\\Service\\PagingService\\PaginatedList.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T02:21:48.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "GymClassController.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
+              "RelativeDocumentMoniker": "Incharge\\Controllers\\GymClassController.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\GymClassController.cs",
+              "RelativeToolTip": "Incharge\\Controllers\\GymClassController.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAswPMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:08:28.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "GymClassService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\GymClassService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymClassService.cs",
+              "RelativeToolTip": "Incharge\\Service\\GymClassService.cs",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAkwJ8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T03:03:35.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "_WeekdayPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_WeekdayPartial.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T05:02:35.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "LocationSchedule.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\LocationSchedule.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAIBJwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T05:05:12.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "SalesService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\SalesService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\SalesService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\SalesService.cs",
+              "RelativeToolTip": "Incharge\\Service\\SalesService.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAA6wDQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T02:23:54.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Details.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Details.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Details.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\Details.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAIBJwCgAAACCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T05:08:06.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\Index.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\Index.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T08:18:52.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "AddClient.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Client\\AddClient.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Client\\AddClient.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Client\\AddClient.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAIBJwDYAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T07:56:25.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "GymclassCalendarService.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
+              "RelativeDocumentMoniker": "Incharge\\Service\\GymclassCalendarService.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\GymclassCalendarService.cs",
+              "RelativeToolTip": "Incharge\\Service\\GymclassCalendarService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:09:02.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "_Schedule.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_Schedule.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_Schedule.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAIBJwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T05:02:28.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "_EmployeeFormFields.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Employee\\_EmployeeFormFields.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAIBJwB8AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T10:16:30.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "_AddGymclassDropDown.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\_AddGymclassDropDown.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T10:14:07.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "TrainerSchedule.cshtml",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
+              "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
+              "RelativeToolTip": "Incharge\\Views\\Gymclass\\TrainerSchedule.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T05:05:23.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
               "Title": "_DiscountFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Discount\\_DiscountFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Discount\\_DiscountFormFields.cshtml",
@@ -1158,11 +1449,12 @@
               "RelativeToolTip": "Incharge\\Views\\Discount\\_DiscountFormFields.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:16:54.388Z"
+              "WhenOpened": "2024-08-14T10:16:54.388Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 83,
               "Title": "_GymClassFormFields.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
@@ -1170,35 +1462,25 @@
               "RelativeToolTip": "Incharge\\Views\\Gymclass\\_GymClassFormFields.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFkAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T10:14:09.519Z"
+              "WhenOpened": "2024-08-14T10:14:09.519Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAA5wDoAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T02:45:54.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 84,
               "Title": "BusinessReportPagingService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\BusinessReportPagingService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\BusinessReportPagingService.cs",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\BusinessReportPagingService.cs",
               "RelativeToolTip": "Incharge\\Service\\PagingService\\BusinessReportPagingService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAD0AAABrAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAIBJwD0AAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:25:26.606Z"
+              "WhenOpened": "2024-08-14T03:25:26.606Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 86,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Incharge\\wwwroot\\css\\site.css",
@@ -1206,11 +1488,12 @@
               "RelativeToolTip": "Incharge\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-14T04:42:03.254Z"
+              "WhenOpened": "2024-08-14T04:42:03.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 88,
               "Title": "bootstrap.css",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
               "RelativeDocumentMoniker": "..\\..\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
@@ -1223,7 +1506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 85,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Account\\Login.cshtml",
@@ -1231,11 +1514,12 @@
               "RelativeToolTip": "Incharge\\Views\\Account\\Login.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T06:48:26.619Z"
+              "WhenOpened": "2024-08-14T06:48:26.619Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 87,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Incharge\\Views\\Account\\Register.cshtml",
@@ -1243,23 +1527,12 @@
               "RelativeToolTip": "Incharge\\Views\\Account\\Register.cshtml",
               "ViewState": "AQIAAAUAAAAAAAAAAAAcwCwAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T06:47:35.404Z"
+              "WhenOpened": "2024-08-14T06:47:35.404Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "ClientController.cs",
-              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
-              "RelativeDocumentMoniker": "Incharge\\Controllers\\ClientController.cs",
-              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Controllers\\ClientController.cs",
-              "RelativeToolTip": "Incharge\\Controllers\\ClientController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:36:42.514Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 89,
               "Title": "ClientPagingService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\Incharge\\Incharge\\Service\\PagingService\\ClientPagingService.cs",
               "RelativeDocumentMoniker": "Incharge\\Service\\PagingService\\ClientPagingService.cs",
@@ -1267,7 +1540,8 @@
               "RelativeToolTip": "Incharge\\Service\\PagingService\\ClientPagingService.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAowCQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:25:29.939Z"
+              "WhenOpened": "2024-08-14T03:25:29.939Z",
+              "EditorCaption": ""
             }
           ]
         }

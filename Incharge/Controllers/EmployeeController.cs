@@ -72,12 +72,7 @@ namespace Incharge.Controllers
         [HttpPost] //ONLY VISIBLE TO ADMIN TO HIRE PEOPLE
         public IActionResult AddEmployee( EmployeeVM employeeVM)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    var employee = _EmployeeDropDown.DropDownOptions();
-            //    employee.Error = "Invalid inputs";
-            //    return View(employee);
-            //}
+           
             try
             {
                 _EmployeeService.AddService(employeeVM);
@@ -129,20 +124,6 @@ namespace Incharge.Controllers
             }
         }
 
-       
-        //view page for delete employee
-        //public IActionResult DeleteEmployee(EmployeeVM employeeVM)
-        //{
-        //    try
-        //    {
-        //        return View(_EmployeeService.GetItem(x => x.Uuid == employeeVM.Uuid));
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        _logger.Error(ex);
-        //        return View();
-        //    }
-        //}
 
         [HttpPost, ActionName("DeleteEmployee")]
         public IActionResult DeleteEmployeeConfirm(EmployeeVM employeeVM)

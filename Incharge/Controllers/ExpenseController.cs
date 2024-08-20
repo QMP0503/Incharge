@@ -182,8 +182,7 @@ namespace Incharge.Controllers
                         expenseVM.Type = "Utilities";
                         return View(expenseVM);
 
-                    //in the event there is multiple type of insurance will show them all as name and price
-                    //for sake of simplicity assume only one lump sum for insurance is made
+               
                     case "Insurance":
                         if (_ExpenseService.GetItem(x => x.Date.Month == DateTime.Now.Month && x.Type == "Insurance") != null)
                         {
@@ -254,7 +253,6 @@ namespace Incharge.Controllers
                 _log.Error(ex);
                 expenseVM.Error = ex.Message;
                 expenseVM.EmployeeList = new List<EmployeeVM>();
-                //expenseVM.EmployeeList.Add(new EmployeeVM() { FirstName = "All", LastName = "Employees Have Been Paid." });
                 return View(expenseVM);
             }
         }
